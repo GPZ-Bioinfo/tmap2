@@ -32,10 +32,34 @@ const router = new Router({
           meta: { title: 'Introduction' }
         },
         {
+          path: '/examples/Column',
+          name: 'Column',
+          component: () => import('./components/Column.vue'),
+          meta: { title: 'Column Sets' }
+        },
+        {
+          path: '/examples/Groups1',
+          name: 'Groups',
+          component: () => import('./components/Groups1.vue'),
+          meta: { title: 'Groups' }
+        },
+        {
           path: '/examples/forcebasedI',
           name: 'forcebased',
           component: () => import('./components/ForceBasedLabelPlacementI.vue'),
-          meta: { title: 'Force1' }
+          meta: { title: 'Topological Models' }
+        },
+        {
+          path: '/examples/Comparisons1',
+          name: 'Comparisons1',
+          component: () => import('./components/Comparisons.vue'),
+          meta: { title: 'Comparisons' }
+        },
+        {
+          path: '/examples/Charts1',
+          name: 'Comparisons1',
+          component: () => import('./components/Charts.vue'),
+          meta: { title: 'Charts' }
         }
       ]
     }

@@ -26,7 +26,8 @@
     </v-navigation-drawer>
 
     <v-app-bar :clipped-left="$vuetify.breakpoint.lgAndUp" app color="primary" dark :dense="denseFlag">
-      <el-page-header @back="goBack" title="Home" style="color: #000"> </el-page-header>
+      <el-page-header @back="goDashboard" title="Dashboard" style="color: #000" v-if="Dashboard_visible"> </el-page-header>
+      <el-page-header @back="goBack" title="Home" style="color: #000" v-if="Home_visible"> </el-page-header>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <!-- <v-toolbar-title style="width: 300px" class="pl-4 ml-0">
         <span class="hidden-sm-and-down" style="color: #000">Tmap</span>
@@ -74,7 +75,8 @@ export default {
     version: '',
     fullScreen: false,
     hidden: true,
-
+    Dashboard_visible: false,
+    Home_visible: true,
     dark: false,
     drawer: null,
     itemActive: 0,
@@ -88,9 +90,33 @@ export default {
     items: function () {
       return [
         {
-          icon: 'mdi-alpha-f-box-outline',
+          icon: 'mdi-view-column',
           title: this.$vuetify.lang.t('$vuetify.sidebar.title1.value'),
-          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title1.children.title1.value'), path: '/examples/forcebasedI' }],
+          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title1.children.title1.value'), path: '/examples/Column' }],
+          appendIcon: 'mdi-chevron-down'
+        },
+        {
+          icon: 'mdi-view-sequential ',
+          title: this.$vuetify.lang.t('$vuetify.sidebar.title2.value'),
+          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title2.children.title1.value'), path: '/examples/Groups1' }],
+          appendIcon: 'mdi-chevron-down'
+        },
+        {
+          icon: 'mdi-vector-circle',
+          title: this.$vuetify.lang.t('$vuetify.sidebar.title3.value'),
+          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title1.value'), path: '/examples/forcebasedI' }],
+          appendIcon: 'mdi-chevron-down'
+        },
+        {
+          icon: 'mdi-chart-gantt ',
+          title: this.$vuetify.lang.t('$vuetify.sidebar.title4.value'),
+          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title4.children.title1.value'), path: '/examples/Comparisons1' }],
+          appendIcon: 'mdi-chevron-down'
+        },
+        {
+          icon: 'mdi-chart-bar ',
+          title: this.$vuetify.lang.t('$vuetify.sidebar.title5.value'),
+          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title5.children.title1.value'), path: '/examples/Charts1' }],
           appendIcon: 'mdi-chevron-down'
         }
       ]
@@ -215,11 +241,20 @@ export default {
       }
     },
     subItemClick(item, key) {
+      this.Dashboard_visible = true
+      this.Home_visible = false
       sessionStorage.setItem('subItemActive', key)
       this.$router.push(item.path).catch((err) => {}) // eslint-disable-line
     },
 
+    goDashboard() {
+      this.Dashboard_visible = false
+      this.Home_visible = true
+      this.$router.push('/examples/introduction').catch((err) => {}) // eslint-disable-line
+    },
     goBack() {
+      this.Dashboard_visible = false
+      this.Home_visible = true
       this.$router.push('/Home').catch((err) => {}) // eslint-disable-line
     }
   }

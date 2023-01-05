@@ -19,10 +19,42 @@ const messages = {
           value: 'Introduction'
         },
         title1: {
-          value: 'Force1',
+          value: 'Column Sets',
+          children: {
+            title1: {
+              value: 'Column'
+            }
+          }
+        },
+        title2: {
+          value: 'Groups',
+          children: {
+            title1: {
+              value: 'Groups1'
+            }
+          }
+        },
+        title3: {
+          value: 'Topological Models',
           children: {
             title1: {
               value: 'ForceBased'
+            }
+          }
+        },
+        title4: {
+          value: 'Comparisons',
+          children: {
+            title1: {
+              value: 'Comparisons1'
+            }
+          }
+        },
+        title5: {
+          value: 'Charts',
+          children: {
+            title1: {
+              value: 'Charts1'
             }
           }
         }
