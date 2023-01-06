@@ -1,21 +1,77 @@
 <template>
-  <div>Groups1</div>
+  <div>
+    <canvas id="canvas"></canvas>
+    <i class="iconfont icon-kuangxuan" @click="brushSelect"></i>
+    <svg id="brushContainer" width="100%" height="100%"></svg>
+  </div>
 </template>
 
 <script>
-/*
- *@Date: 2023-01-05 14:48:03
- *@Description: 模块描述
- */
+import * as d3 from 'd3'
+
 export default {
-  name: '',
   data() {
-    return {}
+    return {
+      canvas: null,
+      brushDom: null
+    }
   },
-  created() {},
-  mounted() {},
-  methods: {}
+  mounted() {
+    this.canvas = document.querySelector('canvas')
+  },
+  methods: {
+    // 框选
+    brushSelect() {
+      const _this = this
+      document.getElementById('brushContainer').style.display = 'block'
+      _this.brushDom = d3.select('#brushContainer').append('g').attr('id', 'brush')
+      _this.brushDom.call(
+        d3
+          .brush()
+          .on('end', function () {
+            const selection = d3.brushSelection(this)
+            _this.selectPointsInArea(selection)
+            _this.cancelBrush()
+          })
+          .extent([
+            [0, 0],
+            [this.canvas.scrollWidth, this.canvas.scrollHeight]
+          ])
+      )
+    },
+    // 取消框选
+    cancelBrush() {
+      this.brushDom.call(
+        d3
+          .brush()
+          .on('.brush', null)
+          .extent([
+            [0, 0],
+            [0, 0]
+          ])
+      )
+      d3.select('#brushContainer').selectAll('*').remove()
+      this.brushDom.attr('fill', false).attr('pointer-events', false).attr('style', false)
+      document.getElementById('brushContainer').style.display = 'none'
+      this.brushDom = null
+    },
+    // 框选高亮
+    selectPointsInArea(selection) {
+      this.pause() // 暂停图动画
+    }
+  }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+canvas {
+  width: 100%;
+  height: 100%;
+}
+#brushContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+</style>

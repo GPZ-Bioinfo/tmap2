@@ -16,7 +16,7 @@ const messages = {
       examplesButton: 'Examples',
       sidebar: {
         titleIntroduction: {
-          value: 'Introduction'
+          value: 'Dashboard'
         },
         title1: {
           value: 'Column Sets',

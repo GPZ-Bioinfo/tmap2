@@ -26,10 +26,10 @@ const router = new Router({
       meta: { title: 'Examples' },
       children: [
         {
-          path: '/examples/introduction',
-          name: 'introduction',
-          component: () => import('./components/Introduction.vue'),
-          meta: { title: 'Introduction' }
+          path: '/examples/dashboard',
+          name: 'dashboard',
+          component: () => import('./components/Dashboard.vue'),
+          meta: { title: 'Dashboard' }
         },
         {
           path: '/examples/Column',
