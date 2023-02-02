@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <canvas id="canvas"></canvas>
     <i class="iconfont icon-kuangxuan" @click="brushSelect"></i>
@@ -8,6 +8,7 @@
 
 <script>
 import * as d3 from 'd3'
+import { Graph } from '@cosmograph/cosmos'
 
 export default {
   data() {
@@ -18,7 +19,24 @@ export default {
   },
   mounted() {
     this.canvas = document.querySelector('canvas')
+    const config = {
+      simulation: {
+        repulsion: 0.5
+      },
+      renderLinks: true,
+      linkColor: (link) => link.color,
+      nodeColor: (node) => node.color,
+      events: {
+        onClick: (node) => {
+          console.log('Clicked node: ', node)
+        }
+      }
+      /* ... */
+    }
+    const graph = new Graph(canvas, config)
+    graph.setData(nodes, links)
   },
+
   methods: {
     // 框选
     brushSelect() {
@@ -58,6 +76,7 @@ export default {
     // 框选高亮
     selectPointsInArea(selection) {
       this.pause() // 暂停图动画
+      this.graph.selectNodesInRange(selection) // cosmograph自带方法（提供框选坐标可以使其节点高亮）
     }
   }
 }
@@ -74,4 +93,4 @@ canvas {
   top: 0;
   display: none;
 }
-</style>
+</style> -->
