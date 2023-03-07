@@ -19,10 +19,10 @@ const messages = {
           value: 'Dashboard'
         },
         title1: {
-          value: 'Column Sets',
+          value: 'Microbiome Features',
           children: {
             title1: {
-              value: 'Column'
+              value: 'Meta'
             }
           }
         },

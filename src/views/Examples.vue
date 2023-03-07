@@ -53,9 +53,7 @@
       </v-tooltip> -->
     </v-app-bar>
     <v-main>
-      <v-container>
-        <router-view></router-view>
-      </v-container>
+      <router-view></router-view>
     </v-main>
 
     <v-fab-transition>
@@ -92,7 +90,7 @@ export default {
         {
           icon: 'mdi-view-column',
           title: this.$vuetify.lang.t('$vuetify.sidebar.title1.value'),
-          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title1.children.title1.value'), path: '/examples/Column' }],
+          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title1.children.title1.value'), path: '/examples/Microbiome' }],
           appendIcon: 'mdi-chevron-down'
         },
         {
@@ -104,7 +102,7 @@ export default {
         {
           icon: 'mdi-vector-circle',
           title: this.$vuetify.lang.t('$vuetify.sidebar.title3.value'),
-          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title1.value'), path: '/examples/forcebasedI' }],
+          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title1.value'), path: '/examples/forcebased' }],
           appendIcon: 'mdi-chevron-down'
         },
         {

@@ -1,96 +1,67 @@
-<!-- <template>
-  <div>
-    <canvas id="canvas"></canvas>
-    <i class="iconfont icon-kuangxuan" @click="brushSelect"></i>
-    <svg id="brushContainer" width="100%" height="100%"></svg>
-  </div>
+<template>
+  <div ref="chart"></div>
 </template>
 
 <script>
 import * as d3 from 'd3'
-import { Graph } from '@cosmograph/cosmos'
 
 export default {
   data() {
     return {
-      canvas: null,
-      brushDom: null
+      data: [10, 20, 30, 40, 50],
+      width: 500,
+      height: 300,
+      margin: { top: 20, right: 20, bottom: 30, left: 40 }
     }
-  },
-  mounted() {
-    this.canvas = document.querySelector('canvas')
-    const config = {
-      simulation: {
-        repulsion: 0.5
-      },
-      renderLinks: true,
-      linkColor: (link) => link.color,
-      nodeColor: (node) => node.color,
-      events: {
-        onClick: (node) => {
-          console.log('Clicked node: ', node)
-        }
-      }
-      /* ... */
-    }
-    const graph = new Graph(canvas, config)
-    graph.setData(nodes, links)
   },
 
-  methods: {
-    // 框选
-    brushSelect() {
-      const _this = this
-      document.getElementById('brushContainer').style.display = 'block'
-      _this.brushDom = d3.select('#brushContainer').append('g').attr('id', 'brush')
-      _this.brushDom.call(
-        d3
-          .brush()
-          .on('end', function () {
-            const selection = d3.brushSelection(this)
-            _this.selectPointsInArea(selection)
-            _this.cancelBrush()
-          })
-          .extent([
-            [0, 0],
-            [this.canvas.scrollWidth, this.canvas.scrollHeight]
-          ])
-      )
-    },
-    // 取消框选
-    cancelBrush() {
-      this.brushDom.call(
-        d3
-          .brush()
-          .on('.brush', null)
-          .extent([
-            [0, 0],
-            [0, 0]
-          ])
-      )
-      d3.select('#brushContainer').selectAll('*').remove()
-      this.brushDom.attr('fill', false).attr('pointer-events', false).attr('style', false)
-      document.getElementById('brushContainer').style.display = 'none'
-      this.brushDom = null
-    },
-    // 框选高亮
-    selectPointsInArea(selection) {
-      this.pause() // 暂停图动画
-      this.graph.selectNodesInRange(selection) // cosmograph自带方法（提供框选坐标可以使其节点高亮）
-    }
+  mounted() {
+    // 创建SVG元素
+    const svg = d3
+      .select(this.$refs.chart)
+      .append('svg')
+      .attr('width', this.width + this.margin.left + this.margin.right)
+      .attr('height', this.height + this.margin.top + this.margin.bottom)
+      .append('g')
+      .attr('transform', `translate(${this.margin.left}, ${this.margin.top})`)
+
+    // 创建比例尺
+    const xScale = d3
+      .scaleBand()
+      .range([0, this.width])
+      .domain(this.data.map((d, i) => i))
+      .padding(0.1)
+
+    const yScale = d3
+      .scaleLinear()
+      .domain([0, d3.max(this.data)])
+      .range([this.height, 0])
+
+    // 创建条形
+    svg
+      .selectAll('.bar')
+      .data(this.data)
+      .enter()
+      .append('rect')
+      .attr('class', 'bar')
+      .attr('x', (d, i) => xScale(i))
+      .attr('y', (d) => yScale(d))
+      .attr('width', xScale.bandwidth())
+      .attr('height', (d) => this.height - yScale(d))
+
+    // 创建x轴和y轴
+    const xAxis = d3.axisBottom(xScale)
+    const yAxis = d3.axisLeft(yScale)
+
+    svg.append('g').attr('class', 'x-axis').attr('transform', `translate(0, ${this.height})`).call(xAxis)
+
+    svg.append('g').attr('class', 'y-axis').call(yAxis)
   }
 }
 </script>
 
 <style scoped>
-canvas {
-  width: 100%;
-  height: 100%;
+.bar {
+  fill: steelblue;
 }
-#brushContainer {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: none;
-}
-</style> -->
+</style>

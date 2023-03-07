@@ -3,19 +3,15 @@
 </template>
 
 <script>
-/*
- *@Date: 2023-01-02 14:58:40
- *@Description: 模块描述
- */
 export default {
-  name: '',
+  components: {},
+  props: {},
   data() {
     return {}
   },
-  created() {},
   mounted() {},
   methods: {}
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

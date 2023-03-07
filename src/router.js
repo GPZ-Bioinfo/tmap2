@@ -32,10 +32,10 @@ const router = new Router({
           meta: { title: 'Dashboard' }
         },
         {
-          path: '/examples/Column',
-          name: 'Column',
-          component: () => import('./components/Column.vue'),
-          meta: { title: 'Column Sets' }
+          path: '/examples/Microbiome',
+          name: 'Meta',
+          component: () => import('./components/Microbiome.vue'),
+          meta: { title: 'Microbiome Features' }
         },
         {
           path: '/examples/Groups1',
@@ -44,9 +44,9 @@ const router = new Router({
           meta: { title: 'Groups' }
         },
         {
-          path: '/examples/forcebasedI',
+          path: '/examples/forcebased',
           name: 'forcebased',
-          component: () => import('./components/ForceBasedLabelPlacementI.vue'),
+          component: () => import('./components/ForceBased.vue'),
           meta: { title: 'Topological Models' }
         },
         {
