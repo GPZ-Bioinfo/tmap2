@@ -43,9 +43,21 @@ const router = new Router({
           component: () => import('./components/Groups1.vue'),
           meta: { title: 'Groups' }
         },
+        // {
+        //   path: '/examples/forcebased',
+        //   name: 'forcebased',
+        //   component: () => import('./components/ForceBased.vue'),
+        //   meta: { title: 'Topological Models' }
+        // },
         {
-          path: '/examples/forcebased',
-          name: 'forcebased',
+          path: '/examples/edit',
+          name: 'edit',
+          component: () => import('./components/ForceBased.vue'),
+          meta: { title: 'Topological Models' }
+        },
+        {
+          path: '/examples/create',
+          name: 'create',
           component: () => import('./components/ForceBased.vue'),
           meta: { title: 'Topological Models' }
         },

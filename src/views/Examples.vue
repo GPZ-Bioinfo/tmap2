@@ -102,7 +102,11 @@ export default {
         {
           icon: 'mdi-vector-circle',
           title: this.$vuetify.lang.t('$vuetify.sidebar.title3.value'),
-          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title1.value'), path: '/examples/forcebased' }],
+          children: [
+            // { title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title1.value'), path: '/examples/forcebased' },
+            { title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title2.value'), path: '/examples/edit' },
+            { title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title3.value'), path: '/examples/create' }
+          ],
           appendIcon: 'mdi-chevron-down'
         },
         {

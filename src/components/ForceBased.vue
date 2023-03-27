@@ -42,9 +42,20 @@
       <el-button class="buttonStyle" @click="screenShot"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="图片导出"><v-icon>mdi-download</v-icon></el-tooltip></el-button
       >
+      <!-- 直方图控件 -->
+      <el-button class="buttonStyle" @click="theChartBar" v-if="histogramExit"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="直方图"><v-icon>mdi-chart-histogram</v-icon></el-tooltip></el-button
+      >
+      <el-button class="buttonStyle" @click="ChartBarNone" v-if="!histogramExit"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="隐藏"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
+      >
       <!-- 画板控件 -->
       <el-button class="buttonStyle" v-if="!buttonColor" @click="ColorSelect"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="调色板"><v-icon>mdi-palette</v-icon></el-tooltip></el-button
+      >
+      <!-- 修改控件 -->
+      <el-button class="buttonStyle" @click="nodeEdit"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="节点编辑"><v-icon>mdi-pencil-minus</v-icon></el-tooltip></el-button
       >
     </div>
     <!-- 点线数量 -->
@@ -64,6 +75,67 @@
         {{ index + 1 + '、id: ' + item }}
       </div>
     </el-card>
+    <!-- 取色板 -->
+    <el-card class="colorBoard" v-if="colorBoardExit">
+      <div slot="header" class="clearfix">
+        <h3 style="text-align: center">Color Cast</h3>
+        <el-button style="position: absolute; right: 10px; top: 0" type="text" @click="colorBoardClose">❌</el-button>
+      </div>
+      <h3 style="text-align: center">Please select a data column below</h3>
+      <v-select label="Degree" :items="['Degree']"></v-select>
+      <div style="text-align: center">
+        <el-radio-group v-model="radio" style="margin-top: 10px">
+          <el-radio :label="3">Sequential</el-radio>
+          <el-radio :label="6">Qualitative</el-radio>
+          <el-radio :label="9">Diverging</el-radio>
+        </el-radio-group>
+      </div>
+      <!-- 色带 -->
+      <div class="color-strip-container">
+        <div class="color-strip" @click="colorBarChange1">
+          <div class="color-block" v-for="(color, index) in colorList1" :key="index" :style="{ backgroundColor: color }" @click="selectColor(color)"></div>
+        </div>
+        <div class="color-strip">
+          <div class="color-block" v-for="(color, index) in colorList2" :key="index" :style="{ backgroundColor: color }" @click="selectColor(color)"></div>
+        </div>
+        <div class="color-strip">
+          <div class="color-block" v-for="(color, index) in colorList3" :key="index" :style="{ backgroundColor: color }" @click="selectColor(color)"></div>
+        </div>
+        <div class="color-strip">
+          <div class="color-block" v-for="(color, index) in colorList4" :key="index" :style="{ backgroundColor: color }" @click="selectColor(color)"></div>
+        </div>
+      </div>
+      <div class="colorBoardButton">
+        <el-button @click="colorBarCancel">Cancel</el-button>
+        <el-button>Reset</el-button>
+        <el-button>Preview</el-button>
+        <el-button>Apply Color Palette</el-button>
+      </div>
+    </el-card>
+    <!-- 节点编辑面板 -->
+    <el-card class="NodesEditBoard" v-if="NodesEditBoardExit">
+      <div slot="header" class="clearfix">
+        <h3 style="text-align: center">Nodes Edit</h3>
+        <el-button style="position: absolute; right: 10px; top: 0" type="text" @click="NodesEditBoardClose">❌</el-button>
+      </div>
+      <div>
+        <el-input v-model="searchValue" placeholder="请输入搜索内容" @keyup.enter.native="doSearch" :suffix-icon="icon" clearable style="width: 500px"></el-input>
+      </div>
+      <div class="dropdown">
+        <el-dropdown>
+          <el-button type="primary"> Select Item<i class="el-icon-arrow-down el-icon--right"></i> </el-button>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>Select Item</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </div>
+      <div class="dropdown">
+        <el-button @click="nodeFilter">Edit</el-button>
+      </div>
+      <div class="dropdown">
+        <el-button @click="nodeReset">Reset</el-button>
+      </div>
+    </el-card>
     <!-- d3画布 -->
     <span ref="box" style="background-color: #fff">
       <svg id="viz" class="container-border" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"></svg>
@@ -74,7 +146,7 @@
 <script>
 import * as d3 from 'd3'
 import * as echarts from 'echarts'
-import * as chromatic from 'd3-scale-chromatic'
+// import * as chromatic from 'd3-scale-chromatic'
 import { elements } from './static/ran2.json'
 
 export default {
@@ -118,7 +190,19 @@ export default {
     labelLayout: null,
     theGreen: [],
     theBlue: [],
-    theRed: []
+    theRed: [],
+    colorBoardExit: false,
+    radio: 3,
+    colorList1: ['#eff3ff', '#bcd7e8', '#68add8', '#2b81c0', '#064e9e'],
+    colorList2: ['#edf9fc', '#b1e3e3', '#62c3a4', '#25a35c', '#006e29'],
+    colorList3: ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd'],
+    colorList4: ['#66c2a5', '#fc8d62', '#8da0cb', '#e78ac3', '#a6d854'],
+    histogramExit: true,
+    BarColorList: ['#244e96', '#25a8b6', '#7cf728', '#f09e30', '#b2392d'],
+    option: null,
+    searchValue: '',
+    icon: 'el-icon-search',
+    NodesEditBoardExit: false
   }),
   async mounted() {
     this.nodesCount = elements.nodes.length
@@ -325,20 +409,21 @@ export default {
 
     // 图表
     var myChart = echarts.init(document.getElementById('chartBar'))
+    const _this = this
     var option = {
       xAxis: {
-        data: [1, 2, 3, 4, 5, 6, 7, 8]
+        data: [1, 2, 3, 4, 5]
       },
       yAxis: {},
       series: [
         {
           type: 'bar',
           // data: [1, 2, 3, 4, 5, 6, 7, 8],
-          data: [this.theBlue.length, 2, 3, this.theGreen.length, 5, 6, 7, this.theRed.length],
+          data: [this.theBlue.length, 8, this.theGreen.length, 9, this.theRed.length],
           itemStyle: {
             normal: {
               color: function (params) {
-                var colorList = ['#244e96', '#25a8b6', '#25dc4c', '#7cf728', '#f8d039', '#f09e30', '#d75f28', '#b2392d']
+                var colorList = _this.BarColorList
                 if (params.dataIndex >= colorList.length) {
                   params.dataIndex = params.dataIndex - colorList.length
                 }
@@ -349,8 +434,10 @@ export default {
         }
       ]
     }
+    this.option = option
     // 使用刚指定的配置项和数据显示图表。
     myChart.setOption(option)
+    document.getElementById('chartBar').style.display = 'none'
     // // 创建比例尺
     // const _this = this
     // let domainArray = _this.data
@@ -407,6 +494,8 @@ export default {
 
     // // 添加y轴线
     // svg.append('line').attr('class', 'axis-line').attr('x1', 80).attr('y1', 80).attr('x2', 80).attr('y2', 300)
+    console.log('this.theBlue', this.theGreen)
+    console.log('this.theBlue', this.theRed)
   },
   methods: {
     positonUpdate() {
@@ -480,6 +569,7 @@ export default {
         // 红色7
       }
     },
+
     // linkColor() {
     //   return '#fff'
     // },
@@ -512,14 +602,14 @@ export default {
       //   .force('center', d3.forceCenter(this.width / 2, this.height / 2))
       //   .force('x', d3.forceX(this.width / 2).strength(1))
       //   .force('y', d3.forceY(this.height / 2).strength(1))
-      document.getElementById('chartBar').style.display = 'none'
+      // document.getElementById('chartBar').style.display = 'none'
     },
     exitFullScreen() {
       this.fullScreen = true
       document.exitFullscreen()
       // this.svg.attr('width', 1200)
       // this.svg.attr('height', 700)
-      document.getElementById('chartBar').style.display = 'block'
+      // document.getElementById('chartBar').style.display = 'block'
     },
     // 暂停
     forceStop() {
@@ -693,7 +783,11 @@ export default {
     },
     boardClose() {
       this.boardExit = false
+
       this.nodesData = []
+    },
+    colorBoardClose() {
+      this.colorBoardExit = false
     },
     // 图片导出
     screenShot() {
@@ -724,31 +818,47 @@ export default {
       img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(xml)))
       console.log('img', img.src)
     },
+    // 直方图
+    theChartBar() {
+      document.getElementById('chartBar').style.display = 'block'
+      this.histogramExit = false
+    },
+    ChartBarNone() {
+      document.getElementById('chartBar').style.display = 'none'
+      this.histogramExit = true
+    },
     // 调色板
+    selectColor(color) {
+      this.$emit('select', color)
+    },
     ColorSelect() {
-      // this.buttonColor = true
-      console.log('111', 10 / 3)
-      const ids = d3
-        .selectAll('circle') // 选择所有的<circle>节点
-        .nodes() // 获取节点数组
-        .map((node) => node.id) // 将节点ID映射到一个新数组中
+      this.colorBoardExit = true
+      // document.getElementById('chartBar').style.display = 'none'
 
-      console.log(ids)
-      const colorScale = d3.scaleSequential(chromatic.interpolateSpectral).domain(d3.extent(ids))
-      this.svg
-        .selectAll('rect')
-        .data(ids)
-        .enter()
-        .append('rect')
-        .attr('x', function (d, i) {
-          return i * 50 + 100
-        })
-        .attr('y', 100)
-        .attr('width', 50)
-        .attr('height', 50)
-        .attr('fill', function (d) {
-          return colorScale((d * 8) / ids.length)
-        })
+      // console.log('111', 10 / 3)
+      // const ids = d3
+      //   .selectAll('circle') // 选择所有的<circle>节点
+      //   .nodes() // 获取节点数组
+      //   .map((node) => node.id) // 将节点ID映射到一个新数组中
+
+      // console.log(ids)
+      // const ids = [1, 2, 3, 4, 5]
+      // const colorScale = d3.scaleSequential(chromatic.interpolateSpectral).domain(d3.extent(ids))
+      // this.svg
+      //   .append('rect')
+      //   .data(ids)
+      //   .enter()
+      //   .append('rect')
+      //   .attr('y', function (d, i) {
+      //     return i * 20 + 250
+      //   })
+      //   .attr('x', 1400)
+      //   .attr('width', 20)
+      //   .attr('height', 20)
+      //   .attr('fill', function (d) {
+      //     return colorScale((d * 8) / ids.length)
+      //   })
+
       // const chart = document.getElementById('chartBar')
 
       // 数据绑定和更新
@@ -763,11 +873,137 @@ export default {
       // bars.style('width', (d) => d + 'px').style('background-color', (d) => colorScale(d))
 
       // bars.exit().remove()
+    },
+    // 色带点击事件
+    colorBarChange1() {
+      const num1 = []
+      const num2 = []
+      const num3 = []
+      const num4 = []
+      const num5 = []
+      this.node.attr('fill', function (d) {
+        if (d.id >= '26') {
+          num5.push(d.id)
+          return '#064e9e'
+        } else if (d.id >= '12' && d.id < '20') {
+          num3.push(d.id)
+          return '#68add8'
+        } else if (d.id >= '5' && d.id < '12') {
+          num2.push(d.id)
+          return '#bcd7e8'
+        } else if (d.id < '5') {
+          num1.push(d.id)
+          return '#eff3ff'
+        } else {
+          num4.push(d.id)
+          return '#2b81c0'
+        }
+      })
+      const _this = this
+      var myChart = echarts.init(document.getElementById('chartBar'))
+      var option = {
+        xAxis: {
+          data: [1, 2, 3, 4, 5]
+        },
+        yAxis: {},
+        series: [
+          {
+            type: 'bar',
+            // data: [1, 2, 3, 4, 5, 6, 7, 8],
+            data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+            itemStyle: {
+              normal: {
+                color: function (params) {
+                  var colorList = _this.colorList1
+                  if (params.dataIndex >= colorList.length) {
+                    params.dataIndex = params.dataIndex - colorList.length
+                  }
+                  return colorList[params.dataIndex]
+                }
+              }
+            }
+          }
+        ]
+      }
+      myChart.setOption(option)
+    },
+    colorBarCancel() {
+      this.node.attr('fill', this.circleColor)
+      console.log('this.theBlue', this.theBlue)
+      var mySecChart = echarts.init(document.getElementById('chartBar'))
+      const _this = this
+      var option = {
+        xAxis: {
+          data: [1, 2, 3, 4, 5]
+        },
+        yAxis: {},
+        series: [
+          {
+            type: 'bar',
+            // data: [1, 2, 3, 4, 5, 6, 7, 8],
+            data: [10, 8, 11, 9, 10],
+            itemStyle: {
+              normal: {
+                color: function (params) {
+                  var colorList = _this.BarColorList
+                  if (params.dataIndex >= colorList.length) {
+                    params.dataIndex = params.dataIndex - colorList.length
+                  }
+                  return colorList[params.dataIndex]
+                }
+              }
+            }
+          }
+        ]
+      }
+      // 使用刚指定的配置项和数据显示图表。
+      mySecChart.setOption(option)
+    },
+    nodeEdit() {
+      this.NodesEditBoardExit = true
+    },
+    doSearch() {
+      // 执行搜索操作
+    },
+    nodeFilter() {
+      this.node.style('opacity', 0)
+      this.node.filter((d) => d.id < 10).style('opacity', 1)
+      this.link.style('opacity', function (o) {
+        return o.source.index < 10 && o.target.index < 10 ? 1 : 0
+      })
+    },
+    nodeReset() {
+      this.node.style('opacity', 1)
+      this.link.style('opacity', 1)
+    },
+    NodesEditBoardClose() {
+      this.NodesEditBoardExit = false
     }
   }
 }
 </script>
 <style>
+.color-strip-container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-strip {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.color-block {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  cursor: pointer;
+}
 /* .links line {
   stroke: #999;
   stroke-opacity: 0.6;
@@ -839,5 +1075,46 @@ export default {
   position: absolute;
   z-index: 15;
   overflow: auto;
+}
+.NodesEditBoard {
+  height: 500px;
+  width: 550px;
+  right: 0;
+  position: absolute;
+  z-index: 16;
+  overflow: auto;
+}
+.colorBoard {
+  height: 450px;
+  width: 550px;
+  right: 0;
+  top: 450px;
+  position: absolute;
+  z-index: 15;
+  overflow: auto;
+}
+.el-radio {
+  font-size: 20px;
+}
+.colorBoardButton {
+  margin-top: 10px;
+  display: flex;
+
+  justify-content: space-between;
+}
+.el-dropdown {
+  vertical-align: top;
+}
+.el-dropdown + .el-dropdown {
+  margin-left: 15px;
+}
+.el-icon-arrow-down {
+  font-size: 12px;
+}
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 </style>
