@@ -104,8 +104,7 @@ export default {
           title: this.$vuetify.lang.t('$vuetify.sidebar.title3.value'),
           children: [
             // { title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title1.value'), path: '/examples/forcebased' },
-            { title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title2.value'), path: '/examples/edit' },
-            { title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title3.value'), path: '/examples/create' }
+            { title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title.value'), path: '/examples/ForceBased' }
           ],
           appendIcon: 'mdi-chevron-down'
         },

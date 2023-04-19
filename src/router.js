@@ -50,14 +50,8 @@ const router = new Router({
         //   meta: { title: 'Topological Models' }
         // },
         {
-          path: '/examples/edit',
-          name: 'edit',
-          component: () => import('./components/ForceBased.vue'),
-          meta: { title: 'Topological Models' }
-        },
-        {
-          path: '/examples/create',
-          name: 'create',
+          path: '/examples/ForceBased',
+          name: 'ForceBased',
           component: () => import('./components/ForceBased.vue'),
           meta: { title: 'Topological Models' }
         },

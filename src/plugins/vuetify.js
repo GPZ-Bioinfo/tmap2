@@ -40,11 +40,8 @@ const messages = {
             // title1: {
             //   value: 'ForceBased'
             // },
-            title2: {
-              value: 'edit'
-            },
-            title3: {
-              value: 'create'
+            title: {
+              value: 'ForceBased'
             }
           }
         },
