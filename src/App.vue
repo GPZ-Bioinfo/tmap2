@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <v-app v-scroll:#scroll-target="onScroll">
+    <v-app>
       <router-view />
     </v-app>
   </div>
@@ -8,26 +8,10 @@
 <script>
 export default {
   data() {
-    return {
-      hidden: false,
-      offsetTop: 0
-    }
+    return {}
   },
-  mounted() {
-    console.log('Dashboard')
-  },
-  methods: {
-    scrollTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
-    },
-    onScroll(e) {
-      this.offsetTop = e.target.scrollTop
-      console.log(this.offsetTop)
-    }
-  }
+  mounted() {},
+  methods: {}
 }
 </script>
 <style>

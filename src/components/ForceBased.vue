@@ -117,7 +117,7 @@
       <div class="colorBoardButton">
         <el-button @click="colorBarCancel">Cancel</el-button>
         <el-button>Reset</el-button>
-        <el-button>Preview</el-button>
+        <el-button @click="dataGet">Preview</el-button>
         <el-button>Apply Color Palette</el-button>
       </div>
     </el-card>
@@ -156,9 +156,8 @@
       </div>
     </el-card>
     <!-- d3画布 -->
-    <span ref="box" style="background-color: #fff">
-      <svg id="viz" class="container-border"></svg>
-    </span>
+
+    <svg id="viz"></svg>
   </div>
 </template>
 
@@ -166,6 +165,7 @@
 import * as d3 from 'd3'
 import * as echarts from 'echarts'
 import { elements } from './static/fgfp_graph_SAFE_dat.json'
+import axios from 'axios'
 
 export default {
   name: 'ForceBasedLabelPlacementI',
@@ -173,20 +173,8 @@ export default {
     max: '',
     min: '',
     graph: '',
-    valueTooltip: 50,
-    snackbar: false,
-    version: '',
+    valueTooltip: 10,
     fullScreen: true,
-    hidden: true,
-    dialog: false,
-    dark: false,
-    drawer: null,
-    itemActive: 0,
-    subItemActive: 0,
-    selectedItem: 0,
-    denseFlag: true,
-    marginTop: 0,
-    searchText: '',
     width: window.innerWidth,
     height: window.innerHeight,
     container: null,
@@ -309,10 +297,9 @@ export default {
     )
     this.container = container
 
-    let link = container.append('g').attr('class', 'links').selectAll('line').data(graph.links).enter().append('line').attr('stroke', 'pink').attr('stroke-width', '1px')
+    let link = container.attr('class', 'links').selectAll('line').data(graph.links).enter().append('line').attr('stroke', 'pink').attr('stroke-width', '1px')
 
     let node = container
-      .append('g')
       .attr('class', 'nodes')
       .selectAll('g')
       .data(graph.nodes)
@@ -481,6 +468,7 @@ export default {
       const docElm = document.documentElement
       docElm.requestFullscreen()
     },
+    // 取消全屏
     exitFullScreen() {
       this.fullScreen = true
       document.exitFullscreen()
@@ -490,6 +478,7 @@ export default {
       this.graphLayout.stop()
       this.buttonStop = false
     },
+    // 开始
     forceStart() {
       this.graphLayout.restart()
       this.buttonStop = true
@@ -1300,10 +1289,10 @@ export default {
     },
     // 节点按id编辑显示(设置透明度)
     nodeFilter() {
-      let maxData = Number(this.max)
+      let maxData = this.max !== '' ? Number(this.max) : 10000
       let minData = Number(this.min)
       const _this = this
-      if (maxData !== '' && maxData >= minData) {
+      if (maxData >= minData) {
         this.node.style('opacity', 0)
         this.link.style('opacity', 0)
         if (_this.propertyChangeData === '年龄') {
@@ -1520,7 +1509,10 @@ export default {
       myChart.setOption(option)
     },
     forceChange() {
-      this.graphLayout.force('charge', d3.forceManyBody().strength(-this.valueTooltip * 8))
+      this.graphLayout.force('charge', d3.forceManyBody().strength(-this.valueTooltip * 40))
+    },
+    dataGet() {
+      axios.get()
     }
   }
 }

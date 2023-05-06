@@ -29,38 +29,12 @@
       <el-page-header @back="goDashboard" title="Dashboard" style="color: #000" v-if="Dashboard_visible"> </el-page-header>
       <el-page-header @back="goBack" title="Home" style="color: #000" v-if="Home_visible"> </el-page-header>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <!-- <v-toolbar-title style="width: 300px" class="pl-4 ml-0">
-        <span class="hidden-sm-and-down" style="color: #000">Tmap</span>
-      </v-toolbar-title> -->
 
       <v-spacer />
-
-      <!-- <v-tooltip v-if="!fullScreen" bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn icon @click="requestFullscreen" v-bind="attrs" v-on="on">
-            <v-icon>mdi-fullscreen</v-icon>
-          </v-btn>
-        </template>
-        <span>Full Screen</span>
-      </v-tooltip>
-      <v-tooltip v-else bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn icon @click="exitFullScreen" v-bind="attrs" v-on="on">
-            <v-icon>mdi-fullscreen-exit</v-icon>
-          </v-btn>
-        </template>
-        <span>Exit Full Screen</span>
-      </v-tooltip> -->
     </v-app-bar>
     <v-main>
       <router-view></router-view>
     </v-main>
-
-    <v-fab-transition>
-      <v-btn v-if="!hidden" color="primary" dark fixed bottom right fab @click="scrollTop">
-        <v-icon>mdi-chevron-up</v-icon>
-      </v-btn>
-    </v-fab-transition>
     <v-snackbar :timeout="3000" v-model="snackbar" bottom :color="$vuetify.theme.themes.light.warning" outlined>NO Match! </v-snackbar>
   </v-app>
 </template>
@@ -72,7 +46,6 @@ export default {
     snackbar: false,
     version: '',
     fullScreen: false,
-    hidden: true,
     Dashboard_visible: false,
     Home_visible: true,
     dark: false,
@@ -82,42 +55,43 @@ export default {
     selectedItem: 0,
     denseFlag: true,
     marginTop: 0,
-    searchText: ''
+    searchText: '',
+    messages: ''
   }),
   computed: {
     items: function () {
       return [
         {
           icon: 'mdi-view-column',
-          title: this.$vuetify.lang.t('$vuetify.sidebar.title1.value'),
-          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title1.children.title1.value'), path: '/examples/Microbiome' }],
+          title: this.messages.$vuetify.sidebar.title1.value,
+          children: [{ title: this.messages.$vuetify.sidebar.title1.children.title1.value, path: '/examples/Microbiome' }],
           appendIcon: 'mdi-chevron-down'
         },
         {
           icon: 'mdi-view-sequential ',
-          title: this.$vuetify.lang.t('$vuetify.sidebar.title2.value'),
-          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title2.children.title1.value'), path: '/examples/Groups1' }],
+          title: this.messages.$vuetify.sidebar.title2.value,
+          children: [{ title: this.messages.$vuetify.sidebar.title2.children.title1.value, path: '/examples/Groups1' }],
           appendIcon: 'mdi-chevron-down'
         },
         {
           icon: 'mdi-vector-circle',
-          title: this.$vuetify.lang.t('$vuetify.sidebar.title3.value'),
+          title: this.messages.$vuetify.sidebar.title3.value,
           children: [
-            // { title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title1.value'), path: '/examples/forcebased' },
-            { title: this.$vuetify.lang.t('$vuetify.sidebar.title3.children.title.value'), path: '/examples/ForceBased' }
+            // { title: this.messages.$vuetify.sidebar.title3.children.title1.value, path: '/examples/forcebased' },
+            { title: this.messages.$vuetify.sidebar.title3.children.title.value, path: '/examples/ForceBased' }
           ],
           appendIcon: 'mdi-chevron-down'
         },
         {
           icon: 'mdi-chart-gantt ',
-          title: this.$vuetify.lang.t('$vuetify.sidebar.title4.value'),
-          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title4.children.title1.value'), path: '/examples/Comparisons1' }],
+          title: this.messages.$vuetify.sidebar.title4.value,
+          children: [{ title: this.messages.$vuetify.sidebar.title4.children.title1.value, path: '/examples/Comparisons1' }],
           appendIcon: 'mdi-chevron-down'
         },
         {
           icon: 'mdi-chart-bar ',
-          title: this.$vuetify.lang.t('$vuetify.sidebar.title5.value'),
-          children: [{ title: this.$vuetify.lang.t('$vuetify.sidebar.title5.children.title1.value'), path: '/examples/Charts1' }],
+          title: this.messages.$vuetify.sidebar.title5.value,
+          children: [{ title: this.messages.$vuetify.sidebar.title5.children.title1.value, path: '/examples/Charts1' }],
           appendIcon: 'mdi-chevron-down'
         }
       ]
@@ -126,9 +100,54 @@ export default {
   created() {
     this.$vuetify.theme.dark = false
     this.version = packageJson.version
-    if (localStorage.getItem('themeDark') && localStorage.getItem('themeDark') === 'true') {
-      this.$vuetify.theme.dark = true
-      this.dark = true
+    this.messages = {
+      $vuetify: {
+        sidebar: {
+          title1: {
+            value: 'Microbiome Features',
+            children: {
+              title1: {
+                value: 'Meta'
+              }
+            }
+          },
+          title2: {
+            value: 'Groups',
+            children: {
+              title1: {
+                value: 'Groups1'
+              }
+            }
+          },
+          title3: {
+            value: 'Topological Models',
+            children: {
+              // title1: {
+              //   value: 'ForceBased'
+              // },
+              title: {
+                value: 'ForceBased'
+              }
+            }
+          },
+          title4: {
+            value: 'Comparisons',
+            children: {
+              title1: {
+                value: 'Comparisons1'
+              }
+            }
+          },
+          title5: {
+            value: 'Charts',
+            children: {
+              title1: {
+                value: 'Charts1'
+              }
+            }
+          }
+        }
+      }
     }
     if (this.$route.path === '/examples') {
       // default route path
@@ -162,20 +181,6 @@ export default {
     }
   },
   mounted() {
-    if (sessionStorage.getItem('i18nLocale') && sessionStorage.getItem('i18nLocale') === 'zh') {
-      this.selectedItem = 1
-    }
-    document.addEventListener('fullscreenchange', () => {})
-
-    window.addEventListener('scroll', () => {
-      let scrollTop = document.documentElement.scrollTop
-      if (scrollTop > 100) {
-        this.hidden = false
-      } else {
-        this.hidden = true
-      }
-    })
-
     // -- Watch Material Design Breakpoints --
     // https://vuetifyjs.com/en/features/breakpoints/#breakpoint-service
     const self = this
@@ -201,38 +206,6 @@ export default {
     sessionStorage.removeItem('itemActive')
   },
   methods: {
-    scrollTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
-    },
-    requestFullscreen() {
-      this.fullScreen = true
-      const docElm = document.documentElement
-      if (docElm.requestFullscreen) {
-        docElm.requestFullscreen()
-      } else if (docElm.msRequestFullscreen) {
-        docElm.msRequestFullscreen()
-      } else if (docElm.mozRequestFullScreen) {
-        docElm.mozRequestFullScreen()
-      } else if (docElm.webkitRequestFullScreen) {
-        docElm.webkitRequestFullScreen()
-      }
-    },
-    exitFullScreen() {
-      this.fullScreen = false
-      if (document.exitFullscreen) {
-        document.exitFullscreen()
-      } else if (document.msExitFullscreen) {
-        document.msExitFullscreen()
-      } else if (document.mozCancelFullScreen) {
-        document.mozCancelFullScreen()
-      } else if (document.webkitCancelFullScreen) {
-        document.webkitCancelFullScreen()
-      }
-    },
-
     itemClick(item, key) {
       this.subItemActive = null
       sessionStorage.setItem('itemActive', key)

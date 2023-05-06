@@ -43,12 +43,6 @@ const router = new Router({
           component: () => import('./components/Groups1.vue'),
           meta: { title: 'Groups' }
         },
-        // {
-        //   path: '/examples/forcebased',
-        //   name: 'forcebased',
-        //   component: () => import('./components/ForceBased.vue'),
-        //   meta: { title: 'Topological Models' }
-        // },
         {
           path: '/examples/ForceBased',
           name: 'ForceBased',
