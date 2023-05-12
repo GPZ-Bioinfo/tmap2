@@ -31,6 +31,13 @@
       <el-button class="buttonStyle" @click="brushCancel" v-if="!brushStop"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消框选"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
       >
+      <!-- 框选控件2 -->
+      <el-button class="buttonStyle" @click="brushSelect2" v-if="brushStop2"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="框选2"><v-icon>mdi-shape-square-plus</v-icon></el-tooltip></el-button
+      >
+      <el-button class="buttonStyle" @click="brushCancel2" v-if="!brushStop2"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消框选"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
+      >
       <!-- 多选按钮 -->
       <el-button class="buttonStyle" @click="MultiSelect" v-if="SelectStop"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="多选"><v-icon>mdi-selection-search</v-icon></el-tooltip></el-button
@@ -53,13 +60,6 @@
       <el-button class="buttonStyle" @click="nodeEdit" v-if="!NodesEditBoardExit"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="显示编辑板"><v-icon>mdi-reply</v-icon></el-tooltip></el-button
       >
-      <!-- 画板控件 -->
-      <el-button class="buttonStyle" @click="colorBoardClose" v-if="colorBoardExit"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="调色板"><v-icon>mdi-palette</v-icon></el-tooltip></el-button
-      >
-      <el-button class="buttonStyle" @click="ColorSelect" v-if="!colorBoardExit"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="显示调色板"><v-icon>mdi-reply</v-icon></el-tooltip></el-button
-      >
       <!-- 下载控件 -->
       <el-button class="buttonStyle" @click="screenShot"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="图片导出"><v-icon>mdi-download</v-icon></el-tooltip></el-button
@@ -71,8 +71,6 @@
       >,links:<span class="CountNumber">{{ linksCount }}</span>
     </div>
     <!-- 直方图 -->
-    <el-button v-if="histogramExit" style="position: absolute; left: 0px; top: 470px; z-index: 10" type="info" size="small" round @click="ChartBarNone">收起</el-button>
-    <el-button v-if="!histogramExit" style="position: absolute; left: 0px; top: 470px; z-index: 10" type="info" size="small" round @click="theChartBar">弹出</el-button>
     <div id="chartBar" style="width: 500px; height: 450px"></div>
     <!-- 数据面板 -->
     <el-card class="dataBoard" v-if="boardExit">
@@ -84,21 +82,17 @@
         {{ index + 1 + '、 ' + item }}
       </div>
     </el-card>
+    <!-- 取色板按钮面板 -->
+    <div class="colorCastButton" v-if="histogramExit">
+      <!-- 画板控件 -->
+      <el-button @click="ColorSelect" type="text" class="buttonStyle2"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="调色板"><v-icon size="30">mdi-palette</v-icon></el-tooltip></el-button
+      >
+      <h3>Click it to open the Color Palette</h3>
+    </div>
     <!-- 取色板 -->
     <el-card class="colorBoard" v-if="colorBoardExit">
-      <div slot="header" class="clearfix">
-        <h3 style="text-align: center">Color Cast</h3>
-        <el-button style="position: absolute; right: 10px; top: 0" type="text" @click="colorBoardClose">❌</el-button>
-      </div>
-      <h3 style="text-align: center">Please select a data column below</h3>
-      <v-select label="Degree" :items="['Degree']"></v-select>
-      <div style="text-align: center">
-        <el-radio-group v-model="radio" style="margin-top: 10px">
-          <el-radio :label="3">Sequential</el-radio>
-          <el-radio :label="6">Qualitative</el-radio>
-          <el-radio :label="9">Diverging</el-radio>
-        </el-radio-group>
-      </div>
+      <h3 style="text-align: center">Color Cast</h3>
       <!-- 色带 -->
       <div class="color-strip-container">
         <div class="color-strip" @click="colorBarChange1">
@@ -116,9 +110,7 @@
       </div>
       <div class="colorBoardButton">
         <el-button @click="colorBarCancel">Cancel</el-button>
-        <el-button>Reset</el-button>
-        <el-button @click="dataGet">Preview</el-button>
-        <el-button>Apply Color Palette</el-button>
+        <el-button @click="colorBoardClose">Apply Color Palette</el-button>
       </div>
     </el-card>
     <!-- 节点编辑面板 -->
@@ -129,11 +121,12 @@
       </div>
       <!-- 搜索框部分关键字检索 -->
       <div>
-        <el-autocomplete v-model="state1" :fetch-suggestions="querySearch" placeholder="请输入关键字" :suffix-icon="icon" clearable style="width: 500px" @select="handleSelect"> </el-autocomplete>
+        <el-autocomplete v-model="state1" :fetch-suggestions="querySearch" placeholder="请输入关键字" :suffix-icon="icon" clearable style="width: 508px" @select="handleSelect"> </el-autocomplete>
       </div>
       <!-- 大类小类选择器 -->
-      <div class="block">
+      <div class="cascader">
         <el-cascader v-model="value" :options="options" :props="{ expandTrigger: 'hover' }" @change="handleChange" placeholder="大类信息"></el-cascader>
+        <el-button @click="cascaderCancel">Cancel</el-button>
       </div>
       <div>
         <div>
@@ -144,7 +137,7 @@
           <span>min:</span>
           <el-input v-model="min" placeholder="输入最小值" />
         </div>
-        <el-button @click="nodeFilter">Edit</el-button>
+        <el-button @click="nodeFilter">Apply</el-button>
       </div>
 
       <div>
@@ -165,7 +158,6 @@
 import * as d3 from 'd3'
 import * as echarts from 'echarts'
 import { elements } from './static/fgfp_graph_SAFE_dat.json'
-import axios from 'axios'
 
 export default {
   name: 'ForceBasedLabelPlacementI',
@@ -181,6 +173,7 @@ export default {
     graphLayout: null,
     graphTrans: null,
     buttonStop: true,
+    brushStop2: true,
     brushStop: true,
     nodesCount: 0,
     linksCount: 0,
@@ -199,7 +192,7 @@ export default {
     graphNodes: null,
     labelLayout: null,
     histogramExit: true,
-    colorBoardExit: true,
+    colorBoardExit: false,
     radio: 3,
     colorList1: ['#eff3ff', '#bcd7e8', '#68add8', '#2b81c0', '#064e9e'],
     colorList2: ['#edf9fc', '#b1e3e3', '#62c3a4', '#25a35c', '#006e29'],
@@ -214,28 +207,28 @@ export default {
     propertyChangeData: '',
     options: [
       {
-        label: '人口统计学',
+        label: '统计分析1',
         children: [
           {
-            label: '年龄',
-            value: '年龄'
+            label: 'Bristol_stool_score',
+            value: 'Bristol_stool_score'
           }
         ]
       },
       {
-        label: '人口测量学',
+        label: '统计分析2',
         children: [
           {
-            label: 'BMI',
-            value: 'BMI'
+            label: 'Mean_corpuscular_hemoglobin_concentration',
+            value: 'Mean_corpuscular_hemoglobin_concentration'
           },
           {
-            label: '体重',
-            value: '体重'
+            label: 'SamplingInfo_previousRelief_option3',
+            value: 'SamplingInfo_previousRelief_option3'
           },
           {
-            label: '身高',
-            value: '身高'
+            label: 'SamplingInfo_previousRelief_option4',
+            value: 'SamplingInfo_previousRelief_option4'
           }
         ]
       },
@@ -243,8 +236,8 @@ export default {
         label: '其他',
         children: [
           {
-            label: 'BMQ',
-            value: 'BMQ'
+            label: 'Pets_past_3_months',
+            value: 'Pets_past_3_months'
           }
         ]
       }
@@ -313,6 +306,9 @@ export default {
       })
       .attr('Bristol_stool_score', function (d) {
         return d.Bristol_stool_score
+      })
+      .attr('Mean_corpuscular_hemoglobin_concentration', function (d) {
+        return d.Mean_corpuscular_hemoglobin_concentration
       })
       .style('stroke', '#caa455')
       .style('stroke-width', '1px')
@@ -458,6 +454,61 @@ export default {
       ]
     }
     myChart.setOption(option)
+    myChart.on('click', function (params) {
+      if (_this.propertyChangeData === 'Bristol_stool_score') {
+        if (params.dataIndex === 0) {
+          _this.max = 0.01
+          _this.min = 0
+        } else if (params.dataIndex === 1) {
+          _this.max = 0.05
+          _this.min = 0.01
+        } else if (params.dataIndex === 2) {
+          _this.max = 0.1
+          _this.min = 0.05
+        } else if (params.dataIndex === 3) {
+          _this.max = 0.5
+          _this.min = 0.1
+        } else if (params.dataIndex === 4) {
+          _this.max = ''
+          _this.min = 0.5
+        }
+      } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+        if (params.dataIndex === 0) {
+          _this.max = 0.01
+          _this.min = 0
+        } else if (params.dataIndex === 1) {
+          _this.max = 0.05
+          _this.min = 0.01
+        } else if (params.dataIndex === 2) {
+          _this.max = 0.1
+          _this.min = 0.05
+        } else if (params.dataIndex === 3) {
+          _this.max = 0.5
+          _this.min = 0.1
+        } else if (params.dataIndex === 4) {
+          _this.max = ''
+          _this.min = 0.5
+        }
+      } else {
+        if (params.dataIndex === 0) {
+          _this.max = 69
+          _this.min = 0
+        } else if (params.dataIndex === 1) {
+          _this.max = 199
+          _this.min = 70
+        } else if (params.dataIndex === 2) {
+          _this.max = 359
+          _this.min = 200
+        } else if (params.dataIndex === 3) {
+          _this.max = 499
+          _this.min = 360
+        } else if (params.dataIndex === 4) {
+          _this.max = ''
+          _this.min = 500
+        }
+      }
+      _this.nodeFilter()
+    })
     document.getElementById('chartBar').style.display = 'block'
     this.dataList = this.loadAll()
   },
@@ -487,7 +538,10 @@ export default {
     highLight() {
       this.LightStop = false
       const _this = this
-      this.node.on('mouseover', focus).on('mouseout', unfocus)
+      this.node.style('opacity', 0.4)
+      this.link.style('opacity', 0.4)
+      this.node.on('click', focus)
+
       let adjList = []
 
       this.graphLinks.forEach(function (d) {
@@ -501,40 +555,32 @@ export default {
         // console.log(d) // eslint-disable-line
         let index = d3.select(d3.event.target).datum().index
         _this.node.style('opacity', function (o) {
-          return neigh(index, o.index) ? 1 : 0.1
+          return neigh(index, o.index) ? 1 : 0.4
         })
         _this.link.style('opacity', function (o) {
-          return o.source.index === index || o.target.index === index ? 1 : 0.1
+          return o.source.index === index || o.target.index === index ? 1 : 0.4
         })
       }
 
-      function unfocus() {
-        _this.node.style('opacity', 1)
-        _this.link.style('opacity', 1)
-      }
+      // function unfocus() {
+      //   _this.node.style('opacity', 1)
+      //   _this.link.style('opacity', 1)
+      // }
     },
     // 取消高亮
     LightCancel() {
       this.LightStop = true
-      let focusId = null
-      const _this = this
-      _this.node.on('mouseover', idFocus).on('mouseout', idUnFocus)
-      function idFocus(d) {
-        focusId = _this.container
-          .append('text')
-          .text(d.id)
-          .attr('x', d.x + 8)
-          .attr('y', d.y - 10)
-          .style('font-family', 'Arial')
-          .style('font-size', 20)
-          .style('pointer-events', 'none')
-      }
-      function idUnFocus(d) {
-        focusId.remove()
-      }
+      this.node.style('opacity', 1)
+      this.link.style('opacity', 1)
     },
     // 框选
     brushSelect() {
+      if (!this.SelectStop) {
+        this.SelectCancel()
+      }
+      if (!this.brushStop2) {
+        this.brushCancel2()
+      }
       this.brushStop = false
       this.boardExit = true
       const _this = this
@@ -552,16 +598,25 @@ export default {
 
         if (selection) {
           const [[x3, y3], [x4, y4]] = selection
+          _this.node.style('opacity', 0.4)
+          _this.nodesData = []
+          _this.nodesDataId = []
           let brushNode = _this.node.filter((d) => x3 <= x(d.x) && x(d.x) < x4 && y3 <= y(d.y) && y(d.y) < y4)
           brushNode.style('opacity', 1)
           if (brushNode.nodes()[0]) {
             brushNode.each(function () {
               const nodeDataId = d3.select(this).attr('id')
-              if (_this.propertyChangeData === '年龄') {
+              if (_this.propertyChangeData === 'Bristol_stool_score') {
                 const nodeDataBri = d3.select(this).attr('Bristol_stool_score')
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
                   _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Bristol_stool_score":' + nodeDataBri)
+                }
+              } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+                const nodeDataBri = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
+                if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
+                  _this.nodesDataId.unshift(nodeDataId)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataBri)
                 }
               } else {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
@@ -623,8 +678,116 @@ export default {
       }
       // this.boardClose()
     },
+    // 框选2
+    brushSelect2() {
+      if (!this.SelectStop) {
+        this.SelectCancel()
+      }
+      if (!this.brushStop) {
+        this.brushCancel()
+      }
+      this.brushStop2 = false
+      this.boardExit = true
+      const _this = this
+      _this.node.style('opacity', 0.4)
+
+      const brush = d3.brush().on('brush', function () {
+        const selection = d3.brushSelection(this)
+        // 框选高亮
+        //   //  selection获得两个数组，每个数组是包含两个数字的数组，第一个是包含框的起始点的x坐标和y坐标，
+        //   //   第二个是框结束点的x、y坐标，利用node的x、y坐标在和框的x、y进行大小对比，得出框内的node和edge
+        //   //  再改变选中的点线的样式就行
+        let x = d3.scaleLinear()
+        let y = d3.scaleLinear()
+        // _this.node.attr('transform', (d) => `translate(${x(d.x)},${y(d.y)})`)
+
+        if (selection) {
+          const [[x3, y3], [x4, y4]] = selection
+          let brushNode = _this.node.filter((d) => x3 <= x(d.x) && x(d.x) < x4 && y3 <= y(d.y) && y(d.y) < y4)
+          brushNode.style('opacity', 1)
+          if (brushNode.nodes()[0]) {
+            brushNode.each(function () {
+              const nodeDataId = d3.select(this).attr('id')
+              if (_this.propertyChangeData === 'Bristol_stool_score') {
+                const nodeDataBri = d3.select(this).attr('Bristol_stool_score')
+                if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
+                  _this.nodesDataId.unshift(nodeDataId)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Bristol_stool_score":' + nodeDataBri)
+                }
+              } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+                const nodeDataBri = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
+                if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
+                  _this.nodesDataId.unshift(nodeDataId)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataBri)
+                }
+              } else {
+                if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
+                  _this.nodesDataId.unshift(nodeDataId)
+                  _this.nodesData.unshift('"id":' + nodeDataId)
+                }
+              }
+            })
+          }
+
+          _this.link
+            .style('opacity', 0.3)
+            .filter(
+              (d) => x3 <= x(d.source.x) && x(d.source.x) < x4 && y3 <= y(d.source.y) && y(d.source.y) < y4 && x3 <= x(d.target.x) && x(d.target.x) < x4 && y3 <= y(d.target.y) && y(d.target.y) < y4
+            )
+            .style('opacity', 1)
+        }
+      })
+      _this.container.call(brush)
+      this.brush = brush
+    },
+    // 取消框选2
+    brushCancel2() {
+      this.node.style('opacity', 1)
+      this.boardExit = false
+      this.nodesData = []
+      this.nodesDataId = []
+      this.container.call(this.brush.move, null)
+      this.container.on('.brush', null)
+      document.querySelector('#viz > g > rect.overlay').remove()
+      document.querySelector('#viz > g > rect.selection').remove()
+      document.querySelector('#viz > g > rect.handle.handle--n').remove()
+      document.querySelector('#viz > g > rect.handle.handle--w').remove()
+      document.querySelector('#viz > g > rect.handle.handle--e').remove()
+      document.querySelector('#viz > g > rect.handle.handle--s').remove()
+      document.querySelector('#viz > g > rect.handle.handle--se').remove()
+      document.querySelector('#viz > g > rect.handle.handle--nw').remove()
+      document.querySelector('#viz > g > rect.handle.handle--ne').remove()
+      document.querySelector('#viz > g > rect.handle.handle--sw').remove()
+      this.container.attr('fill', '')
+      this.brushStop2 = true
+      this.link.style('opacity', 1)
+      // 节点悬浮显示id
+      let focusId = null
+      const _this = this
+      _this.node.on('mouseover', idFocus).on('mouseout', idUnFocus)
+      function idFocus(d) {
+        focusId = _this.container
+          .append('text')
+          .text(d.id)
+          .attr('x', d.x + 8)
+          .attr('y', d.y - 10)
+          .style('font-family', 'Arial')
+          .style('font-size', 20)
+          .style('pointer-events', 'none')
+      }
+      function idUnFocus(d) {
+        focusId.remove()
+      }
+      // this.boardClose()
+    },
     // 多选
     MultiSelect() {
+      if (!this.brushStop2) {
+        this.brushCancel2()
+      }
+      if (!this.brushStop) {
+        this.brushCancel()
+      }
       this.SelectStop = false
       const _this = this
       this.boardExit = true
@@ -634,11 +797,17 @@ export default {
         d3.select(this).style('opacity', 1)
         // d3.select(this).style('fill', '#caa455')
         const nodeDataId = d3.select(this).attr('id')
-        if (_this.propertyChangeData === '年龄') {
+        if (_this.propertyChangeData === 'Bristol_stool_score') {
           const nodeDataBri = d3.select(this).attr('Bristol_stool_score')
           if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
             _this.nodesDataId.unshift(nodeDataId)
             _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Bristol_stool_score":' + nodeDataBri)
+          }
+        } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+          const nodeDataBri = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
+          if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
+            _this.nodesDataId.unshift(nodeDataId)
+            _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataBri)
           }
         } else {
           if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
@@ -662,6 +831,9 @@ export default {
     // 数据面板关闭
     boardClose() {
       const _this = this
+      if (!this.brushStop2) {
+        _this.brushCancel2()
+      }
       if (!this.brushStop) {
         _this.brushCancel()
       }
@@ -721,7 +893,7 @@ export default {
     // 蓝色色带点击事件
     colorBarChange1() {
       const _this = this
-      if (_this.propertyChangeData === '年龄') {
+      if (_this.propertyChangeData === 'Bristol_stool_score') {
         const num1 = []
         const num2 = []
         const num3 = []
@@ -755,6 +927,73 @@ export default {
           },
           xAxis: {
             name: 'Bristol_stool_score',
+            nameLocation: 'middle',
+            nameGap: 25,
+            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+            data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
+          },
+          yAxis: {
+            name: '节点数量',
+            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+          },
+          series: [
+            {
+              type: 'bar',
+              // data: [1, 2, 3, 4, 5, 6, 7, 8],
+              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+              label: {
+                show: true,
+                position: 'top'
+              },
+              itemStyle: {
+                normal: {
+                  color: function (params) {
+                    const colorList = _this.colorList1
+                    if (params.dataIndex >= colorList.length) {
+                      params.dataIndex = params.dataIndex - colorList.length
+                    }
+                    return colorList[params.dataIndex]
+                  }
+                }
+              }
+            }
+          ]
+        }
+        myChart.setOption(option)
+      } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+        const num1 = []
+        const num2 = []
+        const num3 = []
+        const num4 = []
+        const num5 = []
+        this.node.attr('fill', function (d) {
+          if (d.Mean_corpuscular_hemoglobin_concentration < '0.01') {
+            num1.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#eff3ff'
+          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.01' && d.Mean_corpuscular_hemoglobin_concentration < '0.05') {
+            num2.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#bcd7e8'
+          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.05' && d.Mean_corpuscular_hemoglobin_concentration < '0.1') {
+            num3.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#68add8'
+          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.1' && d.Mean_corpuscular_hemoglobin_concentration < '0.5') {
+            num4.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#2b81c0'
+          } else {
+            num5.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#064e9e'
+          }
+        })
+        const myChart = echarts.init(document.getElementById('chartBar'))
+
+        const option = {
+          grid: {
+            left: '3%',
+            bottom: '10%',
+            containLabel: true
+          },
+          xAxis: {
+            name: 'Mean_corpuscular_hemoglobin_concentration',
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
@@ -860,7 +1099,7 @@ export default {
     // 绿色色带点击事件
     colorBarChange2() {
       const _this = this
-      if (_this.propertyChangeData === '年龄') {
+      if (_this.propertyChangeData === 'Bristol_stool_score') {
         const num1 = []
         const num2 = []
         const num3 = []
@@ -894,6 +1133,73 @@ export default {
           },
           xAxis: {
             name: 'Bristol_stool_score',
+            nameLocation: 'middle',
+            nameGap: 25,
+            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+            data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
+          },
+          yAxis: {
+            name: '节点数量',
+            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+          },
+          series: [
+            {
+              type: 'bar',
+              // data: [1, 2, 3, 4, 5, 6, 7, 8],
+              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+              label: {
+                show: true,
+                position: 'top'
+              },
+              itemStyle: {
+                normal: {
+                  color: function (params) {
+                    const colorList = _this.colorList2
+                    if (params.dataIndex >= colorList.length) {
+                      params.dataIndex = params.dataIndex - colorList.length
+                    }
+                    return colorList[params.dataIndex]
+                  }
+                }
+              }
+            }
+          ]
+        }
+        myChart.setOption(option)
+      } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+        const num1 = []
+        const num2 = []
+        const num3 = []
+        const num4 = []
+        const num5 = []
+        this.node.attr('fill', function (d) {
+          if (d.Mean_corpuscular_hemoglobin_concentration < '0.01') {
+            num1.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#edf9fc'
+          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.01' && d.Mean_corpuscular_hemoglobin_concentration < '0.05') {
+            num2.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#b1e3e3'
+          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.05' && d.Mean_corpuscular_hemoglobin_concentration < '0.1') {
+            num3.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#62c3a4'
+          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.1' && d.Mean_corpuscular_hemoglobin_concentration < '0.5') {
+            num4.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#25a35c'
+          } else {
+            num5.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#006e29'
+          }
+        })
+        const myChart = echarts.init(document.getElementById('chartBar'))
+
+        const option = {
+          grid: {
+            left: '3%',
+            bottom: '10%',
+            containLabel: true
+          },
+          xAxis: {
+            name: 'Mean_corpuscular_hemoglobin_concentration',
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
@@ -999,7 +1305,7 @@ export default {
     // 橙色色带点击事件
     colorBarChange3() {
       const _this = this
-      if (_this.propertyChangeData === '年龄') {
+      if (_this.propertyChangeData === 'Bristol_stool_score') {
         const num1 = []
         const num2 = []
         const num3 = []
@@ -1033,6 +1339,73 @@ export default {
           },
           xAxis: {
             name: 'Bristol_stool_score',
+            nameLocation: 'middle',
+            nameGap: 25,
+            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+            data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
+          },
+          yAxis: {
+            name: '节点数量',
+            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+          },
+          series: [
+            {
+              type: 'bar',
+              // data: [1, 2, 3, 4, 5, 6, 7, 8],
+              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+              label: {
+                show: true,
+                position: 'top'
+              },
+              itemStyle: {
+                normal: {
+                  color: function (params) {
+                    const colorList = _this.colorList3
+                    if (params.dataIndex >= colorList.length) {
+                      params.dataIndex = params.dataIndex - colorList.length
+                    }
+                    return colorList[params.dataIndex]
+                  }
+                }
+              }
+            }
+          ]
+        }
+        myChart.setOption(option)
+      } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+        const num1 = []
+        const num2 = []
+        const num3 = []
+        const num4 = []
+        const num5 = []
+        this.node.attr('fill', function (d) {
+          if (d.Mean_corpuscular_hemoglobin_concentration < '0.01') {
+            num1.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#ffeede'
+          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.01' && d.Mean_corpuscular_hemoglobin_concentration < '0.05') {
+            num2.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#febf80'
+          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.05' && d.Mean_corpuscular_hemoglobin_concentration < '0.1') {
+            num3.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#ff8d2e'
+          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.1' && d.Mean_corpuscular_hemoglobin_concentration < '0.5') {
+            num4.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#e95406'
+          } else {
+            num5.push(d.Mean_corpuscular_hemoglobin_concentration)
+            return '#a83500'
+          }
+        })
+        const myChart = echarts.init(document.getElementById('chartBar'))
+
+        const option = {
+          grid: {
+            left: '3%',
+            bottom: '10%',
+            containLabel: true
+          },
+          xAxis: {
+            name: 'Mean_corpuscular_hemoglobin_concentration',
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
@@ -1138,8 +1511,10 @@ export default {
     // 彩色色带点击事件
     colorBarChange4() {
       const _this = this
-      if (_this.propertyChangeData === '年龄') {
-        this.propertyChange()
+      if (_this.propertyChangeData === 'Bristol_stool_score') {
+        this.propertyChangeBri()
+      } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+        this.propertyChangeMean()
       } else {
         const _this = this
         const num1 = []
@@ -1212,6 +1587,11 @@ export default {
     },
     // 色带还原
     colorBarCancel() {
+      this.colorBarChange4()
+      this.colorBoardClose()
+    },
+    // 选择器还原
+    cascaderCancel() {
       this.value = ''
       this.state1 = ''
       this.propertyChangeData = ''
@@ -1293,10 +1673,24 @@ export default {
       let minData = Number(this.min)
       const _this = this
       if (maxData >= minData) {
-        this.node.style('opacity', 0)
-        this.link.style('opacity', 0)
-        if (_this.propertyChangeData === '年龄') {
+        this.node.style('opacity', 0.4)
+        this.link.style('opacity', 0.4)
+        if (_this.propertyChangeData === 'Bristol_stool_score') {
           let nodeLimit = this.node.filter((d) => d.Bristol_stool_score <= maxData && d.Bristol_stool_score >= minData)
+          nodeLimit.style('opacity', 1)
+          let nodeLimitId = nodeLimit.data().map((d) => d.id)
+          let linkLimit = this.link.filter((d) => nodeLimitId.includes(d.source.index) && nodeLimitId.includes(d.target.index))
+          linkLimit.style('opacity', 1)
+          this.nodesCount = nodeLimit._groups[0].length
+          this.linksCount = linkLimit._groups[0].length
+          this.node
+            .on('mouseover', function () {
+              ''
+            })
+            .on('mouseout', '')
+          nodeLimit.on('mouseover', idFocus).on('mouseout', idUnFocus)
+        } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+          let nodeLimit = this.node.filter((d) => d.Mean_corpuscular_hemoglobin_concentration <= maxData && d.Mean_corpuscular_hemoglobin_concentration >= minData)
           nodeLimit.style('opacity', 1)
           let nodeLimitId = nodeLimit.data().map((d) => d.id)
           let linkLimit = this.link.filter((d) => nodeLimitId.includes(d.source.index) && nodeLimitId.includes(d.target.index))
@@ -1399,6 +1793,7 @@ export default {
     },
     // 节点编辑面板的下拉框
     handleChange(value) {
+      this.state1 = ''
       const filteredArr = []
       for (let index = 0; index < value.length; index++) {
         if (value[index]) {
@@ -1407,39 +1802,40 @@ export default {
       }
       let categoryData = filteredArr[0]
       console.log(categoryData)
-      if (categoryData === '年龄') {
-        this.propertyChange()
-        this.propertyChangeData = '年龄'
-      } else if (categoryData === 'BMQ') {
-        this.propertyChange()
-        this.propertyChangeData = 'BMQ'
-      } else {
-        this.propertyChange()
-        this.propertyChangeData = '非年龄'
+      if (categoryData === 'Bristol_stool_score') {
+        this.propertyChangeBri()
+        this.propertyChangeData = 'Bristol_stool_score'
+      } else if (categoryData === 'Mean_corpuscular_hemoglobin_concentration') {
+        this.propertyChangeMean()
+        this.propertyChangeData = 'Mean_corpuscular_hemoglobin_concentration'
       }
     },
     // 搜索点击下拉框数据
     handleSelect(item) {
+      this.value = ''
       console.log(item.value)
       // 切换年龄才会改变节点数据，其他暂时是恢复原来的数据
-      if (item.value === '年龄') {
-        this.propertyChange()
-        this.propertyChangeData = '年龄'
-      } else if (item.value === 'BMQ') {
-        this.propertyChange()
-        this.propertyChangeData = 'BMQ'
-      } else {
-        this.propertyChange()
-        this.propertyChangeData = '非年龄'
+      if (item.value === 'Bristol_stool_score') {
+        this.propertyChangeBri()
+        this.propertyChangeData = 'Bristol_stool_score'
+      } else if (item.value === 'Mean_corpuscular_hemoglobin_concentration') {
+        this.propertyChangeMean()
+        this.propertyChangeData = 'Mean_corpuscular_hemoglobin_concentration'
       }
     },
 
     // 搜索下拉数据显示
     loadAll() {
-      return [{ value: '年龄' }, { value: 'BMI' }, { value: '体重' }, { value: '身高' }, { value: 'BMQ' }]
+      return [
+        { value: 'Bristol_stool_score' },
+        { value: 'Mean_corpuscular_hemoglobin_concentration' },
+        { value: 'SamplingInfo_previousRelief_option3' },
+        { value: 'SamplingInfo_previousRelief_option4' },
+        { value: 'Pets_past_3_months' }
+      ]
     },
     // 根据变量名切换数值
-    propertyChange() {
+    propertyChangeBri() {
       const num1 = []
       const num2 = []
       const num3 = []
@@ -1508,11 +1904,76 @@ export default {
       }
       myChart.setOption(option)
     },
+    propertyChangeMean() {
+      const num1 = []
+      const num2 = []
+      const num3 = []
+      const num4 = []
+      const num5 = []
+      this.node.attr('fill', function (d) {
+        if (d.Mean_corpuscular_hemoglobin_concentration < '0.01') {
+          num1.push(d.Mean_corpuscular_hemoglobin_concentration)
+          return '#b2392d'
+        } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.01' && d.Mean_corpuscular_hemoglobin_concentration < '0.05') {
+          num2.push(d.Mean_corpuscular_hemoglobin_concentration)
+          return '#f09e30'
+        } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.05' && d.Mean_corpuscular_hemoglobin_concentration < '0.1') {
+          num3.push(d.Mean_corpuscular_hemoglobin_concentration)
+          return '#7cf728'
+        } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.1' && d.Mean_corpuscular_hemoglobin_concentration < '0.5') {
+          num4.push(d.Mean_corpuscular_hemoglobin_concentration)
+          return '#25a8b6'
+        } else {
+          num5.push(d.Mean_corpuscular_hemoglobin_concentration)
+          return '#244e96'
+        }
+      })
+      const myChart = echarts.init(document.getElementById('chartBar'))
+      const _this = this
+      const option = {
+        grid: {
+          left: '3%',
+          bottom: '10%',
+          containLabel: true
+        },
+        xAxis: {
+          name: 'Mean_corpuscular_hemoglobin_concentration',
+          nameLocation: 'middle',
+          nameGap: 25,
+          nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+          data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
+        },
+        yAxis: {
+          name: '节点数量',
+          nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+        },
+        series: [
+          {
+            type: 'bar',
+            // data: [1, 2, 3, 4, 5, 6, 7, 8],
+            data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+            label: {
+              show: true,
+              position: 'top'
+            },
+            itemStyle: {
+              normal: {
+                color: function (params) {
+                  const colorList = _this.BarColorList
+                  if (params.dataIndex >= colorList.length) {
+                    params.dataIndex = params.dataIndex - colorList.length
+                  }
+                  return colorList[params.dataIndex]
+                }
+              }
+            }
+          }
+        ]
+      }
+      myChart.setOption(option)
+    },
     forceChange() {
       this.graphLayout.force('charge', d3.forceManyBody().strength(-this.valueTooltip * 40))
-    },
-    dataGet() {
-      axios.get()
     }
   }
 }
@@ -1561,6 +2022,11 @@ export default {
   justify-content: center;
   align-items: center;
 }
+.buttonStyle2 {
+  padding: 0;
+  margin-right: 10px;
+}
+
 .el-button + .el-button,
 .el-checkbox.is-bordered + .el-checkbox.is-bordered {
   margin-left: 0;
@@ -1581,7 +2047,8 @@ export default {
 }
 #chartBar {
   // margin-left: 100px;
-  margin-top: 500px;
+  margin-top: 0px;
+  right: 0;
   position: absolute;
   z-index: 10;
 }
@@ -1595,14 +2062,23 @@ export default {
 
 .dataBoard {
   height: 90vh;
-  width: 400px;
-  right: 60px;
+  width: 460px;
+  right: 0px;
   position: absolute;
   z-index: 120;
   overflow: auto;
 }
+.colorCastButton {
+  right: 0;
+  top: 490px;
+  z-index: 16;
+  position: absolute;
+  width: 480px;
+  display: flex;
+  height: 30px;
+}
 .NodesEditBoard {
-  top: 10px;
+  top: 530px;
   height: 450px;
   width: 550px;
   right: 0;
@@ -1611,13 +2087,12 @@ export default {
   overflow: auto;
 }
 .colorBoard {
-  height: 450px;
-  width: 550px;
-  right: 0;
-  top: 470px;
+  height: 280px;
+  width: 300px;
+  right: 500px;
+  top: 240px;
   position: absolute;
   z-index: 15;
-  overflow: auto;
 }
 .el-radio {
   font-size: 20px;
@@ -1635,6 +2110,10 @@ export default {
   width: 450px;
 }
 .sliderBox {
+  display: flex;
+  justify-content: space-between;
+}
+.cascader {
   display: flex;
   justify-content: space-between;
 }

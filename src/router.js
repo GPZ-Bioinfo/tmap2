@@ -26,12 +26,6 @@ const router = new Router({
       meta: { title: 'Examples' },
       children: [
         {
-          path: '/examples/dashboard',
-          name: 'dashboard',
-          component: () => import('./components/Dashboard.vue'),
-          meta: { title: 'Dashboard' }
-        },
-        {
           path: '/examples/Microbiome',
           name: 'Meta',
           component: () => import('./components/Microbiome.vue'),

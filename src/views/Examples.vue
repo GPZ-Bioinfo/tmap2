@@ -1,252 +1,136 @@
 <template>
-  <v-app id="inspire">
-    <v-navigation-drawer v-model="drawer" :clipped="$vuetify.breakpoint.lgAndUp" app width="280">
-      <v-divider></v-divider>
-      <v-list dense>
-        <v-list-group v-for="(item, key) in items" :key="key" v-model="item.active" :append-icon="item.appendIcon" @click="itemClick(item, key)">
-          <template v-slot:activator>
-            <v-list-item-icon style="color: #000">
-              <v-icon v-text="item.icon"></v-icon>
-            </v-list-item-icon>
-            <v-list-item-content style="color: #000">
-              <v-list-item-title v-text="item.title"></v-list-item-title>
-            </v-list-item-content>
-          </template>
-          <v-list-item-group v-if="item.children" style="color: #000" v-model="subItemActive">
-            <v-list-item v-for="(subItem, k) in item.children" :key="k" @click="subItemClick(subItem, k)">
-              <v-list-item-icon></v-list-item-icon>
-
-              <v-list-item-content>
-                <v-list-item-title v-text="subItem.title"></v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list-item-group>
-        </v-list-group>
-      </v-list>
-    </v-navigation-drawer>
-
-    <v-app-bar :clipped-left="$vuetify.breakpoint.lgAndUp" app color="primary" dark :dense="denseFlag">
-      <el-page-header @back="goDashboard" title="Dashboard" style="color: #000" v-if="Dashboard_visible"> </el-page-header>
+  <div class="wrapper">
+    <el-header>
       <el-page-header @back="goBack" title="Home" style="color: #000" v-if="Home_visible"> </el-page-header>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-
-      <v-spacer />
-    </v-app-bar>
-    <v-main>
-      <router-view></router-view>
-    </v-main>
-    <v-snackbar :timeout="3000" v-model="snackbar" bottom :color="$vuetify.theme.themes.light.warning" outlined>NO Match! </v-snackbar>
-  </v-app>
+      <div class="humberger"><el-button class="el-icon-s-fold" style="font-size: 20px; color: #000" @click="toggleMenu" type="text"></el-button></div>
+    </el-header>
+    <el-container>
+      <el-menu default-active="2" class="el-menu-vertical-demo" @select="handleSelect" :collapse="isCollapse">
+        <el-submenu index="1">
+          <template slot="title">
+            <v-icon>mdi-view-column</v-icon>
+            <span>Microbiome Features</span>
+          </template>
+          <el-menu-item-group>
+            <el-menu-item index="1-1">Meta</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
+        <el-submenu index="2">
+          <template slot="title">
+            <v-icon>mdi-view-sequential</v-icon>
+            <span>Groups</span>
+          </template>
+          <el-menu-item-group>
+            <el-menu-item index="2-1">Groups1</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
+        <el-submenu index="3">
+          <template slot="title">
+            <v-icon>mdi-vector-circle</v-icon>
+            <span>Topological Models</span>
+          </template>
+          <el-menu-item-group>
+            <el-menu-item index="3-1">ForceBased</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
+        <el-submenu index="4">
+          <template slot="title">
+            <v-icon>mdi-chart-gantt</v-icon>
+            <span>Comparisons</span>
+          </template>
+          <el-menu-item-group>
+            <el-menu-item index="4-1">Comparisons1</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
+        <el-submenu index="5">
+          <template slot="title">
+            <v-icon>mdi-chart-bar</v-icon>
+            <span>Charts</span>
+          </template>
+          <el-menu-item-group>
+            <el-menu-item index="5-1">Charts1</el-menu-item>
+          </el-menu-item-group>
+        </el-submenu>
+      </el-menu>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+    </el-container>
+  </div>
 </template>
 
 <script>
-import packageJson from '../../package.json'
 export default {
-  data: () => ({
-    snackbar: false,
-    version: '',
-    fullScreen: false,
-    Dashboard_visible: false,
-    Home_visible: true,
-    dark: false,
-    drawer: null,
-    itemActive: 0,
-    subItemActive: 0,
-    selectedItem: 0,
-    denseFlag: true,
-    marginTop: 0,
-    searchText: '',
-    messages: ''
-  }),
-  computed: {
-    items: function () {
-      return [
-        {
-          icon: 'mdi-view-column',
-          title: this.messages.$vuetify.sidebar.title1.value,
-          children: [{ title: this.messages.$vuetify.sidebar.title1.children.title1.value, path: '/examples/Microbiome' }],
-          appendIcon: 'mdi-chevron-down'
-        },
-        {
-          icon: 'mdi-view-sequential ',
-          title: this.messages.$vuetify.sidebar.title2.value,
-          children: [{ title: this.messages.$vuetify.sidebar.title2.children.title1.value, path: '/examples/Groups1' }],
-          appendIcon: 'mdi-chevron-down'
-        },
-        {
-          icon: 'mdi-vector-circle',
-          title: this.messages.$vuetify.sidebar.title3.value,
-          children: [
-            // { title: this.messages.$vuetify.sidebar.title3.children.title1.value, path: '/examples/forcebased' },
-            { title: this.messages.$vuetify.sidebar.title3.children.title.value, path: '/examples/ForceBased' }
-          ],
-          appendIcon: 'mdi-chevron-down'
-        },
-        {
-          icon: 'mdi-chart-gantt ',
-          title: this.messages.$vuetify.sidebar.title4.value,
-          children: [{ title: this.messages.$vuetify.sidebar.title4.children.title1.value, path: '/examples/Comparisons1' }],
-          appendIcon: 'mdi-chevron-down'
-        },
-        {
-          icon: 'mdi-chart-bar ',
-          title: this.messages.$vuetify.sidebar.title5.value,
-          children: [{ title: this.messages.$vuetify.sidebar.title5.children.title1.value, path: '/examples/Charts1' }],
-          appendIcon: 'mdi-chevron-down'
-        }
-      ]
-    }
-  },
-  created() {
-    this.$vuetify.theme.dark = false
-    this.version = packageJson.version
-    this.messages = {
-      $vuetify: {
-        sidebar: {
-          title1: {
-            value: 'Microbiome Features',
-            children: {
-              title1: {
-                value: 'Meta'
-              }
-            }
-          },
-          title2: {
-            value: 'Groups',
-            children: {
-              title1: {
-                value: 'Groups1'
-              }
-            }
-          },
-          title3: {
-            value: 'Topological Models',
-            children: {
-              // title1: {
-              //   value: 'ForceBased'
-              // },
-              title: {
-                value: 'ForceBased'
-              }
-            }
-          },
-          title4: {
-            value: 'Comparisons',
-            children: {
-              title1: {
-                value: 'Comparisons1'
-              }
-            }
-          },
-          title5: {
-            value: 'Charts',
-            children: {
-              title1: {
-                value: 'Charts1'
-              }
-            }
-          }
-        }
-      }
-    }
-    if (this.$route.path === '/examples') {
-      // default route path
-      this.$router.push('/examples/dashboard').catch((err) => {}) // eslint-disable-line
-    } else {
-      this.$router.push(this.$route.path).catch((err) => {}) // eslint-disable-line
-      const path = this.$route.path
-      this.items.forEach((item, key) => {
-        if (item.path === path) {
-          this.itemActive = key
-        } else {
-          if (item.children && item.children.length > 0) {
-            item.children.forEach((v, k) => {
-              if (v.path === path) {
-                sessionStorage.setItem('itemActive', key)
-                sessionStorage.setItem('subItemActive', k)
-              }
-            })
-          }
-        }
-      })
-
-      if (sessionStorage.getItem('itemActive')) {
-        this.items[0].active = false
-        this.items[Number(sessionStorage.getItem('itemActive'))]['active'] = true
-      }
-
-      if (sessionStorage.getItem('subItemActive')) {
-        this.subItemActive = Number(sessionStorage.getItem('subItemActive'))
-      }
+  data() {
+    return {
+      isCollapse: false, // 控制侧边菜单栏的显示状态
+      Home_visible: true
     }
   },
   mounted() {
-    // -- Watch Material Design Breakpoints --
-    // https://vuetifyjs.com/en/features/breakpoints/#breakpoint-service
-    const self = this
-    if (self.$vuetify.breakpoint.name === 'xl') {
-      self.denseFlag = false
-    }
-    this.$watch(
-      function () {
-        return self.$vuetify.breakpoint.name
-      },
-      function (newVal, oldVal) {
-        if (newVal === 'xl') {
-          self.denseFlag = false
-        } else {
-          self.denseFlag = true
-        }
-      }
-    )
-    // -- end --
-  },
-  beforeDestroy() {
-    sessionStorage.removeItem('subItemActive')
-    sessionStorage.removeItem('itemActive')
+    this.$vuetify.theme.dark = false
   },
   methods: {
-    itemClick(item, key) {
-      this.subItemActive = null
-      sessionStorage.setItem('itemActive', key)
-      console.dir(item)
-      if (!item.children) {
-        this.$router.push(item.path).catch((err) => {}) // eslint-disable-line
+    toggleMenu() {
+      this.isCollapse = !this.isCollapse
+    },
+    handleSelect(key, keyPath) {
+      console.log(key, keyPath)
+      if (key === '1-1') {
+        this.$router.push('/examples/Microbiome')
+      }
+      if (key === '2-1') {
+        this.$router.push('/examples/Groups1')
+      }
+      if (key === '3-1') {
+        this.$router.push('/examples/ForceBased')
+      }
+      if (key === '4-1') {
+        this.$router.push('/examples/Comparisons1')
+      }
+      if (key === '5-1') {
+        this.$router.push('/examples/Charts1')
       }
     },
-    subItemClick(item, key) {
-      this.Dashboard_visible = true
-      this.Home_visible = false
-      sessionStorage.setItem('subItemActive', key)
-      this.$router.push(item.path).catch((err) => {}) // eslint-disable-line
-    },
-
-    goDashboard() {
-      this.Dashboard_visible = false
-      this.Home_visible = true
-      this.$router.push('/examples/dashboard').catch((err) => {}) // eslint-disable-line
-    },
     goBack() {
-      this.Dashboard_visible = false
       this.Home_visible = true
       this.$router.push('/Home').catch((err) => {}) // eslint-disable-line
     }
   }
 }
 </script>
-<style scoped>
-.img-container {
+
+<style>
+.wrapper {
+  height: 100%;
+}
+.el-header {
+  height: 60px;
+  background-color: #c8d0d4;
   display: flex;
-  padding: 20px;
+}
+.el-aside {
   width: 280px;
-  height: 140px;
+  background-color: #f5f7fa;
 }
-.logo-img {
-  width: 45%;
-  object-fit: contain;
-  margin: 0 5px;
+
+.el-menu-vertical-demo:not(.el-menu--collapse) {
+  width: 280px;
+  min-height: 400px;
 }
-.img-d3-padding {
-  padding: 4px !important;
+.el-submenu {
+  margin-left: -20px;
+}
+.el-main {
+  padding: 0px;
+}
+.el-page-header {
+  height: 60px;
+  width: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.humberger {
+  line-height: 60px;
 }
 </style>
