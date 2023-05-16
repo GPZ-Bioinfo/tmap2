@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div>
     <ul>
       <li v-for="item in graph.elements.links" :key="item.id">{{ item.id }}</li>
@@ -30,4 +30,4 @@ export default {
     }
   }
 }
-</script>
+</script> -->

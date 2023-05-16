@@ -1978,7 +1978,7 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style>
 .color-strip-container {
   display: flex;
   height: 100%;
@@ -2046,7 +2046,6 @@ export default {
   color: #000;
 }
 #chartBar {
-  // margin-left: 100px;
   margin-top: 0px;
   right: 0;
   position: absolute;
@@ -2055,9 +2054,6 @@ export default {
 .dataCard {
   font-size: 16px;
   margin-bottom: 18px;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 
 .dataBoard {
