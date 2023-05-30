@@ -241,7 +241,8 @@ export default {
           }
         ]
       }
-    ]
+    ],
+    lastClicked: null
   }),
   async mounted() {
     this.nodesCount = elements.nodes.length
@@ -455,56 +456,63 @@ export default {
     }
     myChart.setOption(option)
     myChart.on('click', function (params) {
-      if (_this.propertyChangeData === 'Bristol_stool_score') {
-        if (params.dataIndex === 0) {
-          _this.max = 0.01
-          _this.min = 0
-        } else if (params.dataIndex === 1) {
-          _this.max = 0.05
-          _this.min = 0.01
-        } else if (params.dataIndex === 2) {
-          _this.max = 0.1
-          _this.min = 0.05
-        } else if (params.dataIndex === 3) {
-          _this.max = 0.5
-          _this.min = 0.1
-        } else if (params.dataIndex === 4) {
-          _this.max = ''
-          _this.min = 0.5
-        }
-      } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-        if (params.dataIndex === 0) {
-          _this.max = 0.01
-          _this.min = 0
-        } else if (params.dataIndex === 1) {
-          _this.max = 0.05
-          _this.min = 0.01
-        } else if (params.dataIndex === 2) {
-          _this.max = 0.1
-          _this.min = 0.05
-        } else if (params.dataIndex === 3) {
-          _this.max = 0.5
-          _this.min = 0.1
-        } else if (params.dataIndex === 4) {
-          _this.max = ''
-          _this.min = 0.5
-        }
+      if (params.dataIndex === _this.lastClicked) {
+        _this.lastClicked = null
+        _this.max = ''
+        _this.min = ''
       } else {
-        if (params.dataIndex === 0) {
-          _this.max = 69
-          _this.min = 0
-        } else if (params.dataIndex === 1) {
-          _this.max = 199
-          _this.min = 70
-        } else if (params.dataIndex === 2) {
-          _this.max = 359
-          _this.min = 200
-        } else if (params.dataIndex === 3) {
-          _this.max = 499
-          _this.min = 360
-        } else if (params.dataIndex === 4) {
-          _this.max = ''
-          _this.min = 500
+        _this.lastClicked = params.dataIndex
+        if (_this.propertyChangeData === 'Bristol_stool_score') {
+          if (_this.lastClicked === 0) {
+            _this.max = 0.01
+            _this.min = 0
+          } else if (_this.lastClicked === 1) {
+            _this.max = 0.05
+            _this.min = 0.01
+          } else if (_this.lastClicked === 2) {
+            _this.max = 0.1
+            _this.min = 0.05
+          } else if (_this.lastClicked === 3) {
+            _this.max = 0.5
+            _this.min = 0.1
+          } else if (_this.lastClicked === 4) {
+            _this.max = ''
+            _this.min = 0.5
+          }
+        } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+          if (_this.lastClicked === 0) {
+            _this.max = 0.01
+            _this.min = 0
+          } else if (_this.lastClicked === 1) {
+            _this.max = 0.05
+            _this.min = 0.01
+          } else if (_this.lastClicked === 2) {
+            _this.max = 0.1
+            _this.min = 0.05
+          } else if (_this.lastClicked === 3) {
+            _this.max = 0.5
+            _this.min = 0.1
+          } else if (_this.lastClicked === 4) {
+            _this.max = ''
+            _this.min = 0.5
+          }
+        } else {
+          if (_this.lastClicked === 0) {
+            _this.max = 69
+            _this.min = 0
+          } else if (_this.lastClicked === 1) {
+            _this.max = 199
+            _this.min = 70
+          } else if (_this.lastClicked === 2) {
+            _this.max = 359
+            _this.min = 200
+          } else if (_this.lastClicked === 3) {
+            _this.max = 499
+            _this.min = 360
+          } else if (_this.lastClicked === 4) {
+            _this.max = ''
+            _this.min = 500
+          }
         }
       }
       _this.nodeFilter()
@@ -794,26 +802,33 @@ export default {
       this.node.style('opacity', 0.4)
       this.link.style('opacity', 0.4)
       this.node.on('click', function (event) {
-        d3.select(this).style('opacity', 1)
-        // d3.select(this).style('fill', '#caa455')
         const nodeDataId = d3.select(this).attr('id')
-        if (_this.propertyChangeData === 'Bristol_stool_score') {
-          const nodeDataBri = d3.select(this).attr('Bristol_stool_score')
-          if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
-            _this.nodesDataId.unshift(nodeDataId)
-            _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Bristol_stool_score":' + nodeDataBri)
-          }
-        } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-          const nodeDataBri = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
-          if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
-            _this.nodesDataId.unshift(nodeDataId)
-            _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataBri)
+        const nodeOpacity = Number(d3.select(this).style('opacity'))
+        if (nodeOpacity === 0.4) {
+          d3.select(this).style('opacity', 1)
+          if (_this.propertyChangeData === 'Bristol_stool_score') {
+            const nodeDataBri = d3.select(this).attr('Bristol_stool_score')
+            if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
+              _this.nodesDataId.unshift(nodeDataId)
+              _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Bristol_stool_score":' + nodeDataBri)
+            }
+          } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+            const nodeDataBri = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
+            if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
+              _this.nodesDataId.unshift(nodeDataId)
+              _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataBri)
+            }
+          } else {
+            if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
+              _this.nodesDataId.unshift(nodeDataId)
+              _this.nodesData.unshift('"id":' + nodeDataId)
+            }
           }
         } else {
-          if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
-            _this.nodesDataId.unshift(nodeDataId)
-            _this.nodesData.unshift('"id":' + nodeDataId)
-          }
+          d3.select(this).style('opacity', 0.4)
+          const nodeIndex = _this.nodesDataId.indexOf(nodeDataId)
+          _this.nodesDataId.splice(nodeIndex, 1)
+          _this.nodesData.splice(nodeIndex, 1)
         }
       })
     },

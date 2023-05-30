@@ -3,7 +3,7 @@
     <div class="flex-column margin-top-20vh">
       <div class="display-3 font-weight-regular span-margin">Tmap</div>
       <div>
-        <v-btn outlined large rounded color="primary" class="margin-0-15 z-index-2" @click="routerRedirect"><v-icon left>mdi-palm-tree</v-icon>login</v-btn>
+        <v-btn outlined large rounded color="primary" class="margin-0-15 z-index-2" @click="routerRedirect"><v-icon left>mdi-atom</v-icon>login</v-btn>
       </div>
     </div>
     <!-- 背景动画画布 -->

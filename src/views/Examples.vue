@@ -75,7 +75,6 @@ export default {
       this.isCollapse = !this.isCollapse
     },
     handleSelect(key, keyPath) {
-      console.log(key, keyPath)
       if (key === '1-1') {
         this.$router.push('/examples/Microbiome')
       }
