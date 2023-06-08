@@ -53,13 +53,6 @@
       <el-button class="buttonStyle" @click="theChartBar" v-if="!histogramExit"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="显示直方图"><v-icon>mdi-reply</v-icon></el-tooltip></el-button
       >
-      <!-- 修改控件 -->
-      <el-button class="buttonStyle" @click="NodesEditBoardClose" v-if="NodesEditBoardExit"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="节点编辑"><v-icon>mdi-pencil-minus</v-icon></el-tooltip></el-button
-      >
-      <el-button class="buttonStyle" @click="nodeEdit" v-if="!NodesEditBoardExit"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="显示编辑板"><v-icon>mdi-reply</v-icon></el-tooltip></el-button
-      >
       <!-- 下载控件 -->
       <el-button class="buttonStyle" @click="screenShot"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="图片导出"><v-icon>mdi-download</v-icon></el-tooltip></el-button
@@ -71,7 +64,7 @@
       >,links:<span class="CountNumber">{{ linksCount }}</span>
     </div>
     <!-- 直方图 -->
-    <div id="chartBar" style="width: 500px; height: 450px"></div>
+    <div id="chartBar" style="width: 350px; height: 350px"></div>
     <!-- 数据面板 -->
     <el-card class="dataBoard" v-if="boardExit">
       <div slot="header" class="clearfix">
@@ -92,7 +85,7 @@
     </div>
     <!-- 取色板 -->
     <el-card class="colorBoard" v-if="colorBoardExit">
-      <h3 style="text-align: center">Color Cast</h3>
+      <h4 style="text-align: center">Color Cast</h4>
       <!-- 色带 -->
       <div class="color-strip-container">
         <div class="color-strip" @click="colorBarChange1">
@@ -109,45 +102,54 @@
         </div>
       </div>
       <div class="colorBoardButton">
-        <el-button @click="colorBarCancel">Cancel</el-button>
-        <el-button @click="colorBoardClose">Apply Color Palette</el-button>
+        <el-button @click="colorBarCancel" size="mini">Cancel</el-button>
+        <el-button @click="colorBoardClose" size="mini">Apply Palette</el-button>
       </div>
     </el-card>
     <!-- 节点编辑面板 -->
-    <el-card class="NodesEditBoard" v-if="NodesEditBoardExit">
-      <div slot="header" class="clearfix">
-        <h3 style="text-align: center">Nodes Edit</h3>
-        <el-button style="position: absolute; right: 10px; top: 0" type="text" @click="NodesEditBoardClose">❌</el-button>
-      </div>
+    <div class="NodesEditBoard" v-if="NodesEditBoardExit">
       <!-- 搜索框部分关键字检索 -->
-      <div>
-        <el-autocomplete v-model="state1" :fetch-suggestions="querySearch" placeholder="请输入关键字" :suffix-icon="icon" clearable style="width: 508px" @select="handleSelect"> </el-autocomplete>
-      </div>
-      <!-- 大类小类选择器 -->
-      <div class="cascader">
-        <el-cascader v-model="value" :options="options" :props="{ expandTrigger: 'hover' }" @change="handleChange" placeholder="大类信息"></el-cascader>
+      <div class="querySearch">
+        <el-autocomplete v-model="state1" :fetch-suggestions="querySearch" placeholder="Please enter keywords to search" :suffix-icon="icon" clearable style="width: 250px" @select="handleSelect">
+        </el-autocomplete>
         <el-button @click="cascaderCancel">Cancel</el-button>
       </div>
-      <div>
-        <div>
-          <span>max:</span>
-          <el-input v-model="max" placeholder="输入最大值" />
+      <el-button @click="HideNodesEditBoard" class="longButton" icon="el-icon-caret-bottom"></el-button>
+      <div v-if="NodesEditBoardHide">
+        <!-- 大类小类选择器 -->
+        <div class="cascader">
+          <el-cascader v-model="value" :options="options" :props="{ expandTrigger: 'hover' }" @change="handleChange" placeholder="primary selector" style="width: 250px"></el-cascader>
+          <el-button @click="cascaderCancel">Cancel</el-button>
         </div>
-        <div>
-          <span>min:</span>
-          <el-input v-model="min" placeholder="输入最小值" />
+        <div class="minAndMax">
+          <div>
+            <div class="minAndMax">
+              <span>max:</span>
+              <el-input v-model="max" placeholder="Enter maximum value" style="width: 200px" />
+            </div>
+            <div class="minAndMax">
+              <span>min:</span>
+              <el-input v-model="min" placeholder="Enter minimum value" style="width: 200px" />
+            </div>
+          </div>
+          <div class="minAndMaxButton">
+            <el-button @click="nodeFilter">Apply</el-button>
+            <el-button @click="nodeReset">Reset</el-button>
+          </div>
         </div>
-        <el-button @click="nodeFilter">Apply</el-button>
+        <h4 class="sliderBox">Drag the slider to change the layout of the nodes(the value=the node repulsion)</h4>
+        <div class="sliderBox">
+          <el-slider v-model="valueTooltip" class="sliderTooltip" @change="forceChange"></el-slider>
+          <span>{{ valueTooltip }}</span>
+        </div>
+        <div class="sliderBoxHelp">
+          <el-button @click="sliderHelp" type="text" class="buttonStyle2"
+            ><el-tooltip placement="right" :delay="{ show: 500 }" :hide-after="2000" content="帮助"><v-icon size="30">mdi-lightbulb-on-outline</v-icon></el-tooltip></el-button
+          >
+        </div>
+        <el-card v-if="sliderHelpExist"><h4>if the effect does not respond,try to drag the node</h4></el-card>
       </div>
-
-      <div>
-        <el-button @click="nodeReset">Reset</el-button>
-      </div>
-      <div class="sliderBox">
-        <el-slider v-model="valueTooltip" class="sliderTooltip" @change="forceChange"></el-slider>
-        <span>{{ valueTooltip }}</span>
-      </div>
-    </el-card>
+    </div>
     <!-- d3画布 -->
 
     <svg id="viz"></svg>
@@ -207,7 +209,7 @@ export default {
     propertyChangeData: '',
     options: [
       {
-        label: '统计分析1',
+        label: 'statistical data 1',
         children: [
           {
             label: 'Bristol_stool_score',
@@ -216,7 +218,7 @@ export default {
         ]
       },
       {
-        label: '统计分析2',
+        label: 'statistical data 2',
         children: [
           {
             label: 'Mean_corpuscular_hemoglobin_concentration',
@@ -233,7 +235,7 @@ export default {
         ]
       },
       {
-        label: '其他',
+        label: 'statistical data 3',
         children: [
           {
             label: 'Pets_past_3_months',
@@ -242,7 +244,11 @@ export default {
         ]
       }
     ],
-    lastClicked: null
+    lastClicked: null,
+    sliderHelpExist: false,
+    counter: 0,
+    counter2: 0,
+    NodesEditBoardHide: false
   }),
   async mounted() {
     this.nodesCount = elements.nodes.length
@@ -426,10 +432,13 @@ export default {
         nameLocation: 'middle',
         nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
         data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
+        // axisLabel: {
+        //   interval: 0
+        // }
       },
       yAxis: {
-        name: '节点数量',
-        nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+        name: 'Number of nodes',
+        nameTextStyle: { fontSize: 16, fontWeight: 'bold', padding: [0, -60, 0, 0] }
       },
       series: [
         {
@@ -892,10 +901,12 @@ export default {
     theChartBar() {
       document.getElementById('chartBar').style.display = 'block'
       this.histogramExit = true
+      this.NodesEditBoardExit = true
     },
     // 直方图关闭
     ChartBarNone() {
       this.histogramExit = false
+      this.NodesEditBoardExit = false
       document.getElementById('chartBar').style.display = 'none'
     },
     // 调色板
@@ -948,7 +959,7 @@ export default {
             data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
           },
           yAxis: {
-            name: '节点数量',
+            name: 'Number of nodes',
             nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
           },
           series: [
@@ -1015,7 +1026,7 @@ export default {
             data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
           },
           yAxis: {
-            name: '节点数量',
+            name: 'Number of nodes',
             nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
           },
           series: [
@@ -1082,7 +1093,7 @@ export default {
             data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
           },
           yAxis: {
-            name: '节点数量',
+            name: 'Number of nodes',
             nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
           },
           series: [
@@ -1154,7 +1165,7 @@ export default {
             data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
           },
           yAxis: {
-            name: '节点数量',
+            name: 'Number of nodes',
             nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
           },
           series: [
@@ -1221,7 +1232,7 @@ export default {
             data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
           },
           yAxis: {
-            name: '节点数量',
+            name: 'Number of nodes',
             nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
           },
           series: [
@@ -1288,7 +1299,7 @@ export default {
             data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
           },
           yAxis: {
-            name: '节点数量',
+            name: 'Number of nodes',
             nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
           },
           series: [
@@ -1360,7 +1371,7 @@ export default {
             data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
           },
           yAxis: {
-            name: '节点数量',
+            name: 'Number of nodes',
             nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
           },
           series: [
@@ -1427,7 +1438,7 @@ export default {
             data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
           },
           yAxis: {
-            name: '节点数量',
+            name: 'Number of nodes',
             nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
           },
           series: [
@@ -1494,7 +1505,7 @@ export default {
             data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
           },
           yAxis: {
-            name: '节点数量',
+            name: 'Number of nodes',
             nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
           },
           series: [
@@ -1571,7 +1582,7 @@ export default {
             data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
           },
           yAxis: {
-            name: '节点数量',
+            name: 'Number of nodes',
             nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
           },
           series: [
@@ -1650,7 +1661,7 @@ export default {
           data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
         },
         yAxis: {
-          name: '节点数量',
+          name: 'Number of nodes',
           nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
         },
         series: [
@@ -1677,10 +1688,6 @@ export default {
         ]
       }
       myChart.setOption(option)
-    },
-    // 节点编辑面板显示
-    nodeEdit() {
-      this.NodesEditBoardExit = true
     },
     // 节点按id编辑显示(设置透明度)
     nodeFilter() {
@@ -1789,10 +1796,6 @@ export default {
     //   this.node = this.originNodes
     //   this.link = this.originLinks
     // },
-    // 节点编辑面板关闭
-    NodesEditBoardClose() {
-      this.NodesEditBoardExit = false
-    },
     // 节点编辑面板的搜索框
     querySearch(queryString, cb) {
       const dataList = this.dataList
@@ -1891,7 +1894,7 @@ export default {
           data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
         },
         yAxis: {
-          name: '节点数量',
+          name: 'Number of nodes',
           nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
         },
         series: [
@@ -1959,7 +1962,7 @@ export default {
           data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
         },
         yAxis: {
-          name: '节点数量',
+          name: 'Number of nodes',
           nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
         },
         series: [
@@ -1989,6 +1992,22 @@ export default {
     },
     forceChange() {
       this.graphLayout.force('charge', d3.forceManyBody().strength(-this.valueTooltip * 40))
+    },
+    sliderHelp() {
+      this.counter++
+      if (this.counter % 2 === 1) {
+        this.sliderHelpExist = true
+      } else {
+        this.sliderHelpExist = false
+      }
+    },
+    HideNodesEditBoard() {
+      this.counter2++
+      if (this.counter2 % 2 === 1) {
+        this.NodesEditBoardHide = true
+      } else {
+        this.NodesEditBoardHide = false
+      }
     }
   }
 }
@@ -2006,12 +2025,12 @@ export default {
   flex-direction: column;
   height: 100%;
   margin-left: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .color-block {
-  width: 30px;
-  height: 30px;
+  width: 23px;
+  height: 23px;
   display: inline-block;
   cursor: pointer;
 }
@@ -2081,27 +2100,27 @@ export default {
 }
 .colorCastButton {
   right: 0;
-  top: 490px;
+  top: 400px;
   z-index: 16;
   position: absolute;
-  width: 480px;
+  width: 340px;
   display: flex;
   height: 30px;
 }
 .NodesEditBoard {
-  top: 530px;
-  height: 450px;
-  width: 550px;
+  top: 450px;
+  height: 500px;
+  width: 360px;
   right: 0;
   position: absolute;
   z-index: 16;
   overflow: auto;
 }
 .colorBoard {
-  height: 280px;
-  width: 300px;
-  right: 500px;
-  top: 240px;
+  height: 220px;
+  width: 200px;
+  right: 345px;
+  top: 220px;
   position: absolute;
   z-index: 15;
 }
@@ -2123,9 +2142,37 @@ export default {
 .sliderBox {
   display: flex;
   justify-content: space-between;
+  margin-left: 20px;
 }
-.cascader {
+.sliderBoxHelp {
+  margin-left: 310px;
+}
+.longButton {
+  display: inline-block;
+  width: 350px;
+  height: 20px;
+  padding: 0 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.cascader,
+.minAndMax {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+.querySearch {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.minAndMaxButton {
+  width: 80px;
+  margin-top: 30px;
 }
 </style>
