@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import store from './store'
 import { vuetify } from '@/plugins/vuetify'
 import VueParticles from 'vue-particles'
 import ElementUI from 'element-ui'
@@ -27,6 +28,7 @@ Vue.use(ElementUI)
 export const bus = new Vue()
 new Vue({
   router,
+  store,
   vuetify,
   el: '#app',
   apolloProvider,

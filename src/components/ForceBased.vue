@@ -64,7 +64,7 @@
       >,links:<span class="CountNumber">{{ linksCount }}</span>
     </div>
     <!-- 直方图 -->
-    <div id="chartBar" style="width: 350px; height: 350px"></div>
+    <div id="chartBar" style="width: 370px; height: 360px"></div>
     <!-- 数据面板 -->
     <el-card class="dataBoard" v-if="boardExit">
       <div slot="header" class="clearfix">
@@ -422,9 +422,13 @@ export default {
     const myChart = echarts.init(document.getElementById('chartBar'))
     const option = {
       grid: {
-        left: '3%',
-        bottom: '10%',
+        left: 0,
+        bottom: '11%',
         containLabel: true
+      },
+      tooltip: {
+        trigger: 'axis',
+        formatter: '{b}:{c} nodes'
       },
       xAxis: {
         name: 'id',
@@ -438,7 +442,7 @@ export default {
       },
       yAxis: {
         name: 'Number of nodes',
-        nameTextStyle: { fontSize: 16, fontWeight: 'bold', padding: [0, -60, 0, 0] }
+        nameTextStyle: { fontSize: 16, fontWeight: 'bold', padding: [0, -80, 0, 0] }
       },
       series: [
         {
@@ -535,11 +539,15 @@ export default {
       this.fullScreen = false
       const docElm = document.documentElement
       docElm.requestFullscreen()
+      this.$store.commit('navCollapse')
+      this.ChartBarNone()
     },
     // 取消全屏
     exitFullScreen() {
       this.fullScreen = true
       document.exitFullscreen()
+      this.$store.commit('navCollapse')
+      this.theChartBar()
     },
     // 暂停
     forceStop() {
@@ -2081,7 +2089,7 @@ export default {
 }
 #chartBar {
   margin-top: 0px;
-  right: 0;
+  right: -10px;
   position: absolute;
   z-index: 10;
 }
@@ -2099,7 +2107,7 @@ export default {
   overflow: auto;
 }
 .colorCastButton {
-  right: 0;
+  right: 20px;
   top: 400px;
   z-index: 16;
   position: absolute;
@@ -2111,7 +2119,7 @@ export default {
   top: 450px;
   height: 500px;
   width: 360px;
-  right: 0;
+  right: 8px;
   position: absolute;
   z-index: 16;
   overflow: auto;

@@ -5,7 +5,7 @@
       <div class="humberger"><el-button class="el-icon-s-fold" style="font-size: 20px; color: #000" @click="toggleMenu" type="text"></el-button></div>
     </el-header>
     <el-container>
-      <el-menu default-active="2" class="el-menu-vertical-demo" @select="handleSelect" :collapse="isCollapse">
+      <el-menu default-active="2" class="el-menu-vertical-demo" @select="handleSelect" :collapse="menuCollapse">
         <el-submenu index="1">
           <template slot="title">
             <v-icon>mdi-view-column</v-icon>
@@ -63,16 +63,20 @@
 export default {
   data() {
     return {
-      isCollapse: false, // 控制侧边菜单栏的显示状态
       Home_visible: true
     }
   },
   mounted() {
     this.$vuetify.theme.dark = false
   },
+  computed: {
+    menuCollapse() {
+      return this.$store.state.isCollapse
+    }
+  },
   methods: {
     toggleMenu() {
-      this.isCollapse = !this.isCollapse
+      this.$store.commit('navCollapse')
     },
     handleSelect(key, keyPath) {
       if (key === '1-1') {
