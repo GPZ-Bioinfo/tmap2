@@ -1,25 +1,53 @@
 <template>
-  <div>
-    <ul>
-      <li v-for="item in graph" :key="item.id">{{ item.id }}</li>
-    </ul>
-  </div>
+  <div>{{ graphqlData }}</div>
 </template>
 
 <script>
-import gql from 'graphql-tag'
-
-const GET_ITEMS = gql`
-  query {
-
-  }
-`
-
+import axios from 'axios'
 export default {
-  apollo: {
-    graph: {
-      query: GET_ITEMS
+  components: {},
+  props: {},
+  data() {
+    return {
+      graphqlData: null
     }
-  }
+  },
+  mounted() {
+    axios
+      .get('http://localhost:8080/graphql', {
+        params: {
+          query: `
+         query {
+           graph {
+             elements {
+               links {
+                 id
+                 source
+                 target
+               }
+               nodes {
+
+                 id
+                 size
+
+               }
+             }
+           }
+         }
+       `
+        }
+      })
+      .then((response) => {
+        // 处理响应数据
+        this.graphqlData = response.data.data.graph.elements
+      })
+      .catch((error) => {
+        // 处理错误
+        console.error(error)
+      })
+  },
+  methods: {}
 }
 </script>
+
+<style scoped></style>

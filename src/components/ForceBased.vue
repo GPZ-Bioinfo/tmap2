@@ -159,6 +159,7 @@
 <script>
 import * as d3 from 'd3'
 import * as echarts from 'echarts'
+import axios from 'axios'
 import { elements } from './static/fgfp_graph_SAFE_dat.json'
 
 export default {
@@ -248,15 +249,52 @@ export default {
     sliderHelpExist: false,
     counter: 0,
     counter2: 0,
-    NodesEditBoardHide: false
+    NodesEditBoardHide: false,
+    graphqlData: null
   }),
   async mounted() {
-    this.nodesCount = elements.nodes.length
-    this.linksCount = elements.links.length
+    try {
+      const response = await axios.get('http://localhost:8080/graphql', {
+        params: {
+          query: `
+          query {
+            graph {
+              elements {
+                links {
+                  id
+                  source
+                  target
+                }
+                nodes {
+                  id
+                  size
+                }
+              }
+            }
+          }
+        `
+        }
+      })
 
-    this.graph = {
-      nodes: elements.nodes,
-      links: elements.links
+      // 处理响应数据
+      this.graphqlData = response.data.data.graph.elements
+
+      this.nodesCount = this.graphqlData.nodes.length
+      this.linksCount = this.graphqlData.links.length
+
+      this.graph = {
+        nodes: this.graphqlData.nodes,
+        links: this.graphqlData.links
+      }
+    } catch (error) {
+      // 处理错误
+      this.nodesCount = elements.nodes.length
+      this.linksCount = elements.links.length
+
+      this.graph = {
+        nodes: elements.nodes,
+        links: elements.links
+      }
     }
     let graph = this.graph
 
@@ -285,7 +323,6 @@ export default {
 
     let svg = d3.select('#viz').attr('width', this.width).attr('height', this.height)
     this.svg = svg
-    let container = svg.append('g')
 
     svg.call(
       d3
@@ -295,8 +332,8 @@ export default {
           container.attr('transform', d3.event.transform)
         })
     )
+    let container = svg.append('g')
     this.container = container
-
     let link = container.attr('class', 'links').selectAll('line').data(graph.links).enter().append('line').attr('stroke', 'pink').attr('stroke-width', '1px')
 
     let node = container
@@ -310,12 +347,6 @@ export default {
       })
       .attr('id', function (d) {
         return d.id
-      })
-      .attr('Bristol_stool_score', function (d) {
-        return d.Bristol_stool_score
-      })
-      .attr('Mean_corpuscular_hemoglobin_concentration', function (d) {
-        return d.Mean_corpuscular_hemoglobin_concentration
       })
       .style('stroke', '#caa455')
       .style('stroke-width', '1px')
@@ -390,11 +421,9 @@ export default {
       d.fx = null
       d.fy = null
     }
-
     // 图表
     const _this = this
-    _this.nodesCount = elements.nodes.length
-    _this.linksCount = elements.links.length
+
     const num1 = []
     const num2 = []
     const num3 = []
@@ -533,6 +562,7 @@ export default {
     document.getElementById('chartBar').style.display = 'block'
     this.dataList = this.loadAll()
   },
+
   methods: {
     // 全屏
     requestFullscreen() {
@@ -2182,5 +2212,12 @@ export default {
 .minAndMaxButton {
   width: 80px;
   margin-top: 30px;
+}
+@media screen and (max-width: 1400px) {
+  .NodesEditBoard,
+  .colorCastButton,
+  #chartBar {
+    display: none !important;
+  }
 }
 </style>
