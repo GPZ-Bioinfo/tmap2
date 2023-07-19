@@ -71,6 +71,40 @@
         <h3 style="text-align: center">Selected</h3>
         <el-button style="position: absolute; right: 10px; top: 0" type="text" @click="boardClose">❌</el-button>
       </div>
+      <el-descriptions class="margin-top" :column="3" :size="size" border>
+        <el-descriptions-item>
+          <template slot="label"> 选中个数 </template>
+          {{ nodesData.length }}
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template slot="label"> 总个数 </template>
+          {{ nodesCount }}
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template slot="label"> 最大值 </template>
+          {{ Math.max(...nodesDataId) }}
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template slot="label"> 最小值 </template>
+          {{ Math.min(...nodesDataId) }}
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template slot="label"> 均值 </template>
+          {{ parseFloat(nodesDataId.reduce((total, str) => total + parseInt(str), 0) / nodesDataId.length).toFixed(2) }}
+        </el-descriptions-item>
+        <el-descriptions-item>
+          <template slot="label"> 标准差 </template>
+          {{
+            parseFloat(
+              Math.sqrt(
+                nodesDataId
+                  .map((num) => Math.pow(num - parseFloat(nodesDataId.reduce((total, str) => total + parseInt(str), 0) / nodesDataId.length).toFixed(2), 2))
+                  .reduce((total, num) => total + num) / nodesDataId.length
+              )
+            ).toFixed(2)
+          }}
+        </el-descriptions-item>
+      </el-descriptions>
       <div v-for="(item, index) in nodesData" :key="index" class="dataCard">
         {{ index + 1 + '、 ' + item }}
       </div>
@@ -213,8 +247,8 @@ export default {
         label: 'statistical data 1',
         children: [
           {
-            label: 'Bristol_stool_score',
-            value: 'Bristol_stool_score'
+            label: 'Age',
+            value: 'Age'
           }
         ]
       },
@@ -250,7 +284,8 @@ export default {
     counter: 0,
     counter2: 0,
     NodesEditBoardHide: false,
-    graphqlData: null
+    graphqlData: null,
+    graphqlDataValue: null
   }),
   async mounted() {
     try {
@@ -258,6 +293,9 @@ export default {
         params: {
           query: `
           query {
+            scores(column: "Age") {
+              value
+            }
             graph {
               elements {
                 links {
@@ -278,12 +316,12 @@ export default {
 
       // 处理响应数据
       this.graphqlData = response.data.data.graph.elements
-
+      this.graphqlDataValue = response.data.data.scores
+      const mergedArray = this.graphqlData.nodes.map((obj, index) => Object.assign({}, obj, this.graphqlDataValue[index]))
       this.nodesCount = this.graphqlData.nodes.length
       this.linksCount = this.graphqlData.links.length
-
       this.graph = {
-        nodes: this.graphqlData.nodes,
+        nodes: mergedArray,
         links: this.graphqlData.links
       }
     } catch (error) {
@@ -347,6 +385,12 @@ export default {
       })
       .attr('id', function (d) {
         return d.id
+      })
+      .attr('Age', function (d) {
+        return d.value
+      })
+      .attr('Mean_corpuscular_hemoglobin_concentration', function (d) {
+        return d.Mean_corpuscular_hemoglobin_concentration
       })
       .style('stroke', '#caa455')
       .style('stroke-width', '1px')
@@ -504,7 +548,7 @@ export default {
         _this.min = ''
       } else {
         _this.lastClicked = params.dataIndex
-        if (_this.propertyChangeData === 'Bristol_stool_score') {
+        if (_this.propertyChangeData === 'Age') {
           if (_this.lastClicked === 0) {
             _this.max = 0.01
             _this.min = 0
@@ -661,17 +705,17 @@ export default {
           if (brushNode.nodes()[0]) {
             brushNode.each(function () {
               const nodeDataId = d3.select(this).attr('id')
-              if (_this.propertyChangeData === 'Bristol_stool_score') {
-                const nodeDataBri = d3.select(this).attr('Bristol_stool_score')
+              if (_this.propertyChangeData === 'Age') {
+                const nodeDataAge = d3.select(this).attr('Age')
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Bristol_stool_score":' + nodeDataBri)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Age":' + nodeDataAge)
                 }
               } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-                const nodeDataBri = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
+                const nodeDataAge = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataBri)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataAge)
                 }
               } else {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
@@ -692,6 +736,7 @@ export default {
       })
       _this.container.call(brush)
       this.brush = brush
+      // console.log('nodesData', this.nodesData)
     },
     // 取消框选
     brushCancel() {
@@ -731,6 +776,7 @@ export default {
       function idUnFocus(d) {
         focusId.remove()
       }
+
       // this.boardClose()
     },
     // 框选2
@@ -763,17 +809,17 @@ export default {
           if (brushNode.nodes()[0]) {
             brushNode.each(function () {
               const nodeDataId = d3.select(this).attr('id')
-              if (_this.propertyChangeData === 'Bristol_stool_score') {
-                const nodeDataBri = d3.select(this).attr('Bristol_stool_score')
+              if (_this.propertyChangeData === 'Age') {
+                const nodeDataAge = d3.select(this).attr('Age')
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Bristol_stool_score":' + nodeDataBri)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Age":' + nodeDataAge)
                 }
               } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-                const nodeDataBri = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
+                const nodeDataAge = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataBri)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataAge)
                 }
               } else {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
@@ -853,17 +899,17 @@ export default {
         const nodeOpacity = Number(d3.select(this).style('opacity'))
         if (nodeOpacity === 0.4) {
           d3.select(this).style('opacity', 1)
-          if (_this.propertyChangeData === 'Bristol_stool_score') {
-            const nodeDataBri = d3.select(this).attr('Bristol_stool_score')
+          if (_this.propertyChangeData === 'Age') {
+            const nodeDataAge = d3.select(this).attr('Age')
             if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
               _this.nodesDataId.unshift(nodeDataId)
-              _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Bristol_stool_score":' + nodeDataBri)
+              _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Age":' + nodeDataAge)
             }
           } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-            const nodeDataBri = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
+            const nodeDataAge = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
             if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
               _this.nodesDataId.unshift(nodeDataId)
-              _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataBri)
+              _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataAge)
             }
           } else {
             if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
@@ -957,27 +1003,27 @@ export default {
     // 蓝色色带点击事件
     colorBarChange1() {
       const _this = this
-      if (_this.propertyChangeData === 'Bristol_stool_score') {
+      if (_this.propertyChangeData === 'Age') {
         const num1 = []
         const num2 = []
         const num3 = []
         const num4 = []
         const num5 = []
         this.node.attr('fill', function (d) {
-          if (d.Bristol_stool_score < '0.01') {
-            num1.push(d.Bristol_stool_score)
+          if (d.value < '0.01') {
+            num1.push(d.value)
             return '#eff3ff'
-          } else if (d.Bristol_stool_score >= '0.01' && d.Bristol_stool_score < '0.05') {
-            num2.push(d.Bristol_stool_score)
+          } else if (d.value >= '0.01' && d.value < '0.05') {
+            num2.push(d.value)
             return '#bcd7e8'
-          } else if (d.Bristol_stool_score >= '0.05' && d.Bristol_stool_score < '0.1') {
-            num3.push(d.Bristol_stool_score)
+          } else if (d.value >= '0.05' && d.value < '0.1') {
+            num3.push(d.value)
             return '#68add8'
-          } else if (d.Bristol_stool_score >= '0.1' && d.Bristol_stool_score < '0.5') {
-            num4.push(d.Bristol_stool_score)
+          } else if (d.value >= '0.1' && d.value < '0.5') {
+            num4.push(d.value)
             return '#2b81c0'
           } else {
-            num5.push(d.Bristol_stool_score)
+            num5.push(d.value)
             return '#064e9e'
           }
         })
@@ -990,7 +1036,7 @@ export default {
             containLabel: true
           },
           xAxis: {
-            name: 'Bristol_stool_score',
+            name: 'Age',
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
@@ -1163,27 +1209,27 @@ export default {
     // 绿色色带点击事件
     colorBarChange2() {
       const _this = this
-      if (_this.propertyChangeData === 'Bristol_stool_score') {
+      if (_this.propertyChangeData === 'Age') {
         const num1 = []
         const num2 = []
         const num3 = []
         const num4 = []
         const num5 = []
         this.node.attr('fill', function (d) {
-          if (d.Bristol_stool_score < '0.01') {
-            num1.push(d.Bristol_stool_score)
+          if (d.value < '0.01') {
+            num1.push(d.value)
             return '#edf9fc'
-          } else if (d.Bristol_stool_score >= '0.01' && d.Bristol_stool_score < '0.05') {
-            num2.push(d.Bristol_stool_score)
+          } else if (d.value >= '0.01' && d.value < '0.05') {
+            num2.push(d.value)
             return '#b1e3e3'
-          } else if (d.Bristol_stool_score >= '0.05' && d.Bristol_stool_score < '0.1') {
-            num3.push(d.Bristol_stool_score)
+          } else if (d.value >= '0.05' && d.value < '0.1') {
+            num3.push(d.value)
             return '#62c3a4'
-          } else if (d.Bristol_stool_score >= '0.1' && d.Bristol_stool_score < '0.5') {
-            num4.push(d.Bristol_stool_score)
+          } else if (d.value >= '0.1' && d.value < '0.5') {
+            num4.push(d.value)
             return '#25a35c'
           } else {
-            num5.push(d.Bristol_stool_score)
+            num5.push(d.value)
             return '#006e29'
           }
         })
@@ -1196,7 +1242,7 @@ export default {
             containLabel: true
           },
           xAxis: {
-            name: 'Bristol_stool_score',
+            name: 'Age',
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
@@ -1369,27 +1415,27 @@ export default {
     // 橙色色带点击事件
     colorBarChange3() {
       const _this = this
-      if (_this.propertyChangeData === 'Bristol_stool_score') {
+      if (_this.propertyChangeData === 'Age') {
         const num1 = []
         const num2 = []
         const num3 = []
         const num4 = []
         const num5 = []
         this.node.attr('fill', function (d) {
-          if (d.Bristol_stool_score < '0.01') {
-            num1.push(d.Bristol_stool_score)
+          if (d.value < '0.01') {
+            num1.push(d.value)
             return '#ffeede'
-          } else if (d.Bristol_stool_score >= '0.01' && d.Bristol_stool_score < '0.05') {
-            num2.push(d.Bristol_stool_score)
+          } else if (d.value >= '0.01' && d.value < '0.05') {
+            num2.push(d.value)
             return '#febf80'
-          } else if (d.Bristol_stool_score >= '0.05' && d.Bristol_stool_score < '0.1') {
-            num3.push(d.Bristol_stool_score)
+          } else if (d.value >= '0.05' && d.value < '0.1') {
+            num3.push(d.value)
             return '#ff8d2e'
-          } else if (d.Bristol_stool_score >= '0.1' && d.Bristol_stool_score < '0.5') {
-            num4.push(d.Bristol_stool_score)
+          } else if (d.value >= '0.1' && d.value < '0.5') {
+            num4.push(d.value)
             return '#e95406'
           } else {
-            num5.push(d.Bristol_stool_score)
+            num5.push(d.value)
             return '#a83500'
           }
         })
@@ -1402,7 +1448,7 @@ export default {
             containLabel: true
           },
           xAxis: {
-            name: 'Bristol_stool_score',
+            name: 'Age',
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
@@ -1575,8 +1621,8 @@ export default {
     // 彩色色带点击事件
     colorBarChange4() {
       const _this = this
-      if (_this.propertyChangeData === 'Bristol_stool_score') {
-        this.propertyChangeBri()
+      if (_this.propertyChangeData === 'Age') {
+        this.propertyChangeAge()
       } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
         this.propertyChangeMean()
       } else {
@@ -1735,8 +1781,8 @@ export default {
       if (maxData >= minData) {
         this.node.style('opacity', 0.4)
         this.link.style('opacity', 0.4)
-        if (_this.propertyChangeData === 'Bristol_stool_score') {
-          let nodeLimit = this.node.filter((d) => d.Bristol_stool_score <= maxData && d.Bristol_stool_score >= minData)
+        if (_this.propertyChangeData === 'Age') {
+          let nodeLimit = this.node.filter((d) => d.value <= maxData && d.value >= minData)
           nodeLimit.style('opacity', 1)
           let nodeLimitId = nodeLimit.data().map((d) => d.id)
           let linkLimit = this.link.filter((d) => nodeLimitId.includes(d.source.index) && nodeLimitId.includes(d.target.index))
@@ -1858,9 +1904,9 @@ export default {
       }
       let categoryData = filteredArr[0]
       console.log(categoryData)
-      if (categoryData === 'Bristol_stool_score') {
-        this.propertyChangeBri()
-        this.propertyChangeData = 'Bristol_stool_score'
+      if (categoryData === 'Age') {
+        this.propertyChangeAge()
+        this.propertyChangeData = 'Age'
       } else if (categoryData === 'Mean_corpuscular_hemoglobin_concentration') {
         this.propertyChangeMean()
         this.propertyChangeData = 'Mean_corpuscular_hemoglobin_concentration'
@@ -1871,9 +1917,9 @@ export default {
       this.value = ''
       console.log(item.value)
       // 切换年龄才会改变节点数据，其他暂时是恢复原来的数据
-      if (item.value === 'Bristol_stool_score') {
-        this.propertyChangeBri()
-        this.propertyChangeData = 'Bristol_stool_score'
+      if (item.value === 'Age') {
+        this.propertyChangeAge()
+        this.propertyChangeData = 'Age'
       } else if (item.value === 'Mean_corpuscular_hemoglobin_concentration') {
         this.propertyChangeMean()
         this.propertyChangeData = 'Mean_corpuscular_hemoglobin_concentration'
@@ -1883,7 +1929,7 @@ export default {
     // 搜索下拉数据显示
     loadAll() {
       return [
-        { value: 'Bristol_stool_score' },
+        { value: 'Age' },
         { value: 'Mean_corpuscular_hemoglobin_concentration' },
         { value: 'SamplingInfo_previousRelief_option3' },
         { value: 'SamplingInfo_previousRelief_option4' },
@@ -1891,27 +1937,27 @@ export default {
       ]
     },
     // 根据变量名切换数值
-    propertyChangeBri() {
+    propertyChangeAge() {
       const num1 = []
       const num2 = []
       const num3 = []
       const num4 = []
       const num5 = []
       this.node.attr('fill', function (d) {
-        if (d.Bristol_stool_score < '0.01') {
-          num1.push(d.Bristol_stool_score)
+        if (d.value < '0.01') {
+          num1.push(d.value)
           return '#b2392d'
-        } else if (d.Bristol_stool_score >= '0.01' && d.Bristol_stool_score < '0.05') {
-          num2.push(d.Bristol_stool_score)
+        } else if (d.value >= '0.01' && d.value < '0.05') {
+          num2.push(d.value)
           return '#f09e30'
-        } else if (d.Bristol_stool_score >= '0.05' && d.Bristol_stool_score < '0.1') {
-          num3.push(d.Bristol_stool_score)
+        } else if (d.value >= '0.05' && d.value < '0.1') {
+          num3.push(d.value)
           return '#7cf728'
-        } else if (d.Bristol_stool_score >= '0.1' && d.Bristol_stool_score < '0.5') {
-          num4.push(d.Bristol_stool_score)
+        } else if (d.value >= '0.1' && d.value < '0.5') {
+          num4.push(d.value)
           return '#25a8b6'
         } else {
-          num5.push(d.Bristol_stool_score)
+          num5.push(d.value)
           return '#244e96'
         }
       })
@@ -1925,7 +1971,7 @@ export default {
           containLabel: true
         },
         xAxis: {
-          name: 'Bristol_stool_score',
+          name: 'Age',
           nameLocation: 'middle',
           nameGap: 25,
           nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
@@ -2028,9 +2074,11 @@ export default {
       }
       myChart.setOption(option)
     },
+    // 改变节点斥力
     forceChange() {
       this.graphLayout.force('charge', d3.forceManyBody().strength(-this.valueTooltip * 40))
     },
+    // 灯泡提示隐藏
     sliderHelp() {
       this.counter++
       if (this.counter % 2 === 1) {
@@ -2039,6 +2087,7 @@ export default {
         this.sliderHelpExist = false
       }
     },
+    // 节点编辑面板隐藏
     HideNodesEditBoard() {
       this.counter2++
       if (this.counter2 % 2 === 1) {
@@ -2125,7 +2174,9 @@ export default {
 }
 .dataCard {
   font-size: 16px;
-  margin-bottom: 18px;
+  padding-bottom: 9px;
+  padding-top: 5px;
+  border: 1px solid rgb(243, 234, 234);
 }
 
 .dataBoard {
