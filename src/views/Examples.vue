@@ -96,6 +96,8 @@ export default {
       }
     },
     goBack() {
+      this.$store.commit('removeToken')
+      localStorage.removeItem('users')
       this.Home_visible = true
       this.$router.push('/Home').catch((err) => {}) // eslint-disable-line
     }

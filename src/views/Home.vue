@@ -2,8 +2,11 @@
   <div class="main justify-center">
     <div class="flex-column margin-top-20vh">
       <div class="display-3 font-weight-regular span-margin">Tmap</div>
-      <div>
-        <v-btn outlined large rounded color="primary" class="margin-0-15 z-index-2" @click="routerRedirect"><v-icon left>mdi-atom</v-icon>login</v-btn>
+      <div class="login">
+        <el-input placeholder="请输入用户名" v-model="username" clearable></el-input>
+        <el-input placeholder="请输入密码" v-model="password" show-password></el-input>
+
+        <v-btn outlined large rounded color="primary" class="btn" @click="routerRedirect"><v-icon left>mdi-atom</v-icon>login</v-btn>
       </div>
     </div>
     <!-- 背景动画画布 -->
@@ -33,14 +36,60 @@
 export default {
   name: 'Home',
   data() {
-    return {}
+    return {
+      username: 'admin',
+      password: ''
+    }
   },
   created() {
     this.$vuetify.theme.dark = true
   },
   methods: {
     routerRedirect() {
-      this.$router.push('/examples').catch((err) => {}) // eslint-disable-line
+      let users = {
+        token: 't2t123xafwfw2233',
+        userName: this.username
+      }
+      if (!this.username) {
+        this.$message({
+          showClose: true,
+          message: '请输入用户名',
+          type: 'error'
+        })
+        return
+      }
+      if (!this.password) {
+        this.$message({
+          showClose: true,
+          message: '请输入密码',
+          type: 'error'
+        })
+        return
+      }
+      if (this.password === '0011') {
+        localStorage.setItem('users', JSON.stringify(users))
+        const isLogin = JSON.parse(localStorage.getItem('users')) && JSON.parse(localStorage.getItem('users'))
+        if (isLogin) {
+          this.$router.push('/examples')
+        }
+      } else {
+        this.$message({
+          showClose: true,
+          message: '密码错误',
+          type: 'error'
+        })
+      }
+      // this.$router.push('/examples').catch((err) => {}) // eslint-disable-line
+    }
+  },
+  beforeRouteEnter(to, from, next) {
+    const isLogin = JSON.parse(localStorage.getItem('users')) && JSON.parse(localStorage.getItem('users'))
+    if (isLogin) {
+      next({
+        path: '/examples'
+      })
+    } else {
+      next()
     }
   }
 }
@@ -75,14 +124,6 @@ export default {
   margin: 20px 0 40px 0;
 }
 
-.margin-0-15 {
-  margin: 0 15px;
-}
-
-.z-index-2 {
-  z-index: 2;
-}
-
 .particles-position {
   position: fixed;
   top: 0;
@@ -90,5 +131,18 @@ export default {
   left: 0;
   right: 0;
   z-index: 1;
+}
+.el-input {
+  margin-top: 15px;
+  z-index: 20;
+}
+.btn {
+  margin-top: 15px;
+  z-index: 20;
+}
+
+.login {
+  width: 400px;
+  margin: 0 auto;
 }
 </style>
