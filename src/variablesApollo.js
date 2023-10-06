@@ -9,13 +9,12 @@ let variablesValue = null
 apolloClient
   .query({
     query: gql`
-      query
-        {
-          variablesCategory {
-            category
-            variables
-          }
-
+      query {
+        variablesCategory {
+          category
+          variables
+        }
+      }
     `
   })
   .then((response) => {

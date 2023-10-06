@@ -251,7 +251,8 @@ export default {
     NodesEditBoardHide: false,
     graphqlData: null,
     graphqlDataValue: null,
-    variablesValue: null
+    variablesValue: null,
+    scoresValue2: null
   }),
   created() {
     const apolloClient = new ApolloClient({
@@ -352,7 +353,6 @@ export default {
           .attr('id', function (d) {
             return d.id
           })
-
           .style('stroke', '#caa455')
           .style('stroke-width', '1px')
           .style('stroke-linecap', 'round')
@@ -428,80 +428,9 @@ export default {
         }
         // 图表
         const _this = this
-
-        const num1 = []
-        const num2 = []
-        const num3 = []
-        const num4 = []
-        const num5 = []
-        this.node.attr('fill', function (d) {
-          d.id = Number(d.id)
-          if (d.id < 70) {
-            num1.push(d.id)
-            return '#b2392d'
-          } else if (d.id >= 70 && d.id < 200) {
-            num2.push(d.id)
-            return '#f09e30'
-          } else if (d.id >= 200 && d.id < 360) {
-            num3.push(d.id)
-            return '#7cf728'
-          } else if (d.id >= 360 && d.id < 500) {
-            num4.push(d.id)
-            return '#27b7c7'
-          } else {
-            num5.push(d.id)
-            return '#244e96'
-          }
-        })
+        this.histogramOrigin()
         const myChart = echarts.init(document.getElementById('chartBar'))
-        const option = {
-          grid: {
-            left: 0,
-            bottom: '11%',
-            containLabel: true
-          },
-          tooltip: {
-            trigger: 'axis',
-            formatter: '{b}:{c} nodes'
-          },
-          xAxis: {
-            name: 'id',
-            nameGap: 25,
-            nameLocation: 'middle',
-            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
-            // axisLabel: {
-            //   interval: 0
-            // }
-          },
-          yAxis: {
-            name: 'Number of nodes',
-            nameTextStyle: { fontSize: 16, fontWeight: 'bold', padding: [0, -80, 0, 0] }
-          },
-          series: [
-            {
-              type: 'bar',
-              // data: [1, 2, 3, 4, 5, 6, 7, 8],
-              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
-              label: {
-                show: true,
-                position: 'top'
-              },
-              itemStyle: {
-                normal: {
-                  color: function (params) {
-                    const colorList = _this.BarColorList
-                    if (params.dataIndex >= colorList.length) {
-                      params.dataIndex = params.dataIndex - colorList.length
-                    }
-                    return colorList[params.dataIndex]
-                  }
-                }
-              }
-            }
-          ]
-        }
-        myChart.setOption(option)
+
         myChart.on('click', function (params) {
           if (params.dataIndex === _this.lastClicked) {
             _this.lastClicked = null
@@ -509,24 +438,7 @@ export default {
             _this.min = ''
           } else {
             _this.lastClicked = params.dataIndex
-            if (_this.propertyChangeData === 'Age') {
-              if (_this.lastClicked === 0) {
-                _this.max = 0.01
-                _this.min = 0
-              } else if (_this.lastClicked === 1) {
-                _this.max = 0.05
-                _this.min = 0.01
-              } else if (_this.lastClicked === 2) {
-                _this.max = 0.1
-                _this.min = 0.05
-              } else if (_this.lastClicked === 3) {
-                _this.max = 0.5
-                _this.min = 0.1
-              } else if (_this.lastClicked === 4) {
-                _this.max = ''
-                _this.min = 0.5
-              }
-            } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
+            if (_this.propertyChangeData) {
               if (_this.lastClicked === 0) {
                 _this.max = 0.01
                 _this.min = 0
@@ -668,17 +580,11 @@ export default {
           if (brushNode.nodes()[0]) {
             brushNode.each(function () {
               const nodeDataId = d3.select(this).attr('id')
-              if (_this.propertyChangeData === 'Age') {
-                const nodeDataAge = d3.select(this).attr('Age')
+              if (_this.propertyChangeData) {
+                const nodeDataAge = d3.select(this).attr(_this.propertyChangeData)
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Age":' + nodeDataAge)
-                }
-              } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-                const nodeDataAge = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
-                if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
-                  _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataAge)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataAge)
                 }
               } else {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
@@ -772,17 +678,11 @@ export default {
           if (brushNode.nodes()[0]) {
             brushNode.each(function () {
               const nodeDataId = d3.select(this).attr('id')
-              if (_this.propertyChangeData === 'Age') {
-                const nodeDataAge = d3.select(this).attr('Age')
+              if (_this.propertyChangeData) {
+                const nodeDataAge = d3.select(this).attr(_this.propertyChangeData)
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Age":' + nodeDataAge)
-                }
-              } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-                const nodeDataAge = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
-                if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
-                  _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataAge)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataAge)
                 }
               } else {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
@@ -862,17 +762,11 @@ export default {
         const nodeOpacity = Number(d3.select(this).style('opacity'))
         if (nodeOpacity === 0.4) {
           d3.select(this).style('opacity', 1)
-          if (_this.propertyChangeData === 'Age') {
-            const nodeDataAge = d3.select(this).attr('Age')
+          if (_this.propertyChangeData) {
+            const nodeDataAge = d3.select(this).attr(_this.propertyChangeData)
             if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
               _this.nodesDataId.unshift(nodeDataId)
-              _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Age":' + nodeDataAge)
-            }
-          } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-            const nodeDataAge = d3.select(this).attr('Mean_corpuscular_hemoglobin_concentration')
-            if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
-              _this.nodesDataId.unshift(nodeDataId)
-              _this.nodesData.unshift('"id":' + nodeDataId + ' , ' + '"Mean_corpuscular_hemoglobin_concentration":' + nodeDataAge)
+              _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataAge)
             }
           } else {
             if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
@@ -912,7 +806,7 @@ export default {
         _this.SelectCancel()
       }
     },
-    // 调色板关闭
+    // 调色板应用且关闭
     colorBoardClose() {
       this.colorBoardExit = false
     },
@@ -966,27 +860,29 @@ export default {
     // 蓝色色带点击事件
     colorBarChange1() {
       const _this = this
-      if (_this.propertyChangeData === 'Age') {
+      if (_this.propertyChangeData) {
         const num1 = []
         const num2 = []
         const num3 = []
         const num4 = []
         const num5 = []
         this.node.attr('fill', function (d) {
-          if (d.value < '0.01') {
-            num1.push(d.value)
+          const nodeId = Number(d.id)
+          const scoresNode = _this.scoresValue2[nodeId].value
+          if (scoresNode < '0.01') {
+            num1.push(scoresNode)
             return '#eff3ff'
-          } else if (d.value >= '0.01' && d.value < '0.05') {
-            num2.push(d.value)
+          } else if (scoresNode >= '0.01' && scoresNode < '0.05') {
+            num2.push(scoresNode)
             return '#bcd7e8'
-          } else if (d.value >= '0.05' && d.value < '0.1') {
-            num3.push(d.value)
+          } else if (scoresNode >= '0.05' && scoresNode < '0.1') {
+            num3.push(scoresNode)
             return '#68add8'
-          } else if (d.value >= '0.1' && d.value < '0.5') {
-            num4.push(d.value)
+          } else if (scoresNode >= '0.1' && scoresNode < '0.5') {
+            num4.push(scoresNode)
             return '#2b81c0'
           } else {
-            num5.push(d.value)
+            num5.push(scoresNode)
             return '#064e9e'
           }
         })
@@ -999,74 +895,7 @@ export default {
             containLabel: true
           },
           xAxis: {
-            name: 'Age',
-            nameLocation: 'middle',
-            nameGap: 25,
-            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
-          },
-          yAxis: {
-            name: 'Number of nodes',
-            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
-          },
-          series: [
-            {
-              type: 'bar',
-              // data: [1, 2, 3, 4, 5, 6, 7, 8],
-              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
-              label: {
-                show: true,
-                position: 'top'
-              },
-              itemStyle: {
-                normal: {
-                  color: function (params) {
-                    const colorList = _this.colorList1
-                    if (params.dataIndex >= colorList.length) {
-                      params.dataIndex = params.dataIndex - colorList.length
-                    }
-                    return colorList[params.dataIndex]
-                  }
-                }
-              }
-            }
-          ]
-        }
-        myChart.setOption(option)
-      } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-        const num1 = []
-        const num2 = []
-        const num3 = []
-        const num4 = []
-        const num5 = []
-        this.node.attr('fill', function (d) {
-          if (d.Mean_corpuscular_hemoglobin_concentration < '0.01') {
-            num1.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#eff3ff'
-          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.01' && d.Mean_corpuscular_hemoglobin_concentration < '0.05') {
-            num2.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#bcd7e8'
-          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.05' && d.Mean_corpuscular_hemoglobin_concentration < '0.1') {
-            num3.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#68add8'
-          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.1' && d.Mean_corpuscular_hemoglobin_concentration < '0.5') {
-            num4.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#2b81c0'
-          } else {
-            num5.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#064e9e'
-          }
-        })
-        const myChart = echarts.init(document.getElementById('chartBar'))
-
-        const option = {
-          grid: {
-            left: '3%',
-            bottom: '10%',
-            containLabel: true
-          },
-          xAxis: {
-            name: 'Mean_corpuscular_hemoglobin_concentration',
+            name: _this.propertyChangeData,
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
@@ -1172,27 +1001,29 @@ export default {
     // 绿色色带点击事件
     colorBarChange2() {
       const _this = this
-      if (_this.propertyChangeData === 'Age') {
+      if (_this.propertyChangeData) {
         const num1 = []
         const num2 = []
         const num3 = []
         const num4 = []
         const num5 = []
         this.node.attr('fill', function (d) {
-          if (d.value < '0.01') {
-            num1.push(d.value)
+          const nodeId = Number(d.id)
+          const scoresNode = _this.scoresValue2[nodeId].value
+          if (scoresNode < '0.01') {
+            num1.push(scoresNode)
             return '#edf9fc'
-          } else if (d.value >= '0.01' && d.value < '0.05') {
-            num2.push(d.value)
+          } else if (scoresNode >= '0.01' && scoresNode < '0.05') {
+            num2.push(scoresNode)
             return '#b1e3e3'
-          } else if (d.value >= '0.05' && d.value < '0.1') {
-            num3.push(d.value)
+          } else if (scoresNode >= '0.05' && scoresNode < '0.1') {
+            num3.push(scoresNode)
             return '#62c3a4'
-          } else if (d.value >= '0.1' && d.value < '0.5') {
-            num4.push(d.value)
+          } else if (scoresNode >= '0.1' && scoresNode < '0.5') {
+            num4.push(scoresNode)
             return '#25a35c'
           } else {
-            num5.push(d.value)
+            num5.push(scoresNode)
             return '#006e29'
           }
         })
@@ -1205,74 +1036,7 @@ export default {
             containLabel: true
           },
           xAxis: {
-            name: 'Age',
-            nameLocation: 'middle',
-            nameGap: 25,
-            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
-          },
-          yAxis: {
-            name: 'Number of nodes',
-            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
-          },
-          series: [
-            {
-              type: 'bar',
-              // data: [1, 2, 3, 4, 5, 6, 7, 8],
-              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
-              label: {
-                show: true,
-                position: 'top'
-              },
-              itemStyle: {
-                normal: {
-                  color: function (params) {
-                    const colorList = _this.colorList2
-                    if (params.dataIndex >= colorList.length) {
-                      params.dataIndex = params.dataIndex - colorList.length
-                    }
-                    return colorList[params.dataIndex]
-                  }
-                }
-              }
-            }
-          ]
-        }
-        myChart.setOption(option)
-      } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-        const num1 = []
-        const num2 = []
-        const num3 = []
-        const num4 = []
-        const num5 = []
-        this.node.attr('fill', function (d) {
-          if (d.Mean_corpuscular_hemoglobin_concentration < '0.01') {
-            num1.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#edf9fc'
-          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.01' && d.Mean_corpuscular_hemoglobin_concentration < '0.05') {
-            num2.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#b1e3e3'
-          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.05' && d.Mean_corpuscular_hemoglobin_concentration < '0.1') {
-            num3.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#62c3a4'
-          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.1' && d.Mean_corpuscular_hemoglobin_concentration < '0.5') {
-            num4.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#25a35c'
-          } else {
-            num5.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#006e29'
-          }
-        })
-        const myChart = echarts.init(document.getElementById('chartBar'))
-
-        const option = {
-          grid: {
-            left: '3%',
-            bottom: '10%',
-            containLabel: true
-          },
-          xAxis: {
-            name: 'Mean_corpuscular_hemoglobin_concentration',
+            name: _this.propertyChangeData,
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
@@ -1378,27 +1142,29 @@ export default {
     // 橙色色带点击事件
     colorBarChange3() {
       const _this = this
-      if (_this.propertyChangeData === 'Age') {
+      if (_this.propertyChangeData) {
         const num1 = []
         const num2 = []
         const num3 = []
         const num4 = []
         const num5 = []
         this.node.attr('fill', function (d) {
-          if (d.value < '0.01') {
-            num1.push(d.value)
+          const nodeId = Number(d.id)
+          const scoresNode = _this.scoresValue2[nodeId].value
+          if (scoresNode < '0.01') {
+            num1.push(scoresNode)
             return '#ffeede'
-          } else if (d.value >= '0.01' && d.value < '0.05') {
-            num2.push(d.value)
+          } else if (scoresNode >= '0.01' && scoresNode < '0.05') {
+            num2.push(scoresNode)
             return '#febf80'
-          } else if (d.value >= '0.05' && d.value < '0.1') {
-            num3.push(d.value)
+          } else if (scoresNode >= '0.05' && scoresNode < '0.1') {
+            num3.push(scoresNode)
             return '#ff8d2e'
-          } else if (d.value >= '0.1' && d.value < '0.5') {
-            num4.push(d.value)
+          } else if (scoresNode >= '0.1' && scoresNode < '0.5') {
+            num4.push(scoresNode)
             return '#e95406'
           } else {
-            num5.push(d.value)
+            num5.push(scoresNode)
             return '#a83500'
           }
         })
@@ -1411,74 +1177,7 @@ export default {
             containLabel: true
           },
           xAxis: {
-            name: 'Age',
-            nameLocation: 'middle',
-            nameGap: 25,
-            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
-          },
-          yAxis: {
-            name: 'Number of nodes',
-            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
-          },
-          series: [
-            {
-              type: 'bar',
-              // data: [1, 2, 3, 4, 5, 6, 7, 8],
-              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
-              label: {
-                show: true,
-                position: 'top'
-              },
-              itemStyle: {
-                normal: {
-                  color: function (params) {
-                    const colorList = _this.colorList3
-                    if (params.dataIndex >= colorList.length) {
-                      params.dataIndex = params.dataIndex - colorList.length
-                    }
-                    return colorList[params.dataIndex]
-                  }
-                }
-              }
-            }
-          ]
-        }
-        myChart.setOption(option)
-      } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-        const num1 = []
-        const num2 = []
-        const num3 = []
-        const num4 = []
-        const num5 = []
-        this.node.attr('fill', function (d) {
-          if (d.Mean_corpuscular_hemoglobin_concentration < '0.01') {
-            num1.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#ffeede'
-          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.01' && d.Mean_corpuscular_hemoglobin_concentration < '0.05') {
-            num2.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#febf80'
-          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.05' && d.Mean_corpuscular_hemoglobin_concentration < '0.1') {
-            num3.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#ff8d2e'
-          } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.1' && d.Mean_corpuscular_hemoglobin_concentration < '0.5') {
-            num4.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#e95406'
-          } else {
-            num5.push(d.Mean_corpuscular_hemoglobin_concentration)
-            return '#a83500'
-          }
-        })
-        const myChart = echarts.init(document.getElementById('chartBar'))
-
-        const option = {
-          grid: {
-            left: '3%',
-            bottom: '10%',
-            containLabel: true
-          },
-          xAxis: {
-            name: 'Mean_corpuscular_hemoglobin_concentration',
+            name: _this.propertyChangeData,
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
@@ -1584,81 +1283,13 @@ export default {
     // 彩色色带点击事件
     colorBarChange4() {
       const _this = this
-      if (_this.propertyChangeData === 'Age') {
-        this.propertyChangeAge()
-      } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-        this.propertyChangeMean()
+      if (_this.propertyChangeData) {
+        this.histogramChange(_this.propertyChangeData)
       } else {
-        const _this = this
-        const num1 = []
-        const num2 = []
-        const num3 = []
-        const num4 = []
-        const num5 = []
-        this.node.attr('fill', function (d) {
-          d.id = Number(d.id)
-          if (d.id < 70) {
-            num1.push(d.id)
-            return '#b2392d'
-          } else if (d.id >= 70 && d.id < 200) {
-            num2.push(d.id)
-            return '#f09e30'
-          } else if (d.id >= 200 && d.id < 360) {
-            num3.push(d.id)
-            return '#7cf728'
-          } else if (d.id >= 360 && d.id < 500) {
-            num4.push(d.id)
-            return '#27b7c7'
-          } else {
-            num5.push(d.id)
-            return '#244e96'
-          }
-        })
-        const myChart = echarts.init(document.getElementById('chartBar'))
-        const option = {
-          grid: {
-            left: '3%',
-            bottom: '10%',
-            containLabel: true
-          },
-          xAxis: {
-            name: 'id',
-            nameGap: 25,
-            nameLocation: 'middle',
-            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
-          },
-          yAxis: {
-            name: 'Number of nodes',
-            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
-          },
-          series: [
-            {
-              type: 'bar',
-              // data: [1, 2, 3, 4, 5, 6, 7, 8],
-              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
-              label: {
-                show: true,
-                position: 'top'
-              },
-              itemStyle: {
-                normal: {
-                  color: function (params) {
-                    const colorList = _this.BarColorList
-                    if (params.dataIndex >= colorList.length) {
-                      params.dataIndex = params.dataIndex - colorList.length
-                    }
-                    return colorList[params.dataIndex]
-                  }
-                }
-              }
-            }
-          ]
-        }
-        myChart.setOption(option)
+        _this.histogramOrigin()
       }
     },
-    // 色带还原
+    // 色带取消
     colorBarCancel() {
       this.colorBarChange4()
       this.colorBoardClose()
@@ -1668,73 +1299,9 @@ export default {
       this.value = ''
       this.state1 = ''
       this.propertyChangeData = ''
-      const _this = this
-      const num1 = []
-      const num2 = []
-      const num3 = []
-      const num4 = []
-      const num5 = []
-      this.node.attr('fill', function (d) {
-        d.id = Number(d.id)
-        if (d.id < 70) {
-          num1.push(d.id)
-          return '#b2392d'
-        } else if (d.id >= 70 && d.id < 200) {
-          num2.push(d.id)
-          return '#f09e30'
-        } else if (d.id >= 200 && d.id < 360) {
-          num3.push(d.id)
-          return '#7cf728'
-        } else if (d.id >= 360 && d.id < 500) {
-          num4.push(d.id)
-          return '#27b7c7'
-        } else {
-          num5.push(d.id)
-          return '#244e96'
-        }
-      })
-      const myChart = echarts.init(document.getElementById('chartBar'))
-      const option = {
-        grid: {
-          left: '3%',
-          bottom: '10%',
-          containLabel: true
-        },
-        xAxis: {
-          name: 'id',
-          nameGap: 25,
-          nameLocation: 'middle',
-          nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-          data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
-        },
-        yAxis: {
-          name: 'Number of nodes',
-          nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
-        },
-        series: [
-          {
-            type: 'bar',
-            // data: [1, 2, 3, 4, 5, 6, 7, 8],
-            data: [num1.length, num2.length, num3.length, num4.length, num5.length],
-            label: {
-              show: true,
-              position: 'top'
-            },
-            itemStyle: {
-              normal: {
-                color: function (params) {
-                  const colorList = _this.BarColorList
-                  if (params.dataIndex >= colorList.length) {
-                    params.dataIndex = params.dataIndex - colorList.length
-                  }
-                  return colorList[params.dataIndex]
-                }
-              }
-            }
-          }
-        ]
-      }
-      myChart.setOption(option)
+      this.histogramOrigin()
+      this.colorBoardClose()
+      this.nodeReset()
     },
     // 节点按id编辑显示(设置透明度)
     nodeFilter() {
@@ -1744,22 +1311,8 @@ export default {
       if (maxData >= minData) {
         this.node.style('opacity', 0.4)
         this.link.style('opacity', 0.4)
-        if (_this.propertyChangeData === 'Age') {
-          let nodeLimit = this.node.filter((d) => d.value <= maxData && d.value >= minData)
-          nodeLimit.style('opacity', 1)
-          let nodeLimitId = nodeLimit.data().map((d) => d.id)
-          let linkLimit = this.link.filter((d) => nodeLimitId.includes(d.source.index) && nodeLimitId.includes(d.target.index))
-          linkLimit.style('opacity', 1)
-          this.nodesCount = nodeLimit._groups[0].length
-          this.linksCount = linkLimit._groups[0].length
-          this.node
-            .on('mouseover', function () {
-              ''
-            })
-            .on('mouseout', '')
-          nodeLimit.on('mouseover', idFocus).on('mouseout', idUnFocus)
-        } else if (_this.propertyChangeData === 'Mean_corpuscular_hemoglobin_concentration') {
-          let nodeLimit = this.node.filter((d) => d.Mean_corpuscular_hemoglobin_concentration <= maxData && d.Mean_corpuscular_hemoglobin_concentration >= minData)
+        if (_this.propertyChangeData) {
+          let nodeLimit = this.node.filter((d) => _this.scoresValue2[Number(d.id)].value <= maxData && _this.scoresValue2[Number(d.id)].value >= minData)
           nodeLimit.style('opacity', 1)
           let nodeLimitId = nodeLimit.data().map((d) => d.id)
           let linkLimit = this.link.filter((d) => nodeLimitId.includes(d.source.index) && nodeLimitId.includes(d.target.index))
@@ -1867,28 +1420,223 @@ export default {
       }
       let categoryData = filteredArr[0]
       console.log(categoryData)
-      if (categoryData === 'Age') {
-        this.propertyChangeAge()
-        this.propertyChangeData = 'Age'
-      } else if (categoryData === 'Mean_corpuscular_hemoglobin_concentration') {
-        this.propertyChangeMean()
-        this.propertyChangeData = 'Mean_corpuscular_hemoglobin_concentration'
-      }
+      const _this = this
+      const apolloClient = new ApolloClient({
+        uri: 'http://localhost:8080/graphql' // 替换成你的GraphQL API的URL
+      })
+      let scoresValue = null
+
+      apolloClient
+        .query({
+          variables: {
+            variable: categoryData
+          },
+          query: gql`
+            query ($variable: String!) {
+              scores(column: $variable) {
+                value
+              }
+            }
+          `
+        })
+        .then((response) => {
+          // 处理响应数据
+          scoresValue = response.data.scores
+          console.log(scoresValue)
+          _this.node.attr(categoryData, function (d) {
+            let scoresValue = response.data.scores
+            _this.scoresValue2 = scoresValue
+            const nodeId = Number(d.id)
+            const scoresNode = scoresValue[nodeId].value
+            console.log(scoresNode)
+            return scoresNode
+          })
+          _this.histogramChange(categoryData)
+        })
     },
     // 搜索点击下拉框数据
     handleSelect(item) {
       this.value = ''
       console.log('item.value', item.value)
-      // 切换年龄才会改变节点数据，其他暂时是恢复原来的数据
-      if (item.value === 'Age') {
-        this.propertyChangeAge()
-        this.propertyChangeData = 'Age'
-      } else if (item.value === 'Mean_corpuscular_hemoglobin_concentration') {
-        this.propertyChangeMean()
-        this.propertyChangeData = 'Mean_corpuscular_hemoglobin_concentration'
-      }
-    },
+      const _this = this
+      const apolloClient = new ApolloClient({
+        uri: 'http://localhost:8080/graphql' // 替换成你的GraphQL API的URL
+      })
+      let scoresValue = null
 
+      apolloClient
+        .query({
+          variables: {
+            variable: item.value
+          },
+          query: gql`
+            query ($variable: String!) {
+              scores(column: $variable) {
+                value
+              }
+            }
+          `
+        })
+        .then((response) => {
+          // 处理响应数据
+          scoresValue = response.data.scores
+          console.log(scoresValue)
+          _this.node.attr(item.value, function (d) {
+            let scoresValue = response.data.scores
+            _this.scoresValue2 = scoresValue
+            const nodeId = Number(d.id)
+            const scoresNode = scoresValue[nodeId].value
+            console.log(scoresNode)
+            return scoresNode
+          })
+          _this.histogramChange(item.value)
+        })
+    },
+    // 原来直方图按id
+    histogramOrigin() {
+      const _this = this
+      const num1 = []
+      const num2 = []
+      const num3 = []
+      const num4 = []
+      const num5 = []
+      this.node.attr('fill', function (d) {
+        d.id = Number(d.id)
+        if (d.id < 70) {
+          num1.push(d.id)
+          return '#b2392d'
+        } else if (d.id >= 70 && d.id < 200) {
+          num2.push(d.id)
+          return '#f09e30'
+        } else if (d.id >= 200 && d.id < 360) {
+          num3.push(d.id)
+          return '#7cf728'
+        } else if (d.id >= 360 && d.id < 500) {
+          num4.push(d.id)
+          return '#27b7c7'
+        } else {
+          num5.push(d.id)
+          return '#244e96'
+        }
+      })
+      const myChart = echarts.init(document.getElementById('chartBar'))
+      const option = {
+        grid: {
+          left: '3%',
+          bottom: '10%',
+          containLabel: true
+        },
+        xAxis: {
+          name: 'id',
+          nameGap: 25,
+          nameLocation: 'middle',
+          nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+          data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
+        },
+        yAxis: {
+          name: 'Number of nodes',
+          nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+        },
+        series: [
+          {
+            type: 'bar',
+            // data: [1, 2, 3, 4, 5, 6, 7, 8],
+            data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+            label: {
+              show: true,
+              position: 'top'
+            },
+            itemStyle: {
+              normal: {
+                color: function (params) {
+                  const colorList = _this.BarColorList
+                  if (params.dataIndex >= colorList.length) {
+                    params.dataIndex = params.dataIndex - colorList.length
+                  }
+                  return colorList[params.dataIndex]
+                }
+              }
+            }
+          }
+        ]
+      }
+      myChart.setOption(option)
+    },
+    // 直方图改变
+    histogramChange(param) {
+      const _this = this
+
+      const num1 = []
+      const num2 = []
+      const num3 = []
+      const num4 = []
+      const num5 = []
+
+      this.node.attr('fill', function (d) {
+        const nodeId = Number(d.id)
+        const scoresNode = _this.scoresValue2[nodeId].value
+        if (scoresNode < '0.01') {
+          num1.push(scoresNode)
+          return '#b2392d'
+        } else if (scoresNode >= '0.01' && scoresNode < '0.05') {
+          num2.push(scoresNode)
+          return '#f09e30'
+        } else if (scoresNode >= '0.05' && scoresNode < '0.1') {
+          num3.push(scoresNode)
+          return '#7cf728'
+        } else if (scoresNode >= '0.1' && scoresNode < '0.5') {
+          num4.push(scoresNode)
+          return '#25a8b6'
+        } else {
+          num5.push(scoresNode)
+          return '#244e96'
+        }
+      })
+      const myChart = echarts.init(document.getElementById('chartBar'))
+
+      const option = {
+        grid: {
+          left: '3%',
+          bottom: '10%',
+          containLabel: true
+        },
+        xAxis: {
+          name: param,
+          nameLocation: 'middle',
+          nameGap: 25,
+          nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+          data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
+        },
+        yAxis: {
+          name: 'Number of nodes',
+          nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+        },
+        series: [
+          {
+            type: 'bar',
+            // data: [1, 2, 3, 4, 5, 6, 7, 8],
+            data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+            label: {
+              show: true,
+              position: 'top'
+            },
+            itemStyle: {
+              normal: {
+                color: function (params) {
+                  const colorList = _this.BarColorList
+                  if (params.dataIndex >= colorList.length) {
+                    params.dataIndex = params.dataIndex - colorList.length
+                  }
+                  return colorList[params.dataIndex]
+                }
+              }
+            }
+          }
+        ]
+      }
+      myChart.setOption(option)
+      _this.propertyChangeData = param
+    },
     // 搜索下拉数据显示
     loadAll() {
       const options = []
@@ -1903,144 +1651,6 @@ export default {
       })
 
       return options
-    },
-    // 根据变量名切换数值
-    propertyChangeAge() {
-      const num1 = []
-      const num2 = []
-      const num3 = []
-      const num4 = []
-      const num5 = []
-      this.node.attr('fill', function (d) {
-        if (d.value < '0.01') {
-          num1.push(d.value)
-          return '#b2392d'
-        } else if (d.value >= '0.01' && d.value < '0.05') {
-          num2.push(d.value)
-          return '#f09e30'
-        } else if (d.value >= '0.05' && d.value < '0.1') {
-          num3.push(d.value)
-          return '#7cf728'
-        } else if (d.value >= '0.1' && d.value < '0.5') {
-          num4.push(d.value)
-          return '#25a8b6'
-        } else {
-          num5.push(d.value)
-          return '#244e96'
-        }
-      })
-      const myChart = echarts.init(document.getElementById('chartBar'))
-      const _this = this
-
-      const option = {
-        grid: {
-          left: '3%',
-          bottom: '10%',
-          containLabel: true
-        },
-        xAxis: {
-          name: 'Age',
-          nameLocation: 'middle',
-          nameGap: 25,
-          nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-          data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
-        },
-        yAxis: {
-          name: 'Number of nodes',
-          nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
-        },
-        series: [
-          {
-            type: 'bar',
-            // data: [1, 2, 3, 4, 5, 6, 7, 8],
-            data: [num1.length, num2.length, num3.length, num4.length, num5.length],
-            label: {
-              show: true,
-              position: 'top'
-            },
-            itemStyle: {
-              normal: {
-                color: function (params) {
-                  const colorList = _this.BarColorList
-                  if (params.dataIndex >= colorList.length) {
-                    params.dataIndex = params.dataIndex - colorList.length
-                  }
-                  return colorList[params.dataIndex]
-                }
-              }
-            }
-          }
-        ]
-      }
-      myChart.setOption(option)
-    },
-    propertyChangeMean() {
-      const num1 = []
-      const num2 = []
-      const num3 = []
-      const num4 = []
-      const num5 = []
-      this.node.attr('fill', function (d) {
-        if (d.Mean_corpuscular_hemoglobin_concentration < '0.01') {
-          num1.push(d.Mean_corpuscular_hemoglobin_concentration)
-          return '#b2392d'
-        } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.01' && d.Mean_corpuscular_hemoglobin_concentration < '0.05') {
-          num2.push(d.Mean_corpuscular_hemoglobin_concentration)
-          return '#f09e30'
-        } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.05' && d.Mean_corpuscular_hemoglobin_concentration < '0.1') {
-          num3.push(d.Mean_corpuscular_hemoglobin_concentration)
-          return '#7cf728'
-        } else if (d.Mean_corpuscular_hemoglobin_concentration >= '0.1' && d.Mean_corpuscular_hemoglobin_concentration < '0.5') {
-          num4.push(d.Mean_corpuscular_hemoglobin_concentration)
-          return '#25a8b6'
-        } else {
-          num5.push(d.Mean_corpuscular_hemoglobin_concentration)
-          return '#244e96'
-        }
-      })
-      const myChart = echarts.init(document.getElementById('chartBar'))
-      const _this = this
-      const option = {
-        grid: {
-          left: '3%',
-          bottom: '10%',
-          containLabel: true
-        },
-        xAxis: {
-          name: 'Mean_corpuscular_hemoglobin_concentration',
-          nameLocation: 'middle',
-          nameGap: 25,
-          nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-          data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
-        },
-        yAxis: {
-          name: 'Number of nodes',
-          nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
-        },
-        series: [
-          {
-            type: 'bar',
-            // data: [1, 2, 3, 4, 5, 6, 7, 8],
-            data: [num1.length, num2.length, num3.length, num4.length, num5.length],
-            label: {
-              show: true,
-              position: 'top'
-            },
-            itemStyle: {
-              normal: {
-                color: function (params) {
-                  const colorList = _this.BarColorList
-                  if (params.dataIndex >= colorList.length) {
-                    params.dataIndex = params.dataIndex - colorList.length
-                  }
-                  return colorList[params.dataIndex]
-                }
-              }
-            }
-          }
-        ]
-      }
-      myChart.setOption(option)
     },
     // 改变节点斥力
     forceChange() {
@@ -2240,4 +1850,3 @@ export default {
   }
 }
 </style>
-./apollo ../apollo
