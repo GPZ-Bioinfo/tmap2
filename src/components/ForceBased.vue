@@ -82,24 +82,24 @@
         </el-descriptions-item>
         <el-descriptions-item>
           <template slot="label"> 最大值 </template>
-          {{ Math.max(...nodesDataId) }}
+          {{ parseFloat(Math.max(...nodesDataScores)).toFixed(2) }}
         </el-descriptions-item>
         <el-descriptions-item>
           <template slot="label"> 最小值 </template>
-          {{ Math.min(...nodesDataId) }}
+          {{ parseFloat(Math.min(...nodesDataScores)).toFixed(2) }}
         </el-descriptions-item>
         <el-descriptions-item>
           <template slot="label"> 均值 </template>
-          {{ parseFloat(nodesDataId.reduce((total, str) => total + parseInt(str), 0) / nodesDataId.length).toFixed(2) }}
+          {{ parseFloat(nodesDataScores.reduce((total, str) => total + parseFloat(str), 0) / nodesDataScores.length).toFixed(2) }}
         </el-descriptions-item>
         <el-descriptions-item>
           <template slot="label"> 标准差 </template>
           {{
             parseFloat(
               Math.sqrt(
-                nodesDataId
-                  .map((num) => Math.pow(num - parseFloat(nodesDataId.reduce((total, str) => total + parseInt(str), 0) / nodesDataId.length).toFixed(2), 2))
-                  .reduce((total, num) => total + num) / nodesDataId.length
+                nodesDataScores
+                  .map((num) => Math.pow(num - parseFloat(nodesDataScores.reduce((total, str) => total + parseInt(str), 0) / nodesDataScores.length).toFixed(2), 2))
+                  .reduce((total, num) => total + num) / nodesDataScores.length
               )
             ).toFixed(2)
           }}
@@ -221,6 +221,7 @@ export default {
     boardExit: false,
     nodesData: [],
     nodesDataId: [],
+    nodesDataScores: [],
     SelectStop: true,
     labelNode: null,
     graphLinks: null,
@@ -252,7 +253,8 @@ export default {
     graphqlData: null,
     graphqlDataValue: null,
     variablesValue: null,
-    scoresValue2: null
+    scoresValue: null,
+    scoresValueArray: []
   }),
   created() {
     const apolloClient = new ApolloClient({
@@ -438,39 +440,23 @@ export default {
             _this.min = ''
           } else {
             _this.lastClicked = params.dataIndex
+            let scoresValueMax = parseFloat(Math.max(..._this.scoresValueArray)).toFixed(2)
             if (_this.propertyChangeData) {
               if (_this.lastClicked === 0) {
-                _this.max = 0.01
+                _this.max = scoresValueMax / 5
                 _this.min = 0
               } else if (_this.lastClicked === 1) {
-                _this.max = 0.05
-                _this.min = 0.01
+                _this.max = (2 * scoresValueMax) / 5
+                _this.min = scoresValueMax / 5
               } else if (_this.lastClicked === 2) {
-                _this.max = 0.1
-                _this.min = 0.05
+                _this.max = (3 * scoresValueMax) / 5
+                _this.min = (2 * scoresValueMax) / 5
               } else if (_this.lastClicked === 3) {
-                _this.max = 0.5
-                _this.min = 0.1
+                _this.max = (4 * scoresValueMax) / 5
+                _this.min = (3 * scoresValueMax) / 5
               } else if (_this.lastClicked === 4) {
                 _this.max = ''
-                _this.min = 0.5
-              }
-            } else {
-              if (_this.lastClicked === 0) {
-                _this.max = 69
-                _this.min = 0
-              } else if (_this.lastClicked === 1) {
-                _this.max = 199
-                _this.min = 70
-              } else if (_this.lastClicked === 2) {
-                _this.max = 359
-                _this.min = 200
-              } else if (_this.lastClicked === 3) {
-                _this.max = 499
-                _this.min = 360
-              } else if (_this.lastClicked === 4) {
-                _this.max = ''
-                _this.min = 500
+                _this.min = (4 * scoresValueMax) / 5
               }
             }
           }
@@ -575,20 +561,23 @@ export default {
           _this.node.style('opacity', 0.4)
           _this.nodesData = []
           _this.nodesDataId = []
+          _this.nodesDataScores = []
           let brushNode = _this.node.filter((d) => x3 <= x(d.x) && x(d.x) < x4 && y3 <= y(d.y) && y(d.y) < y4)
           brushNode.style('opacity', 1)
           if (brushNode.nodes()[0]) {
             brushNode.each(function () {
               const nodeDataId = d3.select(this).attr('id')
               if (_this.propertyChangeData) {
-                const nodeDataAge = d3.select(this).attr(_this.propertyChangeData)
+                const nodeDataScores = d3.select(this).attr(_this.propertyChangeData)
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataAge)
+                  _this.nodesDataScores.unshift(nodeDataScores)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
                 }
               } else {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
+                  _this.nodesDataScores = _this.nodesDataId
                   _this.nodesData.unshift('"id":' + nodeDataId)
                 }
               }
@@ -613,6 +602,7 @@ export default {
       this.boardExit = false
       this.nodesData = []
       this.nodesDataId = []
+      this.nodesDataScores = []
       this.container.call(this.brush.move, null)
       this.container.on('.brush', null)
       document.querySelector('#viz > g > rect.overlay').remove()
@@ -679,14 +669,16 @@ export default {
             brushNode.each(function () {
               const nodeDataId = d3.select(this).attr('id')
               if (_this.propertyChangeData) {
-                const nodeDataAge = d3.select(this).attr(_this.propertyChangeData)
+                const nodeDataScores = d3.select(this).attr(_this.propertyChangeData)
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataAge)
+                  _this.nodesDataScores.unshift(nodeDataScores)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
                 }
               } else {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
+                  _this.nodesDataScores = _this.nodesDataId
                   _this.nodesData.unshift('"id":' + nodeDataId)
                 }
               }
@@ -710,6 +702,7 @@ export default {
       this.boardExit = false
       this.nodesData = []
       this.nodesDataId = []
+      this.nodesDataScores = []
       this.container.call(this.brush.move, null)
       this.container.on('.brush', null)
       document.querySelector('#viz > g > rect.overlay').remove()
@@ -763,14 +756,16 @@ export default {
         if (nodeOpacity === 0.4) {
           d3.select(this).style('opacity', 1)
           if (_this.propertyChangeData) {
-            const nodeDataAge = d3.select(this).attr(_this.propertyChangeData)
+            const nodeDataScores = d3.select(this).attr(_this.propertyChangeData)
             if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
               _this.nodesDataId.unshift(nodeDataId)
-              _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataAge)
+              _this.nodesDataScores.unshift(nodeDataScores)
+              _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
             }
           } else {
             if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
               _this.nodesDataId.unshift(nodeDataId)
+              _this.nodesDataScores = _this.nodesDataId
               _this.nodesData.unshift('"id":' + nodeDataId)
             }
           }
@@ -778,6 +773,7 @@ export default {
           d3.select(this).style('opacity', 0.4)
           const nodeIndex = _this.nodesDataId.indexOf(nodeDataId)
           _this.nodesDataId.splice(nodeIndex, 1)
+          _this.nodesDataScores.splice(nodeIndex, 1)
           _this.nodesData.splice(nodeIndex, 1)
         }
       })
@@ -791,6 +787,7 @@ export default {
       this.boardExit = false
       this.nodesData = []
       this.nodesDataId = []
+      this.nodesDataScores = []
       // this.boardClose()
     },
     // 数据面板关闭
@@ -866,19 +863,21 @@ export default {
         const num3 = []
         const num4 = []
         const num5 = []
+        let scoresValueMax = parseFloat(Math.max(..._this.scoresValueArray)).toFixed(2)
         this.node.attr('fill', function (d) {
           const nodeId = Number(d.id)
-          const scoresNode = _this.scoresValue2[nodeId].value
-          if (scoresNode < '0.01') {
+          const scoresNode = _this.scoresValue[nodeId].value
+
+          if (scoresNode < scoresValueMax / 5) {
             num1.push(scoresNode)
             return '#eff3ff'
-          } else if (scoresNode >= '0.01' && scoresNode < '0.05') {
+          } else if (scoresNode >= scoresValueMax / 5 && scoresNode < (2 * scoresValueMax) / 5) {
             num2.push(scoresNode)
             return '#bcd7e8'
-          } else if (scoresNode >= '0.05' && scoresNode < '0.1') {
+          } else if (scoresNode >= (2 * scoresValueMax) / 5 && scoresNode < (3 * scoresValueMax) / 5) {
             num3.push(scoresNode)
             return '#68add8'
-          } else if (scoresNode >= '0.1' && scoresNode < '0.5') {
+          } else if (scoresNode >= (3 * scoresValueMax) / 5 && scoresNode < (4 * scoresValueMax) / 5) {
             num4.push(scoresNode)
             return '#2b81c0'
           } else {
@@ -899,7 +898,13 @@ export default {
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
+            data: [
+              `(0,${scoresValueMax / 5})`,
+              `(${scoresValueMax / 5},${(2 * scoresValueMax) / 5})`,
+              `(${(2 * scoresValueMax) / 5},${(3 * scoresValueMax) / 5})`,
+              `(${(3 * scoresValueMax) / 5},${(4 * scoresValueMax) / 5})`,
+              `(${(4 * scoresValueMax) / 5},${scoresValueMax})`
+            ]
           },
           yAxis: {
             name: 'Number of nodes',
@@ -936,21 +941,21 @@ export default {
         const num4 = []
         const num5 = []
         this.node.attr('fill', function (d) {
-          d.id = Number(d.id)
-          if (d.id < 70) {
-            num1.push(d.id)
+          d.size = Number(d.size)
+          if (d.size < 4) {
+            num1.push(d.size)
             return '#eff3ff'
-          } else if (d.id >= 70 && d.id < 200) {
-            num2.push(d.id)
+          } else if (d.size >= 4 && d.size < 8) {
+            num2.push(d.size)
             return '#bcd7e8'
-          } else if (d.id >= 200 && d.id < 360) {
-            num3.push(d.id)
+          } else if (d.size >= 8 && d.size < 12) {
+            num3.push(d.size)
             return '#68add8'
-          } else if (d.id >= 360 && d.id < 500) {
-            num4.push(d.id)
+          } else if (d.size >= 12 && d.size < 16) {
+            num4.push(d.size)
             return '#2b81c0'
           } else {
-            num5.push(d.id)
+            num5.push(d.size)
             return '#064e9e'
           }
         })
@@ -962,11 +967,11 @@ export default {
             containLabel: true
           },
           xAxis: {
-            name: 'id',
+            name: 'size',
             nameGap: 25,
             nameLocation: 'middle',
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
+            data: ['(0,4)', '(4,8)', '(8,12)', '(12,16)', '(16,+∞)']
           },
           yAxis: {
             name: 'Number of nodes',
@@ -1007,19 +1012,21 @@ export default {
         const num3 = []
         const num4 = []
         const num5 = []
+        let scoresValueMax = parseFloat(Math.max(..._this.scoresValueArray)).toFixed(2)
         this.node.attr('fill', function (d) {
           const nodeId = Number(d.id)
-          const scoresNode = _this.scoresValue2[nodeId].value
-          if (scoresNode < '0.01') {
+          const scoresNode = _this.scoresValue[nodeId].value
+
+          if (scoresNode < scoresValueMax / 5) {
             num1.push(scoresNode)
             return '#edf9fc'
-          } else if (scoresNode >= '0.01' && scoresNode < '0.05') {
+          } else if (scoresNode >= scoresValueMax / 5 && scoresNode < (2 * scoresValueMax) / 5) {
             num2.push(scoresNode)
             return '#b1e3e3'
-          } else if (scoresNode >= '0.05' && scoresNode < '0.1') {
+          } else if (scoresNode >= (2 * scoresValueMax) / 5 && scoresNode < (3 * scoresValueMax) / 5) {
             num3.push(scoresNode)
             return '#62c3a4'
-          } else if (scoresNode >= '0.1' && scoresNode < '0.5') {
+          } else if (scoresNode >= (3 * scoresValueMax) / 5 && scoresNode < (4 * scoresValueMax) / 5) {
             num4.push(scoresNode)
             return '#25a35c'
           } else {
@@ -1040,7 +1047,13 @@ export default {
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
+            data: [
+              `(0,${scoresValueMax / 5})`,
+              `(${scoresValueMax / 5},${(2 * scoresValueMax) / 5})`,
+              `(${(2 * scoresValueMax) / 5},${(3 * scoresValueMax) / 5})`,
+              `(${(3 * scoresValueMax) / 5},${(4 * scoresValueMax) / 5})`,
+              `(${(4 * scoresValueMax) / 5},${scoresValueMax})`
+            ]
           },
           yAxis: {
             name: 'Number of nodes',
@@ -1077,21 +1090,21 @@ export default {
         const num4 = []
         const num5 = []
         this.node.attr('fill', function (d) {
-          d.id = Number(d.id)
-          if (d.id < 70) {
-            num1.push(d.id)
+          d.size = Number(d.size)
+          if (d.size < 4) {
+            num1.push(d.size)
             return '#edf9fc'
-          } else if (d.id >= 70 && d.id < 200) {
-            num2.push(d.id)
+          } else if (d.size >= 4 && d.size < 8) {
+            num2.push(d.size)
             return '#b1e3e3'
-          } else if (d.id >= 200 && d.id < 360) {
-            num3.push(d.id)
+          } else if (d.size >= 8 && d.size < 12) {
+            num3.push(d.size)
             return '#62c3a4'
-          } else if (d.id >= 360 && d.id < 500) {
-            num4.push(d.id)
+          } else if (d.size >= 12 && d.size < 16) {
+            num4.push(d.size)
             return '#25a35c'
           } else {
-            num5.push(d.id)
+            num5.push(d.size)
             return '#006e29'
           }
         })
@@ -1103,11 +1116,11 @@ export default {
             containLabel: true
           },
           xAxis: {
-            name: 'id',
+            name: 'size',
             nameGap: 25,
             nameLocation: 'middle',
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
+            data: ['(0,4)', '(4,8)', '(8,12)', '(12,16)', '(16,+∞)']
           },
           yAxis: {
             name: 'Number of nodes',
@@ -1148,19 +1161,21 @@ export default {
         const num3 = []
         const num4 = []
         const num5 = []
+        let scoresValueMax = parseFloat(Math.max(..._this.scoresValueArray)).toFixed(2)
         this.node.attr('fill', function (d) {
           const nodeId = Number(d.id)
-          const scoresNode = _this.scoresValue2[nodeId].value
-          if (scoresNode < '0.01') {
+          const scoresNode = _this.scoresValue[nodeId].value
+
+          if (scoresNode < scoresValueMax / 5) {
             num1.push(scoresNode)
             return '#ffeede'
-          } else if (scoresNode >= '0.01' && scoresNode < '0.05') {
+          } else if (scoresNode >= scoresValueMax / 5 && scoresNode < (2 * scoresValueMax) / 5) {
             num2.push(scoresNode)
             return '#febf80'
-          } else if (scoresNode >= '0.05' && scoresNode < '0.1') {
+          } else if (scoresNode >= (2 * scoresValueMax) / 5 && scoresNode < (3 * scoresValueMax) / 5) {
             num3.push(scoresNode)
             return '#ff8d2e'
-          } else if (scoresNode >= '0.1' && scoresNode < '0.5') {
+          } else if (scoresNode >= (3 * scoresValueMax) / 5 && scoresNode < (4 * scoresValueMax) / 5) {
             num4.push(scoresNode)
             return '#e95406'
           } else {
@@ -1181,7 +1196,13 @@ export default {
             nameLocation: 'middle',
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
+            data: [
+              `(0,${scoresValueMax / 5})`,
+              `(${scoresValueMax / 5},${(2 * scoresValueMax) / 5})`,
+              `(${(2 * scoresValueMax) / 5},${(3 * scoresValueMax) / 5})`,
+              `(${(3 * scoresValueMax) / 5},${(4 * scoresValueMax) / 5})`,
+              `(${(4 * scoresValueMax) / 5},${scoresValueMax})`
+            ]
           },
           yAxis: {
             name: 'Number of nodes',
@@ -1218,21 +1239,21 @@ export default {
         const num4 = []
         const num5 = []
         this.node.attr('fill', function (d) {
-          d.id = Number(d.id)
-          if (d.id < 70) {
-            num1.push(d.id)
+          d.size = Number(d.size)
+          if (d.size < 4) {
+            num1.push(d.size)
             return '#ffeede'
-          } else if (d.id >= 70 && d.id < 200) {
-            num2.push(d.id)
+          } else if (d.size >= 4 && d.size < 8) {
+            num2.push(d.size)
             return '#febf80'
-          } else if (d.id >= 200 && d.id < 360) {
-            num3.push(d.id)
+          } else if (d.size >= 8 && d.size < 12) {
+            num3.push(d.size)
             return '#ff8d2e'
-          } else if (d.id >= 360 && d.id < 500) {
-            num4.push(d.id)
+          } else if (d.size >= 12 && d.size < 16) {
+            num4.push(d.size)
             return '#e95406'
           } else {
-            num5.push(d.id)
+            num5.push(d.size)
             return '#a83500'
           }
         })
@@ -1244,11 +1265,11 @@ export default {
             containLabel: true
           },
           xAxis: {
-            name: 'id',
+            name: 'size',
             nameGap: 25,
             nameLocation: 'middle',
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-            data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
+            data: ['(0,4)', '(4,8)', '(8,12)', '(12,16)', '(16,+∞)']
           },
           yAxis: {
             name: 'Number of nodes',
@@ -1312,7 +1333,7 @@ export default {
         this.node.style('opacity', 0.4)
         this.link.style('opacity', 0.4)
         if (_this.propertyChangeData) {
-          let nodeLimit = this.node.filter((d) => _this.scoresValue2[Number(d.id)].value <= maxData && _this.scoresValue2[Number(d.id)].value >= minData)
+          let nodeLimit = this.node.filter((d) => _this.scoresValue[Number(d.id)].value <= maxData && _this.scoresValue[Number(d.id)].value >= minData)
           nodeLimit.style('opacity', 1)
           let nodeLimitId = nodeLimit.data().map((d) => d.id)
           let linkLimit = this.link.filter((d) => nodeLimitId.includes(d.source.index) && nodeLimitId.includes(d.target.index))
@@ -1424,7 +1445,6 @@ export default {
       const apolloClient = new ApolloClient({
         uri: 'http://localhost:8080/graphql' // 替换成你的GraphQL API的URL
       })
-      let scoresValue = null
 
       apolloClient
         .query({
@@ -1441,14 +1461,11 @@ export default {
         })
         .then((response) => {
           // 处理响应数据
-          scoresValue = response.data.scores
-          console.log(scoresValue)
           _this.node.attr(categoryData, function (d) {
-            let scoresValue = response.data.scores
-            _this.scoresValue2 = scoresValue
+            _this.scoresValue = response.data.scores
             const nodeId = Number(d.id)
-            const scoresNode = scoresValue[nodeId].value
-            console.log(scoresNode)
+            const scoresNode = _this.scoresValue[nodeId].value
+            _this.scoresValueArray.unshift(scoresNode)
             return scoresNode
           })
           _this.histogramChange(categoryData)
@@ -1462,7 +1479,6 @@ export default {
       const apolloClient = new ApolloClient({
         uri: 'http://localhost:8080/graphql' // 替换成你的GraphQL API的URL
       })
-      let scoresValue = null
 
       apolloClient
         .query({
@@ -1479,14 +1495,11 @@ export default {
         })
         .then((response) => {
           // 处理响应数据
-          scoresValue = response.data.scores
-          console.log(scoresValue)
           _this.node.attr(item.value, function (d) {
-            let scoresValue = response.data.scores
-            _this.scoresValue2 = scoresValue
+            _this.scoresValue = response.data.scores
             const nodeId = Number(d.id)
-            const scoresNode = scoresValue[nodeId].value
-            console.log(scoresNode)
+            const scoresNode = _this.scoresValue[nodeId].value
+            _this.scoresValueArray.unshift(scoresNode)
             return scoresNode
           })
           _this.histogramChange(item.value)
@@ -1501,21 +1514,21 @@ export default {
       const num4 = []
       const num5 = []
       this.node.attr('fill', function (d) {
-        d.id = Number(d.id)
-        if (d.id < 70) {
-          num1.push(d.id)
+        d.size = Number(d.size)
+        if (d.size < 4) {
+          num1.push(d.size)
           return '#b2392d'
-        } else if (d.id >= 70 && d.id < 200) {
-          num2.push(d.id)
+        } else if (d.size >= 4 && d.size < 8) {
+          num2.push(d.size)
           return '#f09e30'
-        } else if (d.id >= 200 && d.id < 360) {
-          num3.push(d.id)
+        } else if (d.size >= 8 && d.size < 12) {
+          num3.push(d.size)
           return '#7cf728'
-        } else if (d.id >= 360 && d.id < 500) {
-          num4.push(d.id)
+        } else if (d.size >= 12 && d.size < 16) {
+          num4.push(d.size)
           return '#27b7c7'
         } else {
-          num5.push(d.id)
+          num5.push(d.size)
           return '#244e96'
         }
       })
@@ -1527,15 +1540,15 @@ export default {
           containLabel: true
         },
         xAxis: {
-          name: 'id',
+          name: 'size',
           nameGap: 25,
           nameLocation: 'middle',
           nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-          data: ['(0,70)', '(70,200)', '(200,360)', '(360,500)', '(500,+∞)']
+          data: ['(0,4)', '(4,8)', '(8,12)', '(12,16)', '(16,+∞)']
         },
         yAxis: {
           name: 'Number of nodes',
-          nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+          nameTextStyle: { fontSize: 16, fontWeight: 'bold', align: 'left' }
         },
         series: [
           {
@@ -1571,20 +1584,21 @@ export default {
       const num3 = []
       const num4 = []
       const num5 = []
-
+      let scoresValueMax = parseFloat(Math.max(..._this.scoresValueArray)).toFixed(2)
       this.node.attr('fill', function (d) {
         const nodeId = Number(d.id)
-        const scoresNode = _this.scoresValue2[nodeId].value
-        if (scoresNode < '0.01') {
+        const scoresNode = _this.scoresValue[nodeId].value
+
+        if (scoresNode < scoresValueMax / 5) {
           num1.push(scoresNode)
           return '#b2392d'
-        } else if (scoresNode >= '0.01' && scoresNode < '0.05') {
+        } else if (scoresNode >= scoresValueMax / 5 && scoresNode < (2 * scoresValueMax) / 5) {
           num2.push(scoresNode)
           return '#f09e30'
-        } else if (scoresNode >= '0.05' && scoresNode < '0.1') {
+        } else if (scoresNode >= (2 * scoresValueMax) / 5 && scoresNode < (3 * scoresValueMax) / 5) {
           num3.push(scoresNode)
           return '#7cf728'
-        } else if (scoresNode >= '0.1' && scoresNode < '0.5') {
+        } else if (scoresNode >= (3 * scoresValueMax) / 5 && scoresNode < (4 * scoresValueMax) / 5) {
           num4.push(scoresNode)
           return '#25a8b6'
         } else {
@@ -1605,7 +1619,13 @@ export default {
           nameLocation: 'middle',
           nameGap: 25,
           nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-          data: ['(0,0.01)', '(0.01,0.05)', '(0.05,0.1)', '(0.1,0.5)', '(0.5,+∞)']
+          data: [
+            `(0,${scoresValueMax / 5})`,
+            `(${scoresValueMax / 5},${(2 * scoresValueMax) / 5})`,
+            `(${(2 * scoresValueMax) / 5},${(3 * scoresValueMax) / 5})`,
+            `(${(3 * scoresValueMax) / 5},${(4 * scoresValueMax) / 5})`,
+            `(${(4 * scoresValueMax) / 5},${scoresValueMax})`
+          ]
         },
         yAxis: {
           name: 'Number of nodes',
