@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <el-header>
-      <el-page-header @back="goBack" title="Home" style="color: #000" v-if="Home_visible"> </el-page-header>
+      <el-page-header @back="goBack" title="Dashboard" style="color: #000" v-if="Dashboard_visible"> </el-page-header>
       <div class="humberger"><el-button class="el-icon-s-fold" style="font-size: 20px; color: #000" @click="toggleMenu" type="text"></el-button></div>
     </el-header>
     <el-container>
@@ -63,7 +63,7 @@
 export default {
   data() {
     return {
-      Home_visible: true
+      Dashboard_visible: true
     }
   },
   mounted() {
@@ -96,10 +96,22 @@ export default {
       }
     },
     goBack() {
-      this.$store.commit('removeToken')
-      localStorage.removeItem('users')
-      this.Home_visible = true
-      this.$router.push('/Home').catch((err) => {}) // eslint-disable-line
+      // this.$store.commit('removeToken')
+      // localStorage.removeItem('users')
+      // this.Home_visible = true
+      // this.$router.push('/home').catch((err) => {})
+      this.Dashboard_visible = false
+      this.$router.push('/dashboard')
+    }
+  },
+  beforeRouteEnter(to, from, next) {
+    const isLogin = JSON.parse(localStorage.getItem('users'))
+    if (isLogin.token !== 't2t123xafwfw2233') {
+      next({
+        path: '/home'
+      })
+    } else {
+      next()
     }
   }
 }
@@ -113,10 +125,6 @@ export default {
   height: 60px;
   background-color: #c8d0d4;
   display: flex;
-}
-.el-aside {
-  width: 280px;
-  background-color: #f5f7fa;
 }
 
 .el-menu-vertical-demo:not(.el-menu--collapse) {

@@ -7,51 +7,51 @@
           <v-icon>mdi-fullscreen</v-icon>
         </el-tooltip></el-button
       >
-      <el-button class="buttonStyle" @click="exitFullScreen" v-if="!fullScreen"
+      <el-button class="buttonStyle" @click="exitFullScreen" v-if="!fullScreen" type="info"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消全屏"> <v-icon>mdi-fullscreen-exit</v-icon></el-tooltip></el-button
       >
       <!-- 暂停控件 -->
       <el-button class="buttonStyle" v-if="buttonStop" @click="forceStop"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="暂停"><v-icon>mdi-pause</v-icon></el-tooltip></el-button
       >
-      <el-button class="buttonStyle" v-if="!buttonStop" @click="forceStart"
+      <el-button class="buttonStyle" v-if="!buttonStop" @click="forceStart" type="info"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="开始"><v-icon>mdi-play</v-icon></el-tooltip></el-button
       >
       <!-- 高亮邻居 -->
       <el-button class="buttonStyle" @click="highLight" v-if="LightStop"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="高亮邻居"><v-icon>mdi-auto-fix</v-icon></el-tooltip></el-button
       >
-      <el-button class="buttonStyle" @click="LightCancel" v-if="!LightStop"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消高亮"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
+      <el-button class="buttonStyle" @click="LightCancel" v-if="!LightStop" type="info"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消高亮"><v-icon>mdi-auto-fix</v-icon></el-tooltip></el-button
       >
       <!-- 框选控件 -->
       <el-button class="buttonStyle" @click="brushSelect" v-if="brushStop"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="框选"><v-icon>mdi-crop-square</v-icon></el-tooltip></el-button
       >
-      <el-button class="buttonStyle" @click="brushCancel" v-if="!brushStop"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消框选"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
+      <el-button class="buttonStyle" @click="brushCancel" v-if="!brushStop" type="info"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消框选"><v-icon>mdi-crop-square</v-icon></el-tooltip></el-button
       >
       <!-- 框选控件2 -->
       <el-button class="buttonStyle" @click="brushSelect2" v-if="brushStop2"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="框选2"><v-icon>mdi-shape-square-plus</v-icon></el-tooltip></el-button
       >
-      <el-button class="buttonStyle" @click="brushCancel2" v-if="!brushStop2"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消框选"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
+      <el-button class="buttonStyle" @click="brushCancel2" v-if="!brushStop2" type="info"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消框选"><v-icon>mdi-shape-square-plus</v-icon></el-tooltip></el-button
       >
       <!-- 多选按钮 -->
       <el-button class="buttonStyle" @click="MultiSelect" v-if="SelectStop"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="多选"><v-icon>mdi-selection-search</v-icon></el-tooltip></el-button
       >
-      <el-button class="buttonStyle" @click="SelectCancel" v-if="!SelectStop"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消多选"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
+      <el-button class="buttonStyle" @click="SelectCancel" v-if="!SelectStop" type="info"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消多选"><v-icon>mdi-selection-search</v-icon></el-tooltip></el-button
       >
 
       <!-- 直方图控件 -->
       <el-button class="buttonStyle" @click="ChartBarNone" v-if="histogramExit"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="直方图"><v-icon>mdi-chart-histogram</v-icon></el-tooltip></el-button
       >
-      <el-button class="buttonStyle" @click="theChartBar" v-if="!histogramExit"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="显示直方图"><v-icon>mdi-reply</v-icon></el-tooltip></el-button
+      <el-button class="buttonStyle" @click="theChartBar" v-if="!histogramExit" type="info"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="显示直方图"><v-icon>mdi-chart-histogram</v-icon></el-tooltip></el-button
       >
       <!-- 下载控件 -->
       <el-button class="buttonStyle" @click="screenShot"
@@ -110,7 +110,7 @@
       </div>
     </el-card>
     <!-- 取色板按钮面板 -->
-    <div class="colorCastButton" v-if="histogramExit">
+    <div id="colorCastButton">
       <!-- 画板控件 -->
       <el-button @click="ColorSelect" type="text" class="buttonStyle2"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="调色板"><v-icon size="30">mdi-palette</v-icon></el-tooltip></el-button
@@ -203,7 +203,7 @@ export default {
     max: '',
     min: '',
     graph: '',
-    valueTooltip: 10,
+    valueTooltip: 20,
     fullScreen: true,
     width: window.innerWidth,
     height: window.innerHeight,
@@ -440,23 +440,40 @@ export default {
             _this.min = ''
           } else {
             _this.lastClicked = params.dataIndex
-            let scoresValueMax = parseFloat(Math.max(..._this.scoresValueArray)).toFixed(2)
+            let scoresValueMax = (parseFloat(Math.max(..._this.scoresValueArray)) / 5).toFixed(2)
             if (_this.propertyChangeData) {
               if (_this.lastClicked === 0) {
-                _this.max = scoresValueMax / 5
+                _this.max = scoresValueMax
                 _this.min = 0
               } else if (_this.lastClicked === 1) {
-                _this.max = (2 * scoresValueMax) / 5
-                _this.min = scoresValueMax / 5
+                _this.max = 2 * scoresValueMax
+                _this.min = scoresValueMax
               } else if (_this.lastClicked === 2) {
-                _this.max = (3 * scoresValueMax) / 5
-                _this.min = (2 * scoresValueMax) / 5
+                _this.max = 3 * scoresValueMax
+                _this.min = 2 * scoresValueMax
               } else if (_this.lastClicked === 3) {
-                _this.max = (4 * scoresValueMax) / 5
-                _this.min = (3 * scoresValueMax) / 5
+                _this.max = 4 * scoresValueMax
+                _this.min = 3 * scoresValueMax
               } else if (_this.lastClicked === 4) {
                 _this.max = ''
-                _this.min = (4 * scoresValueMax) / 5
+                _this.min = 4 * scoresValueMax
+              }
+            } else {
+              if (_this.lastClicked === 0) {
+                _this.max = 4
+                _this.min = 0
+              } else if (_this.lastClicked === 1) {
+                _this.max = 8
+                _this.min = 4
+              } else if (_this.lastClicked === 2) {
+                _this.max = 12
+                _this.min = 8
+              } else if (_this.lastClicked === 3) {
+                _this.max = 16
+                _this.min = 12
+              } else if (_this.lastClicked === 4) {
+                _this.max = ''
+                _this.min = 16
               }
             }
           }
@@ -475,14 +492,18 @@ export default {
       const docElm = document.documentElement
       docElm.requestFullscreen()
       this.$store.commit('navCollapse')
-      this.ChartBarNone()
+      document.getElementById('chartBar').style.display = 'none'
+      this.NodesEditBoardExit = false
+      document.getElementById('colorCastButton').style.display = 'none'
     },
     // 取消全屏
     exitFullScreen() {
       this.fullScreen = true
       document.exitFullscreen()
       this.$store.commit('navCollapse')
-      this.theChartBar()
+      document.getElementById('chartBar').style.display = 'block'
+      document.getElementById('colorCastButton').style.display = 'flex'
+      this.NodesEditBoardExit = true
     },
     // 暂停
     forceStop() {
@@ -496,8 +517,21 @@ export default {
     },
     // 高亮
     highLight() {
-      this.LightStop = false
       const _this = this
+      this.LightStop = false
+      if (!this.brushStop) {
+        this.brushStop = true
+        this.brushCancel()
+      }
+      if (!this.brushStop2) {
+        this.brushStop2 = true
+        this.brushCancel2()
+      }
+      if (!this.SelectStop) {
+        this.SelectStop = true
+        this.SelectCancel()
+      }
+
       this.node.style('opacity', 0.4)
       this.link.style('opacity', 0.4)
       this.node.on('click', focus)
@@ -535,18 +569,26 @@ export default {
     },
     // 框选
     brushSelect() {
-      if (!this.SelectStop) {
-        this.SelectCancel()
+      if (!this.LightStop) {
+        this.LightStop = true
+        this.LightCancel()
       }
       if (!this.brushStop2) {
+        this.brushStop2 = true
         this.brushCancel2()
       }
+      if (!this.SelectStop) {
+        this.SelectStop = true
+        this.SelectCancel()
+      }
       this.brushStop = false
-      this.boardExit = true
       const _this = this
       _this.node.style('opacity', 0.4)
-
-      const brush = d3.brush().on('brush', function () {
+      const brush = d3.brush().on('start', brushstarted).on('brush', brushing)
+      function brushstarted() {
+        _this.boardExit = true
+      }
+      function brushing() {
         const selection = d3.brushSelection(this)
         // 框选高亮
         //   //  selection获得两个数组，每个数组是包含两个数字的数组，第一个是包含框的起始点的x坐标和y坐标，
@@ -591,7 +633,7 @@ export default {
             )
             .style('opacity', 1)
         }
-      })
+      }
       _this.container.call(brush)
       this.brush = brush
       // console.log('nodesData', this.nodesData)
@@ -599,7 +641,6 @@ export default {
     // 取消框选
     brushCancel() {
       this.node.style('opacity', 1)
-      this.boardExit = false
       this.nodesData = []
       this.nodesDataId = []
       this.nodesDataScores = []
@@ -618,6 +659,7 @@ export default {
       this.container.attr('fill', '')
       this.brushStop = true
       this.link.style('opacity', 1)
+      this.boardExit = false
       // 节点悬浮显示id
       let focusId = null
       const _this = this
@@ -640,18 +682,27 @@ export default {
     },
     // 框选2
     brushSelect2() {
-      if (!this.SelectStop) {
-        this.SelectCancel()
+      if (!this.LightStop) {
+        this.LightStop = true
+        this.LightCancel()
       }
       if (!this.brushStop) {
+        this.brushStop = true
         this.brushCancel()
       }
+      if (!this.SelectStop) {
+        this.SelectStop = true
+        this.SelectCancel()
+      }
       this.brushStop2 = false
-      this.boardExit = true
       const _this = this
       _this.node.style('opacity', 0.4)
 
-      const brush = d3.brush().on('brush', function () {
+      const brush = d3.brush().on('start', brushstarted2).on('brush', brushing2)
+      function brushstarted2() {
+        _this.boardExit = true
+      }
+      function brushing2() {
         const selection = d3.brushSelection(this)
         // 框选高亮
         //   //  selection获得两个数组，每个数组是包含两个数字的数组，第一个是包含框的起始点的x坐标和y坐标，
@@ -692,14 +743,13 @@ export default {
             )
             .style('opacity', 1)
         }
-      })
+      }
       _this.container.call(brush)
       this.brush = brush
     },
     // 取消框选2
     brushCancel2() {
       this.node.style('opacity', 1)
-      this.boardExit = false
       this.nodesData = []
       this.nodesDataId = []
       this.nodesDataScores = []
@@ -718,6 +768,7 @@ export default {
       this.container.attr('fill', '')
       this.brushStop2 = true
       this.link.style('opacity', 1)
+      this.boardExit = false
       // 节点悬浮显示id
       let focusId = null
       const _this = this
@@ -739,18 +790,25 @@ export default {
     },
     // 多选
     MultiSelect() {
-      if (!this.brushStop2) {
-        this.brushCancel2()
+      if (!this.LightStop) {
+        this.LightStop = true
+        this.LightCancel()
       }
       if (!this.brushStop) {
+        this.brushStop = true
         this.brushCancel()
+      }
+      if (!this.brushStop2) {
+        this.brushStop2 = true
+        this.brushCancel2()
       }
       this.SelectStop = false
       const _this = this
-      this.boardExit = true
       this.node.style('opacity', 0.4)
       this.link.style('opacity', 0.4)
-      this.node.on('click', function (event) {
+      this.node.on('click', clickSelect)
+      function clickSelect(event) {
+        _this.boardExit = true
         const nodeDataId = d3.select(this).attr('id')
         const nodeOpacity = Number(d3.select(this).style('opacity'))
         if (nodeOpacity === 0.4) {
@@ -776,7 +834,7 @@ export default {
           _this.nodesDataScores.splice(nodeIndex, 1)
           _this.nodesData.splice(nodeIndex, 1)
         }
-      })
+      }
     },
     // 取消多选
     SelectCancel() {
@@ -839,12 +897,14 @@ export default {
     theChartBar() {
       document.getElementById('chartBar').style.display = 'block'
       this.histogramExit = true
+      document.getElementById('colorCastButton').style.display = 'flex'
       this.NodesEditBoardExit = true
     },
     // 直方图关闭
     ChartBarNone() {
       this.histogramExit = false
       this.NodesEditBoardExit = false
+      document.getElementById('colorCastButton').style.display = 'none'
       document.getElementById('chartBar').style.display = 'none'
     },
     // 调色板
@@ -863,24 +923,24 @@ export default {
         const num3 = []
         const num4 = []
         const num5 = []
-        let scoresValueMax = parseFloat(Math.max(..._this.scoresValueArray)).toFixed(2)
+        let scoresValueMax = (parseFloat(Math.max(..._this.scoresValueArray)) / 5).toFixed(2)
         this.node.attr('fill', function (d) {
           const nodeId = Number(d.id)
           const scoresNode = _this.scoresValue[nodeId].value
 
-          if (scoresNode < scoresValueMax / 5) {
+          if (scoresNode < scoresValueMax) {
             num1.push(scoresNode)
             return '#eff3ff'
-          } else if (scoresNode >= scoresValueMax / 5 && scoresNode < (2 * scoresValueMax) / 5) {
+          } else if (scoresNode >= scoresValueMax && scoresNode < 2 * scoresValueMax) {
             num2.push(scoresNode)
             return '#bcd7e8'
-          } else if (scoresNode >= (2 * scoresValueMax) / 5 && scoresNode < (3 * scoresValueMax) / 5) {
+          } else if (scoresNode >= 2 * scoresValueMax && scoresNode < 3 * scoresValueMax) {
             num3.push(scoresNode)
             return '#68add8'
-          } else if (scoresNode >= (3 * scoresValueMax) / 5 && scoresNode < (4 * scoresValueMax) / 5) {
+          } else if (scoresNode >= 3 * scoresValueMax && scoresNode < 4 * scoresValueMax) {
             num4.push(scoresNode)
             return '#2b81c0'
-          } else {
+          } else if (scoresNode >= 4 * scoresValueMax && (scoresNode / 5).toFixed(2) <= scoresValueMax) {
             num5.push(scoresNode)
             return '#064e9e'
           }
@@ -899,11 +959,11 @@ export default {
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
             data: [
-              `(0,${scoresValueMax / 5})`,
-              `(${scoresValueMax / 5},${(2 * scoresValueMax) / 5})`,
-              `(${(2 * scoresValueMax) / 5},${(3 * scoresValueMax) / 5})`,
-              `(${(3 * scoresValueMax) / 5},${(4 * scoresValueMax) / 5})`,
-              `(${(4 * scoresValueMax) / 5},${scoresValueMax})`
+              `(0,${scoresValueMax})`,
+              `(${scoresValueMax},${2 * scoresValueMax})`,
+              `(${2 * scoresValueMax},${3 * scoresValueMax})`,
+              `(${3 * scoresValueMax},${4 * scoresValueMax})`,
+              `(${4 * scoresValueMax},${5 * scoresValueMax})`
             ]
           },
           yAxis: {
@@ -1012,24 +1072,24 @@ export default {
         const num3 = []
         const num4 = []
         const num5 = []
-        let scoresValueMax = parseFloat(Math.max(..._this.scoresValueArray)).toFixed(2)
+        let scoresValueMax = (parseFloat(Math.max(..._this.scoresValueArray)) / 5).toFixed(2)
         this.node.attr('fill', function (d) {
           const nodeId = Number(d.id)
           const scoresNode = _this.scoresValue[nodeId].value
 
-          if (scoresNode < scoresValueMax / 5) {
+          if (scoresNode < scoresValueMax) {
             num1.push(scoresNode)
             return '#edf9fc'
-          } else if (scoresNode >= scoresValueMax / 5 && scoresNode < (2 * scoresValueMax) / 5) {
+          } else if (scoresNode >= scoresValueMax && scoresNode < 2 * scoresValueMax) {
             num2.push(scoresNode)
             return '#b1e3e3'
-          } else if (scoresNode >= (2 * scoresValueMax) / 5 && scoresNode < (3 * scoresValueMax) / 5) {
+          } else if (scoresNode >= 2 * scoresValueMax && scoresNode < 3 * scoresValueMax) {
             num3.push(scoresNode)
             return '#62c3a4'
-          } else if (scoresNode >= (3 * scoresValueMax) / 5 && scoresNode < (4 * scoresValueMax) / 5) {
+          } else if (scoresNode >= 3 * scoresValueMax && scoresNode < 4 * scoresValueMax) {
             num4.push(scoresNode)
             return '#25a35c'
-          } else {
+          } else if (scoresNode >= 4 * scoresValueMax && (scoresNode / 5).toFixed(2) <= scoresValueMax) {
             num5.push(scoresNode)
             return '#006e29'
           }
@@ -1048,11 +1108,11 @@ export default {
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
             data: [
-              `(0,${scoresValueMax / 5})`,
-              `(${scoresValueMax / 5},${(2 * scoresValueMax) / 5})`,
-              `(${(2 * scoresValueMax) / 5},${(3 * scoresValueMax) / 5})`,
-              `(${(3 * scoresValueMax) / 5},${(4 * scoresValueMax) / 5})`,
-              `(${(4 * scoresValueMax) / 5},${scoresValueMax})`
+              `(0,${scoresValueMax})`,
+              `(${scoresValueMax},${2 * scoresValueMax})`,
+              `(${2 * scoresValueMax},${3 * scoresValueMax})`,
+              `(${3 * scoresValueMax},${4 * scoresValueMax})`,
+              `(${4 * scoresValueMax},${5 * scoresValueMax})`
             ]
           },
           yAxis: {
@@ -1161,24 +1221,24 @@ export default {
         const num3 = []
         const num4 = []
         const num5 = []
-        let scoresValueMax = parseFloat(Math.max(..._this.scoresValueArray)).toFixed(2)
+        let scoresValueMax = (parseFloat(Math.max(..._this.scoresValueArray)) / 5).toFixed(2)
         this.node.attr('fill', function (d) {
           const nodeId = Number(d.id)
           const scoresNode = _this.scoresValue[nodeId].value
 
-          if (scoresNode < scoresValueMax / 5) {
+          if (scoresNode < scoresValueMax) {
             num1.push(scoresNode)
             return '#ffeede'
-          } else if (scoresNode >= scoresValueMax / 5 && scoresNode < (2 * scoresValueMax) / 5) {
+          } else if (scoresNode >= scoresValueMax && scoresNode < 2 * scoresValueMax) {
             num2.push(scoresNode)
             return '#febf80'
-          } else if (scoresNode >= (2 * scoresValueMax) / 5 && scoresNode < (3 * scoresValueMax) / 5) {
+          } else if (scoresNode >= 2 * scoresValueMax && scoresNode < 3 * scoresValueMax) {
             num3.push(scoresNode)
             return '#ff8d2e'
-          } else if (scoresNode >= (3 * scoresValueMax) / 5 && scoresNode < (4 * scoresValueMax) / 5) {
+          } else if (scoresNode >= 3 * scoresValueMax && scoresNode < 4 * scoresValueMax) {
             num4.push(scoresNode)
             return '#e95406'
-          } else {
+          } else if (scoresNode >= 4 * scoresValueMax && (scoresNode / 5).toFixed(2) <= scoresValueMax) {
             num5.push(scoresNode)
             return '#a83500'
           }
@@ -1197,11 +1257,11 @@ export default {
             nameGap: 25,
             nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
             data: [
-              `(0,${scoresValueMax / 5})`,
-              `(${scoresValueMax / 5},${(2 * scoresValueMax) / 5})`,
-              `(${(2 * scoresValueMax) / 5},${(3 * scoresValueMax) / 5})`,
-              `(${(3 * scoresValueMax) / 5},${(4 * scoresValueMax) / 5})`,
-              `(${(4 * scoresValueMax) / 5},${scoresValueMax})`
+              `(0,${scoresValueMax})`,
+              `(${scoresValueMax},${2 * scoresValueMax})`,
+              `(${2 * scoresValueMax},${3 * scoresValueMax})`,
+              `(${3 * scoresValueMax},${4 * scoresValueMax})`,
+              `(${4 * scoresValueMax},${5 * scoresValueMax})`
             ]
           },
           yAxis: {
@@ -1347,7 +1407,7 @@ export default {
             .on('mouseout', '')
           nodeLimit.on('mouseover', idFocus).on('mouseout', idUnFocus)
         } else {
-          let nodeLimit = this.node.filter((d) => d.id <= maxData && d.id >= minData)
+          let nodeLimit = this.node.filter((d) => d.size <= maxData && d.size >= minData)
           nodeLimit.style('opacity', 1)
           let linkLimit = this.link.filter((d) => d.source.index <= maxData && d.source.index >= minData && d.target.index <= maxData && d.target.index >= minData)
           linkLimit.style('opacity', 1)
@@ -1461,8 +1521,9 @@ export default {
         })
         .then((response) => {
           // 处理响应数据
+          _this.scoresValue = response.data.scores
+          _this.scoresValueArray = []
           _this.node.attr(categoryData, function (d) {
-            _this.scoresValue = response.data.scores
             const nodeId = Number(d.id)
             const scoresNode = _this.scoresValue[nodeId].value
             _this.scoresValueArray.unshift(scoresNode)
@@ -1495,10 +1556,12 @@ export default {
         })
         .then((response) => {
           // 处理响应数据
+          _this.scoresValue = response.data.scores
+          _this.scoresValueArray = []
           _this.node.attr(item.value, function (d) {
-            _this.scoresValue = response.data.scores
             const nodeId = Number(d.id)
             const scoresNode = _this.scoresValue[nodeId].value
+
             _this.scoresValueArray.unshift(scoresNode)
             return scoresNode
           })
@@ -1584,24 +1647,25 @@ export default {
       const num3 = []
       const num4 = []
       const num5 = []
-      let scoresValueMax = parseFloat(Math.max(..._this.scoresValueArray)).toFixed(2)
+      let scoresValueMax = (parseFloat(Math.max(..._this.scoresValueArray)) / 5).toFixed(2)
+      console.log('scoresValueMax ', scoresValueMax)
       this.node.attr('fill', function (d) {
         const nodeId = Number(d.id)
         const scoresNode = _this.scoresValue[nodeId].value
 
-        if (scoresNode < scoresValueMax / 5) {
+        if (scoresNode < scoresValueMax) {
           num1.push(scoresNode)
           return '#b2392d'
-        } else if (scoresNode >= scoresValueMax / 5 && scoresNode < (2 * scoresValueMax) / 5) {
+        } else if (scoresNode >= scoresValueMax && scoresNode < 2 * scoresValueMax) {
           num2.push(scoresNode)
           return '#f09e30'
-        } else if (scoresNode >= (2 * scoresValueMax) / 5 && scoresNode < (3 * scoresValueMax) / 5) {
+        } else if (scoresNode >= 2 * scoresValueMax && scoresNode < 3 * scoresValueMax) {
           num3.push(scoresNode)
           return '#7cf728'
-        } else if (scoresNode >= (3 * scoresValueMax) / 5 && scoresNode < (4 * scoresValueMax) / 5) {
+        } else if (scoresNode >= 3 * scoresValueMax && scoresNode < 4 * scoresValueMax) {
           num4.push(scoresNode)
           return '#25a8b6'
-        } else {
+        } else if (scoresNode >= 4 * scoresValueMax && (scoresNode / 5).toFixed(2) <= scoresValueMax) {
           num5.push(scoresNode)
           return '#244e96'
         }
@@ -1620,11 +1684,11 @@ export default {
           nameGap: 25,
           nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
           data: [
-            `(0,${scoresValueMax / 5})`,
-            `(${scoresValueMax / 5},${(2 * scoresValueMax) / 5})`,
-            `(${(2 * scoresValueMax) / 5},${(3 * scoresValueMax) / 5})`,
-            `(${(3 * scoresValueMax) / 5},${(4 * scoresValueMax) / 5})`,
-            `(${(4 * scoresValueMax) / 5},${scoresValueMax})`
+            `(0,${scoresValueMax})`,
+            `(${scoresValueMax},${2 * scoresValueMax})`,
+            `(${2 * scoresValueMax},${3 * scoresValueMax})`,
+            `(${3 * scoresValueMax},${4 * scoresValueMax})`,
+            `(${4 * scoresValueMax},${5 * scoresValueMax})`
           ]
         },
         yAxis: {
@@ -1674,7 +1738,7 @@ export default {
     },
     // 改变节点斥力
     forceChange() {
-      this.graphLayout.force('charge', d3.forceManyBody().strength(-this.valueTooltip * 40))
+      this.graphLayout.force('charge', d3.forceManyBody().strength(-this.valueTooltip * 20))
     },
     // 灯泡提示隐藏
     sliderHelp() {
@@ -1785,7 +1849,7 @@ export default {
   z-index: 120;
   overflow: auto;
 }
-.colorCastButton {
+#colorCastButton {
   right: 20px;
   top: 400px;
   z-index: 16;
@@ -1864,7 +1928,7 @@ export default {
 }
 @media screen and (max-width: 1300px) {
   .NodesEditBoard,
-  .colorCastButton,
+  #colorCastButton,
   #chartBar {
     display: none !important;
   }

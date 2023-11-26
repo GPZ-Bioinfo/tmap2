@@ -25,6 +25,12 @@ const router = new Router({
       meta: { title: 'Home' }
     },
     {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: () => import('./views/Dashboard.vue'),
+      meta: { title: 'Dashboard' }
+    },
+    {
       path: '/examples',
       name: 'examples',
       component: () => import('./views/Examples.vue'),

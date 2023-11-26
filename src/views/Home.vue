@@ -3,8 +3,8 @@
     <div class="flex-column margin-top-20vh">
       <div class="display-3 font-weight-regular span-margin">Tmap</div>
       <div class="login">
-        <el-input placeholder="请输入用户名" v-model="username" clearable></el-input>
-        <el-input placeholder="请输入密码" v-model="password" show-password></el-input>
+        <el-input placeholder="请输入用户名" v-model="username" clearable @keyup.native.enter="routerRedirect"></el-input>
+        <el-input placeholder="请输入密码" v-model="password" show-password @keyup.native.enter="routerRedirect"></el-input>
 
         <v-btn outlined large rounded color="primary" class="btn" @click="routerRedirect"><v-icon left>mdi-atom</v-icon>login</v-btn>
       </div>
@@ -70,7 +70,7 @@ export default {
         localStorage.setItem('users', JSON.stringify(users))
         const isLogin = JSON.parse(localStorage.getItem('users')) && JSON.parse(localStorage.getItem('users'))
         if (isLogin) {
-          this.$router.push('/examples')
+          this.$router.push('/dashboard')
         }
       } else {
         this.$message({
@@ -80,16 +80,6 @@ export default {
         })
       }
       // this.$router.push('/examples').catch((err) => {}) // eslint-disable-line
-    }
-  },
-  beforeRouteEnter(to, from, next) {
-    const isLogin = JSON.parse(localStorage.getItem('users')) && JSON.parse(localStorage.getItem('users'))
-    if (isLogin) {
-      next({
-        path: '/examples'
-      })
-    } else {
-      next()
     }
   }
 }
@@ -139,6 +129,15 @@ export default {
 .btn {
   margin-top: 15px;
   z-index: 20;
+}
+
+.btn2 {
+  margin-top: 15px;
+  z-index: 30;
+  color: blue;
+  background-color: transparent;
+  border: 1px solid blue;
+  position: absolute;
 }
 
 .login {
