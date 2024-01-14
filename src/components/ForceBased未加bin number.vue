@@ -65,35 +65,6 @@
     </div>
     <!-- 直方图 -->
     <div id="chartBar" style="width: 370px; height: 360px"></div>
-    <!-- 柱子数量-->
-    <div id="chartBarx">
-      <label for="intervalInput" style="font-weight: bold; font-size: 16px">change the number of bin:</label>
-      <input
-        id="intervalInput"
-        type="number"
-        v-model="interval"
-        @input="updateChart"
-        min="1"
-        pattern="\d+"
-        style="margin-top: 1px; border: 1px solid rgb(108, 98, 98); width: 60px; appearance: textfield"
-      />
-    </div>
-    <!-- 柱子范围 -->
-    <div id="minMaxBox">
-      <div class="fromToBox">
-        <div class="minAndMax">
-          <span>from:</span>
-          <input v-model="min" type="number" min="1" pattern="\d+" @input="nodeFilter" style="width: 60px; border: 1px solid rgb(108, 98, 98); height: 25px" />
-        </div>
-        <div class="minAndMax">
-          <span>to:</span>
-          <input v-model="max" type="number" min="1" pattern="\d+" @input="nodeFilter" style="width: 60px; border: 1px solid rgb(108, 98, 98); height: 25px" />
-        </div>
-      </div>
-      <div class="minMaxButton">
-        <el-button style="position: absolute; padding: 5px" type="text" @click="nodeReset">✖️</el-button>
-      </div>
-    </div>
     <!-- 数据面板 -->
     <el-card class="dataBoard" v-if="boardExit">
       <div slot="header" class="clearfix">
@@ -161,7 +132,7 @@
           <div class="color-block" v-for="(color, index) in colorList3" :key="index" :style="{ backgroundColor: color }" @click="selectColor(color)"></div>
         </div>
         <div class="color-strip" @click="colorBarChange4">
-          <div class="color-block" v-for="(color, index) in colorList0" :key="index" :style="{ backgroundColor: color }" @click="selectColor(color)"></div>
+          <div class="color-block" v-for="(color, index) in BarColorList" :key="index" :style="{ backgroundColor: color }" @click="selectColor(color)"></div>
         </div>
       </div>
       <div class="colorBoardButton">
@@ -184,7 +155,22 @@
           <el-cascader v-model="value" :options="options" :props="{ expandTrigger: 'hover' }" @change="handleChange" placeholder="primary selector" style="width: 250px"></el-cascader>
           <el-button @click="cascaderCancel">Cancel</el-button>
         </div>
-
+        <div class="minAndMax">
+          <div>
+            <div class="minAndMax">
+              <span>max:</span>
+              <el-input v-model="max" placeholder="Enter maximum value" style="width: 200px" />
+            </div>
+            <div class="minAndMax">
+              <span>min:</span>
+              <el-input v-model="min" placeholder="Enter minimum value" style="width: 200px" />
+            </div>
+          </div>
+          <div class="minAndMaxButton">
+            <el-button @click="nodeFilter">Apply</el-button>
+            <el-button @click="nodeReset">Reset</el-button>
+          </div>
+        </div>
         <h4 class="sliderBox">Drag the slider to change the layout of the nodes(the value=the node repulsion)</h4>
         <div class="sliderBox">
           <el-slider v-model="valueTooltip" class="sliderTooltip" @change="forceChange"></el-slider>
@@ -250,8 +236,7 @@ export default {
     colorList1: ['#eff3ff', '#bcd7e8', '#68add8', '#2b81c0', '#064e9e'],
     colorList2: ['#edf9fc', '#b1e3e3', '#62c3a4', '#25a35c', '#006e29'],
     colorList3: ['#ffeede', '#febf80', '#ff8d2e', '#e95406', '#a83500'],
-    colorList0: ['#b2392d', '#f09e30', '#7cf728', '#25a8b6', '#244e96'],
-    BarColorList: null,
+    BarColorList: ['#b2392d', '#f09e30', '#7cf728', '#25a8b6', '#244e96'],
     option: null,
     icon: 'el-icon-search',
     NodesEditBoardExit: true,
@@ -270,21 +255,8 @@ export default {
     variablesValue: null,
     scoresValue: null,
     scoresValueArray: [],
-    interval: 10,
-    sizeValueMax: null,
-    scoresValueMax: null,
-    xData: [],
-    yData: [],
-    intervalData: [],
-    sizeValueArray: [],
-    scaleColor: null
+    sizeValueArray: []
   }),
-  mounted() {
-    this.updateChart()
-  },
-  watch: {
-    interval: 'updateChart' // Watch for changes in the interval and update the chart
-  },
   created() {
     const apolloClient = new ApolloClient({
       uri: 'http://localhost:8080/graphql' // 替换成你的GraphQL API的URL
@@ -459,10 +431,10 @@ export default {
           d.fy = null
         }
         // 图表
-        this.sizeValueMax = Math.max(..._this.sizeValueArray)
 
-        this.updateChart()
+        this.histogramOrigin()
         const myChart = echarts.init(document.getElementById('chartBar'))
+
         myChart.on('click', function (params) {
           if (params.dataIndex === _this.lastClicked) {
             _this.lastClicked = null
@@ -470,17 +442,42 @@ export default {
             _this.min = ''
           } else {
             _this.lastClicked = params.dataIndex
-            const clickedIndex = _this.lastClicked
+            let scoresValueMax = (parseFloat(Math.max(..._this.scoresValueArray)) / 5).toFixed(2)
             if (_this.propertyChangeData) {
-              const intervalSize = _this.scoresValueMax / _this.interval
-              // 根据点击的柱子索引计算对应的最小值和最大值
-              _this.min = (clickedIndex * intervalSize).toFixed(4)
-              _this.max = ((clickedIndex + 1) * intervalSize).toFixed(4)
+              if (_this.lastClicked === 0) {
+                _this.max = scoresValueMax
+                _this.min = 0
+              } else if (_this.lastClicked === 1) {
+                _this.max = 2 * scoresValueMax
+                _this.min = scoresValueMax
+              } else if (_this.lastClicked === 2) {
+                _this.max = 3 * scoresValueMax
+                _this.min = 2 * scoresValueMax
+              } else if (_this.lastClicked === 3) {
+                _this.max = 4 * scoresValueMax
+                _this.min = 3 * scoresValueMax
+              } else if (_this.lastClicked === 4) {
+                _this.max = ''
+                _this.min = 4 * scoresValueMax
+              }
             } else {
-              const intervalSize = _this.sizeValueMax / _this.interval
-              // 根据点击的柱子索引计算对应的最小值和最大值
-              _this.min = (clickedIndex * intervalSize).toFixed(1)
-              _this.max = ((clickedIndex + 1) * intervalSize).toFixed(1)
+              let sizeValueMax = (parseFloat(Math.max(..._this.sizeValueArray)) / 5).toFixed(1)
+              if (_this.lastClicked === 0) {
+                _this.max = sizeValueMax
+                _this.min = 0
+              } else if (_this.lastClicked === 1) {
+                _this.max = 2 * sizeValueMax
+                _this.min = sizeValueMax
+              } else if (_this.lastClicked === 2) {
+                _this.max = 3 * sizeValueMax
+                _this.min = 2 * sizeValueMax
+              } else if (_this.lastClicked === 3) {
+                _this.max = 4 * sizeValueMax
+                _this.min = 3 * sizeValueMax
+              } else if (_this.lastClicked === 4) {
+                _this.max = ''
+                _this.min = 4 * sizeValueMax
+              }
             }
           }
           _this.nodeFilter()
@@ -501,7 +498,6 @@ export default {
       document.getElementById('chartBar').style.display = 'none'
       this.NodesEditBoardExit = false
       document.getElementById('colorCastButton').style.display = 'none'
-      document.getElementById('minMaxBox').style.display = 'none'
     },
     // 取消全屏
     exitFullScreen() {
@@ -510,7 +506,6 @@ export default {
       this.$store.commit('navCollapse')
       document.getElementById('chartBar').style.display = 'block'
       document.getElementById('colorCastButton').style.display = 'flex'
-      document.getElementById('minMaxBox').style.display = 'flex'
       this.NodesEditBoardExit = true
     },
     // 暂停
@@ -906,7 +901,6 @@ export default {
       document.getElementById('chartBar').style.display = 'block'
       this.histogramExit = true
       document.getElementById('colorCastButton').style.display = 'flex'
-      document.getElementById('minMaxBox').style.display = 'flex'
       this.NodesEditBoardExit = true
     },
     // 直方图关闭
@@ -914,7 +908,6 @@ export default {
       this.histogramExit = false
       this.NodesEditBoardExit = false
       document.getElementById('colorCastButton').style.display = 'none'
-      document.getElementById('minMaxBox').style.display = 'none'
       document.getElementById('chartBar').style.display = 'none'
     },
     // 调色板
@@ -926,23 +919,459 @@ export default {
     },
     // 蓝色色带点击事件
     colorBarChange1() {
-      this.updateColorScale('blue')
-      this.updateChart()
+      const _this = this
+      if (_this.propertyChangeData) {
+        const num1 = []
+        const num2 = []
+        const num3 = []
+        const num4 = []
+        const num5 = []
+        let scoresValueMax = (parseFloat(Math.max(..._this.scoresValueArray)) / 5).toFixed(2)
+        this.node.attr('fill', function (d) {
+          const nodeId = Number(d.id)
+          const scoresNode = _this.scoresValue[nodeId].value
+
+          if (scoresNode < scoresValueMax) {
+            num1.push(scoresNode)
+            return '#eff3ff'
+          } else if (scoresNode >= scoresValueMax && scoresNode < 2 * scoresValueMax) {
+            num2.push(scoresNode)
+            return '#bcd7e8'
+          } else if (scoresNode >= 2 * scoresValueMax && scoresNode < 3 * scoresValueMax) {
+            num3.push(scoresNode)
+            return '#68add8'
+          } else if (scoresNode >= 3 * scoresValueMax && scoresNode < 4 * scoresValueMax) {
+            num4.push(scoresNode)
+            return '#2b81c0'
+          } else if (scoresNode >= 4 * scoresValueMax && (scoresNode / 5).toFixed(2) <= scoresValueMax) {
+            num5.push(scoresNode)
+            return '#064e9e'
+          }
+        })
+        const myChart = echarts.init(document.getElementById('chartBar'))
+
+        const option = {
+          grid: {
+            left: '3%',
+            bottom: '10%',
+            containLabel: true
+          },
+          xAxis: {
+            name: _this.propertyChangeData,
+            nameLocation: 'middle',
+            nameGap: 25,
+            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+            data: [
+              `(0,${scoresValueMax})`,
+              `(${scoresValueMax},${2 * scoresValueMax})`,
+              `(${2 * scoresValueMax},${3 * scoresValueMax})`,
+              `(${3 * scoresValueMax},${4 * scoresValueMax})`,
+              `(${4 * scoresValueMax},${5 * scoresValueMax})`
+            ]
+          },
+          yAxis: {
+            name: 'Number of nodes',
+            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+          },
+          series: [
+            {
+              type: 'bar',
+              // data: [1, 2, 3, 4, 5, 6, 7, 8],
+              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+              label: {
+                show: true,
+                position: 'top'
+              },
+              itemStyle: {
+                normal: {
+                  color: function (params) {
+                    const colorList = _this.colorList1
+                    if (params.dataIndex >= colorList.length) {
+                      params.dataIndex = params.dataIndex - colorList.length
+                    }
+                    return colorList[params.dataIndex]
+                  }
+                }
+              }
+            }
+          ]
+        }
+        myChart.setOption(option)
+      } else {
+        const num1 = []
+        const num2 = []
+        const num3 = []
+        const num4 = []
+        const num5 = []
+        this.node.attr('fill', function (d) {
+          d.size = Number(d.size)
+          if (d.size < 4) {
+            num1.push(d.size)
+            return '#eff3ff'
+          } else if (d.size >= 4 && d.size < 8) {
+            num2.push(d.size)
+            return '#bcd7e8'
+          } else if (d.size >= 8 && d.size < 12) {
+            num3.push(d.size)
+            return '#68add8'
+          } else if (d.size >= 12 && d.size < 16) {
+            num4.push(d.size)
+            return '#2b81c0'
+          } else {
+            num5.push(d.size)
+            return '#064e9e'
+          }
+        })
+        const myChart = echarts.init(document.getElementById('chartBar'))
+        const option = {
+          grid: {
+            left: '3%',
+            bottom: '10%',
+            containLabel: true
+          },
+          xAxis: {
+            name: 'size',
+            nameGap: 25,
+            nameLocation: 'middle',
+            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+            data: ['(0,4)', '(4,8)', '(8,12)', '(12,16)', '(16,+∞)']
+          },
+          yAxis: {
+            name: 'Number of nodes',
+            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+          },
+          series: [
+            {
+              type: 'bar',
+              // data: [1, 2, 3, 4, 5, 6, 7, 8],
+              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+              label: {
+                show: true,
+                position: 'top'
+              },
+              itemStyle: {
+                normal: {
+                  color: function (params) {
+                    const colorList = _this.colorList1
+                    if (params.dataIndex >= colorList.length) {
+                      params.dataIndex = params.dataIndex - colorList.length
+                    }
+                    return colorList[params.dataIndex]
+                  }
+                }
+              }
+            }
+          ]
+        }
+        myChart.setOption(option)
+      }
     },
     // 绿色色带点击事件
     colorBarChange2() {
-      this.updateColorScale('green')
-      this.updateChart()
+      const _this = this
+      if (_this.propertyChangeData) {
+        const num1 = []
+        const num2 = []
+        const num3 = []
+        const num4 = []
+        const num5 = []
+        let scoresValueMax = (parseFloat(Math.max(..._this.scoresValueArray)) / 5).toFixed(2)
+        this.node.attr('fill', function (d) {
+          const nodeId = Number(d.id)
+          const scoresNode = _this.scoresValue[nodeId].value
+
+          if (scoresNode < scoresValueMax) {
+            num1.push(scoresNode)
+            return '#edf9fc'
+          } else if (scoresNode >= scoresValueMax && scoresNode < 2 * scoresValueMax) {
+            num2.push(scoresNode)
+            return '#b1e3e3'
+          } else if (scoresNode >= 2 * scoresValueMax && scoresNode < 3 * scoresValueMax) {
+            num3.push(scoresNode)
+            return '#62c3a4'
+          } else if (scoresNode >= 3 * scoresValueMax && scoresNode < 4 * scoresValueMax) {
+            num4.push(scoresNode)
+            return '#25a35c'
+          } else if (scoresNode >= 4 * scoresValueMax && (scoresNode / 5).toFixed(2) <= scoresValueMax) {
+            num5.push(scoresNode)
+            return '#006e29'
+          }
+        })
+        const myChart = echarts.init(document.getElementById('chartBar'))
+
+        const option = {
+          grid: {
+            left: '3%',
+            bottom: '10%',
+            containLabel: true
+          },
+          xAxis: {
+            name: _this.propertyChangeData,
+            nameLocation: 'middle',
+            nameGap: 25,
+            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+            data: [
+              `(0,${scoresValueMax})`,
+              `(${scoresValueMax},${2 * scoresValueMax})`,
+              `(${2 * scoresValueMax},${3 * scoresValueMax})`,
+              `(${3 * scoresValueMax},${4 * scoresValueMax})`,
+              `(${4 * scoresValueMax},${5 * scoresValueMax})`
+            ]
+          },
+          yAxis: {
+            name: 'Number of nodes',
+            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+          },
+          series: [
+            {
+              type: 'bar',
+              // data: [1, 2, 3, 4, 5, 6, 7, 8],
+              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+              label: {
+                show: true,
+                position: 'top'
+              },
+              itemStyle: {
+                normal: {
+                  color: function (params) {
+                    const colorList = _this.colorList2
+                    if (params.dataIndex >= colorList.length) {
+                      params.dataIndex = params.dataIndex - colorList.length
+                    }
+                    return colorList[params.dataIndex]
+                  }
+                }
+              }
+            }
+          ]
+        }
+        myChart.setOption(option)
+      } else {
+        const num1 = []
+        const num2 = []
+        const num3 = []
+        const num4 = []
+        const num5 = []
+        this.node.attr('fill', function (d) {
+          d.size = Number(d.size)
+          if (d.size < 4) {
+            num1.push(d.size)
+            return '#edf9fc'
+          } else if (d.size >= 4 && d.size < 8) {
+            num2.push(d.size)
+            return '#b1e3e3'
+          } else if (d.size >= 8 && d.size < 12) {
+            num3.push(d.size)
+            return '#62c3a4'
+          } else if (d.size >= 12 && d.size < 16) {
+            num4.push(d.size)
+            return '#25a35c'
+          } else {
+            num5.push(d.size)
+            return '#006e29'
+          }
+        })
+        const myChart = echarts.init(document.getElementById('chartBar'))
+        const option = {
+          grid: {
+            left: '3%',
+            bottom: '10%',
+            containLabel: true
+          },
+          xAxis: {
+            name: 'size',
+            nameGap: 25,
+            nameLocation: 'middle',
+            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+            data: ['(0,4)', '(4,8)', '(8,12)', '(12,16)', '(16,+∞)']
+          },
+          yAxis: {
+            name: 'Number of nodes',
+            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+          },
+          series: [
+            {
+              type: 'bar',
+              // data: [1, 2, 3, 4, 5, 6, 7, 8],
+              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+              label: {
+                show: true,
+                position: 'top'
+              },
+              itemStyle: {
+                normal: {
+                  color: function (params) {
+                    const colorList = _this.colorList2
+                    if (params.dataIndex >= colorList.length) {
+                      params.dataIndex = params.dataIndex - colorList.length
+                    }
+                    return colorList[params.dataIndex]
+                  }
+                }
+              }
+            }
+          ]
+        }
+        myChart.setOption(option)
+      }
     },
     // 橙色色带点击事件
     colorBarChange3() {
-      this.updateColorScale('orange')
-      this.updateChart()
+      const _this = this
+      if (_this.propertyChangeData) {
+        const num1 = []
+        const num2 = []
+        const num3 = []
+        const num4 = []
+        const num5 = []
+        let scoresValueMax = (parseFloat(Math.max(..._this.scoresValueArray)) / 5).toFixed(2)
+        this.node.attr('fill', function (d) {
+          const nodeId = Number(d.id)
+          const scoresNode = _this.scoresValue[nodeId].value
+
+          if (scoresNode < scoresValueMax) {
+            num1.push(scoresNode)
+            return '#ffeede'
+          } else if (scoresNode >= scoresValueMax && scoresNode < 2 * scoresValueMax) {
+            num2.push(scoresNode)
+            return '#febf80'
+          } else if (scoresNode >= 2 * scoresValueMax && scoresNode < 3 * scoresValueMax) {
+            num3.push(scoresNode)
+            return '#ff8d2e'
+          } else if (scoresNode >= 3 * scoresValueMax && scoresNode < 4 * scoresValueMax) {
+            num4.push(scoresNode)
+            return '#e95406'
+          } else if (scoresNode >= 4 * scoresValueMax && (scoresNode / 5).toFixed(2) <= scoresValueMax) {
+            num5.push(scoresNode)
+            return '#a83500'
+          }
+        })
+        const myChart = echarts.init(document.getElementById('chartBar'))
+
+        const option = {
+          grid: {
+            left: '3%',
+            bottom: '10%',
+            containLabel: true
+          },
+          xAxis: {
+            name: _this.propertyChangeData,
+            nameLocation: 'middle',
+            nameGap: 25,
+            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+            data: [
+              `(0,${scoresValueMax})`,
+              `(${scoresValueMax},${2 * scoresValueMax})`,
+              `(${2 * scoresValueMax},${3 * scoresValueMax})`,
+              `(${3 * scoresValueMax},${4 * scoresValueMax})`,
+              `(${4 * scoresValueMax},${5 * scoresValueMax})`
+            ]
+          },
+          yAxis: {
+            name: 'Number of nodes',
+            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+          },
+          series: [
+            {
+              type: 'bar',
+              // data: [1, 2, 3, 4, 5, 6, 7, 8],
+              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+              label: {
+                show: true,
+                position: 'top'
+              },
+              itemStyle: {
+                normal: {
+                  color: function (params) {
+                    const colorList = _this.colorList3
+                    if (params.dataIndex >= colorList.length) {
+                      params.dataIndex = params.dataIndex - colorList.length
+                    }
+                    return colorList[params.dataIndex]
+                  }
+                }
+              }
+            }
+          ]
+        }
+        myChart.setOption(option)
+      } else {
+        const num1 = []
+        const num2 = []
+        const num3 = []
+        const num4 = []
+        const num5 = []
+        this.node.attr('fill', function (d) {
+          d.size = Number(d.size)
+          if (d.size < 4) {
+            num1.push(d.size)
+            return '#ffeede'
+          } else if (d.size >= 4 && d.size < 8) {
+            num2.push(d.size)
+            return '#febf80'
+          } else if (d.size >= 8 && d.size < 12) {
+            num3.push(d.size)
+            return '#ff8d2e'
+          } else if (d.size >= 12 && d.size < 16) {
+            num4.push(d.size)
+            return '#e95406'
+          } else {
+            num5.push(d.size)
+            return '#a83500'
+          }
+        })
+        const myChart = echarts.init(document.getElementById('chartBar'))
+        const option = {
+          grid: {
+            left: '3%',
+            bottom: '10%',
+            containLabel: true
+          },
+          xAxis: {
+            name: 'size',
+            nameGap: 25,
+            nameLocation: 'middle',
+            nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+            data: ['(0,4)', '(4,8)', '(8,12)', '(12,16)', '(16,+∞)']
+          },
+          yAxis: {
+            name: 'Number of nodes',
+            nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+          },
+          series: [
+            {
+              type: 'bar',
+              // data: [1, 2, 3, 4, 5, 6, 7, 8],
+              data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+              label: {
+                show: true,
+                position: 'top'
+              },
+              itemStyle: {
+                normal: {
+                  color: function (params) {
+                    const colorList = _this.colorList3
+                    if (params.dataIndex >= colorList.length) {
+                      params.dataIndex = params.dataIndex - colorList.length
+                    }
+                    return colorList[params.dataIndex]
+                  }
+                }
+              }
+            }
+          ]
+        }
+        myChart.setOption(option)
+      }
     },
     // 彩色色带点击事件
     colorBarChange4() {
-      this.scaleColor = ''
-      this.updateChart()
+      const _this = this
+      if (_this.propertyChangeData) {
+        this.histogramChange(_this.propertyChangeData)
+      } else {
+        _this.histogramOrigin()
+      }
     },
     // 色带取消
     colorBarCancel() {
@@ -954,7 +1383,7 @@ export default {
       this.value = ''
       this.state1 = ''
       this.propertyChangeData = ''
-      this.updateChart()
+      this.histogramOrigin()
       this.colorBoardClose()
       this.nodeReset()
     },
@@ -967,7 +1396,7 @@ export default {
         this.node.style('opacity', 0.4)
         this.link.style('opacity', 0.4)
         if (_this.propertyChangeData) {
-          let nodeLimit = this.node.filter((d) => _this.scoresValue[Number(d.id)].value <= maxData && _this.scoresValue[Number(d.id)].value >= minData)
+          let nodeLimit = this.node.filter((d) => _this.scoresValue[Number(d.id)].value <= maxData && _this.scoresValue[Number(d.id)].value > minData)
           nodeLimit.style('opacity', 1)
           let nodeLimitId = nodeLimit.data().map((d) => d.id)
           let linkLimit = this.link.filter((d) => nodeLimitId.includes(d.source.index) && nodeLimitId.includes(d.target.index))
@@ -981,11 +1410,12 @@ export default {
             .on('mouseout', '')
           nodeLimit.on('mouseover', idFocus).on('mouseout', idUnFocus)
         } else {
-          let nodeLimit = this.node.filter((d) => d.size <= maxData && d.size >= minData)
+          let nodeLimit = this.node.filter((d) => d.size <= maxData && d.size > minData)
           nodeLimit.style('opacity', 1)
-
+          let linkLimit = this.link.filter((d) => d.source.index <= maxData && d.source.index >= minData && d.target.index <= maxData && d.target.index >= minData)
+          linkLimit.style('opacity', 1)
           this.nodesCount = nodeLimit._groups[0].length
-          this.linksCount = 0
+          this.linksCount = linkLimit._groups[0].length
           this.node
             .on('mouseover', function () {
               ''
@@ -1036,6 +1466,20 @@ export default {
         focusId.remove()
       }
     },
+    // // 节点按id编辑显示(直接移除)
+    // nodeFilter() {
+    //   this.originNodes = this.node
+    //   this.node.filter((d) => d.id >= 10).remove()
+    //   this.node = this.node.filter((d) => d.id < 10)
+    //   this.originLinks = this.link
+    //   this.link.filter((o) => o.source.index >= 10 || o.target.index >= 10).remove()
+    //   this.link = this.link.filter((o) => o.source.index < 10 && o.target.index < 10)
+    // },
+    // // 节点编辑恢复
+    // nodeReset() {
+    //   this.node = this.originNodes
+    //   this.link = this.originLinks
+    // },
     // 节点编辑面板的搜索框
     querySearch(queryString, cb) {
       const dataList = this.dataList
@@ -1086,12 +1530,9 @@ export default {
             const nodeId = Number(d.id)
             const scoresNode = _this.scoresValue[nodeId].value
             _this.scoresValueArray.unshift(scoresNode)
-
             return scoresNode
           })
-          _this.scoresValueMax = Math.max(..._this.scoresValueArray)
-          _this.propertyChangeData = categoryData
-          _this.updateChart()
+          _this.histogramChange(categoryData)
         })
     },
     // 搜索点击下拉框数据
@@ -1127,10 +1568,168 @@ export default {
             _this.scoresValueArray.unshift(scoresNode)
             return scoresNode
           })
-          _this.scoresValueMax = Math.max(..._this.scoresValueArray)
-          _this.propertyChangeData = item.value
-          _this.updateChart()
+          _this.histogramChange(item.value)
         })
+    },
+    // 原来直方图按id
+    histogramOrigin() {
+      const _this = this
+      const num1 = []
+      const num2 = []
+      const num3 = []
+      const num4 = []
+      const num5 = []
+      let sizeValueMax = (parseFloat(Math.max(..._this.sizeValueArray)) / 5).toFixed(1)
+      this.node.attr('fill', function (d) {
+        d.size = Number(d.size)
+        if (d.size < sizeValueMax) {
+          num1.push(d.size)
+          return '#b2392d'
+        } else if (d.size >= sizeValueMax && d.size < 2 * sizeValueMax) {
+          num2.push(d.size)
+          return '#f09e30'
+        } else if (d.size >= 2 * sizeValueMax && d.size < 3 * sizeValueMax) {
+          num3.push(d.size)
+          return '#7cf728'
+        } else if (d.size >= 3 * sizeValueMax && d.size < 4 * sizeValueMax) {
+          num4.push(d.size)
+          return '#25a8b6'
+        } else if (d.size >= 4 * sizeValueMax && (d.size / 5).toFixed(1) <= sizeValueMax) {
+          num5.push(d.size)
+          return '#244e96'
+        }
+      })
+      const myChart = echarts.init(document.getElementById('chartBar'))
+
+      const option = {
+        grid: {
+          left: '3%',
+          bottom: '10%',
+          containLabel: true
+        },
+        xAxis: {
+          name: 'size',
+          nameLocation: 'middle',
+          nameGap: 25,
+          nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+          data: [
+            `(0,${sizeValueMax})`,
+            `(${sizeValueMax},${2 * sizeValueMax})`,
+            `(${2 * sizeValueMax},${3 * sizeValueMax})`,
+            `(${3 * sizeValueMax},${4 * sizeValueMax})`,
+            `(${4 * sizeValueMax},${5 * sizeValueMax})`
+          ]
+        },
+        yAxis: {
+          name: 'Number of nodes',
+          nameTextStyle: { fontSize: 16, fontWeight: 'bold', align: 'left' }
+        },
+        series: [
+          {
+            type: 'bar',
+            // data: [1, 2, 3, 4, 5, 6, 7, 8],
+            data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+            label: {
+              show: true,
+              position: 'top'
+            },
+            itemStyle: {
+              normal: {
+                color: function (params) {
+                  const colorList = _this.BarColorList
+                  if (params.dataIndex >= colorList.length) {
+                    params.dataIndex = params.dataIndex - colorList.length
+                  }
+                  return colorList[params.dataIndex]
+                }
+              }
+            }
+          }
+        ]
+      }
+      myChart.setOption(option)
+    },
+    // 直方图改变
+    histogramChange(param) {
+      const _this = this
+
+      const num1 = []
+      const num2 = []
+      const num3 = []
+      const num4 = []
+      const num5 = []
+      let scoresValueMax = (parseFloat(Math.max(..._this.scoresValueArray)) / 5).toFixed(2)
+      this.node.attr('fill', function (d) {
+        const nodeId = Number(d.id)
+        const scoresNode = _this.scoresValue[nodeId].value
+
+        if (scoresNode < scoresValueMax) {
+          num1.push(scoresNode)
+          return '#b2392d'
+        } else if (scoresNode >= scoresValueMax && scoresNode < 2 * scoresValueMax) {
+          num2.push(scoresNode)
+          return '#f09e30'
+        } else if (scoresNode >= 2 * scoresValueMax && scoresNode < 3 * scoresValueMax) {
+          num3.push(scoresNode)
+          return '#7cf728'
+        } else if (scoresNode >= 3 * scoresValueMax && scoresNode < 4 * scoresValueMax) {
+          num4.push(scoresNode)
+          return '#25a8b6'
+        } else if (scoresNode >= 4 * scoresValueMax && (scoresNode / 5).toFixed(2) <= scoresValueMax) {
+          num5.push(scoresNode)
+          return '#244e96'
+        }
+      })
+      const myChart = echarts.init(document.getElementById('chartBar'))
+
+      const option = {
+        grid: {
+          left: '3%',
+          bottom: '10%',
+          containLabel: true
+        },
+        xAxis: {
+          name: param,
+          nameLocation: 'middle',
+          nameGap: 25,
+          nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
+          data: [
+            `(0,${scoresValueMax})`,
+            `(${scoresValueMax},${2 * scoresValueMax})`,
+            `(${2 * scoresValueMax},${3 * scoresValueMax})`,
+            `(${3 * scoresValueMax},${4 * scoresValueMax})`,
+            `(${4 * scoresValueMax},${5 * scoresValueMax})`
+          ]
+        },
+        yAxis: {
+          name: 'Number of nodes',
+          nameTextStyle: { fontSize: 16, fontWeight: 'bold' }
+        },
+        series: [
+          {
+            type: 'bar',
+            // data: [1, 2, 3, 4, 5, 6, 7, 8],
+            data: [num1.length, num2.length, num3.length, num4.length, num5.length],
+            label: {
+              show: true,
+              position: 'top'
+            },
+            itemStyle: {
+              normal: {
+                color: function (params) {
+                  const colorList = _this.BarColorList
+                  if (params.dataIndex >= colorList.length) {
+                    params.dataIndex = params.dataIndex - colorList.length
+                  }
+                  return colorList[params.dataIndex]
+                }
+              }
+            }
+          }
+        ]
+      }
+      myChart.setOption(option)
+      _this.propertyChangeData = param
     },
     // 搜索下拉数据显示
     loadAll() {
@@ -1168,172 +1767,6 @@ export default {
       } else {
         this.NodesEditBoardHide = false
       }
-    },
-    updateChart() {
-      const _this = this
-      // 生成横坐标数据
-      this.xData = this.generateXData()
-      console.log(this.xData)
-      // 根据新的等分数量动态生成随机纵坐标数据
-      this.yData = this.generateYData()
-      // 生成柱子数量
-      this.intervalData = this.generateIntervalData()
-      // 配置ECharts
-      const option = {
-        grid: {
-          left: '8%',
-          bottom: '10%',
-          containLabel: true
-        },
-        xAxis: {
-          name: _this.propertyChangeData ? _this.propertyChangeData : 'size',
-          nameLocation: 'middle',
-          nameGap: 25,
-          nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
-          data: this.xData,
-          axisLabel: {
-            interval: Math.ceil(_this.xData.length / this.interval),
-            showMaxLabel: true
-          }
-        },
-        yAxis: {
-          name: 'nodes number',
-          nameTextStyle: { fontSize: 16, fontWeight: 'bold' },
-          type: 'value'
-        },
-        series: [
-          {
-            type: 'bar',
-            data: this.yData.map((value, index) => ({
-              value,
-              itemStyle: {
-                color: this.generateGradientColor(index)
-              }
-            }))
-          }
-        ]
-      }
-
-      // 使用配置项设置图表
-      const myChart = echarts.init(document.getElementById('chartBar'))
-      myChart.setOption(option)
-      // 更新节点颜色
-      this.updateNodeColor()
-    },
-    generateXData() {
-      const _this = this
-      if (_this.propertyChangeData) {
-        const max = _this.scoresValueMax
-        console.log(max)
-        const intervalCount = this.interval
-        return Array.from({ length: intervalCount }, (_, index) => (index * (max / intervalCount)).toFixed(4))
-      } else {
-        const max = this.sizeValueMax
-        const intervalCount = this.interval
-        return Array.from({ length: intervalCount }, (_, index) => (index * (max / intervalCount)).toFixed(1))
-      }
-    },
-    generateYData() {
-      const _this = this
-      // 初始化纵坐标数据为 0
-      const yData = Array.from({ length: this.interval }, () => 0)
-
-      // 遍历节点，统计每个区间的数量
-      if (_this.propertyChangeData) {
-        this.node.each(function (d) {
-          const nodeId = Number(d.id)
-          const scoresNode = _this.scoresValue[nodeId].value
-          const index = _this.findIndexInInterval(scoresNode)
-          yData[index]++
-        })
-      } else {
-        this.node.each(function (d) {
-          const index = _this.findIndexInInterval(d.size)
-          yData[index]++
-        })
-      }
-      return yData
-    },
-    updateColorScale(color) {
-      const _this = this
-      // 根据选择的颜色设置新的渐变色带
-      switch (color) {
-        case 'blue':
-          _this.scaleColor = 'blue'
-          break
-        case 'green':
-          _this.scaleColor = 'green'
-          break
-        case 'orange':
-          _this.scaleColor = 'orange'
-          break
-      }
-    },
-    generateGradientColor(index) {
-      const _this = this
-      // 根据选择的颜色设置新的渐变色带
-      let colorScale = d3
-        .scaleSequential()
-        .domain([_this.interval - 1, 0])
-        .interpolator(d3.interpolateViridis)
-      switch (_this.scaleColor) {
-        case 'blue':
-          colorScale = d3
-            .scaleSequential()
-            .domain([0, _this.interval - 1])
-            .interpolator(d3.interpolateBlues)
-          break
-        case 'green':
-          colorScale = d3
-            .scaleSequential()
-            .domain([0, _this.interval - 1])
-            .interpolator(d3.interpolateGreens)
-          break
-        case 'orange':
-          colorScale = d3
-            .scaleSequential()
-            .domain([0, _this.interval - 1])
-            .interpolator(d3.interpolateOranges)
-          break
-      }
-
-      return colorScale(index)
-    },
-    generateIntervalData() {
-      // 生成柱子数量
-      return Array.from({ length: this.interval }, (_, index) => ({
-        id: index + 1
-      }))
-    },
-    updateNodeColor() {
-      // 更新节点颜色
-      const _this = this
-      if (_this.propertyChangeData) {
-        this.node.attr('fill', function (d, i) {
-          const nodeId = Number(d.id)
-          const scoresNode = _this.scoresValue[nodeId].value
-          const index = _this.findIndexInInterval(scoresNode)
-          return _this.generateGradientColor(index)
-        })
-      } else {
-        this.node.attr('fill', function (d, i) {
-          const index = _this.findIndexInInterval(d.size)
-          return _this.generateGradientColor(index)
-        })
-      }
-    },
-    findIndexInInterval(value) {
-      const index = this.xData.findIndex((x, i, arr) => {
-        if (i === 0 && value < x) {
-          return true // 当 value 小于第一个元素时，返回 true
-        } else if (i === arr.length - 1 && value >= x) {
-          return true // 当 value 大于等于最后一个元素时，返回 true
-        } else {
-          return value >= x && value < arr[i + 1] // 在其他情况下，判断 value 是否在当前区间内
-        }
-      })
-
-      return index >= 0 ? index : 0 // 确保返回的索引不会小于 0
     }
   }
 }
@@ -1411,12 +1844,6 @@ export default {
   position: absolute;
   z-index: 10;
 }
-#chartBarx {
-  margin-top: 0px;
-  right: 100px;
-  position: absolute;
-  z-index: 10;
-}
 .dataCard {
   font-size: 16px;
   padding-bottom: 9px;
@@ -1432,34 +1859,9 @@ export default {
   z-index: 120;
   overflow: auto;
 }
-
-#minMaxBox {
-  right: 20px;
-  top: 402px;
-  z-index: 16;
-  position: absolute;
-  width: 340px;
-  display: flex;
-  height: 30px;
-}
-.fromToBox {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 50px;
-}
-.minAndMax {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-  margin-left: 10px;
-}
-.minMaxButton {
-  margin-bottom: 20px;
-  margin-left: 10px;
-}
 #colorCastButton {
   right: 20px;
-  top: 430px;
+  top: 400px;
   z-index: 16;
   position: absolute;
   width: 340px;
@@ -1467,7 +1869,7 @@ export default {
   height: 30px;
 }
 .NodesEditBoard {
-  top: 470px;
+  top: 450px;
   height: 500px;
   width: 360px;
   right: 8px;
@@ -1518,16 +1920,24 @@ export default {
   margin-bottom: 10px;
 }
 .cascader,
+.minAndMax {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
 .querySearch {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
   margin-left: 10px;
 }
-
+.minAndMaxButton {
+  width: 80px;
+  margin-top: 30px;
+}
 @media screen and (max-width: 1300px) {
   .NodesEditBoard,
-  #minMaxBox,
   #colorCastButton,
   #chartBar {
     display: none !important;
