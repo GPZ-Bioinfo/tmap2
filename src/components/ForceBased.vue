@@ -40,10 +40,10 @@
       >
       <!-- 多选按钮 -->
       <el-button class="buttonStyle" @click="MultiSelect" v-if="SelectStop"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="多选"><v-icon>mdi-selection-search</v-icon></el-tooltip></el-button
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="多选"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
       >
       <el-button class="buttonStyle" @click="SelectCancel" v-if="!SelectStop" type="info"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消多选"><v-icon>mdi-selection-search</v-icon></el-tooltip></el-button
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消多选"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
       >
 
       <!-- 直方图控件 -->
@@ -60,8 +60,9 @@
     </div>
     <!-- 点线数量 -->
     <div class="CountBoard">
-      nodes:<span class="CountNumber">{{ nodesCount }}</span
-      >,links:<span class="CountNumber">{{ linksCount }}</span>
+      nodes:<span class="CountNumber">{{ nodesSelectedCount }}/</span><span class="CountNumber">{{ nodesCount }}</span
+      >; links:<span class="CountNumber">{{ linksSelectedCount }}/</span><span class="CountNumber">{{ linksCount }}</span
+      >; feature:<span class="CountNumber">{{ featureName }}</span>
     </div>
     <!-- 直方图 -->
     <div id="chartBar" style="width: 370px; height: 360px"></div>
@@ -90,8 +91,11 @@
           <input v-model="max" type="number" min="1" pattern="\d+" @input="nodeFilter" style="width: 60px; border: 1px solid rgb(108, 98, 98); height: 25px" />
         </div>
       </div>
-      <div class="minMaxButton">
+      <div class="minMaxCancel">
         <el-button style="position: absolute; padding: 5px" type="text" @click="nodeReset">✖️</el-button>
+      </div>
+      <div class="minMaxButton">
+        <el-button style="position: absolute; padding-top: 0px; padding-bottom: 10px" type="text" @click="boardOpen"><v-icon>mdi-table-large-plus</v-icon></el-button>
       </div>
     </div>
     <!-- 数据面板 -->
@@ -207,7 +211,6 @@
 <script>
 import * as d3 from 'd3'
 import * as echarts from 'echarts'
-import { elements } from './static/fgfp_graph_SAFE_dat.json'
 import gql from 'graphql-tag'
 import ApolloClient from 'apollo-boost'
 
@@ -219,6 +222,7 @@ export default {
     graph: '',
     valueTooltip: 20,
     fullScreen: true,
+    svg: null,
     width: window.innerWidth,
     height: window.innerHeight,
     container: null,
@@ -229,7 +233,9 @@ export default {
     brushStop: true,
     nodesCount: 0,
     linksCount: 0,
-    svg: null,
+    nodesSelectedCount: 0,
+    linksSelectedCount: 0,
+    featureName: '',
     node: null,
     link: null,
     boardExit: false,
@@ -242,6 +248,7 @@ export default {
     LightStop: true,
     multiple: 10,
     brush: null,
+    currentScale: 1,
     graphNodes: null,
     labelLayout: null,
     histogramExit: true,
@@ -277,10 +284,15 @@ export default {
     yData: [],
     intervalData: [],
     sizeValueArray: [],
-    scaleColor: null
+    scaleColor: null,
+    lightMark: 0
   }),
   mounted() {
     this.updateChart()
+  },
+  beforeDestroy() {
+    // 在组件销毁前移除窗口大小变化事件监听
+    window.removeEventListener('resize', this.resize)
   },
   watch: {
     interval: 'updateChart' // Watch for changes in the interval and update the chart
@@ -317,6 +329,7 @@ export default {
         this.graphqlData = response.data.graph.elements
         this.nodesCount = this.graphqlData.nodes.length
         this.linksCount = this.graphqlData.links.length
+        this.featureName = 'size'
         this.graph = {
           nodes: this.graphqlData.nodes,
           links: this.graphqlData.links
@@ -356,19 +369,15 @@ export default {
         this.graphTrans = graphTrans
         this.graphLinks = graph.links
         this.graphNodes = graph.nodes
-
-        let svg = d3.select('#viz').attr('width', this.width).attr('height', this.height)
-        this.svg = svg
-
-        svg.call(
-          d3
-            .zoom()
-            .scaleExtent([0.1, 4]) // eslint-disable-line
-            .on('zoom', function () {
-              container.attr('transform', d3.event.transform)
-            })
-        )
-        let container = svg.append('g')
+        // 获取 SVG 元素
+        this.svg = d3.select('#viz')
+        // 初始化 SVG 大小
+        this.resize()
+        // 监听窗口大小变化事件
+        window.addEventListener('resize', this.resize)
+        // 监听缩放事件
+        this.svg.call(d3.zoom().on('zoom', this.zoomed))
+        let container = this.svg.append('g')
         this.container = container
         let link = container.attr('class', 'links').selectAll('line').data(graph.links).enter().append('line').attr('stroke', 'pink').attr('stroke-width', '1px')
 
@@ -492,6 +501,19 @@ export default {
   },
 
   methods: {
+    // 更新 SVG 大小的方法
+    resize() {
+      // 获取新的窗口宽度和高度
+      this.width = window.innerWidth
+      this.height = window.innerHeight
+
+      // 设置 SVG 的宽度和高度
+      this.svg.attr('width', this.width).attr('height', this.height)
+    },
+    zoomed() {
+      this.currentScale = d3.event.transform.k
+      this.container.attr('transform', d3.event.transform)
+    },
     // 全屏
     requestFullscreen() {
       this.fullScreen = false
@@ -527,6 +549,8 @@ export default {
     highLight() {
       const _this = this
       this.LightStop = false
+      this.lightMark = 0
+      this.nodesSelectedCount = 0
       if (!this.brushStop) {
         this.brushStop = true
         this.brushCancel()
@@ -574,9 +598,16 @@ export default {
       this.LightStop = true
       this.node.style('opacity', 1)
       this.link.style('opacity', 1)
+      this.lightMark = 0
+      this.nodesSelectedCount = 0
+    },
+    boardOpen() {
+      this.boardExit = true
     },
     // 框选
     brushSelect() {
+      this.nodesSelectedCount = 0
+      this.node.style('opacity', 0.4)
       if (!this.LightStop) {
         this.LightStop = true
         this.LightCancel()
@@ -589,9 +620,10 @@ export default {
         this.SelectStop = true
         this.SelectCancel()
       }
+      this.lightMark = 0
       this.brushStop = false
       const _this = this
-      _this.node.style('opacity', 0.4)
+
       const brush = d3.brush().on('start', brushstarted).on('brush', brushing)
       function brushstarted() {
         _this.boardExit = true
@@ -623,12 +655,15 @@ export default {
                   _this.nodesDataId.unshift(nodeDataId)
                   _this.nodesDataScores.unshift(nodeDataScores)
                   _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
+                  _this.nodesSelectedCount = _this.nodesData.length
                 }
               } else {
+                const nodeDataScores = d3.select(this).attr('r')
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesDataScores = _this.nodesDataId
-                  _this.nodesData.unshift('"id":' + nodeDataId)
+                  _this.nodesDataScores.unshift(nodeDataScores)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + 'size' + '":' + nodeDataScores)
+                  _this.nodesSelectedCount = _this.nodesData.length
                 }
               }
             })
@@ -642,16 +677,17 @@ export default {
             .style('opacity', 1)
         }
       }
+      const scaledExtent = [
+        [-this.width / this.currentScale, -this.height / this.currentScale],
+        [this.width / this.currentScale, this.height / this.currentScale]
+      ]
+
+      brush.extent(scaledExtent)
       _this.container.call(brush)
       this.brush = brush
-      // console.log('nodesData', this.nodesData)
     },
     // 取消框选
     brushCancel() {
-      this.node.style('opacity', 1)
-      this.nodesData = []
-      this.nodesDataId = []
-      this.nodesDataScores = []
       this.container.call(this.brush.move, null)
       this.container.on('.brush', null)
       document.querySelector('#viz > g > rect.overlay').remove()
@@ -667,26 +703,14 @@ export default {
       this.container.attr('fill', '')
       this.brushStop = true
       this.link.style('opacity', 1)
-      this.boardExit = false
-      // 节点悬浮显示id
-      let focusId = null
-      const _this = this
-      _this.node.on('mouseover', idFocus).on('mouseout', idUnFocus)
-      function idFocus(d) {
-        focusId = _this.container
-          .append('text')
-          .text(d.id)
-          .attr('x', d.x + 8)
-          .attr('y', d.y - 10)
-          .style('font-family', 'Arial')
-          .style('font-size', 20)
-          .style('pointer-events', 'none')
-      }
-      function idUnFocus(d) {
-        focusId.remove()
-      }
 
-      // this.boardClose()
+      this.node.style('opacity', 1)
+      this.nodesData = []
+      this.nodesDataId = []
+      this.nodesDataScores = []
+      this.nodesSelectedCount = 0
+      this.boardExit = false
+      this.lightMark = 0
     },
     // 框选2
     brushSelect2() {
@@ -702,9 +726,12 @@ export default {
         this.SelectStop = true
         this.SelectCancel()
       }
+      if (this.lightMark === 0) {
+        this.node.style('opacity', 0.4)
+      }
+      this.lightMark++
       this.brushStop2 = false
       const _this = this
-      _this.node.style('opacity', 0.4)
 
       const brush = d3.brush().on('start', brushstarted2).on('brush', brushing2)
       function brushstarted2() {
@@ -733,12 +760,15 @@ export default {
                   _this.nodesDataId.unshift(nodeDataId)
                   _this.nodesDataScores.unshift(nodeDataScores)
                   _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
+                  _this.nodesSelectedCount = _this.nodesData.length
                 }
               } else {
+                const nodeDataScores = d3.select(this).attr('r')
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
-                  _this.nodesDataScores = _this.nodesDataId
-                  _this.nodesData.unshift('"id":' + nodeDataId)
+                  _this.nodesDataScores.unshift(nodeDataScores)
+                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + 'size' + '":' + nodeDataScores)
+                  _this.nodesSelectedCount = _this.nodesData.length
                 }
               }
             })
@@ -752,15 +782,17 @@ export default {
             .style('opacity', 1)
         }
       }
+      const scaledExtent = [
+        [-this.width / this.currentScale, -this.height / this.currentScale],
+        [this.width / this.currentScale, this.height / this.currentScale]
+      ]
+
+      brush.extent(scaledExtent)
       _this.container.call(brush)
       this.brush = brush
     },
     // 取消框选2
     brushCancel2() {
-      this.node.style('opacity', 1)
-      this.nodesData = []
-      this.nodesDataId = []
-      this.nodesDataScores = []
       this.container.call(this.brush.move, null)
       this.container.on('.brush', null)
       document.querySelector('#viz > g > rect.overlay').remove()
@@ -776,28 +808,21 @@ export default {
       this.container.attr('fill', '')
       this.brushStop2 = true
       this.link.style('opacity', 1)
-      this.boardExit = false
-      // 节点悬浮显示id
-      let focusId = null
-      const _this = this
-      _this.node.on('mouseover', idFocus).on('mouseout', idUnFocus)
-      function idFocus(d) {
-        focusId = _this.container
-          .append('text')
-          .text(d.id)
-          .attr('x', d.x + 8)
-          .attr('y', d.y - 10)
-          .style('font-family', 'Arial')
-          .style('font-size', 20)
-          .style('pointer-events', 'none')
+
+      if (this.lightMark === 0) {
+        this.node.style('opacity', 1)
+        this.nodesData = []
+        this.nodesDataId = []
+        this.nodesDataScores = []
+        this.boardExit = false
       }
-      function idUnFocus(d) {
-        focusId.remove()
-      }
-      // this.boardClose()
     },
     // 多选
     MultiSelect() {
+      if (this.lightMark === 0) {
+        this.node.style('opacity', 0.4)
+      }
+      this.lightMark++
       if (!this.LightStop) {
         this.LightStop = true
         this.LightCancel()
@@ -812,8 +837,6 @@ export default {
       }
       this.SelectStop = false
       const _this = this
-      this.node.style('opacity', 0.4)
-      this.link.style('opacity', 0.4)
       this.node.on('click', clickSelect)
       function clickSelect(event) {
         _this.boardExit = true
@@ -827,34 +850,39 @@ export default {
               _this.nodesDataId.unshift(nodeDataId)
               _this.nodesDataScores.unshift(nodeDataScores)
               _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
+              _this.nodesSelectedCount = _this.nodesData.length
             }
           } else {
+            const nodeDataScores = d3.select(this).attr('r')
             if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
               _this.nodesDataId.unshift(nodeDataId)
-              _this.nodesDataScores = _this.nodesDataId
-              _this.nodesData.unshift('"id":' + nodeDataId)
+              _this.nodesDataScores.unshift(nodeDataScores)
+              _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + 'size' + '":' + nodeDataScores)
+              _this.nodesSelectedCount = _this.nodesData.length
             }
           }
         } else {
           d3.select(this).style('opacity', 0.4)
           const nodeIndex = _this.nodesDataId.indexOf(nodeDataId)
           _this.nodesDataId.splice(nodeIndex, 1)
-          _this.nodesDataScores.splice(nodeIndex, 1)
           _this.nodesData.splice(nodeIndex, 1)
+          _this.nodesSelectedCount = _this.nodesData.length
         }
       }
     },
     // 取消多选
     SelectCancel() {
       this.SelectStop = true
-      this.node.style('opacity', 1)
-      this.link.style('opacity', 1)
       this.node.on('click', '')
-      this.boardExit = false
-      this.nodesData = []
-      this.nodesDataId = []
-      this.nodesDataScores = []
-      // this.boardClose()
+
+      if (this.lightMark === 0) {
+        this.node.style('opacity', 1)
+        this.link.style('opacity', 1)
+        this.boardExit = false
+        this.nodesData = []
+        this.nodesDataId = []
+        this.nodesDataScores = []
+      }
     },
     // 数据面板关闭
     boardClose() {
@@ -867,6 +895,32 @@ export default {
       }
       if (!this.SelectStop) {
         _this.SelectCancel()
+      }
+      this.lightMark = 0
+      this.min = ''
+      this.max = ''
+      this.nodesData = []
+      this.nodesSelectedCount = 0
+      this.nodesDataId = []
+      this.nodesDataScores = []
+      this.node.style('opacity', 1)
+      this.link.style('opacity', 1)
+      this.boardExit = false
+      // 节点悬浮显示id
+      let focusId = null
+      _this.node.on('mouseover', idFocus).on('mouseout', idUnFocus)
+      function idFocus(d) {
+        focusId = _this.container
+          .append('text')
+          .text(d.id)
+          .attr('x', d.x + 8)
+          .attr('y', d.y - 10)
+          .style('font-family', 'Arial')
+          .style('font-size', 20)
+          .style('pointer-events', 'none')
+      }
+      function idUnFocus(d) {
+        focusId.remove()
       }
     },
     // 调色板应用且关闭
@@ -954,6 +1008,7 @@ export default {
       this.value = ''
       this.state1 = ''
       this.propertyChangeData = ''
+      this.featureName = 'size'
       this.updateChart()
       this.colorBoardClose()
       this.nodeReset()
@@ -963,6 +1018,10 @@ export default {
       let maxData = this.max !== '' ? Number(this.max) : 10000
       let minData = Number(this.min)
       const _this = this
+      _this.nodesData = []
+      _this.nodesDataId = []
+      _this.nodesDataScores = []
+
       if (maxData >= minData) {
         this.node.style('opacity', 0.4)
         this.link.style('opacity', 0.4)
@@ -972,26 +1031,54 @@ export default {
           let nodeLimitId = nodeLimit.data().map((d) => d.id)
           let linkLimit = this.link.filter((d) => nodeLimitId.includes(d.source.index) && nodeLimitId.includes(d.target.index))
           linkLimit.style('opacity', 1)
-          this.nodesCount = nodeLimit._groups[0].length
-          this.linksCount = linkLimit._groups[0].length
+          this.nodesSelectedCount = nodeLimit._groups[0].length
+          this.linksSelectedCount = linkLimit._groups[0].length
           this.node
             .on('mouseover', function () {
               ''
             })
             .on('mouseout', '')
           nodeLimit.on('mouseover', idFocus).on('mouseout', idUnFocus)
+
+          if (nodeLimit.nodes()[0]) {
+            nodeLimit.each(function () {
+              const nodeDataId = d3.select(this).attr('id')
+
+              const nodeDataScores = d3.select(this).attr(_this.propertyChangeData)
+              if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
+                _this.nodesDataId.unshift(nodeDataId)
+                _this.nodesDataScores.unshift(nodeDataScores)
+                _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
+                _this.nodesSelectedCount = _this.nodesData.length
+              }
+            })
+          }
         } else {
           let nodeLimit = this.node.filter((d) => d.size <= maxData && d.size >= minData)
           nodeLimit.style('opacity', 1)
 
-          this.nodesCount = nodeLimit._groups[0].length
-          this.linksCount = 0
+          this.nodesSelectedCount = nodeLimit._groups[0].length
+          this.linksSelectedCount = 0
           this.node
             .on('mouseover', function () {
               ''
             })
             .on('mouseout', '')
           nodeLimit.on('mouseover', idFocus).on('mouseout', idUnFocus)
+
+          if (nodeLimit.nodes()[0]) {
+            nodeLimit.each(function () {
+              const nodeDataId = d3.select(this).attr('id')
+
+              const nodeDataScores = d3.select(this).attr('r')
+              if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
+                _this.nodesDataId.unshift(nodeDataId)
+                _this.nodesDataScores.unshift(nodeDataScores)
+                _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + 'size' + '":' + nodeDataScores)
+                _this.nodesSelectedCount = _this.nodesData.length
+              }
+            })
+          }
         }
       }
       // 节点悬浮显示id
@@ -1014,8 +1101,8 @@ export default {
     nodeReset() {
       this.max = ''
       this.min = ''
-      this.nodesCount = elements.nodes.length
-      this.linksCount = elements.links.length
+      this.nodesSelectedCount = 0
+      this.linksSelectedCount = 0
       this.node.style('opacity', 1)
       this.link.style('opacity', 1)
       // 节点悬浮显示id
@@ -1091,6 +1178,7 @@ export default {
           })
           _this.scoresValueMax = Math.max(..._this.scoresValueArray)
           _this.propertyChangeData = categoryData
+          _this.featureName = _this.propertyChangeData
           _this.updateChart()
         })
     },
@@ -1129,6 +1217,7 @@ export default {
           })
           _this.scoresValueMax = Math.max(..._this.scoresValueArray)
           _this.propertyChangeData = item.value
+          _this.featureName = _this.propertyChangeData
           _this.updateChart()
         })
     },
@@ -1169,6 +1258,7 @@ export default {
         this.NodesEditBoardHide = false
       }
     },
+    // 直方图设置
     updateChart() {
       const _this = this
       // 生成横坐标数据
@@ -1230,7 +1320,7 @@ export default {
       } else {
         const max = this.sizeValueMax
         const intervalCount = this.interval
-        return Array.from({ length: intervalCount }, (_, index) => (index * (max / intervalCount)).toFixed(1))
+        return Array.from({ length: intervalCount }, (_, index) => ((index + 0.5) * (max / intervalCount)).toFixed(1))
       }
     },
     generateYData() {
@@ -1453,9 +1543,13 @@ export default {
   margin-bottom: 20px;
   margin-left: 10px;
 }
-.minMaxButton {
+.minMaxCancel {
   margin-bottom: 20px;
   margin-left: 10px;
+}
+.minMaxButton {
+  margin-bottom: 30px;
+  margin-left: 40px;
 }
 #colorCastButton {
   right: 20px;
@@ -1529,7 +1623,8 @@ export default {
   .NodesEditBoard,
   #minMaxBox,
   #colorCastButton,
-  #chartBar {
+  #chartBar,
+  #chartBarx {
     display: none !important;
   }
 }

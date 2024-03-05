@@ -51,23 +51,13 @@ export default {
   },
   methods: {
     handleClick() {
-      this.$router.push('/examples/ForceBased')
+      this.$router.push('/project_id=123456/ForceBased')
     },
     goBack() {
       this.$store.commit('removeToken')
       localStorage.removeItem('users')
       this.Home_visible = true
       this.$router.push('/home').catch((err) => {}) // eslint-disable-line
-    }
-  },
-  beforeRouteEnter(to, from, next) {
-    const isLogin = JSON.parse(localStorage.getItem('users'))
-    if (isLogin.token !== 't2t123xafwfw2233') {
-      next({
-        path: '/home'
-      })
-    } else {
-      next()
     }
   }
 }

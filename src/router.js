@@ -31,37 +31,37 @@ const router = new Router({
       meta: { title: 'Dashboard' }
     },
     {
-      path: '/examples',
+      path: '/project_id=123456',
       name: 'examples',
       component: () => import('./views/Examples.vue'),
       meta: { title: 'Examples' },
       children: [
         {
-          path: '/examples/Microbiome',
+          path: '/project_id=123456/Microbiome',
           name: 'Meta',
           component: () => import('./components/Microbiome.vue'),
           meta: { title: 'Microbiome Features' }
         },
         {
-          path: '/examples/Groups1',
+          path: '/project_id=123456/Groups1',
           name: 'Groups',
           component: () => import('./components/Groups1.vue'),
           meta: { title: 'Groups' }
         },
         {
-          path: '/examples/ForceBased',
+          path: '/project_id=123456/ForceBased',
           name: 'ForceBased',
           component: () => import('./components/ForceBased.vue'),
           meta: { title: 'Topological Models' }
         },
         {
-          path: '/examples/Comparisons1',
+          path: '/project_id=123456/Comparisons1',
           name: 'Comparisons1',
           component: () => import('./components/Comparisons.vue'),
           meta: { title: 'Comparisons' }
         },
         {
-          path: '/examples/Charts1',
+          path: '/project_id=123456/Charts1',
           name: 'Comparisons1',
           component: () => import('./components/Charts.vue'),
           meta: { title: 'Charts' }
@@ -74,7 +74,28 @@ const router = new Router({
 // router guard
 router.beforeEach((to, from, next) => {
   document.title = to.meta.title ? to.meta.title + ' | ' + 'Tmap' : 'Tmap'
-  next()
+  const isLogin = JSON.parse(localStorage.getItem('users'))
+  if (to.name === 'home') {
+    if (isLogin) {
+      this.$router.push('/dashboard')
+    } else {
+      next()
+    }
+  } else {
+    if (isLogin) {
+      if (isLogin.token === 't2t123xafwfw2233') {
+        next()
+      } else {
+        next({
+          path: '/home'
+        })
+      }
+    } else {
+      next({
+        path: '/home'
+      })
+    }
+  }
 })
 
 export default router

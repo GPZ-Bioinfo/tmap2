@@ -80,19 +80,19 @@ export default {
     },
     handleSelect(key, keyPath) {
       if (key === '1-1') {
-        this.$router.push('/examples/Microbiome')
+        this.$router.push('/project_id=123456/Microbiome')
       }
       if (key === '2-1') {
-        this.$router.push('/examples/Groups1')
+        this.$router.push('/project_id=123456/Groups1')
       }
       if (key === '3-1') {
-        this.$router.push('/examples/ForceBased')
+        this.$router.push('/project_id=123456/ForceBased')
       }
       if (key === '4-1') {
-        this.$router.push('/examples/Comparisons1')
+        this.$router.push('/project_id=123456/Comparisons1')
       }
       if (key === '5-1') {
-        this.$router.push('/examples/Charts1')
+        this.$router.push('/project_id=123456/Charts1')
       }
     },
     goBack() {
@@ -102,16 +102,6 @@ export default {
       // this.$router.push('/home').catch((err) => {})
       this.Dashboard_visible = false
       this.$router.push('/dashboard')
-    }
-  },
-  beforeRouteEnter(to, from, next) {
-    const isLogin = JSON.parse(localStorage.getItem('users'))
-    if (isLogin.token !== 't2t123xafwfw2233') {
-      next({
-        path: '/home'
-      })
-    } else {
-      next()
     }
   }
 }
