@@ -1,0 +1,700 @@
+{
+  "data": [
+    {
+      "variable": "Bristol_stool_score",
+      "enrich_score": 88.9045412285186
+    },
+    {
+      "variable": "Gender:F",
+      "enrich_score": 85.72327257797475
+    },
+    {
+      "variable": "Gender:M",
+      "enrich_score": 81.07659392378041
+    },
+    {
+      "variable": "Hemoglobine",
+      "enrich_score": 79.08287495008986
+    },
+    {
+      "variable": "Mean_corpuscular_hemoglobin_concentration",
+      "enrich_score": 63.5829870693216
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.2",
+      "enrich_score": 58.9862216900928
+    },
+    {
+      "variable": "Shift_work:False",
+      "enrich_score": 57.99790681581743
+    },
+    {
+      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
+      "enrich_score": 54.34981229017558
+    },
+    {
+      "variable": "Red_blood_cell_count",
+      "enrich_score": 53.72294345850603
+    },
+    {
+      "variable": "Uric_acid",
+      "enrich_score": 51.10187495371106
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.1",
+      "enrich_score": 46.00170252122784
+    },
+    {
+      "variable": "Height",
+      "enrich_score": 45.99326669420051
+    },
+    {
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2",
+      "enrich_score": 45.876280740184775
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+      "enrich_score": 44.24609254929719
+    },
+    {
+      "variable": "Pets_.past_3_months.",
+      "enrich_score": 43.87528005952815
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.1",
+      "enrich_score": 43.72585490676706
+    },
+    {
+      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
+      "enrich_score": 43.66792582815045
+    },
+    {
+      "variable": "Gastroentritis_.other_treatment.",
+      "enrich_score": 43.64807698870248
+    },
+    {
+      "variable": "Glomerular_filtration_rate",
+      "enrich_score": 43.39540646772342
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.3",
+      "enrich_score": 42.47110056595373
+    },
+    {
+      "variable": "Age",
+      "enrich_score": 42.133086327287344
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4",
+      "enrich_score": 41.71962128987856
+    },
+    {
+      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.2",
+      "enrich_score": 41.4569961333568
+    },
+    {
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
+      "enrich_score": 41.33360083338048
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.3",
+      "enrich_score": 40.41332755617362
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2",
+      "enrich_score": 39.89517335650561
+    },
+    {
+      "variable": "Smoking_with_inhalation:Neen",
+      "enrich_score": 39.76602543367001
+    },
+    {
+      "variable": "Creatinine",
+      "enrich_score": 39.48012934200891
+    },
+    {
+      "variable": "Body_mass_index",
+      "enrich_score": 39.290050072959616
+    },
+    {
+      "variable": "Work_days_per_week",
+      "enrich_score": 38.899908077841474
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.1",
+      "enrich_score": 38.81694586966631
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.4",
+      "enrich_score": 38.76004982809372
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.3",
+      "enrich_score": 38.48198815001612
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.2",
+      "enrich_score": 37.47961064383217
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.2",
+      "enrich_score": 37.284305596412295
+    },
+    {
+      "variable": "Shift_work:True",
+      "enrich_score": 36.9599441452826
+    },
+    {
+      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.3",
+      "enrich_score": 36.51995878518627
+    },
+    {
+      "variable": "Bread_type_preference:shortanswer.doesnot.apply",
+      "enrich_score": 35.99105492173674
+    },
+    {
+      "variable": "Smoking_with_inhalation:Not_relevant",
+      "enrich_score": 35.91638821340911
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.1",
+      "enrich_score": 35.813202613993774
+    },
+    {
+      "variable": "Breakfast_.N_past_week.",
+      "enrich_score": 35.65674051430982
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.5",
+      "enrich_score": 35.33963771553594
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3",
+      "enrich_score": 35.14370886065051
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.2",
+      "enrich_score": 34.420331754203694
+    },
+    {
+      "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
+      "enrich_score": 34.34914548214252
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.1",
+      "enrich_score": 34.23803155438934
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.1",
+      "enrich_score": 33.78210547938594
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.3",
+      "enrich_score": 33.707968479818774
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.2",
+      "enrich_score": 33.471099379161444
+    },
+    {
+      "variable": "Smoking_with_inhalation:Ja",
+      "enrich_score": 33.347709382583595
+    },
+    {
+      "variable": "Sleep_.hours.day.",
+      "enrich_score": 33.27489946214503
+    },
+    {
+      "variable": "J01CA04_.amoxicillin.",
+      "enrich_score": 32.949574537835325
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.1",
+      "enrich_score": 32.8081368273581
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.1",
+      "enrich_score": 32.76347180445893
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.5",
+      "enrich_score": 32.27557641418989
+    },
+    {
+      "variable": "HDL_cholesterol",
+      "enrich_score": 32.22313981617919
+    },
+    {
+      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.2",
+      "enrich_score": 31.867443110666223
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2",
+      "enrich_score": 31.66347430413312
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.2",
+      "enrich_score": 31.30194157477661
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+      "enrich_score": 30.95334176512106
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.4",
+      "enrich_score": 30.90191639608274
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.2",
+      "enrich_score": 30.88789698499462
+    },
+    {
+      "variable": "Smoker",
+      "enrich_score": 30.16128303713852
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.6",
+      "enrich_score": 30.07553248102246
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.2",
+      "enrich_score": 29.946821136855203
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.4",
+      "enrich_score": 29.87868243589844
+    },
+    {
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3",
+      "enrich_score": 29.801347077641054
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.6",
+      "enrich_score": 29.54574864844722
+    },
+    {
+      "variable": "Hip_circumference",
+      "enrich_score": 29.167141616966983
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.7",
+      "enrich_score": 29.089242454316995
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.2",
+      "enrich_score": 29.0802227069984
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:shortanswer.doesnot.apply",
+      "enrich_score": 29.02492933301324
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5",
+      "enrich_score": 28.98818720664332
+    },
+    {
+      "variable": "Alpha.2.globulin",
+      "enrich_score": 28.585832637223344
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.7",
+      "enrich_score": 27.80511503002736
+    },
+    {
+      "variable": "Creatine_kinase",
+      "enrich_score": 27.789040921602528
+    },
+    {
+      "variable": "Cigarettes_.average.day_past_3_months.",
+      "enrich_score": 27.36150425254712
+    },
+    {
+      "variable": "Working_start_age:shortanswer.doesnot.apply",
+      "enrich_score": 27.307967519083935
+    },
+    {
+      "variable": "Irritable_bowel_syndrome",
+      "enrich_score": 26.901254946382227
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.7",
+      "enrich_score": 26.79313609468756
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3",
+      "enrich_score": 26.775441621807687
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.5",
+      "enrich_score": 26.603782308177
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.7",
+      "enrich_score": 26.504719763437905
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:nan",
+      "enrich_score": 26.497894863549384
+    },
+    {
+      "variable": "R06AX28_.rupatadine.",
+      "enrich_score": 26.31644825015068
+    },
+    {
+      "variable": "Food_allergy",
+      "enrich_score": 26.091458375744416
+    },
+    {
+      "variable": "J01CR02_.amoxicillin_and_enzyme_inhibitor.",
+      "enrich_score": 26.07763540694273
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.6",
+      "enrich_score": 25.60455728186255
+    },
+    {
+      "variable": "G03CA04_CC06_.estrogens.",
+      "enrich_score": 25.5564318944422
+    },
+    {
+      "variable": "J01XE01_.nitrofurantoin.",
+      "enrich_score": 25.51200176214974
+    },
+    {
+      "variable": "Beta.globulin",
+      "enrich_score": 25.26818749044988
+    },
+    {
+      "variable": "Blood_urea",
+      "enrich_score": 23.960907973495814
+    },
+    {
+      "variable": "Magnesium_supplement",
+      "enrich_score": 23.701717309056328
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.9",
+      "enrich_score": 22.58898171568992
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+      "enrich_score": 22.47989077752448
+    },
+    {
+      "variable": "Working_hours_.hours.week.",
+      "enrich_score": 21.90353493110248
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.2",
+      "enrich_score": 21.527068107752125
+    },
+    {
+      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.3",
+      "enrich_score": 20.92000338671091
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.1",
+      "enrich_score": 20.653091119664825
+    },
+    {
+      "variable": "Gamma.glutamyltransferase",
+      "enrich_score": 20.42036406372003
+    },
+    {
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+      "enrich_score": 20.410881417298555
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.6",
+      "enrich_score": 20.37703264249102
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.5",
+      "enrich_score": 20.06257231669452
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.3",
+      "enrich_score": 19.966443519848085
+    },
+    {
+      "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.3",
+      "enrich_score": 19.916580941256463
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.3",
+      "enrich_score": 19.830182093717596
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.4",
+      "enrich_score": 19.774849101656432
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:shortanswer.doesnot.apply",
+      "enrich_score": 19.58769941767888
+    },
+    {
+      "variable": "L04AX01_.azathioprine.",
+      "enrich_score": 19.2833236049625
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.4",
+      "enrich_score": 18.24560676030072
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.6",
+      "enrich_score": 17.956703635445372
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.4",
+      "enrich_score": 17.54001080194868
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.6",
+      "enrich_score": 17.2807039307139
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.8",
+      "enrich_score": 17.27213613820711
+    },
+    {
+      "variable": "Triglycerides",
+      "enrich_score": 17.253213688364937
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.1",
+      "enrich_score": 17.23754379767938
+    },
+    {
+      "variable": "Shift_work:nan",
+      "enrich_score": 17.15692167187574
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+      "enrich_score": 16.907309457916348
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:shortanswer.doesnot.apply",
+      "enrich_score": 16.831383955140268
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.2",
+      "enrich_score": 16.794653490619986
+    },
+    {
+      "variable": "N06AX16_.venlafaxine.",
+      "enrich_score": 16.66001050931742
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.5",
+      "enrich_score": 16.487866499461408
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.7",
+      "enrich_score": 16.228818702819023
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.7",
+      "enrich_score": 15.470297314472008
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
+      "enrich_score": 15.227553236276162
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.1",
+      "enrich_score": 15.176647331381696
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.4",
+      "enrich_score": 15.129010210981226
+    },
+    {
+      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.2",
+      "enrich_score": 15.01560380263308
+    },
+    {
+      "variable": "Chocolate_type_preference:shortanswer.doesnot.apply",
+      "enrich_score": 14.9951699271025
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.4",
+      "enrich_score": 14.8331601693608
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.1",
+      "enrich_score": 14.617600050946214
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.9",
+      "enrich_score": 14.490408450640968
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.3",
+      "enrich_score": 14.461892016738554
+    },
+    {
+      "variable": "L04AB_.TNF.alpha_inhibitors.",
+      "enrich_score": 14.449447687252016
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.5",
+      "enrich_score": 14.235338748392545
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.3",
+      "enrich_score": 13.922990802002982
+    },
+    {
+      "variable": "Childhood_residence_type:nan",
+      "enrich_score": 13.855463158479598
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.6",
+      "enrich_score": 13.647434613940955
+    },
+    {
+      "variable": "Ulcerative_colitis",
+      "enrich_score": 13.377637722367565
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.4",
+      "enrich_score": 13.198968715066169
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:shortanswer.doesnot.apply",
+      "enrich_score": 12.98423910784048
+    },
+    {
+      "variable": "Meat_.average_past_week.:shortanswer.doesnot.apply",
+      "enrich_score": 12.327745287810483
+    },
+    {
+      "variable": "G03AA12_.drospirenone_and_ethinylestradiol.",
+      "enrich_score": 11.961650178387938
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.1",
+      "enrich_score": 11.827580103731304
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.6",
+      "enrich_score": 11.510409705556553
+    },
+    {
+      "variable": "Q10_supplement",
+      "enrich_score": 11.328370412921958
+    },
+    {
+      "variable": "A07EC02_.mesalazine.",
+      "enrich_score": 11.215545214962969
+    },
+    {
+      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1",
+      "enrich_score": 11.197263534257658
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7",
+      "enrich_score": 11.132282625278204
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.4",
+      "enrich_score": 11.110353468416092
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2",
+      "enrich_score": 10.803068599323035
+    },
+    {
+      "variable": "A06AD15_65_.osmotic_laxatives.",
+      "enrich_score": 10.760629246261688
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.5",
+      "enrich_score": 10.751162407901449
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.7",
+      "enrich_score": 10.43954856265614
+    },
+    {
+      "variable": "Working_start_age:nan",
+      "enrich_score": 10.27530893244445
+    },
+    {
+      "variable": "Chronic_fatigue_syndrome",
+      "enrich_score": 9.680235955317256
+    },
+    {
+      "variable": "Childhood_residence_type:enkeleboerderijdieren",
+      "enrich_score": 9.216858087967898
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.3",
+      "enrich_score": 9.160656829992911
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.5",
+      "enrich_score": 8.21379426686712
+    },
+    {
+      "variable": "Spirits_consumption:shortanswer.doesnot.apply",
+      "enrich_score": 7.982859345169944
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.4",
+      "enrich_score": 7.751591690407304
+    },
+    {
+      "variable": "Alanine_transaminase_.ALT.",
+      "enrich_score": 7.676561983421367
+    },
+    {
+      "variable": "N03AE01_.clonazepam.",
+      "enrich_score": 7.53401064563776
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5",
+      "enrich_score": 7.374915713071388
+    },
+    {
+      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.1",
+      "enrich_score": 7.119288838178222
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.6",
+      "enrich_score": 6.205978065439757
+    },
+    {
+      "variable": "G03DA04_.progesterone.",
+      "enrich_score": 5.856207172770446
+    },
+    {
+      "variable": "Beer_consumption:shortanswer.doesnot.apply",
+      "enrich_score": 4.671376488705903
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.5",
+      "enrich_score": 3.921824752916192
+    },
+    {
+      "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.1",
+      "enrich_score": 2.412160724241548
+    },
+    {
+      "variable": "HOMA.IR",
+      "enrich_score": 2.27696346533352
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.3",
+      "enrich_score": 2.197341600671212
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.6",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.4",
+      "enrich_score": 0.0
+    }
+  ]
+}

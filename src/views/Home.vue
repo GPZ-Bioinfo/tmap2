@@ -79,7 +79,7 @@ export default {
           type: 'error'
         })
       }
-      // this.$router.push('/project_id=123456').catch((err) => {}) // eslint-disable-line
+      // this.$router.push('/project_id=genus_r1106_c421').catch((err) => {}) // eslint-disable-line
     }
   }
 }

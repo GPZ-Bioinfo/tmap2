@@ -1,0 +1,2455 @@
+{
+  "graph": {
+    "element": {
+      "nodes": [
+        {
+          "id": "Age"
+        },
+        {
+          "id": "Creatinine"
+        },
+        {
+          "id": "Sick_leave_.freq._past_year.:nan"
+        },
+        {
+          "id": "Meat_.average_past_week.:nutrition.consumption.option.3"
+        },
+        {
+          "id": "Body_mass_index"
+        },
+        {
+          "id": "Uric_acid"
+        },
+        {
+          "id": "Beta.globulin"
+        },
+        {
+          "id": "Triglycerides"
+        },
+        {
+          "id": "Alanine_transaminase_.ALT."
+        },
+        {
+          "id": "Gamma.glutamyltransferase"
+        },
+        {
+          "id": "Creatine_kinase"
+        },
+        {
+          "id": "Hip_circumference"
+        },
+        {
+          "id": "Bristol_stool_score"
+        },
+        {
+          "id": "Working_hours_.hours.week."
+        },
+        {
+          "id": "Work_days_per_week"
+        },
+        {
+          "id": "Gender:M"
+        },
+        {
+          "id": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1"
+        },
+        {
+          "id": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2"
+        },
+        {
+          "id": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5"
+        },
+        {
+          "id": "Fruits_.days_since_consumed.:nutrition.last.intake.option.7"
+        },
+        {
+          "id": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3"
+        },
+        {
+          "id": "Height"
+        },
+        {
+          "id": "Hemoglobine"
+        },
+        {
+          "id": "Red_blood_cell_count"
+        },
+        {
+          "id": "Ulcerative_colitis"
+        },
+        {
+          "id": "L04AB_.TNF.alpha_inhibitors."
+        },
+        {
+          "id": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.2"
+        },
+        {
+          "id": "Coffee_.days_since_consumed.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": "Fruits_.freq._past_week.:nutrition.frequency.option.3"
+        },
+        {
+          "id": "Fruits_.days_since_consumed.:nutrition.last.intake.option.4"
+        },
+        {
+          "id": "Soda_.freq._past_week.:nutrition.frequency.option.3"
+        },
+        {
+          "id": "Cigarettes_.average.day_past_3_months."
+        },
+        {
+          "id": "Smoker"
+        },
+        {
+          "id": "Alcohol_.average_past_week.:nutrition.consumption.option.3"
+        },
+        {
+          "id": "Mean_corpuscular_hemoglobin_concentration"
+        },
+        {
+          "id": "Childhood_residence_type:enkeleboerderijdieren"
+        },
+        {
+          "id": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7"
+        },
+        {
+          "id": "Soy_products_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4"
+        },
+        {
+          "id": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.2"
+        },
+        {
+          "id": "A07EC02_.mesalazine."
+        },
+        {
+          "id": "R06AX28_.rupatadine."
+        },
+        {
+          "id": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.2"
+        },
+        {
+          "id": "Alcohol_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": "Blood_urea"
+        },
+        {
+          "id": "Time_since_previous_relief:samplingInfo.previousRelief.option.7"
+        },
+        {
+          "id": "Working_start_age:shortanswer.doesnot.apply"
+        },
+        {
+          "id": "Alpha.2.globulin"
+        },
+        {
+          "id": "HDL_cholesterol"
+        },
+        {
+          "id": "Irritable_bowel_syndrome"
+        },
+        {
+          "id": "Glomerular_filtration_rate"
+        },
+        {
+          "id": "Weight_perception:weightQuestions.howDoYouFindYourself.option.1"
+        },
+        {
+          "id": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2"
+        },
+        {
+          "id": "Breakfast_.N_past_week."
+        },
+        {
+          "id": "Gender:F"
+        },
+        {
+          "id": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1"
+        },
+        {
+          "id": "Fruits_.days_since_consumed.:nutrition.last.intake.option.8"
+        },
+        {
+          "id": "Bread_type_preference:shortanswer.doesnot.apply"
+        },
+        {
+          "id": "Soy_products_.average_past_week.:nutrition.consumption.option.5"
+        },
+        {
+          "id": "Shift_work:False"
+        },
+        {
+          "id": "Time_since_previous_relief:samplingInfo.previousRelief.option.1"
+        },
+        {
+          "id": "Working_start_age:nan"
+        },
+        {
+          "id": "Pets_.past_3_months."
+        },
+        {
+          "id": "Time_since_previous_relief:samplingInfo.previousRelief.option.4"
+        },
+        {
+          "id": "Working_start_age:workQuestions.ageAtFirstWork.option.2"
+        },
+        {
+          "id": "Coffee_.days_since_consumed.:nutrition.last.intake.option.9"
+        },
+        {
+          "id": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5"
+        },
+        {
+          "id": "Meat_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": "Meat_.average_past_week.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3"
+        },
+        {
+          "id": "Soda_.freq._past_week.:nutrition.frequency.option.4"
+        },
+        {
+          "id": "Alcohol_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3"
+        },
+        {
+          "id": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2"
+        },
+        {
+          "id": "Fruits_.freq._past_week.:nutrition.frequency.option.7"
+        },
+        {
+          "id": "Sleep_.hours.day."
+        },
+        {
+          "id": "Chronic_fatigue_syndrome"
+        },
+        {
+          "id": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1"
+        },
+        {
+          "id": "Fruits_.freq._past_week.:nutrition.frequency.option.5"
+        },
+        {
+          "id": "L04AX01_.azathioprine."
+        },
+        {
+          "id": "Soy_products_.average_past_week.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3"
+        },
+        {
+          "id": "Weight_perception:weightQuestions.howDoYouFindYourself.option.6"
+        },
+        {
+          "id": "Smoking_with_inhalation:Ja"
+        },
+        {
+          "id": "Food_allergy"
+        },
+        {
+          "id": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.7"
+        },
+        {
+          "id": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.4"
+        },
+        {
+          "id": "J01CR02_.amoxicillin_and_enzyme_inhibitor."
+        },
+        {
+          "id": "Alcohol_.average_past_week.:nutrition.consumption.option.2"
+        },
+        {
+          "id": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2"
+        },
+        {
+          "id": "Time_since_previous_relief:samplingInfo.previousRelief.option.3"
+        },
+        {
+          "id": "Working_start_age:workQuestions.ageAtFirstWork.option.1"
+        },
+        {
+          "id": "Soda_.freq._past_week.:nutrition.frequency.option.5"
+        },
+        {
+          "id": "Magnesium_supplement"
+        },
+        {
+          "id": "N03AE01_.clonazepam."
+        },
+        {
+          "id": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1"
+        },
+        {
+          "id": "Fruits_.freq._past_week.:nutrition.frequency.option.2"
+        },
+        {
+          "id": "Q10_supplement"
+        },
+        {
+          "id": "N06AX16_.venlafaxine."
+        },
+        {
+          "id": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4"
+        },
+        {
+          "id": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.1"
+        },
+        {
+          "id": "Meat_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": "Soda_.freq._past_week.:nutrition.frequency.option.6"
+        },
+        {
+          "id": "J01CA04_.amoxicillin."
+        },
+        {
+          "id": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4"
+        },
+        {
+          "id": "Shift_work:True"
+        },
+        {
+          "id": "J01XE01_.nitrofurantoin."
+        },
+        {
+          "id": "Soy_products_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": "A06AD15_65_.osmotic_laxatives."
+        },
+        {
+          "id": "Fruits_.freq._past_week.:nutrition.frequency.option.6"
+        },
+        {
+          "id": "Coffee_.days_since_consumed.:nutrition.last.intake.option.6"
+        },
+        {
+          "id": "G03CA04_CC06_.estrogens."
+        },
+        {
+          "id": "Alcohol_.average_past_week.:nutrition.consumption.option.1"
+        },
+        {
+          "id": "G03DA04_.progesterone."
+        },
+        {
+          "id": "Soda_.freq._past_week.:nutrition.frequency.option.1"
+        },
+        {
+          "id": "Smoking_with_inhalation:Neen"
+        },
+        {
+          "id": "Weight_perception:weightQuestions.howDoYouFindYourself.option.3"
+        },
+        {
+          "id": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3"
+        },
+        {
+          "id": "Coffee_.days_since_consumed.:nutrition.last.intake.option.1"
+        },
+        {
+          "id": "Fruits_.days_since_consumed.:nutrition.last.intake.option.9"
+        },
+        {
+          "id": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.2"
+        },
+        {
+          "id": "Chocolate_type_preference:shortanswer.doesnot.apply"
+        },
+        {
+          "id": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.1"
+        },
+        {
+          "id": "Alcohol_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.2"
+        },
+        {
+          "id": "Weight_perception:weightQuestions.howDoYouFindYourself.option.7"
+        },
+        {
+          "id": "Soy_products_.average_past_week.:nutrition.consumption.option.2"
+        },
+        {
+          "id": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.1"
+        },
+        {
+          "id": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.4"
+        },
+        {
+          "id": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.3"
+        },
+        {
+          "id": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.4"
+        },
+        {
+          "id": "Soy_products_.average_past_week.:nutrition.consumption.option.3"
+        },
+        {
+          "id": "Time_since_previous_relief:samplingInfo.previousRelief.option.5"
+        },
+        {
+          "id": "Meat_.average_past_week.:nutrition.consumption.option.1"
+        },
+        {
+          "id": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.3"
+        },
+        {
+          "id": "Fruits_.days_since_consumed.:nutrition.last.intake.option.2"
+        },
+        {
+          "id": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.2"
+        },
+        {
+          "id": "Coffee_.days_since_consumed.:nutrition.last.intake.option.4"
+        },
+        {
+          "id": "Meat_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.1"
+        },
+        {
+          "id": "Working_start_age:workQuestions.ageAtFirstWork.option.3"
+        },
+        {
+          "id": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.3"
+        },
+        {
+          "id": "Shift_work:nan"
+        },
+        {
+          "id": "Coffee_.days_since_consumed.:nutrition.last.intake.option.3"
+        },
+        {
+          "id": "Beer_consumption:shortanswer.doesnot.apply"
+        },
+        {
+          "id": "Fruits_.days_since_consumed.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": "Fruits_.days_since_consumed.:nutrition.last.intake.option.6"
+        },
+        {
+          "id": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.3"
+        },
+        {
+          "id": "Alcohol_.average_past_week.:nutrition.consumption.option.5"
+        },
+        {
+          "id": "Spirits_consumption:shortanswer.doesnot.apply"
+        },
+        {
+          "id": "Fruits_.freq._past_week.:nutrition.frequency.option.1"
+        },
+        {
+          "id": "Soda_.freq._past_week.:nutrition.frequency.option.2"
+        },
+        {
+          "id": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2"
+        },
+        {
+          "id": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.3"
+        },
+        {
+          "id": "Fruits_.days_since_consumed.:nutrition.last.intake.option.5"
+        }
+      ],
+      "links": [
+        {
+          "id": 0,
+          "source": "Age",
+          "target": "Creatinine"
+        },
+        {
+          "id": 1,
+          "source": "Age",
+          "target": "Sick_leave_.freq._past_year.:nan"
+        },
+        {
+          "id": 2,
+          "source": "Age",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.3"
+        },
+        {
+          "id": 3,
+          "source": "Creatinine",
+          "target": "Body_mass_index"
+        },
+        {
+          "id": 4,
+          "source": "Creatinine",
+          "target": "Height"
+        },
+        {
+          "id": 5,
+          "source": "Creatinine",
+          "target": "Red_blood_cell_count"
+        },
+        {
+          "id": 6,
+          "source": "Creatinine",
+          "target": "Blood_urea"
+        },
+        {
+          "id": 7,
+          "source": "Creatinine",
+          "target": "Uric_acid"
+        },
+        {
+          "id": 8,
+          "source": "Creatinine",
+          "target": "Hip_circumference"
+        },
+        {
+          "id": 9,
+          "source": "Creatinine",
+          "target": "Gender:M"
+        },
+        {
+          "id": 10,
+          "source": "Creatinine",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.3"
+        },
+        {
+          "id": 11,
+          "source": "Sick_leave_.freq._past_year.:nan",
+          "target": "Hemoglobine"
+        },
+        {
+          "id": 12,
+          "source": "Sick_leave_.freq._past_year.:nan",
+          "target": "Working_start_age:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 13,
+          "source": "Sick_leave_.freq._past_year.:nan",
+          "target": "Shift_work:nan"
+        },
+        {
+          "id": 14,
+          "source": "Meat_.average_past_week.:nutrition.consumption.option.3",
+          "target": "Gamma.glutamyltransferase"
+        },
+        {
+          "id": 15,
+          "source": "Meat_.average_past_week.:nutrition.consumption.option.3",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2"
+        },
+        {
+          "id": 16,
+          "source": "Meat_.average_past_week.:nutrition.consumption.option.3",
+          "target": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.1"
+        },
+        {
+          "id": 17,
+          "source": "Meat_.average_past_week.:nutrition.consumption.option.3",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2"
+        },
+        {
+          "id": 18,
+          "source": "Meat_.average_past_week.:nutrition.consumption.option.3",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2"
+        },
+        {
+          "id": 19,
+          "source": "Meat_.average_past_week.:nutrition.consumption.option.3",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.2"
+        },
+        {
+          "id": 20,
+          "source": "Body_mass_index",
+          "target": "Uric_acid"
+        },
+        {
+          "id": 21,
+          "source": "Body_mass_index",
+          "target": "Beta.globulin"
+        },
+        {
+          "id": 22,
+          "source": "Body_mass_index",
+          "target": "Triglycerides"
+        },
+        {
+          "id": 23,
+          "source": "Body_mass_index",
+          "target": "Alanine_transaminase_.ALT."
+        },
+        {
+          "id": 24,
+          "source": "Body_mass_index",
+          "target": "Gamma.glutamyltransferase"
+        },
+        {
+          "id": 25,
+          "source": "Body_mass_index",
+          "target": "Creatine_kinase"
+        },
+        {
+          "id": 26,
+          "source": "Body_mass_index",
+          "target": "Hip_circumference"
+        },
+        {
+          "id": 27,
+          "source": "Body_mass_index",
+          "target": "Bristol_stool_score"
+        },
+        {
+          "id": 28,
+          "source": "Body_mass_index",
+          "target": "Working_hours_.hours.week."
+        },
+        {
+          "id": 29,
+          "source": "Body_mass_index",
+          "target": "Work_days_per_week"
+        },
+        {
+          "id": 30,
+          "source": "Body_mass_index",
+          "target": "Gender:M"
+        },
+        {
+          "id": 31,
+          "source": "Body_mass_index",
+          "target": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1"
+        },
+        {
+          "id": 32,
+          "source": "Body_mass_index",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2"
+        },
+        {
+          "id": 33,
+          "source": "Body_mass_index",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5"
+        },
+        {
+          "id": 34,
+          "source": "Body_mass_index",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.7"
+        },
+        {
+          "id": 35,
+          "source": "Body_mass_index",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3"
+        },
+        {
+          "id": 36,
+          "source": "Uric_acid",
+          "target": "Height"
+        },
+        {
+          "id": 37,
+          "source": "Uric_acid",
+          "target": "Hemoglobine"
+        },
+        {
+          "id": 38,
+          "source": "Uric_acid",
+          "target": "Red_blood_cell_count"
+        },
+        {
+          "id": 39,
+          "source": "Uric_acid",
+          "target": "Hip_circumference"
+        },
+        {
+          "id": 40,
+          "source": "Uric_acid",
+          "target": "Work_days_per_week"
+        },
+        {
+          "id": 41,
+          "source": "Uric_acid",
+          "target": "L04AB_.TNF.alpha_inhibitors."
+        },
+        {
+          "id": 42,
+          "source": "Uric_acid",
+          "target": "Gender:M"
+        },
+        {
+          "id": 43,
+          "source": "Uric_acid",
+          "target": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1"
+        },
+        {
+          "id": 44,
+          "source": "Uric_acid",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2"
+        },
+        {
+          "id": 45,
+          "source": "Uric_acid",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5"
+        },
+        {
+          "id": 46,
+          "source": "Uric_acid",
+          "target": "Working_start_age:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 47,
+          "source": "Beta.globulin",
+          "target": "Alpha.2.globulin"
+        },
+        {
+          "id": 48,
+          "source": "Beta.globulin",
+          "target": "Glomerular_filtration_rate"
+        },
+        {
+          "id": 49,
+          "source": "Beta.globulin",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.1"
+        },
+        {
+          "id": 50,
+          "source": "Beta.globulin",
+          "target": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2"
+        },
+        {
+          "id": 51,
+          "source": "Triglycerides",
+          "target": "Alanine_transaminase_.ALT."
+        },
+        {
+          "id": 52,
+          "source": "Triglycerides",
+          "target": "Hip_circumference"
+        },
+        {
+          "id": 53,
+          "source": "Triglycerides",
+          "target": "Working_hours_.hours.week."
+        },
+        {
+          "id": 54,
+          "source": "Triglycerides",
+          "target": "L04AB_.TNF.alpha_inhibitors."
+        },
+        {
+          "id": 55,
+          "source": "Triglycerides",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5"
+        },
+        {
+          "id": 56,
+          "source": "Triglycerides",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3"
+        },
+        {
+          "id": 57,
+          "source": "Alanine_transaminase_.ALT.",
+          "target": "Creatine_kinase"
+        },
+        {
+          "id": 58,
+          "source": "Alanine_transaminase_.ALT.",
+          "target": "Working_hours_.hours.week."
+        },
+        {
+          "id": 59,
+          "source": "Alanine_transaminase_.ALT.",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2"
+        },
+        {
+          "id": 60,
+          "source": "Alanine_transaminase_.ALT.",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5"
+        },
+        {
+          "id": 61,
+          "source": "Gamma.glutamyltransferase",
+          "target": "Hip_circumference"
+        },
+        {
+          "id": 62,
+          "source": "Gamma.glutamyltransferase",
+          "target": "Working_hours_.hours.week."
+        },
+        {
+          "id": 63,
+          "source": "Gamma.glutamyltransferase",
+          "target": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1"
+        },
+        {
+          "id": 64,
+          "source": "Gamma.glutamyltransferase",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2"
+        },
+        {
+          "id": 65,
+          "source": "Creatine_kinase",
+          "target": "Hip_circumference"
+        },
+        {
+          "id": 66,
+          "source": "Creatine_kinase",
+          "target": "Time_since_previous_relief:samplingInfo.previousRelief.option.1"
+        },
+        {
+          "id": 67,
+          "source": "Creatine_kinase",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5"
+        },
+        {
+          "id": 68,
+          "source": "Creatine_kinase",
+          "target": "Working_start_age:nan"
+        },
+        {
+          "id": 69,
+          "source": "Hip_circumference",
+          "target": "Bristol_stool_score"
+        },
+        {
+          "id": 70,
+          "source": "Hip_circumference",
+          "target": "Working_hours_.hours.week."
+        },
+        {
+          "id": 71,
+          "source": "Hip_circumference",
+          "target": "Gender:M"
+        },
+        {
+          "id": 72,
+          "source": "Hip_circumference",
+          "target": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1"
+        },
+        {
+          "id": 73,
+          "source": "Hip_circumference",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2"
+        },
+        {
+          "id": 74,
+          "source": "Hip_circumference",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5"
+        },
+        {
+          "id": 75,
+          "source": "Hip_circumference",
+          "target": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3"
+        },
+        {
+          "id": 76,
+          "source": "Hip_circumference",
+          "target": "Working_start_age:nan"
+        },
+        {
+          "id": 77,
+          "source": "Hip_circumference",
+          "target": "Fruits_.freq._past_week.:nutrition.frequency.option.3"
+        },
+        {
+          "id": 78,
+          "source": "Hip_circumference",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.7"
+        },
+        {
+          "id": 79,
+          "source": "Hip_circumference",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3"
+        },
+        {
+          "id": 80,
+          "source": "Hip_circumference",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.4"
+        },
+        {
+          "id": 81,
+          "source": "Bristol_stool_score",
+          "target": "Hemoglobine"
+        },
+        {
+          "id": 82,
+          "source": "Bristol_stool_score",
+          "target": "Red_blood_cell_count"
+        },
+        {
+          "id": 83,
+          "source": "Bristol_stool_score",
+          "target": "Work_days_per_week"
+        },
+        {
+          "id": 84,
+          "source": "Bristol_stool_score",
+          "target": "Gender:M"
+        },
+        {
+          "id": 85,
+          "source": "Bristol_stool_score",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": 86,
+          "source": "Bristol_stool_score",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3"
+        },
+        {
+          "id": 87,
+          "source": "Bristol_stool_score",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2"
+        },
+        {
+          "id": 88,
+          "source": "Bristol_stool_score",
+          "target": "Fruits_.freq._past_week.:nutrition.frequency.option.7"
+        },
+        {
+          "id": 89,
+          "source": "Bristol_stool_score",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3"
+        },
+        {
+          "id": 90,
+          "source": "Working_hours_.hours.week.",
+          "target": "Work_days_per_week"
+        },
+        {
+          "id": 91,
+          "source": "Working_hours_.hours.week.",
+          "target": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1"
+        },
+        {
+          "id": 92,
+          "source": "Working_hours_.hours.week.",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2"
+        },
+        {
+          "id": 93,
+          "source": "Working_hours_.hours.week.",
+          "target": "Fruits_.freq._past_week.:nutrition.frequency.option.5"
+        },
+        {
+          "id": 94,
+          "source": "Work_days_per_week",
+          "target": "L04AX01_.azathioprine."
+        },
+        {
+          "id": 95,
+          "source": "Work_days_per_week",
+          "target": "Gender:M"
+        },
+        {
+          "id": 96,
+          "source": "Work_days_per_week",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2"
+        },
+        {
+          "id": 97,
+          "source": "Work_days_per_week",
+          "target": "Soy_products_.average_past_week.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 98,
+          "source": "Gender:M",
+          "target": "Height"
+        },
+        {
+          "id": 99,
+          "source": "Gender:M",
+          "target": "Hemoglobine"
+        },
+        {
+          "id": 100,
+          "source": "Gender:M",
+          "target": "Red_blood_cell_count"
+        },
+        {
+          "id": 101,
+          "source": "Gender:M",
+          "target": "L04AB_.TNF.alpha_inhibitors."
+        },
+        {
+          "id": 102,
+          "source": "Gender:M",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5"
+        },
+        {
+          "id": 103,
+          "source": "Gender:M",
+          "target": "Working_start_age:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 104,
+          "source": "Gender:M",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3"
+        },
+        {
+          "id": 105,
+          "source": "Gender:M",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7"
+        },
+        {
+          "id": 106,
+          "source": "Gender:M",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": 107,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
+          "target": "R06AX28_.rupatadine."
+        },
+        {
+          "id": 108,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.3"
+        },
+        {
+          "id": 109,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
+          "target": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.1"
+        },
+        {
+          "id": 110,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 111,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.1"
+        },
+        {
+          "id": 112,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.7"
+        },
+        {
+          "id": 113,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
+          "target": "Shift_work:True"
+        },
+        {
+          "id": 114,
+          "source": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2",
+          "target": "L04AB_.TNF.alpha_inhibitors."
+        },
+        {
+          "id": 115,
+          "source": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2",
+          "target": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.2"
+        },
+        {
+          "id": 116,
+          "source": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5"
+        },
+        {
+          "id": 117,
+          "source": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5",
+          "target": "Height"
+        },
+        {
+          "id": 118,
+          "source": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5",
+          "target": "Working_start_age:nan"
+        },
+        {
+          "id": 119,
+          "source": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.1"
+        },
+        {
+          "id": 120,
+          "source": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.4"
+        },
+        {
+          "id": 121,
+          "source": "Fruits_.days_since_consumed.:nutrition.last.intake.option.7",
+          "target": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.2"
+        },
+        {
+          "id": 122,
+          "source": "Fruits_.days_since_consumed.:nutrition.last.intake.option.7",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2"
+        },
+        {
+          "id": 123,
+          "source": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3",
+          "target": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.4"
+        },
+        {
+          "id": 124,
+          "source": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2"
+        },
+        {
+          "id": 125,
+          "source": "Height",
+          "target": "Hemoglobine"
+        },
+        {
+          "id": 126,
+          "source": "Height",
+          "target": "Red_blood_cell_count"
+        },
+        {
+          "id": 127,
+          "source": "Height",
+          "target": "Ulcerative_colitis"
+        },
+        {
+          "id": 128,
+          "source": "Height",
+          "target": "L04AB_.TNF.alpha_inhibitors."
+        },
+        {
+          "id": 129,
+          "source": "Height",
+          "target": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.2"
+        },
+        {
+          "id": 130,
+          "source": "Height",
+          "target": "Coffee_.days_since_consumed.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 131,
+          "source": "Height",
+          "target": "Fruits_.freq._past_week.:nutrition.frequency.option.3"
+        },
+        {
+          "id": 132,
+          "source": "Height",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.4"
+        },
+        {
+          "id": 133,
+          "source": "Height",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.3"
+        },
+        {
+          "id": 134,
+          "source": "Hemoglobine",
+          "target": "Red_blood_cell_count"
+        },
+        {
+          "id": 135,
+          "source": "Hemoglobine",
+          "target": "Mean_corpuscular_hemoglobin_concentration"
+        },
+        {
+          "id": 136,
+          "source": "Hemoglobine",
+          "target": "Childhood_residence_type:enkeleboerderijdieren"
+        },
+        {
+          "id": 137,
+          "source": "Hemoglobine",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7"
+        },
+        {
+          "id": 138,
+          "source": "Hemoglobine",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": 139,
+          "source": "Red_blood_cell_count",
+          "target": "L04AB_.TNF.alpha_inhibitors."
+        },
+        {
+          "id": 140,
+          "source": "Red_blood_cell_count",
+          "target": "Childhood_residence_type:enkeleboerderijdieren"
+        },
+        {
+          "id": 141,
+          "source": "Red_blood_cell_count",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4"
+        },
+        {
+          "id": 142,
+          "source": "Red_blood_cell_count",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7"
+        },
+        {
+          "id": 143,
+          "source": "Red_blood_cell_count",
+          "target": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.2"
+        },
+        {
+          "id": 144,
+          "source": "Red_blood_cell_count",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": 145,
+          "source": "Ulcerative_colitis",
+          "target": "J01CR02_.amoxicillin_and_enzyme_inhibitor."
+        },
+        {
+          "id": 146,
+          "source": "Ulcerative_colitis",
+          "target": "A07EC02_.mesalazine."
+        },
+        {
+          "id": 147,
+          "source": "Ulcerative_colitis",
+          "target": "L04AB_.TNF.alpha_inhibitors."
+        },
+        {
+          "id": 148,
+          "source": "Ulcerative_colitis",
+          "target": "Working_start_age:workQuestions.ageAtFirstWork.option.2"
+        },
+        {
+          "id": 149,
+          "source": "Ulcerative_colitis",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.2"
+        },
+        {
+          "id": 150,
+          "source": "Ulcerative_colitis",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2"
+        },
+        {
+          "id": 151,
+          "source": "Ulcerative_colitis",
+          "target": "Coffee_.days_since_consumed.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 152,
+          "source": "Ulcerative_colitis",
+          "target": "Fruits_.freq._past_week.:nutrition.frequency.option.3"
+        },
+        {
+          "id": 153,
+          "source": "Ulcerative_colitis",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.4"
+        },
+        {
+          "id": 154,
+          "source": "L04AB_.TNF.alpha_inhibitors.",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.4"
+        },
+        {
+          "id": 155,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.2",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": 156,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.2",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.3"
+        },
+        {
+          "id": 157,
+          "source": "Coffee_.days_since_consumed.:shortanswer.doesnot.apply",
+          "target": "Glomerular_filtration_rate"
+        },
+        {
+          "id": 158,
+          "source": "Fruits_.freq._past_week.:nutrition.frequency.option.3",
+          "target": "N03AE01_.clonazepam."
+        },
+        {
+          "id": 159,
+          "source": "Fruits_.freq._past_week.:nutrition.frequency.option.3",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 160,
+          "source": "Fruits_.freq._past_week.:nutrition.frequency.option.3",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2"
+        },
+        {
+          "id": 161,
+          "source": "Fruits_.freq._past_week.:nutrition.frequency.option.3",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.4"
+        },
+        {
+          "id": 162,
+          "source": "Fruits_.days_since_consumed.:nutrition.last.intake.option.4",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2"
+        },
+        {
+          "id": 163,
+          "source": "Soda_.freq._past_week.:nutrition.frequency.option.3",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": 164,
+          "source": "Cigarettes_.average.day_past_3_months.",
+          "target": "Smoker"
+        },
+        {
+          "id": 165,
+          "source": "Cigarettes_.average.day_past_3_months.",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.3"
+        },
+        {
+          "id": 166,
+          "source": "Smoker",
+          "target": "Smoking_with_inhalation:Ja"
+        },
+        {
+          "id": 167,
+          "source": "Smoker",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.3"
+        },
+        {
+          "id": 168,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.3",
+          "target": "Pets_.past_3_months."
+        },
+        {
+          "id": 169,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.3",
+          "target": "Childhood_residence_type:enkeleboerderijdieren"
+        },
+        {
+          "id": 170,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.3",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 171,
+          "source": "Mean_corpuscular_hemoglobin_concentration",
+          "target": "A07EC02_.mesalazine."
+        },
+        {
+          "id": 172,
+          "source": "Mean_corpuscular_hemoglobin_concentration",
+          "target": "R06AX28_.rupatadine."
+        },
+        {
+          "id": 173,
+          "source": "Mean_corpuscular_hemoglobin_concentration",
+          "target": "Childhood_residence_type:enkeleboerderijdieren"
+        },
+        {
+          "id": 174,
+          "source": "Mean_corpuscular_hemoglobin_concentration",
+          "target": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.2"
+        },
+        {
+          "id": 175,
+          "source": "Mean_corpuscular_hemoglobin_concentration",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 176,
+          "source": "Childhood_residence_type:enkeleboerderijdieren",
+          "target": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.2"
+        },
+        {
+          "id": 177,
+          "source": "Childhood_residence_type:enkeleboerderijdieren",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": 178,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4"
+        },
+        {
+          "id": 179,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 180,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 181,
+          "source": "Soy_products_.average_past_week.:nutrition.consumption.option.4",
+          "target": "Glomerular_filtration_rate"
+        },
+        {
+          "id": 182,
+          "source": "Soy_products_.average_past_week.:nutrition.consumption.option.4",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 183,
+          "source": "Soy_products_.average_past_week.:nutrition.consumption.option.4",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.4"
+        },
+        {
+          "id": 184,
+          "source": "Soy_products_.average_past_week.:nutrition.consumption.option.4",
+          "target": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.2"
+        },
+        {
+          "id": 185,
+          "source": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
+          "target": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.2"
+        },
+        {
+          "id": 186,
+          "source": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 187,
+          "source": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 188,
+          "source": "A07EC02_.mesalazine.",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2"
+        },
+        {
+          "id": 189,
+          "source": "A07EC02_.mesalazine.",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.6"
+        },
+        {
+          "id": 190,
+          "source": "R06AX28_.rupatadine.",
+          "target": "Smoking_with_inhalation:Ja"
+        },
+        {
+          "id": 191,
+          "source": "R06AX28_.rupatadine.",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.3"
+        },
+        {
+          "id": 192,
+          "source": "R06AX28_.rupatadine.",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 193,
+          "source": "R06AX28_.rupatadine.",
+          "target": "Shift_work:True"
+        },
+        {
+          "id": 194,
+          "source": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.2",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 195,
+          "source": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.2",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 196,
+          "source": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.2",
+          "target": "Fruits_.days_since_consumed.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 197,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.7",
+          "target": "J01CA04_.amoxicillin."
+        },
+        {
+          "id": 198,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.7",
+          "target": "J01CR02_.amoxicillin_and_enzyme_inhibitor."
+        },
+        {
+          "id": 199,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.7",
+          "target": "L04AX01_.azathioprine."
+        },
+        {
+          "id": 200,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.7",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 201,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.7",
+          "target": "Shift_work:True"
+        },
+        {
+          "id": 202,
+          "source": "Blood_urea",
+          "target": "Time_since_previous_relief:samplingInfo.previousRelief.option.7"
+        },
+        {
+          "id": 203,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "Breakfast_.N_past_week."
+        },
+        {
+          "id": 204,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "Q10_supplement"
+        },
+        {
+          "id": 205,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "N06AX16_.venlafaxine."
+        },
+        {
+          "id": 206,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "Smoking_with_inhalation:Neen"
+        },
+        {
+          "id": 207,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3"
+        },
+        {
+          "id": 208,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4"
+        },
+        {
+          "id": 209,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3"
+        },
+        {
+          "id": 210,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.6"
+        },
+        {
+          "id": 211,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 212,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1"
+        },
+        {
+          "id": 213,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+          "target": "Shift_work:False"
+        },
+        {
+          "id": 214,
+          "source": "Working_start_age:shortanswer.doesnot.apply",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.3"
+        },
+        {
+          "id": 215,
+          "source": "Alpha.2.globulin",
+          "target": "HDL_cholesterol"
+        },
+        {
+          "id": 216,
+          "source": "Alpha.2.globulin",
+          "target": "Irritable_bowel_syndrome"
+        },
+        {
+          "id": 217,
+          "source": "HDL_cholesterol",
+          "target": "Breakfast_.N_past_week."
+        },
+        {
+          "id": 218,
+          "source": "HDL_cholesterol",
+          "target": "Irritable_bowel_syndrome"
+        },
+        {
+          "id": 219,
+          "source": "HDL_cholesterol",
+          "target": "Gender:F"
+        },
+        {
+          "id": 220,
+          "source": "HDL_cholesterol",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1"
+        },
+        {
+          "id": 221,
+          "source": "HDL_cholesterol",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.8"
+        },
+        {
+          "id": 222,
+          "source": "HDL_cholesterol",
+          "target": "Bread_type_preference:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 223,
+          "source": "HDL_cholesterol",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.5"
+        },
+        {
+          "id": 224,
+          "source": "HDL_cholesterol",
+          "target": "Shift_work:False"
+        },
+        {
+          "id": 225,
+          "source": "Irritable_bowel_syndrome",
+          "target": "Breakfast_.N_past_week."
+        },
+        {
+          "id": 226,
+          "source": "Irritable_bowel_syndrome",
+          "target": "Gender:F"
+        },
+        {
+          "id": 227,
+          "source": "Irritable_bowel_syndrome",
+          "target": "Time_since_previous_relief:samplingInfo.previousRelief.option.3"
+        },
+        {
+          "id": 228,
+          "source": "Irritable_bowel_syndrome",
+          "target": "Working_start_age:workQuestions.ageAtFirstWork.option.1"
+        },
+        {
+          "id": 229,
+          "source": "Irritable_bowel_syndrome",
+          "target": "Meat_.average_past_week.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 230,
+          "source": "Irritable_bowel_syndrome",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.5"
+        },
+        {
+          "id": 231,
+          "source": "Glomerular_filtration_rate",
+          "target": "Pets_.past_3_months."
+        },
+        {
+          "id": 232,
+          "source": "Glomerular_filtration_rate",
+          "target": "Time_since_previous_relief:samplingInfo.previousRelief.option.4"
+        },
+        {
+          "id": 233,
+          "source": "Glomerular_filtration_rate",
+          "target": "Working_start_age:workQuestions.ageAtFirstWork.option.2"
+        },
+        {
+          "id": 234,
+          "source": "Glomerular_filtration_rate",
+          "target": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2"
+        },
+        {
+          "id": 235,
+          "source": "Glomerular_filtration_rate",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.9"
+        },
+        {
+          "id": 236,
+          "source": "Glomerular_filtration_rate",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5"
+        },
+        {
+          "id": 237,
+          "source": "Glomerular_filtration_rate",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 238,
+          "source": "Glomerular_filtration_rate",
+          "target": "Meat_.average_past_week.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 239,
+          "source": "Glomerular_filtration_rate",
+          "target": "Bread_type_preference:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 240,
+          "source": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
+          "target": "Pets_.past_3_months."
+        },
+        {
+          "id": 241,
+          "source": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
+          "target": "Q10_supplement"
+        },
+        {
+          "id": 242,
+          "source": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
+          "target": "N06AX16_.venlafaxine."
+        },
+        {
+          "id": 243,
+          "source": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
+          "target": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.1"
+        },
+        {
+          "id": 244,
+          "source": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
+          "target": "Beer_consumption:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 245,
+          "source": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 246,
+          "source": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 247,
+          "source": "Breakfast_.N_past_week.",
+          "target": "Gender:F"
+        },
+        {
+          "id": 248,
+          "source": "Breakfast_.N_past_week.",
+          "target": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3"
+        },
+        {
+          "id": 249,
+          "source": "Breakfast_.N_past_week.",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.6"
+        },
+        {
+          "id": 250,
+          "source": "Breakfast_.N_past_week.",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1"
+        },
+        {
+          "id": 251,
+          "source": "Breakfast_.N_past_week.",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.5"
+        },
+        {
+          "id": 252,
+          "source": "Breakfast_.N_past_week.",
+          "target": "Shift_work:False"
+        },
+        {
+          "id": 253,
+          "source": "Gender:F",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1"
+        },
+        {
+          "id": 254,
+          "source": "Gender:F",
+          "target": "Bread_type_preference:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 255,
+          "source": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+          "target": "Sleep_.hours.day."
+        },
+        {
+          "id": 256,
+          "source": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+          "target": "Chronic_fatigue_syndrome"
+        },
+        {
+          "id": 257,
+          "source": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+          "target": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1"
+        },
+        {
+          "id": 258,
+          "source": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+          "target": "Bread_type_preference:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 259,
+          "source": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+          "target": "Shift_work:False"
+        },
+        {
+          "id": 260,
+          "source": "Fruits_.days_since_consumed.:nutrition.last.intake.option.8",
+          "target": "Sleep_.hours.day."
+        },
+        {
+          "id": 261,
+          "source": "Fruits_.days_since_consumed.:nutrition.last.intake.option.8",
+          "target": "A06AD15_65_.osmotic_laxatives."
+        },
+        {
+          "id": 262,
+          "source": "Bread_type_preference:shortanswer.doesnot.apply",
+          "target": "Sleep_.hours.day."
+        },
+        {
+          "id": 263,
+          "source": "Bread_type_preference:shortanswer.doesnot.apply",
+          "target": "Pets_.past_3_months."
+        },
+        {
+          "id": 264,
+          "source": "Bread_type_preference:shortanswer.doesnot.apply",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.6"
+        },
+        {
+          "id": 265,
+          "source": "Bread_type_preference:shortanswer.doesnot.apply",
+          "target": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.3"
+        },
+        {
+          "id": 266,
+          "source": "Bread_type_preference:shortanswer.doesnot.apply",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5"
+        },
+        {
+          "id": 267,
+          "source": "Bread_type_preference:shortanswer.doesnot.apply",
+          "target": "Meat_.average_past_week.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 268,
+          "source": "Bread_type_preference:shortanswer.doesnot.apply",
+          "target": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1"
+        },
+        {
+          "id": 269,
+          "source": "Soy_products_.average_past_week.:nutrition.consumption.option.5",
+          "target": "Meat_.average_past_week.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 270,
+          "source": "Shift_work:False",
+          "target": "Sleep_.hours.day."
+        },
+        {
+          "id": 271,
+          "source": "Shift_work:False",
+          "target": "Q10_supplement"
+        },
+        {
+          "id": 272,
+          "source": "Shift_work:False",
+          "target": "A06AD15_65_.osmotic_laxatives."
+        },
+        {
+          "id": 273,
+          "source": "Shift_work:False",
+          "target": "Smoking_with_inhalation:Neen"
+        },
+        {
+          "id": 274,
+          "source": "Shift_work:False",
+          "target": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3"
+        },
+        {
+          "id": 275,
+          "source": "Shift_work:False",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4"
+        },
+        {
+          "id": 276,
+          "source": "Shift_work:False",
+          "target": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3"
+        },
+        {
+          "id": 277,
+          "source": "Shift_work:False",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 278,
+          "source": "Shift_work:False",
+          "target": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1"
+        },
+        {
+          "id": 279,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.1",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3"
+        },
+        {
+          "id": 280,
+          "source": "Working_start_age:nan",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3"
+        },
+        {
+          "id": 281,
+          "source": "Working_start_age:nan",
+          "target": "Shift_work:nan"
+        },
+        {
+          "id": 282,
+          "source": "Pets_.past_3_months.",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.6"
+        },
+        {
+          "id": 283,
+          "source": "Pets_.past_3_months.",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5"
+        },
+        {
+          "id": 284,
+          "source": "Pets_.past_3_months.",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.7"
+        },
+        {
+          "id": 285,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.4",
+          "target": "Working_start_age:workQuestions.ageAtFirstWork.option.2"
+        },
+        {
+          "id": 286,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.9",
+          "target": "Time_since_previous_relief:samplingInfo.previousRelief.option.5"
+        },
+        {
+          "id": 287,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.9",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 288,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5",
+          "target": "J01CR02_.amoxicillin_and_enzyme_inhibitor."
+        },
+        {
+          "id": 289,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4"
+        },
+        {
+          "id": 290,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5",
+          "target": "Fruits_.days_since_consumed.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 291,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+          "target": "Q10_supplement"
+        },
+        {
+          "id": 292,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+          "target": "A06AD15_65_.osmotic_laxatives."
+        },
+        {
+          "id": 293,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+          "target": "N06AX16_.venlafaxine."
+        },
+        {
+          "id": 294,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+          "target": "Smoking_with_inhalation:Neen"
+        },
+        {
+          "id": 295,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+          "target": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3"
+        },
+        {
+          "id": 296,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4"
+        },
+        {
+          "id": 297,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 298,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.6"
+        },
+        {
+          "id": 299,
+          "source": "Soda_.freq._past_week.:nutrition.frequency.option.4",
+          "target": "Chronic_fatigue_syndrome"
+        },
+        {
+          "id": 300,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.4",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3"
+        },
+        {
+          "id": 301,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.4",
+          "target": "Fruits_.freq._past_week.:nutrition.frequency.option.1"
+        },
+        {
+          "id": 302,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.4",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.9"
+        },
+        {
+          "id": 303,
+          "source": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3"
+        },
+        {
+          "id": 304,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2",
+          "target": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.2"
+        },
+        {
+          "id": 305,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.1"
+        },
+        {
+          "id": 306,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2",
+          "target": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.4"
+        },
+        {
+          "id": 307,
+          "source": "Fruits_.freq._past_week.:nutrition.frequency.option.7",
+          "target": "Time_since_previous_relief:samplingInfo.previousRelief.option.3"
+        },
+        {
+          "id": 308,
+          "source": "Fruits_.freq._past_week.:nutrition.frequency.option.7",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.6"
+        },
+        {
+          "id": 309,
+          "source": "Fruits_.freq._past_week.:nutrition.frequency.option.7",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.5"
+        },
+        {
+          "id": 310,
+          "source": "Sleep_.hours.day.",
+          "target": "Chronic_fatigue_syndrome"
+        },
+        {
+          "id": 311,
+          "source": "Sleep_.hours.day.",
+          "target": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1"
+        },
+        {
+          "id": 312,
+          "source": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.2"
+        },
+        {
+          "id": 313,
+          "source": "L04AX01_.azathioprine.",
+          "target": "J01CA04_.amoxicillin."
+        },
+        {
+          "id": 314,
+          "source": "L04AX01_.azathioprine.",
+          "target": "J01CR02_.amoxicillin_and_enzyme_inhibitor."
+        },
+        {
+          "id": 315,
+          "source": "L04AX01_.azathioprine.",
+          "target": "Shift_work:True"
+        },
+        {
+          "id": 316,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
+          "target": "N06AX16_.venlafaxine."
+        },
+        {
+          "id": 317,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
+          "target": "Smoking_with_inhalation:Neen"
+        },
+        {
+          "id": 318,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4"
+        },
+        {
+          "id": 319,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
+          "target": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.1"
+        },
+        {
+          "id": 320,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.6"
+        },
+        {
+          "id": 321,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 322,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.6"
+        },
+        {
+          "id": 323,
+          "source": "Weight_perception:weightQuestions.howDoYouFindYourself.option.6",
+          "target": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.2"
+        },
+        {
+          "id": 324,
+          "source": "Smoking_with_inhalation:Ja",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.1"
+        },
+        {
+          "id": 325,
+          "source": "Smoking_with_inhalation:Ja",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.9"
+        },
+        {
+          "id": 326,
+          "source": "Food_allergy",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.7"
+        },
+        {
+          "id": 327,
+          "source": "Food_allergy",
+          "target": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.4"
+        },
+        {
+          "id": 328,
+          "source": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.7",
+          "target": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.4"
+        },
+        {
+          "id": 329,
+          "source": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.7",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.1"
+        },
+        {
+          "id": 330,
+          "source": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.7",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 331,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.4",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.4"
+        },
+        {
+          "id": 332,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.4",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.1"
+        },
+        {
+          "id": 333,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.4",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 334,
+          "source": "J01CR02_.amoxicillin_and_enzyme_inhibitor.",
+          "target": "J01CA04_.amoxicillin."
+        },
+        {
+          "id": 335,
+          "source": "J01CR02_.amoxicillin_and_enzyme_inhibitor.",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.2"
+        },
+        {
+          "id": 336,
+          "source": "J01CR02_.amoxicillin_and_enzyme_inhibitor.",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4"
+        },
+        {
+          "id": 337,
+          "source": "J01CR02_.amoxicillin_and_enzyme_inhibitor.",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.5"
+        },
+        {
+          "id": 338,
+          "source": "J01CR02_.amoxicillin_and_enzyme_inhibitor.",
+          "target": "Shift_work:True"
+        },
+        {
+          "id": 339,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.2",
+          "target": "J01CA04_.amoxicillin."
+        },
+        {
+          "id": 340,
+          "source": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.6"
+        },
+        {
+          "id": 341,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.3",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4"
+        },
+        {
+          "id": 342,
+          "source": "Time_since_previous_relief:samplingInfo.previousRelief.option.3",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.5"
+        },
+        {
+          "id": 343,
+          "source": "Soda_.freq._past_week.:nutrition.frequency.option.5",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4"
+        },
+        {
+          "id": 344,
+          "source": "Magnesium_supplement",
+          "target": "N03AE01_.clonazepam."
+        },
+        {
+          "id": 345,
+          "source": "Magnesium_supplement",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1"
+        },
+        {
+          "id": 346,
+          "source": "Magnesium_supplement",
+          "target": "Fruits_.freq._past_week.:nutrition.frequency.option.2"
+        },
+        {
+          "id": 347,
+          "source": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+          "target": "Fruits_.freq._past_week.:nutrition.frequency.option.2"
+        },
+        {
+          "id": 348,
+          "source": "Fruits_.freq._past_week.:nutrition.frequency.option.2",
+          "target": "Fruits_.days_since_consumed.:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 349,
+          "source": "Q10_supplement",
+          "target": "N06AX16_.venlafaxine."
+        },
+        {
+          "id": 350,
+          "source": "Q10_supplement",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4"
+        },
+        {
+          "id": 351,
+          "source": "Q10_supplement",
+          "target": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.1"
+        },
+        {
+          "id": 352,
+          "source": "Q10_supplement",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 353,
+          "source": "Q10_supplement",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.6"
+        },
+        {
+          "id": 354,
+          "source": "N06AX16_.venlafaxine.",
+          "target": "Smoking_with_inhalation:Neen"
+        },
+        {
+          "id": 355,
+          "source": "N06AX16_.venlafaxine.",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4"
+        },
+        {
+          "id": 356,
+          "source": "N06AX16_.venlafaxine.",
+          "target": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.1"
+        },
+        {
+          "id": 357,
+          "source": "N06AX16_.venlafaxine.",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 358,
+          "source": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4",
+          "target": "Smoking_with_inhalation:Neen"
+        },
+        {
+          "id": 359,
+          "source": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4",
+          "target": "Coffee_.days_since_consumed.:nutrition.last.intake.option.6"
+        },
+        {
+          "id": 360,
+          "source": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4",
+          "target": "Meat_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 361,
+          "source": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.6"
+        },
+        {
+          "id": 362,
+          "source": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.1",
+          "target": "Smoking_with_inhalation:Neen"
+        },
+        {
+          "id": 363,
+          "source": "Meat_.average_past_week.:nutrition.consumption.option.6",
+          "target": "Smoking_with_inhalation:Neen"
+        },
+        {
+          "id": 364,
+          "source": "Meat_.average_past_week.:nutrition.consumption.option.6",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.6"
+        },
+        {
+          "id": 365,
+          "source": "Soda_.freq._past_week.:nutrition.frequency.option.6",
+          "target": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.4"
+        },
+        {
+          "id": 366,
+          "source": "J01CA04_.amoxicillin.",
+          "target": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4"
+        },
+        {
+          "id": 367,
+          "source": "J01XE01_.nitrofurantoin.",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.6"
+        },
+        {
+          "id": 368,
+          "source": "Soy_products_.average_past_week.:nutrition.consumption.option.6",
+          "target": "Weight_perception:weightQuestions.howDoYouFindYourself.option.3"
+        },
+        {
+          "id": 369,
+          "source": "A06AD15_65_.osmotic_laxatives.",
+          "target": "Fruits_.freq._past_week.:nutrition.frequency.option.6"
+        },
+        {
+          "id": 370,
+          "source": "Fruits_.freq._past_week.:nutrition.frequency.option.6",
+          "target": "G03CA04_CC06_.estrogens."
+        },
+        {
+          "id": 371,
+          "source": "Fruits_.freq._past_week.:nutrition.frequency.option.6",
+          "target": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.3"
+        },
+        {
+          "id": 372,
+          "source": "G03CA04_CC06_.estrogens.",
+          "target": "Alcohol_.average_past_week.:nutrition.consumption.option.1"
+        },
+        {
+          "id": 373,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.1",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.2"
+        },
+        {
+          "id": 374,
+          "source": "G03DA04_.progesterone.",
+          "target": "Soda_.freq._past_week.:nutrition.frequency.option.1"
+        },
+        {
+          "id": 375,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.1",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.9"
+        },
+        {
+          "id": 376,
+          "source": "Fruits_.days_since_consumed.:nutrition.last.intake.option.9",
+          "target": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.1"
+        },
+        {
+          "id": 377,
+          "source": "Fruits_.days_since_consumed.:nutrition.last.intake.option.9",
+          "target": "Fruits_.freq._past_week.:nutrition.frequency.option.1"
+        },
+        {
+          "id": 378,
+          "source": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.2",
+          "target": "Chocolate_type_preference:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 379,
+          "source": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.1",
+          "target": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.1"
+        },
+        {
+          "id": 380,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.6",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.2"
+        },
+        {
+          "id": 381,
+          "source": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.2",
+          "target": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.1"
+        },
+        {
+          "id": 382,
+          "source": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.2",
+          "target": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.4"
+        },
+        {
+          "id": 383,
+          "source": "Weight_perception:weightQuestions.howDoYouFindYourself.option.7",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.2"
+        },
+        {
+          "id": 384,
+          "source": "Soy_products_.average_past_week.:nutrition.consumption.option.2",
+          "target": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2"
+        },
+        {
+          "id": 385,
+          "source": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.4",
+          "target": "Beer_consumption:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 386,
+          "source": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.4",
+          "target": "Soy_products_.average_past_week.:nutrition.consumption.option.3"
+        },
+        {
+          "id": 387,
+          "source": "Soy_products_.average_past_week.:nutrition.consumption.option.3",
+          "target": "Beer_consumption:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 388,
+          "source": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.2"
+        },
+        {
+          "id": 389,
+          "source": "Fruits_.days_since_consumed.:nutrition.last.intake.option.2",
+          "target": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.1"
+        },
+        {
+          "id": 390,
+          "source": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.1",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.6"
+        },
+        {
+          "id": 391,
+          "source": "Working_start_age:workQuestions.ageAtFirstWork.option.3",
+          "target": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.3"
+        },
+        {
+          "id": 392,
+          "source": "Coffee_.days_since_consumed.:nutrition.last.intake.option.3",
+          "target": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.3"
+        },
+        {
+          "id": 393,
+          "source": "Alcohol_.average_past_week.:nutrition.consumption.option.5",
+          "target": "Spirits_consumption:shortanswer.doesnot.apply"
+        },
+        {
+          "id": 394,
+          "source": "Soda_.freq._past_week.:nutrition.frequency.option.2",
+          "target": "Fruits_.days_since_consumed.:nutrition.last.intake.option.5"
+        },
+        {
+          "id": 395,
+          "source": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2",
+          "target": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.3"
+        }
+      ]
+    }
+  }
+}

@@ -9,10 +9,10 @@
         <el-submenu index="1">
           <template slot="title">
             <v-icon>mdi-view-column</v-icon>
-            <span>Microbiome Features</span>
+            <span>Features</span>
           </template>
           <el-menu-item-group>
-            <el-menu-item index="1-1">Meta</el-menu-item>
+            <el-menu-item index="1-1">ranking</el-menu-item>
           </el-menu-item-group>
         </el-submenu>
         <el-submenu index="2">
@@ -80,19 +80,19 @@ export default {
     },
     handleSelect(key, keyPath) {
       if (key === '1-1') {
-        this.$router.push('/project_id=123456/Microbiome')
+        this.$router.push('/project_id=genus_r1106_c421/Features')
       }
       if (key === '2-1') {
-        this.$router.push('/project_id=123456/Groups1')
+        this.$router.push('/project_id=genus_r1106_c421/Groups1')
       }
       if (key === '3-1') {
-        this.$router.push('/project_id=123456/ForceBased')
+        this.$router.push('/project_id=genus_r1106_c421/ForceBased')
       }
       if (key === '4-1') {
-        this.$router.push('/project_id=123456/Comparisons1')
+        this.$router.push('/project_id=genus_r1106_c421/Comparisons1')
       }
       if (key === '5-1') {
-        this.$router.push('/project_id=123456/Charts1')
+        this.$router.push('/project_id=genus_r1106_c421/Charts1')
       }
     },
     goBack() {

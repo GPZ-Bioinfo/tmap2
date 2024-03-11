@@ -602,7 +602,9 @@ export default {
       this.nodesSelectedCount = 0
     },
     boardOpen() {
-      this.boardExit = true
+      if (this.min || this.max) {
+        this.boardExit = true
+      }
     },
     // 框选
     brushSelect() {
@@ -958,6 +960,7 @@ export default {
     // 直方图
     theChartBar() {
       document.getElementById('chartBar').style.display = 'block'
+      document.getElementById('chartBarx').style.display = 'block'
       this.histogramExit = true
       document.getElementById('colorCastButton').style.display = 'flex'
       document.getElementById('minMaxBox').style.display = 'flex'
@@ -970,6 +973,7 @@ export default {
       document.getElementById('colorCastButton').style.display = 'none'
       document.getElementById('minMaxBox').style.display = 'none'
       document.getElementById('chartBar').style.display = 'none'
+      document.getElementById('chartBarx').style.display = 'none'
     },
     // 调色板
     selectColor(color) {
@@ -1263,7 +1267,7 @@ export default {
       const _this = this
       // 生成横坐标数据
       this.xData = this.generateXData()
-      console.log(this.xData)
+
       // 根据新的等分数量动态生成随机纵坐标数据
       this.yData = this.generateYData()
       // 生成柱子数量
@@ -1314,7 +1318,7 @@ export default {
       const _this = this
       if (_this.propertyChangeData) {
         const max = _this.scoresValueMax
-        console.log(max)
+
         const intervalCount = this.interval
         return Array.from({ length: intervalCount }, (_, index) => (index * (max / intervalCount)).toFixed(4))
       } else {

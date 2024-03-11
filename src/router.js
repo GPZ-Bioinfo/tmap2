@@ -31,37 +31,37 @@ const router = new Router({
       meta: { title: 'Dashboard' }
     },
     {
-      path: '/project_id=123456',
+      path: '/project_id=genus_r1106_c421',
       name: 'examples',
       component: () => import('./views/Examples.vue'),
       meta: { title: 'Examples' },
       children: [
         {
-          path: '/project_id=123456/Microbiome',
-          name: 'Meta',
-          component: () => import('./components/Microbiome.vue'),
-          meta: { title: 'Microbiome Features' }
+          path: '/project_id=genus_r1106_c421/Features',
+          name: 'ranking',
+          component: () => import('./components/Features.vue'),
+          meta: { title: 'Features' }
         },
         {
-          path: '/project_id=123456/Groups1',
+          path: '/project_id=genus_r1106_c421/Groups1',
           name: 'Groups',
           component: () => import('./components/Groups1.vue'),
           meta: { title: 'Groups' }
         },
         {
-          path: '/project_id=123456/ForceBased',
+          path: '/project_id=genus_r1106_c421/ForceBased',
           name: 'ForceBased',
           component: () => import('./components/ForceBased.vue'),
           meta: { title: 'Topological Models' }
         },
         {
-          path: '/project_id=123456/Comparisons1',
+          path: '/project_id=genus_r1106_c421/Comparisons1',
           name: 'Comparisons1',
           component: () => import('./components/Comparisons.vue'),
           meta: { title: 'Comparisons' }
         },
         {
-          path: '/project_id=123456/Charts1',
+          path: '/project_id=genus_r1106_c421/Charts1',
           name: 'Comparisons1',
           component: () => import('./components/Charts.vue'),
           meta: { title: 'Charts' }

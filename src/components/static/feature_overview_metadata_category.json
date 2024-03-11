@@ -1,0 +1,700 @@
+{
+  "data": [
+    {
+      "variable": "Age",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Body_mass_index",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Height",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Cigarettes_.average.day_past_3_months.",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Hemoglobine",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Red_blood_cell_count",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Mean_corpuscular_hemoglobin_concentration",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "HOMA.IR",
+      "category": "Special"
+    },
+    {
+      "variable": "Blood_urea",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Creatinine",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Uric_acid",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Alpha.2.globulin",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Beta.globulin",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Triglycerides",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "HDL_cholesterol",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Alanine_transaminase_.ALT.",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Gamma.glutamyltransferase",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Creatine_kinase",
+      "category": "BloodParameters"
+    },
+    {
+      "variable": "Glomerular_filtration_rate",
+      "category": "Health"
+    },
+    {
+      "variable": "Hip_circumference",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Bristol_stool_score",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Sleep_.hours.day.",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Working_hours_.hours.week.",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Work_days_per_week",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Breakfast_.N_past_week.",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Smoker",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Pets_.past_3_months.",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Food_allergy",
+      "category": "Health"
+    },
+    {
+      "variable": "Ulcerative_colitis",
+      "category": "Health"
+    },
+    {
+      "variable": "Irritable_bowel_syndrome",
+      "category": "Health"
+    },
+    {
+      "variable": "Chronic_fatigue_syndrome",
+      "category": "Health"
+    },
+    {
+      "variable": "Gastroentritis_.other_treatment.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "Magnesium_supplement",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Q10_supplement",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "J01CA04_.amoxicillin.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "J01CR02_.amoxicillin_and_enzyme_inhibitor.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "J01XE01_.nitrofurantoin.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "A06AD15_65_.osmotic_laxatives.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "A07EC02_.mesalazine.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "G03AA12_.drospirenone_and_ethinylestradiol.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "G03CA04_CC06_.estrogens.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "G03DA04_.progesterone.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "L04AB_.TNF.alpha_inhibitors.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "L04AX01_.azathioprine.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "N03AE01_.clonazepam.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "N06AX16_.venlafaxine.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "R06AX28_.rupatadine.",
+      "category": "Health(Medication)"
+    },
+    {
+      "variable": "Gender:F",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Gender:M",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Smoking_with_inhalation:Neen",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Smoking_with_inhalation:Not_relevant",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Smoking_with_inhalation:Ja",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.2",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.5",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.3",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.6",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.1",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.7",
+      "category": "Anthropometric"
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.2",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.3",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.1",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.5",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Childhood_residence_type:nan",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.4",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Childhood_residence_type:enkeleboerderijdieren",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.3",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.4",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.1",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.2",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.5",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.6",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.7",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.4",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.2",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.1",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.4",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.2",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.6",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.1",
+      "category": "Bowel Habit"
+    },
+    {
+      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.3",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Working_start_age:nan",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Working_start_age:shortanswer.doesnot.apply",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.2",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.1",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.4",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:nan",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.2",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.1",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.3",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.5",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.7",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:shortanswer.doesnot.apply",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.4",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.6",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Beer_consumption:shortanswer.doesnot.apply",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Spirits_consumption:shortanswer.doesnot.apply",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Chocolate_type_preference:shortanswer.doesnot.apply",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.9",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.4",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.6",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:shortanswer.doesnot.apply",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.5",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.7",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Meat_.average_past_week.:shortanswer.doesnot.apply",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.4",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.6",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.4",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.7",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.5",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.6",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.7",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.9",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.4",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.6",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.5",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:shortanswer.doesnot.apply",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.8",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Bread_type_preference:shortanswer.doesnot.apply",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.7",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.4",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.5",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.6",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.2",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.5",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:shortanswer.doesnot.apply",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.4",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.1",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.3",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.6",
+      "category": "DietaryHabit"
+    },
+    {
+      "variable": "Shift_work:False",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Shift_work:True",
+      "category": "Lifestyle"
+    },
+    {
+      "variable": "Shift_work:nan",
+      "category": "Lifestyle"
+    }
+  ]
+}
