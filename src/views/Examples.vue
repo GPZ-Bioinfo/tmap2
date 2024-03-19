@@ -79,20 +79,21 @@ export default {
       this.$store.commit('navCollapse')
     },
     handleSelect(key, keyPath) {
+      let graphName = JSON.parse(localStorage.getItem('graphName'))
       if (key === '1-1') {
-        this.$router.push('/project_id=genus_r1106_c421/Features')
+        this.$router.push(`/project_id=${graphName}/Features`)
       }
       if (key === '2-1') {
-        this.$router.push('/project_id=genus_r1106_c421/Groups1')
+        this.$router.push(`/project_id=${graphName}/Groups1`)
       }
       if (key === '3-1') {
-        this.$router.push('/project_id=genus_r1106_c421/ForceBased')
+        this.$router.push(`/project_id=${graphName}/ForceBased`)
       }
       if (key === '4-1') {
-        this.$router.push('/project_id=genus_r1106_c421/Comparisons1')
+        this.$router.push(`/project_id=${graphName}/Comparisons1`)
       }
       if (key === '5-1') {
-        this.$router.push('/project_id=genus_r1106_c421/Charts1')
+        this.$router.push(`/project_id=${graphName}/Charts1`)
       }
     },
     goBack() {

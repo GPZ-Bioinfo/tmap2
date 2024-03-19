@@ -1,0 +1,1444 @@
+{
+  "_elements2": {
+    "links": [
+      {
+        "id": 0,
+        "source": "AFP",
+        "target": "A_G"
+      },
+      {
+        "id": 1,
+        "source": "AFP",
+        "target": "B_Cysc"
+      },
+      {
+        "id": 2,
+        "source": "AFP",
+        "target": "Hypertensive_Disorder_of_Pregnancy"
+      },
+      {
+        "id": 3,
+        "source": "AFP",
+        "target": "Placental_Insufficiency"
+      },
+      {
+        "id": 4,
+        "source": "AFP",
+        "target": "HAVAB_Negative"
+      },
+      {
+        "id": 5,
+        "source": "AFP",
+        "target": "HBcAb_Negative"
+      },
+      {
+        "id": 6,
+        "source": "AFP",
+        "target": "HBeAb_Negative"
+      },
+      {
+        "id": 7,
+        "source": "AFP",
+        "target": "HBeAg_Negative"
+      },
+      {
+        "id": 8,
+        "source": "AFP",
+        "target": "HBsAb_Positive"
+      },
+      {
+        "id": 9,
+        "source": "AFP",
+        "target": "HBsAg_Negative"
+      },
+      {
+        "id": 10,
+        "source": "AFP",
+        "target": "Native_Place_Other"
+      },
+      {
+        "id": 11,
+        "source": "AFP",
+        "target": "Delivery_Gestational_Age_G_\u226542W"
+      },
+      {
+        "id": 12,
+        "source": "A_G",
+        "target": "B_ALB"
+      },
+      {
+        "id": 13,
+        "source": "A_G",
+        "target": "B_Cysc"
+      },
+      {
+        "id": 14,
+        "source": "A_G",
+        "target": "U_MUC"
+      },
+      {
+        "id": 15,
+        "source": "A_G",
+        "target": "HAVAB_Negative"
+      },
+      {
+        "id": 16,
+        "source": "A_G",
+        "target": "HBeAb_Negative"
+      },
+      {
+        "id": 17,
+        "source": "A_G",
+        "target": "HBsAg_Negative"
+      },
+      {
+        "id": 18,
+        "source": "B_Cysc",
+        "target": "B_APTT"
+      },
+      {
+        "id": 19,
+        "source": "B_Cysc",
+        "target": "B_TBIL"
+      },
+      {
+        "id": 20,
+        "source": "B_Cysc",
+        "target": "Hypertensive_Disorder_of_Pregnancy"
+      },
+      {
+        "id": 21,
+        "source": "B_Cysc",
+        "target": "Placental_Insufficiency"
+      },
+      {
+        "id": 22,
+        "source": "B_Cysc",
+        "target": "HAVAB_Negative"
+      },
+      {
+        "id": 23,
+        "source": "B_Cysc",
+        "target": "HBeAg_Negative"
+      },
+      {
+        "id": 24,
+        "source": "B_Cysc",
+        "target": "HBsAb_Positive"
+      },
+      {
+        "id": 25,
+        "source": "B_Cysc",
+        "target": "HBsAg_Negative"
+      },
+      {
+        "id": 26,
+        "source": "B_Cysc",
+        "target": "Delivery_Gestational_Age_G_\u226542W"
+      },
+      {
+        "id": 27,
+        "source": "Hypertensive_Disorder_of_Pregnancy",
+        "target": "Placental_Insufficiency"
+      },
+      {
+        "id": 28,
+        "source": "Hypertensive_Disorder_of_Pregnancy",
+        "target": "Delivery_Gestational_Age_G_\u226542W"
+      },
+      {
+        "id": 29,
+        "source": "Placental_Insufficiency",
+        "target": "Native_Place_Other"
+      },
+      {
+        "id": 30,
+        "source": "HAVAB_Negative",
+        "target": "B_APTT"
+      },
+      {
+        "id": 31,
+        "source": "HAVAB_Negative",
+        "target": "HBeAb_Negative"
+      },
+      {
+        "id": 32,
+        "source": "HAVAB_Negative",
+        "target": "HBeAg_Negative"
+      },
+      {
+        "id": 33,
+        "source": "HAVAB_Negative",
+        "target": "HBsAb_Positive"
+      },
+      {
+        "id": 34,
+        "source": "HAVAB_Negative",
+        "target": "HBsAg_Negative"
+      },
+      {
+        "id": 35,
+        "source": "HAVAB_Negative",
+        "target": "HCV_Negative"
+      },
+      {
+        "id": 36,
+        "source": "HAVAB_Negative",
+        "target": "U_NIT_Positive"
+      },
+      {
+        "id": 37,
+        "source": "HBcAb_Negative",
+        "target": "Height"
+      },
+      {
+        "id": 38,
+        "source": "HBcAb_Negative",
+        "target": "Delivery_Gestational_Age"
+      },
+      {
+        "id": 39,
+        "source": "HBcAb_Negative",
+        "target": "HBeAb_Negative"
+      },
+      {
+        "id": 40,
+        "source": "HBcAb_Negative",
+        "target": "HBeAg_Negative"
+      },
+      {
+        "id": 41,
+        "source": "HBcAb_Negative",
+        "target": "HBsAg_Negative"
+      },
+      {
+        "id": 42,
+        "source": "HBcAb_Negative",
+        "target": "Native_Place_Other"
+      },
+      {
+        "id": 43,
+        "source": "HBcAb_Negative",
+        "target": "Rupture_of_Membranes_Model_Artificial"
+      },
+      {
+        "id": 44,
+        "source": "HBeAb_Negative",
+        "target": "Height"
+      },
+      {
+        "id": 45,
+        "source": "HBeAb_Negative",
+        "target": "Delivery_Gestational_Age"
+      },
+      {
+        "id": 46,
+        "source": "HBeAb_Negative",
+        "target": "HBeAg_Negative"
+      },
+      {
+        "id": 47,
+        "source": "HBeAb_Negative",
+        "target": "HBsAg_Negative"
+      },
+      {
+        "id": 48,
+        "source": "HBeAb_Negative",
+        "target": "HCV_Negative"
+      },
+      {
+        "id": 49,
+        "source": "HBeAb_Negative",
+        "target": "U_NIT_Positive"
+      },
+      {
+        "id": 50,
+        "source": "HBeAg_Negative",
+        "target": "HBsAg_Negative"
+      },
+      {
+        "id": 51,
+        "source": "HBeAg_Negative",
+        "target": "HCV_Negative"
+      },
+      {
+        "id": 52,
+        "source": "HBsAg_Negative",
+        "target": "B_MONO_P"
+      },
+      {
+        "id": 53,
+        "source": "HBsAg_Negative",
+        "target": "Height"
+      },
+      {
+        "id": 54,
+        "source": "HBsAg_Negative",
+        "target": "Delivery_Gestational_Age"
+      },
+      {
+        "id": 55,
+        "source": "HBsAg_Negative",
+        "target": "HCV_Negative"
+      },
+      {
+        "id": 56,
+        "source": "HBsAg_Negative",
+        "target": "U_NIT_Positive"
+      },
+      {
+        "id": 57,
+        "source": "HBsAg_Negative",
+        "target": "Native_Place_Other"
+      },
+      {
+        "id": 58,
+        "source": "HBsAg_Negative",
+        "target": "Rupture_of_Membranes_Model_Artificial"
+      },
+      {
+        "id": 59,
+        "source": "Native_Place_Other",
+        "target": "Rupture_of_Membranes_Model_Artificial"
+      },
+      {
+        "id": 60,
+        "source": "Native_Place_Other",
+        "target": "History_Pregnancy_Outcomes_Other"
+      },
+      {
+        "id": 61,
+        "source": "Delivery_Gestational_Age_G_\u226542W",
+        "target": "B_APTT"
+      },
+      {
+        "id": 62,
+        "source": "B_ALB",
+        "target": "B_TP"
+      },
+      {
+        "id": 63,
+        "source": "B_ALB",
+        "target": "U_MUC"
+      },
+      {
+        "id": 64,
+        "source": "BS",
+        "target": "BS120"
+      },
+      {
+        "id": 65,
+        "source": "BS",
+        "target": "BS60"
+      },
+      {
+        "id": 66,
+        "source": "BS120",
+        "target": "BS60"
+      },
+      {
+        "id": 67,
+        "source": "BS60",
+        "target": "Cord_Entanglement"
+      },
+      {
+        "id": 68,
+        "source": "Cord_Entanglement",
+        "target": "B_MCH"
+      },
+      {
+        "id": 69,
+        "source": "Cord_Entanglement",
+        "target": "B_MCHC"
+      },
+      {
+        "id": 70,
+        "source": "Cord_Entanglement",
+        "target": "B_MCV"
+      },
+      {
+        "id": 71,
+        "source": "Cord_Entanglement",
+        "target": "B_NEUT_P"
+      },
+      {
+        "id": 72,
+        "source": "Cord_Entanglement",
+        "target": "U_EPI"
+      },
+      {
+        "id": 73,
+        "source": "Cord_Entanglement",
+        "target": "U_HYA"
+      },
+      {
+        "id": 74,
+        "source": "Cord_Entanglement",
+        "target": "Scar_Uterus"
+      },
+      {
+        "id": 75,
+        "source": "Cord_Entanglement",
+        "target": "Premature_Rupture_of_Membranes"
+      },
+      {
+        "id": 76,
+        "source": "Cord_Entanglement",
+        "target": "Native_Place_Guangdong"
+      },
+      {
+        "id": 77,
+        "source": "Cord_Entanglement",
+        "target": "Conception_Season_Winter"
+      },
+      {
+        "id": 78,
+        "source": "B_TP",
+        "target": "B_NEUT"
+      },
+      {
+        "id": 79,
+        "source": "B_TP",
+        "target": "B_PCT"
+      },
+      {
+        "id": 80,
+        "source": "B_ALT",
+        "target": "B_AST"
+      },
+      {
+        "id": 81,
+        "source": "B_ALT",
+        "target": "Delivery_Gestational_Age_G_28-36W"
+      },
+      {
+        "id": 82,
+        "source": "B_AST",
+        "target": "Delivery_Gestational_Age_G_28-36W"
+      },
+      {
+        "id": 83,
+        "source": "B_BA",
+        "target": "B_BA_P"
+      },
+      {
+        "id": 84,
+        "source": "B_BA_P",
+        "target": "B_RBC"
+      },
+      {
+        "id": 85,
+        "source": "B_RBC",
+        "target": "B_INR"
+      },
+      {
+        "id": 86,
+        "source": "B_RBC",
+        "target": "B_PT"
+      },
+      {
+        "id": 87,
+        "source": "B_RBC",
+        "target": "U_NIT_Positive"
+      },
+      {
+        "id": 88,
+        "source": "B_TBIL",
+        "target": "B_IBIL"
+      },
+      {
+        "id": 89,
+        "source": "B_TBIL",
+        "target": "B_MCH"
+      },
+      {
+        "id": 90,
+        "source": "B_TBIL",
+        "target": "B_MCV"
+      },
+      {
+        "id": 91,
+        "source": "B_TBIL",
+        "target": "Ovary_Disease"
+      },
+      {
+        "id": 92,
+        "source": "B_EO",
+        "target": "B_EO_P"
+      },
+      {
+        "id": 93,
+        "source": "B_FIB",
+        "target": "Age"
+      },
+      {
+        "id": 94,
+        "source": "Age",
+        "target": "B_MCHC"
+      },
+      {
+        "id": 95,
+        "source": "Age",
+        "target": "U_ERY_G_Negative"
+      },
+      {
+        "id": 96,
+        "source": "Age",
+        "target": "Age_Group_\u226535"
+      },
+      {
+        "id": 97,
+        "source": "B_GLO",
+        "target": "B_PCT"
+      },
+      {
+        "id": 98,
+        "source": "B_GLO",
+        "target": "Multiple_Pregnancy"
+      },
+      {
+        "id": 99,
+        "source": "B_GLO",
+        "target": "Pregnancy_Mode_ART"
+      },
+      {
+        "id": 100,
+        "source": "B_PCT",
+        "target": "B_LYMPH_P"
+      },
+      {
+        "id": 101,
+        "source": "B_PCT",
+        "target": "B_PLT"
+      },
+      {
+        "id": 102,
+        "source": "B_PCT",
+        "target": "U_KET_G_Negative"
+      },
+      {
+        "id": 103,
+        "source": "Multiple_Pregnancy",
+        "target": "Thyroid_Disease"
+      },
+      {
+        "id": 104,
+        "source": "Multiple_Pregnancy",
+        "target": "Pregnancy_Mode_ART"
+      },
+      {
+        "id": 105,
+        "source": "Pregnancy_Mode_ART",
+        "target": "B_NEUT_P"
+      },
+      {
+        "id": 106,
+        "source": "Pregnancy_Mode_ART",
+        "target": "B_RDW_SD"
+      },
+      {
+        "id": 107,
+        "source": "Pregnancy_Mode_ART",
+        "target": "Thyroid_Disease"
+      },
+      {
+        "id": 108,
+        "source": "B_IBIL",
+        "target": "B_MCH"
+      },
+      {
+        "id": 109,
+        "source": "B_IBIL",
+        "target": "B_MCV"
+      },
+      {
+        "id": 110,
+        "source": "B_IBIL",
+        "target": "B_NEUT_P"
+      },
+      {
+        "id": 111,
+        "source": "B_IBIL",
+        "target": "Ovary_Disease"
+      },
+      {
+        "id": 112,
+        "source": "B_MCH",
+        "target": "B_MCHC"
+      },
+      {
+        "id": 113,
+        "source": "B_MCH",
+        "target": "B_MCV"
+      },
+      {
+        "id": 114,
+        "source": "B_MCH",
+        "target": "Postpartum_Hemorrhage"
+      },
+      {
+        "id": 115,
+        "source": "B_MCH",
+        "target": "Premature_Rupture_of_Membranes"
+      },
+      {
+        "id": 116,
+        "source": "B_MCH",
+        "target": "Conception_Season_Winter"
+      },
+      {
+        "id": 117,
+        "source": "B_MCV",
+        "target": "B_MCHC"
+      },
+      {
+        "id": 118,
+        "source": "B_MCV",
+        "target": "B_NEUT_P"
+      },
+      {
+        "id": 119,
+        "source": "B_MCV",
+        "target": "Postpartum_Hemorrhage"
+      },
+      {
+        "id": 120,
+        "source": "B_NEUT_P",
+        "target": "B_NEUT"
+      },
+      {
+        "id": 121,
+        "source": "B_NEUT_P",
+        "target": "U_HYA"
+      },
+      {
+        "id": 122,
+        "source": "B_NEUT_P",
+        "target": "Scar_Uterus"
+      },
+      {
+        "id": 123,
+        "source": "B_NEUT_P",
+        "target": "Native_Place_Guangdong"
+      },
+      {
+        "id": 124,
+        "source": "B_NEUT_P",
+        "target": "Conception_Season_Winter"
+      },
+      {
+        "id": 125,
+        "source": "Ovary_Disease",
+        "target": "B_NEUT"
+      },
+      {
+        "id": 126,
+        "source": "Ovary_Disease",
+        "target": "U_PH"
+      },
+      {
+        "id": 127,
+        "source": "Ovary_Disease",
+        "target": "Postpartum_Hemorrhage"
+      },
+      {
+        "id": 128,
+        "source": "B_INR",
+        "target": "B_PT"
+      },
+      {
+        "id": 129,
+        "source": "B_INR",
+        "target": "U_NIT_Positive"
+      },
+      {
+        "id": 130,
+        "source": "B_INR",
+        "target": "Anemia_Thalassemia"
+      },
+      {
+        "id": 131,
+        "source": "B_PT",
+        "target": "U_NIT_Positive"
+      },
+      {
+        "id": 132,
+        "source": "B_PT",
+        "target": "Anemia_Thalassemia"
+      },
+      {
+        "id": 133,
+        "source": "U_NIT_Positive",
+        "target": "Height"
+      },
+      {
+        "id": 134,
+        "source": "U_NIT_Positive",
+        "target": "HCV_Negative"
+      },
+      {
+        "id": 135,
+        "source": "U_NIT_Positive",
+        "target": "Anemia_Thalassemia"
+      },
+      {
+        "id": 136,
+        "source": "Anemia_Thalassemia",
+        "target": "U_LEU_G_Negative"
+      },
+      {
+        "id": 137,
+        "source": "B_MCHC",
+        "target": "Premature_Rupture_of_Membranes"
+      },
+      {
+        "id": 138,
+        "source": "B_MCHC",
+        "target": "Delivery_Season_Autumn"
+      },
+      {
+        "id": 139,
+        "source": "Postpartum_Hemorrhage",
+        "target": "B_NEUT"
+      },
+      {
+        "id": 140,
+        "source": "Postpartum_Hemorrhage",
+        "target": "Native_Place_Guangdong"
+      },
+      {
+        "id": 141,
+        "source": "Postpartum_Hemorrhage",
+        "target": "Delivery_Mode_Forceps Delivery"
+      },
+      {
+        "id": 142,
+        "source": "Premature_Rupture_of_Membranes",
+        "target": "Scar_Uterus"
+      },
+      {
+        "id": 143,
+        "source": "Conception_Season_Winter",
+        "target": "Scar_Uterus"
+      },
+      {
+        "id": 144,
+        "source": "Conception_Season_Winter",
+        "target": "Delivery_Mode_Cesarean Delivery"
+      },
+      {
+        "id": 145,
+        "source": "B_MONO",
+        "target": "B_UA"
+      },
+      {
+        "id": 146,
+        "source": "B_NEUT",
+        "target": "Native_Place_Guangdong"
+      },
+      {
+        "id": 147,
+        "source": "Native_Place_Guangdong",
+        "target": "U_EPI"
+      },
+      {
+        "id": 148,
+        "source": "Native_Place_Guangdong",
+        "target": "U_HYA"
+      },
+      {
+        "id": 149,
+        "source": "Native_Place_Guangdong",
+        "target": "HBsAg_Positive"
+      },
+      {
+        "id": 150,
+        "source": "U_HYA",
+        "target": "U_EPI"
+      },
+      {
+        "id": 151,
+        "source": "U_HYA",
+        "target": "Scar_Uterus"
+      },
+      {
+        "id": 152,
+        "source": "U_HYA",
+        "target": "Delivery_Mode_Cesarean Delivery"
+      },
+      {
+        "id": 153,
+        "source": "B_R_GT",
+        "target": "U_NEC"
+      },
+      {
+        "id": 154,
+        "source": "B_R_GT",
+        "target": "U_PRO_Positive"
+      },
+      {
+        "id": 155,
+        "source": "U_EPI",
+        "target": "Blood_Type_O"
+      },
+      {
+        "id": 156,
+        "source": "Delivery_Mode_Cesarean Delivery",
+        "target": "Pelvic_Adhesions"
+      },
+      {
+        "id": 157,
+        "source": "Delivery_Mode_Cesarean Delivery",
+        "target": "BMI_Before_Pregnancy_G_\u226524 Overweight"
+      },
+      {
+        "id": 158,
+        "source": "U_RBC",
+        "target": "Intrahepatic_Cholestasis_of_Pregnancy"
+      },
+      {
+        "id": 159,
+        "source": "U_RBC",
+        "target": "Fetal_Abnormalities_Fetal Growth Retardation"
+      },
+      {
+        "id": 160,
+        "source": "Intrahepatic_Cholestasis_of_Pregnancy",
+        "target": "Fetal_Abnormalities_Fetal Growth Retardation"
+      },
+      {
+        "id": 161,
+        "source": "U_TRI",
+        "target": "History_Pregnancy_Outcomes_Miscarriage"
+      },
+      {
+        "id": 162,
+        "source": "History_Pregnancy_Outcomes_Miscarriage",
+        "target": "U_ASC_G_Positive"
+      },
+      {
+        "id": 163,
+        "source": "History_Pregnancy_Outcomes_Miscarriage",
+        "target": "U_KET_G_Positive"
+      },
+      {
+        "id": 164,
+        "source": "Age_Group_\u226535",
+        "target": "Infant_Weight"
+      },
+      {
+        "id": 165,
+        "source": "Age_Group_\u226535",
+        "target": "Weight_Gain_Over_Pregnancy_G_More Than Guidelines"
+      },
+      {
+        "id": 166,
+        "source": "Weight_Before_Pregnancy",
+        "target": "Infant_Weight_G_\u22654KG Overweight"
+      },
+      {
+        "id": 167,
+        "source": "Infant_Weight_G_\u22654KG Overweight",
+        "target": "Infant_Weight"
+      },
+      {
+        "id": 168,
+        "source": "Infant_Weight_G_\u22654KG Overweight",
+        "target": "Fetal_Abnormalities_Other"
+      },
+      {
+        "id": 169,
+        "source": "Allergic_History",
+        "target": "Breast_Disease"
+      },
+      {
+        "id": 170,
+        "source": "Allergic_History",
+        "target": "Primipara"
+      },
+      {
+        "id": 171,
+        "source": "Allergic_History",
+        "target": "Weight_Gain_Over_Pregnancy_G_Less Than Guidelines"
+      },
+      {
+        "id": 172,
+        "source": "Breast_Disease",
+        "target": "Primipara"
+      },
+      {
+        "id": 173,
+        "source": "Breast_Disease",
+        "target": "Weight_Gain_Over_Pregnancy_G_Less Than Guidelines"
+      },
+      {
+        "id": 174,
+        "source": "Weight_Gain_Over_Pregnancy_G_Less Than Guidelines",
+        "target": "U_ERY_G_Positive"
+      },
+      {
+        "id": 175,
+        "source": "Weight_Gain_Over_Pregnancy_G_Less Than Guidelines",
+        "target": "Age_Group_30-34"
+      },
+      {
+        "id": 176,
+        "source": "Chronic_Inflammation",
+        "target": "Hepatopathy"
+      },
+      {
+        "id": 177,
+        "source": "Chronic_Inflammation",
+        "target": "HBcAb_Positive"
+      },
+      {
+        "id": 178,
+        "source": "Chronic_Inflammation",
+        "target": "HBeAb_Positive"
+      },
+      {
+        "id": 179,
+        "source": "Chronic_Inflammation",
+        "target": "HBsAg_Positive"
+      },
+      {
+        "id": 180,
+        "source": "Hepatopathy",
+        "target": "HBcAb_Positive"
+      },
+      {
+        "id": 181,
+        "source": "Hepatopathy",
+        "target": "HBeAb_Positive"
+      },
+      {
+        "id": 182,
+        "source": "Hepatopathy",
+        "target": "HBsAb_Negative"
+      },
+      {
+        "id": 183,
+        "source": "Hepatopathy",
+        "target": "HBsAg_Positive"
+      },
+      {
+        "id": 184,
+        "source": "HBcAb_Positive",
+        "target": "HBeAb_Positive"
+      },
+      {
+        "id": 185,
+        "source": "HBcAb_Positive",
+        "target": "HBsAg_Positive"
+      },
+      {
+        "id": 186,
+        "source": "HBeAb_Positive",
+        "target": "HBsAg_Positive"
+      },
+      {
+        "id": 187,
+        "source": "HBsAg_Positive",
+        "target": "HBsAb_Negative"
+      },
+      {
+        "id": 188,
+        "source": "Infant_Weight",
+        "target": "Weight_Gain_Over_Pregnancy_G_More Than Guidelines"
+      },
+      {
+        "id": 189,
+        "source": "Weight_Gain_Over_Pregnancy_G_More Than Guidelines",
+        "target": "Weight_Gain_Over_Pregnancy"
+      },
+      {
+        "id": 190,
+        "source": "Gestation_Age",
+        "target": "Gestation_Age_G1_29-45W"
+      },
+      {
+        "id": 191,
+        "source": "HCV_Negative",
+        "target": "Fetal_Abnormalities_Fetal Distress"
+      },
+      {
+        "id": 192,
+        "source": "Rupture_of_Membranes_Model_Artificial",
+        "target": "Medication_Progesterone"
+      },
+      {
+        "id": 193,
+        "source": "U_LEU_G_Positive",
+        "target": "Delivery_Season_Winter"
+      },
+      {
+        "id": 194,
+        "source": "Delivery_Season_Winter",
+        "target": "Conception_Season_Spring"
+      },
+      {
+        "id": 195,
+        "source": "Conception_Season_Summer",
+        "target": "Gestation_Age_G1_Postpartum"
+      }
+    ],
+    "nodes": [
+      {
+        "id": "AFP",
+        "size": null
+      },
+      {
+        "id": "A_G",
+        "size": null
+      },
+      {
+        "id": "B_Cysc",
+        "size": null
+      },
+      {
+        "id": "Hypertensive_Disorder_of_Pregnancy",
+        "size": null
+      },
+      {
+        "id": "Placental_Insufficiency",
+        "size": null
+      },
+      {
+        "id": "HAVAB_Negative",
+        "size": null
+      },
+      {
+        "id": "HBcAb_Negative",
+        "size": null
+      },
+      {
+        "id": "HBeAb_Negative",
+        "size": null
+      },
+      {
+        "id": "HBeAg_Negative",
+        "size": null
+      },
+      {
+        "id": "HBsAb_Positive",
+        "size": null
+      },
+      {
+        "id": "HBsAg_Negative",
+        "size": null
+      },
+      {
+        "id": "Native_Place_Other",
+        "size": null
+      },
+      {
+        "id": "Delivery_Gestational_Age_G_\u226542W",
+        "size": null
+      },
+      {
+        "id": "B_ALB",
+        "size": null
+      },
+      {
+        "id": "U_MUC",
+        "size": null
+      },
+      {
+        "id": "BS",
+        "size": null
+      },
+      {
+        "id": "BS120",
+        "size": null
+      },
+      {
+        "id": "BS60",
+        "size": null
+      },
+      {
+        "id": "Cord_Entanglement",
+        "size": null
+      },
+      {
+        "id": "B_TP",
+        "size": null
+      },
+      {
+        "id": "B_ALT",
+        "size": null
+      },
+      {
+        "id": "B_AST",
+        "size": null
+      },
+      {
+        "id": "Delivery_Gestational_Age_G_28-36W",
+        "size": null
+      },
+      {
+        "id": "B_APTT",
+        "size": null
+      },
+      {
+        "id": "B_BA",
+        "size": null
+      },
+      {
+        "id": "B_BA_P",
+        "size": null
+      },
+      {
+        "id": "B_RBC",
+        "size": null
+      },
+      {
+        "id": "B_TBIL",
+        "size": null
+      },
+      {
+        "id": "B_EO",
+        "size": null
+      },
+      {
+        "id": "B_EO_P",
+        "size": null
+      },
+      {
+        "id": "B_FIB",
+        "size": null
+      },
+      {
+        "id": "Age",
+        "size": null
+      },
+      {
+        "id": "B_GLO",
+        "size": null
+      },
+      {
+        "id": "B_PCT",
+        "size": null
+      },
+      {
+        "id": "Multiple_Pregnancy",
+        "size": null
+      },
+      {
+        "id": "Pregnancy_Mode_ART",
+        "size": null
+      },
+      {
+        "id": "B_IBIL",
+        "size": null
+      },
+      {
+        "id": "B_MCH",
+        "size": null
+      },
+      {
+        "id": "B_MCV",
+        "size": null
+      },
+      {
+        "id": "B_NEUT_P",
+        "size": null
+      },
+      {
+        "id": "Ovary_Disease",
+        "size": null
+      },
+      {
+        "id": "B_INR",
+        "size": null
+      },
+      {
+        "id": "B_PT",
+        "size": null
+      },
+      {
+        "id": "U_NIT_Positive",
+        "size": null
+      },
+      {
+        "id": "Anemia_Thalassemia",
+        "size": null
+      },
+      {
+        "id": "B_LYMPH_P",
+        "size": null
+      },
+      {
+        "id": "B_MCHC",
+        "size": null
+      },
+      {
+        "id": "Postpartum_Hemorrhage",
+        "size": null
+      },
+      {
+        "id": "Premature_Rupture_of_Membranes",
+        "size": null
+      },
+      {
+        "id": "Conception_Season_Winter",
+        "size": null
+      },
+      {
+        "id": "Delivery_Season_Autumn",
+        "size": null
+      },
+      {
+        "id": "B_MONO",
+        "size": null
+      },
+      {
+        "id": "B_UA",
+        "size": null
+      },
+      {
+        "id": "B_MONO_P",
+        "size": null
+      },
+      {
+        "id": "B_NEUT",
+        "size": null
+      },
+      {
+        "id": "Native_Place_Guangdong",
+        "size": null
+      },
+      {
+        "id": "U_HYA",
+        "size": null
+      },
+      {
+        "id": "Scar_Uterus",
+        "size": null
+      },
+      {
+        "id": "B_PLT",
+        "size": null
+      },
+      {
+        "id": "U_KET_G_Negative",
+        "size": null
+      },
+      {
+        "id": "B_RDW_SD",
+        "size": null
+      },
+      {
+        "id": "B_R_GT",
+        "size": null
+      },
+      {
+        "id": "U_NEC",
+        "size": null
+      },
+      {
+        "id": "U_PRO_Positive",
+        "size": null
+      },
+      {
+        "id": "U_EPI",
+        "size": null
+      },
+      {
+        "id": "Blood_Type_O",
+        "size": null
+      },
+      {
+        "id": "Delivery_Mode_Cesarean Delivery",
+        "size": null
+      },
+      {
+        "id": "U_PH",
+        "size": null
+      },
+      {
+        "id": "U_RBC",
+        "size": null
+      },
+      {
+        "id": "Intrahepatic_Cholestasis_of_Pregnancy",
+        "size": null
+      },
+      {
+        "id": "Fetal_Abnormalities_Fetal Growth Retardation",
+        "size": null
+      },
+      {
+        "id": "U_TRI",
+        "size": null
+      },
+      {
+        "id": "History_Pregnancy_Outcomes_Miscarriage",
+        "size": null
+      },
+      {
+        "id": "U_ERY_G_Negative",
+        "size": null
+      },
+      {
+        "id": "Age_Group_\u226535",
+        "size": null
+      },
+      {
+        "id": "Height",
+        "size": null
+      },
+      {
+        "id": "Weight_Before_Pregnancy",
+        "size": null
+      },
+      {
+        "id": "Infant_Weight_G_\u22654KG Overweight",
+        "size": null
+      },
+      {
+        "id": "Allergic_History",
+        "size": null
+      },
+      {
+        "id": "Breast_Disease",
+        "size": null
+      },
+      {
+        "id": "Primipara",
+        "size": null
+      },
+      {
+        "id": "Weight_Gain_Over_Pregnancy_G_Less Than Guidelines",
+        "size": null
+      },
+      {
+        "id": "Chronic_Inflammation",
+        "size": null
+      },
+      {
+        "id": "Hepatopathy",
+        "size": null
+      },
+      {
+        "id": "HBcAb_Positive",
+        "size": null
+      },
+      {
+        "id": "HBeAb_Positive",
+        "size": null
+      },
+      {
+        "id": "HBsAg_Positive",
+        "size": null
+      },
+      {
+        "id": "HBsAb_Negative",
+        "size": null
+      },
+      {
+        "id": "Pelvic_Adhesions",
+        "size": null
+      },
+      {
+        "id": "Thyroid_Disease",
+        "size": null
+      },
+      {
+        "id": "Delivery_Gestational_Age",
+        "size": null
+      },
+      {
+        "id": "Infant_Weight",
+        "size": null
+      },
+      {
+        "id": "Weight_Gain_Over_Pregnancy_G_More Than Guidelines",
+        "size": null
+      },
+      {
+        "id": "Delivery_Mode_Forceps Delivery",
+        "size": null
+      },
+      {
+        "id": "Gestation_Age",
+        "size": null
+      },
+      {
+        "id": "Gestation_Age_G1_29-45W",
+        "size": null
+      },
+      {
+        "id": "Weight_Gain_Over_Pregnancy",
+        "size": null
+      },
+      {
+        "id": "HCV_Negative",
+        "size": null
+      },
+      {
+        "id": "Rupture_of_Membranes_Model_Artificial",
+        "size": null
+      },
+      {
+        "id": "Fetal_Abnormalities_Fetal Distress",
+        "size": null
+      },
+      {
+        "id": "U_ASC_G_Positive",
+        "size": null
+      },
+      {
+        "id": "U_ERY_G_Positive",
+        "size": null
+      },
+      {
+        "id": "U_KET_G_Positive",
+        "size": null
+      },
+      {
+        "id": "U_LEU_G_Negative",
+        "size": null
+      },
+      {
+        "id": "U_LEU_G_Positive",
+        "size": null
+      },
+      {
+        "id": "Delivery_Season_Winter",
+        "size": null
+      },
+      {
+        "id": "Age_Group_30-34",
+        "size": null
+      },
+      {
+        "id": "BMI_Before_Pregnancy_G_\u226524 Overweight",
+        "size": null
+      },
+      {
+        "id": "History_Pregnancy_Outcomes_Other",
+        "size": null
+      },
+      {
+        "id": "Medication_Progesterone",
+        "size": null
+      },
+      {
+        "id": "Conception_Season_Spring",
+        "size": null
+      },
+      {
+        "id": "Fetal_Abnormalities_Other",
+        "size": null
+      },
+      {
+        "id": "Conception_Season_Summer",
+        "size": null
+      },
+      {
+        "id": "Gestation_Age_G1_Postpartum",
+        "size": null
+      }
+    ]
+  }
+}

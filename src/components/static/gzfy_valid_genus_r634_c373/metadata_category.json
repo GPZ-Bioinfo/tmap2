@@ -1,0 +1,716 @@
+{
+  "_datas2": [
+    {
+      "variable": "AFP",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "A_G",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "BS",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "BS120",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "BS60",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_ALB",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_ALT",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_APTT",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_AST",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_BA",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_BA_P",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_Crea",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_Cysc",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_DBIL",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_EO",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_EO_P",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_FIB",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_GLO",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_GLU",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_HCT",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_HGB",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_IBIL",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_INR",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_LYMPH",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_LYMPH_P",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_MCH",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_MCHC",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_MCV",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_MONO",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_MONO_P",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_MPV",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_NEUT",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_NEUT_P",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_PCT",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_PDW",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_PLT",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_PT",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_PT_P",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_P_LCR",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_RBC",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_RDW_CV",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_RDW_SD",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_R_GT",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_TBA",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_TBIL",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_TP",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_TT",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_UA",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_Urea",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "B_WBC",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HbA1c",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "PROG",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_EPI",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_HYA",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_MUC",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_NEC",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_PH",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_RBC",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_SG",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_TRI",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_WBC",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "Age",
+      "category": "Demographics"
+    },
+    {
+      "variable": "BMI_Before_Pregnancy",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Height",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Weight_Before_Pregnancy",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Allergic_History",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Breast_Disease",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Chronic_Inflammation",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Health",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Hepatopathy",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Hysteromyoma",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Ovary_Disease",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Pelvic_Adhesions",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Scar_Uterus",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Thyroid_Disease",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Gestational_Diabetes_Mellitus",
+      "category": "Pregnancy Complications"
+    },
+    {
+      "variable": "Hypertensive_Disorder_of_Pregnancy",
+      "category": "Pregnancy Complications"
+    },
+    {
+      "variable": "Intrahepatic_Cholestasis_of_Pregnancy",
+      "category": "Pregnancy Complications"
+    },
+    {
+      "variable": "Streptococcal_Infection",
+      "category": "Pregnancy Complications"
+    },
+    {
+      "variable": "Cord_Entanglement",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Gestational_Age",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Infant_Weight",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Placental_Insufficiency",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Postpartum_Hemorrhage",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Premature_Rupture_of_Membranes",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Gestation_Age",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Multiple_Pregnancy",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Primipara",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Weight_Gain_Over_Pregnancy",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "HAVAB_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HAVAB_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HBcAb_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HBcAb_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HBeAb_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HBeAb_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HBeAg_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HBeAg_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HBsAb_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HBsAb_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HBsAg_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HBsAg_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HCV_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "HCV_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_ASC_G_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_ASC_G_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_BIL_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_BIL_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_ERY_G_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_ERY_G_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_GLU_G_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_GLU_G_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_KET_G_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_KET_G_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_LEU_G_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_LEU_G_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_NIT_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_NIT_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_PRO_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_PRO_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_UBG_G_Negative",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_UBG_G_Positive",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "U_URI_G_Normal",
+      "category": "Biochemical Indices"
+    },
+    {
+      "variable": "Age_Group_30-34",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Age_Group_\u226429",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Age_Group_\u226535",
+      "category": "Demographics"
+    },
+    {
+      "variable": "BMI_Before_Pregnancy_G_18.5-24 Normal",
+      "category": "Demographics"
+    },
+    {
+      "variable": "BMI_Before_Pregnancy_G_<18.5 Underweight",
+      "category": "Demographics"
+    },
+    {
+      "variable": "BMI_Before_Pregnancy_G_\u226524 Overweight",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Blood_Type_A",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Blood_Type_AB",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Blood_Type_B",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Blood_Type_O",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Native_Place_Guangdong",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Native_Place_Other",
+      "category": "Demographics"
+    },
+    {
+      "variable": "Medication_No",
+      "category": "Drug Usage"
+    },
+    {
+      "variable": "Medication_Other",
+      "category": "Drug Usage"
+    },
+    {
+      "variable": "Medication_Progesterone",
+      "category": "Drug Usage"
+    },
+    {
+      "variable": "Anemia_No",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Anemia_Other",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Anemia_Thalassemia",
+      "category": "Health Characteristics & Disease History"
+    },
+    {
+      "variable": "Amniodic_Fluid_Clear",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Amniodic_Fluid_Muddy",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Gestational_Age_G_28-36W",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Gestational_Age_G_37-42W",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Gestational_Age_G_\u226542W",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Mode_Cesarean Delivery",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Mode_Forceps Delivery",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Mode_Vaginal Delivery",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Season_Autumn",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Season_Spring",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Season_Summer",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Delivery_Season_Winter",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Fetal_Abnormalities_Fetal Distress",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Fetal_Abnormalities_Fetal Growth Retardation",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Fetal_Abnormalities_No",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Fetal_Abnormalities_Other",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Infant_Outcome_Discharge",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Infant_Outcome_Referral",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Infant_Weight_G_2.5-4KG Normal",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Infant_Weight_G_<2.5KG Underweight",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Infant_Weight_G_\u22654KG Overweight",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Rupture_of_Membranes_Model_Artificial",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Rupture_of_Membranes_Model_Spontaneous",
+      "category": "Pregnancy Outcomes"
+    },
+    {
+      "variable": "Conception_Season_Autumn",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Conception_Season_Spring",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Conception_Season_Summer",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Conception_Season_Winter",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Gestation_Age_G1_13-28W",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Gestation_Age_G1_29-45W",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Gestation_Age_G1_Postpartum",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "History_Pregnancy_Outcomes_Miscarriage",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "History_Pregnancy_Outcomes_No",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "History_Pregnancy_Outcomes_Other",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Pregnancy_Mode_ART",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Pregnancy_Mode_NAT",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Weight_Gain_Over_Pregnancy_G_Less Than Guidelines",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Weight_Gain_Over_Pregnancy_G_More Than Guidelines",
+      "category": "Pregnancy Related Characteristics"
+    },
+    {
+      "variable": "Weight_Gain_Over_Pregnancy_G_Within Guidelines",
+      "category": "Pregnancy Related Characteristics"
+    }
+  ]
+}

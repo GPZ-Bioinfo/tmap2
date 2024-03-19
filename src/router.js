@@ -8,6 +8,7 @@ Router.prototype.push = function push(location) {
   return originalPush.call(this, location).catch((err) => err)
 }
 
+let graphName = JSON.parse(localStorage.getItem('graphName'))
 const router = new Router({
   // mode: 'history',
   base: process.env.BASE_URL,
@@ -31,37 +32,37 @@ const router = new Router({
       meta: { title: 'Dashboard' }
     },
     {
-      path: '/project_id=genus_r1106_c421',
+      path: `/project_id=${graphName}`,
       name: 'examples',
       component: () => import('./views/Examples.vue'),
       meta: { title: 'Examples' },
       children: [
         {
-          path: '/project_id=genus_r1106_c421/Features',
+          path: `/project_id=${graphName}/Features`,
           name: 'ranking',
           component: () => import('./components/Features.vue'),
           meta: { title: 'Features' }
         },
         {
-          path: '/project_id=genus_r1106_c421/Groups1',
+          path: `/project_id=${graphName}/Groups1`,
           name: 'Groups',
           component: () => import('./components/Groups1.vue'),
           meta: { title: 'Groups' }
         },
         {
-          path: '/project_id=genus_r1106_c421/ForceBased',
+          path: `/project_id=${graphName}/ForceBased`,
           name: 'ForceBased',
           component: () => import('./components/ForceBased.vue'),
           meta: { title: 'Topological Models' }
         },
         {
-          path: '/project_id=genus_r1106_c421/Comparisons1',
+          path: `/project_id=${graphName}/Comparisons1`,
           name: 'Comparisons1',
           component: () => import('./components/Comparisons.vue'),
           meta: { title: 'Comparisons' }
         },
         {
-          path: '/project_id=genus_r1106_c421/Charts1',
+          path: `/project_id=${graphName}/Charts1`,
           name: 'Comparisons1',
           component: () => import('./components/Charts.vue'),
           meta: { title: 'Charts' }

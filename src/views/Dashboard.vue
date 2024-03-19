@@ -83,7 +83,10 @@ export default {
     },
     handleTextClick() {
       const graphName = event.target.innerText
+      localStorage.removeItem('graphName')
+      localStorage.setItem('graphName', JSON.stringify(graphName))
       this.$router.push(`/project_id=${graphName}/ForceBased`)
+      location.reload()
     },
     goBack() {
       this.$store.commit('removeToken')

@@ -211,8 +211,15 @@
 <script>
 import * as d3 from 'd3'
 import * as echarts from 'echarts'
-import gql from 'graphql-tag'
-import ApolloClient from 'apollo-boost'
+import { _elements } from './static/topo_model_graph.json'
+import { _datas } from './static/feature_overview_metadata_category.json'
+import { _data } from './static/topo_model_node_avg_metadata.json'
+import { _elements2 } from './static/gzfy_valid_genus_r634_c373/topo_model_graph.json'
+import { _datas2 } from './static/gzfy_valid_genus_r634_c373/metadata_category.json'
+import { _data2 } from './static/gzfy_valid_genus_r634_c373/topo_model_node_avg_metadata.json'
+import { _elements3 } from './static/gzfy_discv_genus_r1455_c373/topo_model_graph.json'
+import { _datas3 } from './static/gzfy_discv_genus_r1455_c373/metadata_category.json'
+import { _data3 } from './static/gzfy_discv_genus_r1455_c373/topo_model_node_avg_metadata.json'
 
 export default {
   name: 'ForceBasedLabelPlacementI',
@@ -272,9 +279,6 @@ export default {
     counter: 0,
     counter2: 0,
     NodesEditBoardHide: false,
-    graphqlData: null,
-    graphqlDataValue: null,
-    variablesValue: null,
     scoresValue: null,
     scoresValueArray: [],
     interval: 10,
@@ -288,7 +292,196 @@ export default {
     lightMark: 0
   }),
   mounted() {
+    let graphName = JSON.parse(localStorage.getItem('graphName'))
+    if (graphName === 'discv_genus_r1455_c373') {
+      this.datas = _datas3
+      this.elements = _elements3
+    } else if (graphName === 'valid_genus_r634_c373') {
+      this.datas = _datas2
+      this.elements = _elements2
+    } else {
+      this.datas = _datas
+      this.elements = _elements
+    }
+    const datas = this.datas
+    const elements = this.elements
+
+    this.nodesCount = elements.nodes.length
+    this.linksCount = elements.links.length
+    this.featureName = 'size'
+    let graph = {
+      nodes: elements.nodes,
+      links: elements.links
+    }
+
+    this.graph = graph
+    const _this = this
+    // 选择器的大类小类数据导入
+    let categories = [...new Set(datas.map((item) => item.category))]
+    this.options = categories.map((category) => {
+      let children = datas.filter((item) => item.category === category)
+      return {
+        label: category,
+        children: children.map((item) => ({
+          value: item.variable,
+          label: item.variable
+        }))
+      }
+    })
+
+    let graphLayout = d3
+      .forceSimulation(graph.nodes)
+      .force('charge', d3.forceManyBody().strength(-400))
+      .force('center', d3.forceCenter(this.width / 3, this.height / 2))
+      .force('x', d3.forceX(this.width / 3).strength(1))
+      .force('y', d3.forceY(this.height / 2).strength(1))
+      .force(
+        'link',
+        d3
+          .forceLink(graph.links)
+          .id(function (d) {
+            return d.id
+          })
+          .distance(50)
+          .strength(1)
+      )
+      .on('tick', ticked)
+    let graphTrans = d3.zoomTransform(graph.nodes)
+    this.graphLayout = graphLayout
+    this.graphTrans = graphTrans
+    this.graphLinks = graph.links
+    this.graphNodes = graph.nodes
+    // 获取 SVG 元素
+    this.svg = d3.select('#viz')
+    // 初始化 SVG 大小
+    this.resize()
+    // 监听窗口大小变化事件
+    window.addEventListener('resize', this.resize)
+    // 监听缩放事件
+    this.svg.call(d3.zoom().on('zoom', this.zoomed))
+    let container = this.svg.append('g')
+    this.container = container
+    let link = container.attr('class', 'links').selectAll('line').data(graph.links).enter().append('line').attr('stroke', 'pink').attr('stroke-width', '1px')
+    let node = container
+      .attr('class', 'nodes')
+      .selectAll('g')
+      .data(graph.nodes)
+      .enter()
+      .append('circle')
+      .attr('r', function (d) {
+        _this.sizeValueArray.unshift(d.size)
+        return d.size
+      })
+      .attr('id', function (d) {
+        return d.id
+      })
+      .style('stroke', '#caa455')
+      .style('stroke-width', '1px')
+      .style('stroke-linecap', 'round')
+
+    // 节点悬浮显示id
+    let focusId = null
+    node.on('mouseover', idFocus).on('mouseout', idUnFocus)
+    function idFocus(d) {
+      focusId = container
+        .append('text')
+        .text(d.id)
+        .attr('x', d.x + 8)
+        .attr('y', d.y - 10)
+        .style('font-family', 'Arial')
+        .style('font-size', 20)
+        .style('pointer-events', 'none')
+    }
+    function idUnFocus(d) {
+      focusId.remove()
+    }
+
+    this.node = node
+    this.link = link
+    function ticked() {
+      node.call(updateNode)
+      link.call(updateLink)
+    }
+
+    function fixna(x) {
+      if (isFinite(x)) return x
+      return 0
+    }
+
+    function updateLink(link) {
+      link
+        .attr('x1', function (d) {
+          return fixna(d.source.x)
+        })
+        .attr('y1', function (d) {
+          return fixna(d.source.y)
+        })
+        .attr('x2', function (d) {
+          return fixna(d.target.x)
+        })
+        .attr('y2', function (d) {
+          return fixna(d.target.y)
+        })
+    }
+
+    function updateNode(node) {
+      node.attr('transform', function (d) {
+        return 'translate(' + fixna(d.x) + ',' + fixna(d.y) + ')'
+      })
+    }
+    const drag = d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended)
+    node.call(drag)
+    function dragstarted(d) {
+      d3.event.sourceEvent.stopPropagation()
+      if (!d3.event.active) graphLayout.alphaTarget(0.3).restart()
+      d.fx = d.x
+      d.fy = d.y
+    }
+
+    function dragged(d) {
+      d.fx = d3.event.x
+      d.fy = d3.event.y
+    }
+
+    function dragended(d) {
+      if (!d3.event.active) graphLayout.alphaTarget(0)
+      d.fx = null
+      d.fy = null
+    }
+    // 图表
+    this.sizeValueMax = Math.max(..._this.sizeValueArray)
+    const myChart = echarts.init(document.getElementById('chartBar'))
+    myChart.on('click', function (params) {
+      if (params.dataIndex === _this.lastClicked) {
+        _this.lastClicked = null
+        _this.max = ''
+        _this.min = ''
+      } else {
+        _this.lastClicked = params.dataIndex
+        const clickedIndex = _this.lastClicked
+        if (_this.propertyChangeData) {
+          const intervalSize = _this.scoresValueMax / _this.interval
+          // 根据点击的柱子索引计算对应的最小值和最大值
+          _this.min = (clickedIndex * intervalSize).toFixed(4)
+          _this.max = ((clickedIndex + 1) * intervalSize).toFixed(4)
+        } else {
+          const intervalSize = _this.sizeValueMax / _this.interval
+          // 根据点击的柱子索引计算对应的最小值和最大值
+          _this.min = (clickedIndex * intervalSize).toFixed(1)
+          _this.max = ((clickedIndex + 1) * intervalSize).toFixed(1)
+        }
+      }
+      _this.nodeFilter()
+    })
+    document.getElementById('chartBar').style.display = 'block'
+
+    this.dataList = this.loadAll()
     this.updateChart()
+    if (this.$route.params.value) {
+      this.value = this.$route.params.value
+      this.handleChange(this.value)
+      this.HideNodesEditBoard()
+    }
   },
   beforeDestroy() {
     // 在组件销毁前移除窗口大小变化事件监听
@@ -297,208 +490,7 @@ export default {
   watch: {
     interval: 'updateChart' // Watch for changes in the interval and update the chart
   },
-  created() {
-    const apolloClient = new ApolloClient({
-      uri: 'http://localhost:8080/graphql' // 替换成你的GraphQL API的URL
-    })
-    apolloClient
-      .query({
-        query: gql`
-          query {
-            variablesCategory {
-              category
-              variables
-            }
-            graph {
-              elements {
-                links {
-                  id
-                  source
-                  target
-                }
-                nodes {
-                  id
-                  size
-                }
-              }
-            }
-          }
-        `
-      })
-      .then((response) => {
-        this.graphqlData = response.data.graph.elements
-        this.nodesCount = this.graphqlData.nodes.length
-        this.linksCount = this.graphqlData.links.length
-        this.featureName = 'size'
-        this.graph = {
-          nodes: this.graphqlData.nodes,
-          links: this.graphqlData.links
-        }
-
-        let graph = this.graph
-        const _this = this
-        // 选择器的大类小类数据导入
-        this.variablesValue = response.data.variablesCategory
-        this.options = this.variablesValue.map((category) => ({
-          label: category.category,
-          children: category.variables.map((variable) => ({
-            label: variable,
-            value: variable
-          }))
-        }))
-
-        let graphLayout = d3
-          .forceSimulation(graph.nodes)
-          .force('charge', d3.forceManyBody().strength(-400))
-          .force('center', d3.forceCenter(this.width / 3, this.height / 2))
-          .force('x', d3.forceX(this.width / 3).strength(1))
-          .force('y', d3.forceY(this.height / 2).strength(1))
-          .force(
-            'link',
-            d3
-              .forceLink(graph.links)
-              .id(function (d) {
-                return d.id
-              })
-              .distance(50)
-              .strength(1)
-          )
-          .on('tick', ticked)
-        let graphTrans = d3.zoomTransform(graph.nodes)
-        this.graphLayout = graphLayout
-        this.graphTrans = graphTrans
-        this.graphLinks = graph.links
-        this.graphNodes = graph.nodes
-        // 获取 SVG 元素
-        this.svg = d3.select('#viz')
-        // 初始化 SVG 大小
-        this.resize()
-        // 监听窗口大小变化事件
-        window.addEventListener('resize', this.resize)
-        // 监听缩放事件
-        this.svg.call(d3.zoom().on('zoom', this.zoomed))
-        let container = this.svg.append('g')
-        this.container = container
-        let link = container.attr('class', 'links').selectAll('line').data(graph.links).enter().append('line').attr('stroke', 'pink').attr('stroke-width', '1px')
-
-        let node = container
-          .attr('class', 'nodes')
-          .selectAll('g')
-          .data(graph.nodes)
-          .enter()
-          .append('circle')
-          .attr('r', function (d) {
-            _this.sizeValueArray.unshift(d.size)
-            return d.size
-          })
-          .attr('id', function (d) {
-            return d.id
-          })
-          .style('stroke', '#caa455')
-          .style('stroke-width', '1px')
-          .style('stroke-linecap', 'round')
-
-        // 节点悬浮显示id
-        let focusId = null
-        node.on('mouseover', idFocus).on('mouseout', idUnFocus)
-        function idFocus(d) {
-          focusId = container
-            .append('text')
-            .text(d.id)
-            .attr('x', d.x + 8)
-            .attr('y', d.y - 10)
-            .style('font-family', 'Arial')
-            .style('font-size', 20)
-            .style('pointer-events', 'none')
-        }
-        function idUnFocus(d) {
-          focusId.remove()
-        }
-
-        this.node = node
-        this.link = link
-        function ticked() {
-          node.call(updateNode)
-          link.call(updateLink)
-        }
-
-        function fixna(x) {
-          if (isFinite(x)) return x
-          return 0
-        }
-
-        function updateLink(link) {
-          link
-            .attr('x1', function (d) {
-              return fixna(d.source.x)
-            })
-            .attr('y1', function (d) {
-              return fixna(d.source.y)
-            })
-            .attr('x2', function (d) {
-              return fixna(d.target.x)
-            })
-            .attr('y2', function (d) {
-              return fixna(d.target.y)
-            })
-        }
-
-        function updateNode(node) {
-          node.attr('transform', function (d) {
-            return 'translate(' + fixna(d.x) + ',' + fixna(d.y) + ')'
-          })
-        }
-        const drag = d3.drag().on('start', dragstarted).on('drag', dragged).on('end', dragended)
-        node.call(drag)
-        function dragstarted(d) {
-          d3.event.sourceEvent.stopPropagation()
-          if (!d3.event.active) graphLayout.alphaTarget(0.3).restart()
-          d.fx = d.x
-          d.fy = d.y
-        }
-
-        function dragged(d) {
-          d.fx = d3.event.x
-          d.fy = d3.event.y
-        }
-
-        function dragended(d) {
-          if (!d3.event.active) graphLayout.alphaTarget(0)
-          d.fx = null
-          d.fy = null
-        }
-        // 图表
-        this.sizeValueMax = Math.max(..._this.sizeValueArray)
-
-        this.updateChart()
-        const myChart = echarts.init(document.getElementById('chartBar'))
-        myChart.on('click', function (params) {
-          if (params.dataIndex === _this.lastClicked) {
-            _this.lastClicked = null
-            _this.max = ''
-            _this.min = ''
-          } else {
-            _this.lastClicked = params.dataIndex
-            const clickedIndex = _this.lastClicked
-            if (_this.propertyChangeData) {
-              const intervalSize = _this.scoresValueMax / _this.interval
-              // 根据点击的柱子索引计算对应的最小值和最大值
-              _this.min = (clickedIndex * intervalSize).toFixed(4)
-              _this.max = ((clickedIndex + 1) * intervalSize).toFixed(4)
-            } else {
-              const intervalSize = _this.sizeValueMax / _this.interval
-              // 根据点击的柱子索引计算对应的最小值和最大值
-              _this.min = (clickedIndex * intervalSize).toFixed(1)
-              _this.max = ((clickedIndex + 1) * intervalSize).toFixed(1)
-            }
-          }
-          _this.nodeFilter()
-        })
-        document.getElementById('chartBar').style.display = 'block'
-
-        this.dataList = this.loadAll()
-      })
-  },
+  created() {},
 
   methods: {
     // 更新 SVG 大小的方法
@@ -1143,99 +1135,90 @@ export default {
     // 节点编辑面板的下拉框
     handleChange(value) {
       this.state1 = ''
-      const filteredArr = []
-      for (let index = 0; index < value.length; index++) {
-        if (value[index]) {
-          filteredArr.push(value[index])
+      let categoryData = ''
+      this.scoresValueArray = []
+      if (Array.isArray(value)) {
+        const filteredArr = []
+        console.log('value', value)
+        for (let index = 0; index < value.length; index++) {
+          if (value[index]) {
+            filteredArr.push(value[index])
+          }
         }
+        categoryData = filteredArr[0]
+      } else {
+        categoryData = value
       }
-      let categoryData = filteredArr[0]
       console.log(categoryData)
       const _this = this
-      const apolloClient = new ApolloClient({
-        uri: 'http://localhost:8080/graphql' // 替换成你的GraphQL API的URL
+      this.node.attr(categoryData, function (d) {
+        const nodeId = Number(d.id)
+        let graphName = JSON.parse(localStorage.getItem('graphName'))
+        if (graphName === 'discv_genus_r1455_c373') {
+          _this.data = _data3
+        } else if (graphName === 'valid_genus_r634_c373') {
+          _this.data = _data2
+        } else {
+          _this.data = _data
+        }
+        const data = _this.data
+
+        let variableData = data[categoryData]
+        let item = variableData.find((item) => Number(item.id) === nodeId)
+        const scoresNode = item.value
+        _this.scoresValueArray.unshift(scoresNode)
+        return scoresNode
       })
 
-      apolloClient
-        .query({
-          variables: {
-            variable: categoryData
-          },
-          query: gql`
-            query ($variable: String!) {
-              scores(column: $variable) {
-                value
-              }
-            }
-          `
-        })
-        .then((response) => {
-          // 处理响应数据
-          _this.scoresValue = response.data.scores
-          _this.scoresValueArray = []
-          _this.node.attr(categoryData, function (d) {
-            const nodeId = Number(d.id)
-            const scoresNode = _this.scoresValue[nodeId].value
-            _this.scoresValueArray.unshift(scoresNode)
-
-            return scoresNode
-          })
-          _this.scoresValueMax = Math.max(..._this.scoresValueArray)
-          _this.propertyChangeData = categoryData
-          _this.featureName = _this.propertyChangeData
-          _this.updateChart()
-        })
+      this.scoresValueMax = Math.max(...this.scoresValueArray)
+      this.propertyChangeData = categoryData
+      this.featureName = this.propertyChangeData
+      this.updateChart()
     },
     // 搜索点击下拉框数据
-    handleSelect(item) {
-      this.value = ''
-      console.log('item.value', item.value)
+    handleSelect(itemvalue) {
       const _this = this
-      const apolloClient = new ApolloClient({
-        uri: 'http://localhost:8080/graphql' // 替换成你的GraphQL API的URL
+      this.scoresValueArray = []
+      this.value = ''
+      console.log('itemvalue.value', itemvalue.value)
+      // 处理响应数据
+      this.node.attr(itemvalue.value, function (d) {
+        const nodeId = Number(d.id)
+        let graphName = JSON.parse(localStorage.getItem('graphName'))
+        if (graphName === 'discv_genus_r1455_c373') {
+          _this.data = _data3
+        } else if (graphName === 'valid_genus_r634_c373') {
+          _this.data = _data2
+        } else {
+          _this.data = _data
+        }
+        const data = _this.data
+        let variableData = data[itemvalue.value]
+        let item = variableData.find((item) => Number(item.id) === nodeId)
+        const scoresNode = item.value
+        _this.scoresValueArray.unshift(scoresNode)
+        return scoresNode
       })
-
-      apolloClient
-        .query({
-          variables: {
-            variable: item.value
-          },
-          query: gql`
-            query ($variable: String!) {
-              scores(column: $variable) {
-                value
-              }
-            }
-          `
-        })
-        .then((response) => {
-          // 处理响应数据
-          _this.scoresValue = response.data.scores
-          _this.scoresValueArray = []
-          _this.node.attr(item.value, function (d) {
-            const nodeId = Number(d.id)
-            const scoresNode = _this.scoresValue[nodeId].value
-
-            _this.scoresValueArray.unshift(scoresNode)
-            return scoresNode
-          })
-          _this.scoresValueMax = Math.max(..._this.scoresValueArray)
-          _this.propertyChangeData = item.value
-          _this.featureName = _this.propertyChangeData
-          _this.updateChart()
-        })
+      this.scoresValueMax = Math.max(...this.scoresValueArray)
+      this.propertyChangeData = itemvalue.value
+      this.featureName = this.propertyChangeData
+      console.log('this.featureName ', this.featureName)
+      this.updateChart()
     },
     // 搜索下拉数据显示
     loadAll() {
-      const options = []
       const _this = this
-
-      _this.variablesValue.forEach((category) => {
-        category.variables.forEach((variable) => {
-          options.push({
-            value: variable
-          })
-        })
+      let graphName = JSON.parse(localStorage.getItem('graphName'))
+      if (graphName === 'discv_genus_r1455_c373') {
+        _this.datas = _datas3
+      } else if (graphName === 'valid_genus_r634_c373') {
+        _this.datas = _datas2
+      } else {
+        _this.datas = _datas
+      }
+      const datas = _this.datas
+      const options = datas.map((item) => {
+        return { value: item.variable }
       })
 
       return options
@@ -1270,6 +1253,7 @@ export default {
 
       // 根据新的等分数量动态生成随机纵坐标数据
       this.yData = this.generateYData()
+
       // 生成柱子数量
       this.intervalData = this.generateIntervalData()
       // 配置ECharts
@@ -1336,7 +1320,18 @@ export default {
       if (_this.propertyChangeData) {
         this.node.each(function (d) {
           const nodeId = Number(d.id)
-          const scoresNode = _this.scoresValue[nodeId].value
+          let graphName = JSON.parse(localStorage.getItem('graphName'))
+          if (graphName === 'discv_genus_r1455_c373') {
+            _this.data = _data3
+          } else if (graphName === 'valid_genus_r634_c373') {
+            _this.data = _data2
+          } else {
+            _this.data = _data
+          }
+          const data = _this.data
+          let variableData = data[_this.propertyChangeData]
+          let item = variableData.find((item) => Number(item.id) === nodeId)
+          const scoresNode = item.value
           const index = _this.findIndexInInterval(scoresNode)
           yData[index]++
         })
@@ -1405,7 +1400,18 @@ export default {
       if (_this.propertyChangeData) {
         this.node.attr('fill', function (d, i) {
           const nodeId = Number(d.id)
-          const scoresNode = _this.scoresValue[nodeId].value
+          let graphName = JSON.parse(localStorage.getItem('graphName'))
+          if (graphName === 'discv_genus_r1455_c373') {
+            _this.data = _data3
+          } else if (graphName === 'valid_genus_r634_c373') {
+            _this.data = _data2
+          } else {
+            _this.data = _data
+          }
+          const data = _this.data
+          let variableData = data[_this.propertyChangeData]
+          let item = variableData.find((item) => Number(item.id) === nodeId)
+          const scoresNode = item.value
           const index = _this.findIndexInInterval(scoresNode)
           return _this.generateGradientColor(index)
         })

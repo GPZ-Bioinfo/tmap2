@@ -1,0 +1,716 @@
+{
+  "_data2": [
+    {
+      "variable": "AFP",
+      "enrich_score": 11.388130912766368
+    },
+    {
+      "variable": "A_G",
+      "enrich_score": 33.08997851214655
+    },
+    {
+      "variable": "BS",
+      "enrich_score": 12.051838151225969
+    },
+    {
+      "variable": "BS120",
+      "enrich_score": 16.001549250146308
+    },
+    {
+      "variable": "BS60",
+      "enrich_score": 10.233042889748328
+    },
+    {
+      "variable": "B_ALB",
+      "enrich_score": 19.881264132343627
+    },
+    {
+      "variable": "B_ALT",
+      "enrich_score": 10.704867886354531
+    },
+    {
+      "variable": "B_APTT",
+      "enrich_score": 16.74504839673261
+    },
+    {
+      "variable": "B_AST",
+      "enrich_score": 21.117594166868997
+    },
+    {
+      "variable": "B_BA",
+      "enrich_score": 22.8786686013173
+    },
+    {
+      "variable": "B_BA_P",
+      "enrich_score": 17.6519268287904
+    },
+    {
+      "variable": "B_Crea",
+      "enrich_score": 18.164611021496302
+    },
+    {
+      "variable": "B_Cysc",
+      "enrich_score": 8.528784316359054
+    },
+    {
+      "variable": "B_DBIL",
+      "enrich_score": 13.134182353324553
+    },
+    {
+      "variable": "B_EO",
+      "enrich_score": 8.447098886722054
+    },
+    {
+      "variable": "B_EO_P",
+      "enrich_score": 8.394499681666403
+    },
+    {
+      "variable": "B_FIB",
+      "enrich_score": 11.784677576916677
+    },
+    {
+      "variable": "B_GLO",
+      "enrich_score": 11.560818022022673
+    },
+    {
+      "variable": "B_GLU",
+      "enrich_score": 15.411281665070096
+    },
+    {
+      "variable": "B_HCT",
+      "enrich_score": 2.99372030357651
+    },
+    {
+      "variable": "B_HGB",
+      "enrich_score": 3.1501590025747275
+    },
+    {
+      "variable": "B_IBIL",
+      "enrich_score": 26.77941843824373
+    },
+    {
+      "variable": "B_INR",
+      "enrich_score": 20.521511408556837
+    },
+    {
+      "variable": "B_LYMPH",
+      "enrich_score": 12.373467634573071
+    },
+    {
+      "variable": "B_LYMPH_P",
+      "enrich_score": 26.336329846502124
+    },
+    {
+      "variable": "B_MCH",
+      "enrich_score": 14.84760513264303
+    },
+    {
+      "variable": "B_MCHC",
+      "enrich_score": 13.687182396005138
+    },
+    {
+      "variable": "B_MCV",
+      "enrich_score": 17.14811739483034
+    },
+    {
+      "variable": "B_MONO",
+      "enrich_score": 4.384983140606318
+    },
+    {
+      "variable": "B_MONO_P",
+      "enrich_score": 7.033962432839351
+    },
+    {
+      "variable": "B_MPV",
+      "enrich_score": 8.008496821982892
+    },
+    {
+      "variable": "B_NEUT",
+      "enrich_score": 24.00248181740092
+    },
+    {
+      "variable": "B_NEUT_P",
+      "enrich_score": 23.35134293400996
+    },
+    {
+      "variable": "B_PCT",
+      "enrich_score": 35.809971291235364
+    },
+    {
+      "variable": "B_PDW",
+      "enrich_score": 9.077473799526963
+    },
+    {
+      "variable": "B_PLT",
+      "enrich_score": 24.949404617502296
+    },
+    {
+      "variable": "B_PT",
+      "enrich_score": 20.391796658728342
+    },
+    {
+      "variable": "B_PT_P",
+      "enrich_score": 15.173531672094498
+    },
+    {
+      "variable": "B_P_LCR",
+      "enrich_score": 2.324843969884808
+    },
+    {
+      "variable": "B_RBC",
+      "enrich_score": 14.672739514867663
+    },
+    {
+      "variable": "B_RDW_CV",
+      "enrich_score": 9.71079068918237
+    },
+    {
+      "variable": "B_RDW_SD",
+      "enrich_score": 16.21633877326699
+    },
+    {
+      "variable": "B_R_GT",
+      "enrich_score": 13.425900370162578
+    },
+    {
+      "variable": "B_TBA",
+      "enrich_score": 8.253591699518445
+    },
+    {
+      "variable": "B_TBIL",
+      "enrich_score": 23.18961033286209
+    },
+    {
+      "variable": "B_TP",
+      "enrich_score": 20.317071856913277
+    },
+    {
+      "variable": "B_TT",
+      "enrich_score": 16.72885445095605
+    },
+    {
+      "variable": "B_UA",
+      "enrich_score": 9.816903928005
+    },
+    {
+      "variable": "B_Urea",
+      "enrich_score": 3.141685093743636
+    },
+    {
+      "variable": "B_WBC",
+      "enrich_score": 3.258260749634287
+    },
+    {
+      "variable": "HbA1c",
+      "enrich_score": 15.602647669495123
+    },
+    {
+      "variable": "PROG",
+      "enrich_score": 11.244050260444226
+    },
+    {
+      "variable": "U_EPI",
+      "enrich_score": 16.179516967078484
+    },
+    {
+      "variable": "U_HYA",
+      "enrich_score": 7.25993261677967
+    },
+    {
+      "variable": "U_MUC",
+      "enrich_score": 17.080248755917786
+    },
+    {
+      "variable": "U_NEC",
+      "enrich_score": 9.140573983970942
+    },
+    {
+      "variable": "U_PH",
+      "enrich_score": 13.461216883182058
+    },
+    {
+      "variable": "U_RBC",
+      "enrich_score": 3.141685093743636
+    },
+    {
+      "variable": "U_SG",
+      "enrich_score": 22.24957007266804
+    },
+    {
+      "variable": "U_TRI",
+      "enrich_score": 4.602441366223209
+    },
+    {
+      "variable": "U_WBC",
+      "enrich_score": 7.929591911764103
+    },
+    {
+      "variable": "Age",
+      "enrich_score": 21.83042619554101
+    },
+    {
+      "variable": "BMI_Before_Pregnancy",
+      "enrich_score": 0.7892592262409435
+    },
+    {
+      "variable": "Height",
+      "enrich_score": 22.11238872730912
+    },
+    {
+      "variable": "Weight_Before_Pregnancy",
+      "enrich_score": 4.825689562385291
+    },
+    {
+      "variable": "Allergic_History",
+      "enrich_score": 15.982306456298266
+    },
+    {
+      "variable": "Breast_Disease",
+      "enrich_score": 8.054325274393404
+    },
+    {
+      "variable": "Chronic_Inflammation",
+      "enrich_score": 9.538571742212811
+    },
+    {
+      "variable": "Health",
+      "enrich_score": 13.50109392099746
+    },
+    {
+      "variable": "Hepatopathy",
+      "enrich_score": 14.608648862683548
+    },
+    {
+      "variable": "Hysteromyoma",
+      "enrich_score": 4.052655690295282
+    },
+    {
+      "variable": "Ovary_Disease",
+      "enrich_score": 22.09192182187647
+    },
+    {
+      "variable": "Pelvic_Adhesions",
+      "enrich_score": 8.838695001975093
+    },
+    {
+      "variable": "Scar_Uterus",
+      "enrich_score": 20.350818889465103
+    },
+    {
+      "variable": "Thyroid_Disease",
+      "enrich_score": 17.030885867513785
+    },
+    {
+      "variable": "Gestational_Diabetes_Mellitus",
+      "enrich_score": 12.550484086038647
+    },
+    {
+      "variable": "Hypertensive_Disorder_of_Pregnancy",
+      "enrich_score": 12.049975136094442
+    },
+    {
+      "variable": "Intrahepatic_Cholestasis_of_Pregnancy",
+      "enrich_score": 5.214368744398573
+    },
+    {
+      "variable": "Streptococcal_Infection",
+      "enrich_score": 11.283354432755852
+    },
+    {
+      "variable": "Cord_Entanglement",
+      "enrich_score": 25.65744065136928
+    },
+    {
+      "variable": "Delivery_Gestational_Age",
+      "enrich_score": 28.830083359956877
+    },
+    {
+      "variable": "Infant_Weight",
+      "enrich_score": 21.379210836318578
+    },
+    {
+      "variable": "Placental_Insufficiency",
+      "enrich_score": 13.393116031739254
+    },
+    {
+      "variable": "Postpartum_Hemorrhage",
+      "enrich_score": 16.391717182852915
+    },
+    {
+      "variable": "Premature_Rupture_of_Membranes",
+      "enrich_score": 17.201349918418398
+    },
+    {
+      "variable": "Gestation_Age",
+      "enrich_score": 16.164930859950644
+    },
+    {
+      "variable": "Multiple_Pregnancy",
+      "enrich_score": 3.0459815955866016
+    },
+    {
+      "variable": "Primipara",
+      "enrich_score": 26.544763766258104
+    },
+    {
+      "variable": "Weight_Gain_Over_Pregnancy",
+      "enrich_score": 13.164389239600542
+    },
+    {
+      "variable": "HAVAB_Negative",
+      "enrich_score": 44.517270106764165
+    },
+    {
+      "variable": "HAVAB_Positive",
+      "enrich_score": 13.503527865926378
+    },
+    {
+      "variable": "HBcAb_Negative",
+      "enrich_score": 20.49614771782017
+    },
+    {
+      "variable": "HBcAb_Positive",
+      "enrich_score": 13.337088326781178
+    },
+    {
+      "variable": "HBeAb_Negative",
+      "enrich_score": 23.24132359885225
+    },
+    {
+      "variable": "HBeAb_Positive",
+      "enrich_score": 14.73913446200699
+    },
+    {
+      "variable": "HBeAg_Negative",
+      "enrich_score": 28.579280015415726
+    },
+    {
+      "variable": "HBeAg_Positive",
+      "enrich_score": 13.717221787753452
+    },
+    {
+      "variable": "HBsAb_Negative",
+      "enrich_score": 8.6419502525067
+    },
+    {
+      "variable": "HBsAb_Positive",
+      "enrich_score": 26.87305557870545
+    },
+    {
+      "variable": "HBsAg_Negative",
+      "enrich_score": 23.72338362467507
+    },
+    {
+      "variable": "HBsAg_Positive",
+      "enrich_score": 22.189585984084413
+    },
+    {
+      "variable": "HCV_Negative",
+      "enrich_score": 40.52271438996628
+    },
+    {
+      "variable": "HCV_Positive",
+      "enrich_score": 2.511041945474473
+    },
+    {
+      "variable": "U_ASC_G_Negative",
+      "enrich_score": 12.319821127638338
+    },
+    {
+      "variable": "U_ASC_G_Positive",
+      "enrich_score": 11.506975141278089
+    },
+    {
+      "variable": "U_BIL_Negative",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "U_BIL_Positive",
+      "enrich_score": 26.26656627231839
+    },
+    {
+      "variable": "U_ERY_G_Negative",
+      "enrich_score": 23.26870977336477
+    },
+    {
+      "variable": "U_ERY_G_Positive",
+      "enrich_score": 8.089877024423924
+    },
+    {
+      "variable": "U_GLU_G_Negative",
+      "enrich_score": 2.2696435893333184
+    },
+    {
+      "variable": "U_GLU_G_Positive",
+      "enrich_score": 22.99576475396641
+    },
+    {
+      "variable": "U_KET_G_Negative",
+      "enrich_score": 8.488486921707015
+    },
+    {
+      "variable": "U_KET_G_Positive",
+      "enrich_score": 3.224602308997725
+    },
+    {
+      "variable": "U_LEU_G_Negative",
+      "enrich_score": 20.809799807015995
+    },
+    {
+      "variable": "U_LEU_G_Positive",
+      "enrich_score": 20.246586303771725
+    },
+    {
+      "variable": "U_NIT_Negative",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "U_NIT_Positive",
+      "enrich_score": 8.014217939058732
+    },
+    {
+      "variable": "U_PRO_Negative",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "U_PRO_Positive",
+      "enrich_score": 11.357994416403796
+    },
+    {
+      "variable": "U_UBG_G_Negative",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "U_UBG_G_Positive",
+      "enrich_score": 5.93500433817244
+    },
+    {
+      "variable": "U_URI_G_Normal",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Age_Group_30-34",
+      "enrich_score": 14.797220426926607
+    },
+    {
+      "variable": "Age_Group_\u226429",
+      "enrich_score": 6.751405677753044
+    },
+    {
+      "variable": "Age_Group_\u226535",
+      "enrich_score": 23.580546863057023
+    },
+    {
+      "variable": "BMI_Before_Pregnancy_G_18.5-24 Normal",
+      "enrich_score": 6.555859573078664
+    },
+    {
+      "variable": "BMI_Before_Pregnancy_G_<18.5 Underweight",
+      "enrich_score": 3.642463200723886
+    },
+    {
+      "variable": "BMI_Before_Pregnancy_G_\u226524 Overweight",
+      "enrich_score": 5.014210323182506
+    },
+    {
+      "variable": "Blood_Type_A",
+      "enrich_score": 15.615869424304012
+    },
+    {
+      "variable": "Blood_Type_AB",
+      "enrich_score": 9.871667721410098
+    },
+    {
+      "variable": "Blood_Type_B",
+      "enrich_score": 15.043310185961696
+    },
+    {
+      "variable": "Blood_Type_O",
+      "enrich_score": 11.614452797426171
+    },
+    {
+      "variable": "Native_Place_Guangdong",
+      "enrich_score": 27.60715045387445
+    },
+    {
+      "variable": "Native_Place_Other",
+      "enrich_score": 36.17992496151122
+    },
+    {
+      "variable": "Medication_No",
+      "enrich_score": 9.324644811411646
+    },
+    {
+      "variable": "Medication_Other",
+      "enrich_score": 5.84866700228821
+    },
+    {
+      "variable": "Medication_Progesterone",
+      "enrich_score": 13.09656212859073
+    },
+    {
+      "variable": "Anemia_No",
+      "enrich_score": 4.266376824149752
+    },
+    {
+      "variable": "Anemia_Other",
+      "enrich_score": 5.3295899849549215
+    },
+    {
+      "variable": "Anemia_Thalassemia",
+      "enrich_score": 26.463120916573423
+    },
+    {
+      "variable": "Amniodic_Fluid_Clear",
+      "enrich_score": 4.121688504438247
+    },
+    {
+      "variable": "Amniodic_Fluid_Muddy",
+      "enrich_score": 15.320749253225303
+    },
+    {
+      "variable": "Delivery_Gestational_Age_G_28-36W",
+      "enrich_score": 11.340526546037268
+    },
+    {
+      "variable": "Delivery_Gestational_Age_G_37-42W",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Delivery_Gestational_Age_G_\u226542W",
+      "enrich_score": 18.37139029117136
+    },
+    {
+      "variable": "Delivery_Mode_Cesarean Delivery",
+      "enrich_score": 13.553150027580376
+    },
+    {
+      "variable": "Delivery_Mode_Forceps Delivery",
+      "enrich_score": 8.21186731990626
+    },
+    {
+      "variable": "Delivery_Mode_Vaginal Delivery",
+      "enrich_score": 12.743478425009688
+    },
+    {
+      "variable": "Delivery_Season_Autumn",
+      "enrich_score": 14.54275435157764
+    },
+    {
+      "variable": "Delivery_Season_Spring",
+      "enrich_score": 5.5070655289526655
+    },
+    {
+      "variable": "Delivery_Season_Summer",
+      "enrich_score": 11.763105710829088
+    },
+    {
+      "variable": "Delivery_Season_Winter",
+      "enrich_score": 23.88972217463179
+    },
+    {
+      "variable": "Fetal_Abnormalities_Fetal Distress",
+      "enrich_score": 16.186379138955978
+    },
+    {
+      "variable": "Fetal_Abnormalities_Fetal Growth Retardation",
+      "enrich_score": 3.141685093743636
+    },
+    {
+      "variable": "Fetal_Abnormalities_No",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Fetal_Abnormalities_Other",
+      "enrich_score": 10.188372704932618
+    },
+    {
+      "variable": "Infant_Outcome_Discharge",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Infant_Outcome_Referral",
+      "enrich_score": 7.275707551270267
+    },
+    {
+      "variable": "Infant_Weight_G_2.5-4KG Normal",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Infant_Weight_G_<2.5KG Underweight",
+      "enrich_score": 4.516388554603942
+    },
+    {
+      "variable": "Infant_Weight_G_\u22654KG Overweight",
+      "enrich_score": 7.415775572015018
+    },
+    {
+      "variable": "Rupture_of_Membranes_Model_Artificial",
+      "enrich_score": 18.40534438854463
+    },
+    {
+      "variable": "Rupture_of_Membranes_Model_Spontaneous",
+      "enrich_score": 22.14785841214692
+    },
+    {
+      "variable": "Conception_Season_Autumn",
+      "enrich_score": 17.00491968118445
+    },
+    {
+      "variable": "Conception_Season_Spring",
+      "enrich_score": 21.614342798261603
+    },
+    {
+      "variable": "Conception_Season_Summer",
+      "enrich_score": 14.517173159005056
+    },
+    {
+      "variable": "Conception_Season_Winter",
+      "enrich_score": 26.71367957955266
+    },
+    {
+      "variable": "Gestation_Age_G1_13-28W",
+      "enrich_score": 19.85702846334327
+    },
+    {
+      "variable": "Gestation_Age_G1_29-45W",
+      "enrich_score": 17.049666634762517
+    },
+    {
+      "variable": "Gestation_Age_G1_Postpartum",
+      "enrich_score": 9.784911811240953
+    },
+    {
+      "variable": "History_Pregnancy_Outcomes_Miscarriage",
+      "enrich_score": 5.14075563004169
+    },
+    {
+      "variable": "History_Pregnancy_Outcomes_No",
+      "enrich_score": 4.275909290815227
+    },
+    {
+      "variable": "History_Pregnancy_Outcomes_Other",
+      "enrich_score": 16.148468782277348
+    },
+    {
+      "variable": "Pregnancy_Mode_ART",
+      "enrich_score": 9.900077058833917
+    },
+    {
+      "variable": "Pregnancy_Mode_NAT",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Weight_Gain_Over_Pregnancy_G_Less Than Guidelines",
+      "enrich_score": 11.00819708060025
+    },
+    {
+      "variable": "Weight_Gain_Over_Pregnancy_G_More Than Guidelines",
+      "enrich_score": 18.09889384304956
+    },
+    {
+      "variable": "Weight_Gain_Over_Pregnancy_G_Within Guidelines",
+      "enrich_score": 6.521587733909836
+    }
+  ]
+}

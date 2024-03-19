@@ -1,71 +1,61 @@
 <template>
   <div>
-    <ul>
-      <li v-for="item in graphqlItems.graph.elements.links" :key="item.id">
-        {{ item }}
-      </li>
-    </ul>
-    <ul>
-      <li v-for="item in graphqlItems.graph.elements.nodes" :key="item.id">
-        {{ item }}
-      </li>
-    </ul>
-    <ul>
-      <li v-for="item in graphqlItems.scores" :key="item.id">
-        {{ item.id }}
-      </li>
-    </ul>
+    <div ref="echarts" style="width: 600px; height: 400px"></div>
   </div>
 </template>
 
 <script>
-import ApolloClient from 'apollo-boost'
-import gql from 'graphql-tag'
+import { data } from './static/feature_overview_barchart.json'
+import * as echarts from 'echarts'
 
 export default {
   data() {
     return {
-      graphqlItems: []
+      chartData: data,
+      chart: null
     }
   },
-  created() {
-    this.fetchItems()
+  mounted() {
+    this.chart = echarts.init(this.$refs.echarts)
+    this.renderChart()
   },
   methods: {
-    fetchItems() {
-      const apolloClient = new ApolloClient({
-        uri: 'http://localhost:8080/graphql' // 替换成你的GraphQL API的URL
-      })
-      apolloClient
-        .query({
-          query: gql`
-            query {
-              scores(column: "Age") {
-                id
-              }
-              graph {
-                elements {
-                  links {
-                    id
-                    source
-                    target
-                  }
-                  nodes {
-                    id
-                    size
-                  }
-                }
-              }
-            }
-          `
-        })
-        .then((response) => {
-          this.graphqlItems = response.data
-        })
-        .catch((error) => {
-          console.error('Error:', error)
-        })
+    renderChart() {
+      const option = {
+        tooltip: {
+          trigger: 'axis',
+          axisPointer: {
+            type: 'shadow'
+          }
+        },
+        legend: {
+          type: 'scroll',
+          orient: 'vertical',
+          right: 0,
+          data: this.chartData.map((item) => item.variable)
+        },
+        xAxis: {
+          type: 'category',
+          data: this.chartData.map((item) => item.variable)
+        },
+        yAxis: {
+          type: 'value'
+        },
+        series: this.chartData.map((item) => ({
+          name: item.variable,
+          type: 'bar',
+          data: [item.enrich_score]
+        }))
+      }
+      this.chart.setOption(option)
+    },
+    handleLegendClick() {
+      this.renderChart()
     }
   }
 }
 </script>
+
+<style>
+/* Add your custom styles here */
+</style>

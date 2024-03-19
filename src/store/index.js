@@ -6,6 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     isCollapse: false, // 初始化存的值
+    graphName: '',
     users: JSON.parse(localStorage.getItem('users')) || {
       token: '',
       userName: ''
