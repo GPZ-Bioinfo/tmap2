@@ -279,7 +279,6 @@ export default {
     counter: 0,
     counter2: 0,
     NodesEditBoardHide: false,
-    scoresValue: null,
     scoresValueArray: [],
     interval: 10,
     sizeValueMax: null,
@@ -1022,7 +1021,22 @@ export default {
         this.node.style('opacity', 0.4)
         this.link.style('opacity', 0.4)
         if (_this.propertyChangeData) {
-          let nodeLimit = this.node.filter((d) => _this.scoresValue[Number(d.id)].value <= maxData && _this.scoresValue[Number(d.id)].value >= minData)
+          let nodeLimit = this.node.filter(function (d) {
+            const nodeId = Number(d.id)
+            let graphName = JSON.parse(localStorage.getItem('graphName'))
+            if (graphName === 'discv_genus_r1455_c373') {
+              _this.data = _data3
+            } else if (graphName === 'valid_genus_r634_c373') {
+              _this.data = _data2
+            } else {
+              _this.data = _data
+            }
+            const data = _this.data
+            let variableData = data[_this.propertyChangeData]
+            let item = variableData.find((item) => Number(item.id) === nodeId)
+            const scoresNode = item.value
+            return scoresNode <= maxData && scoresNode >= minData
+          })
           nodeLimit.style('opacity', 1)
           let nodeLimitId = nodeLimit.data().map((d) => d.id)
           let linkLimit = this.link.filter((d) => nodeLimitId.includes(d.source.index) && nodeLimitId.includes(d.target.index))
