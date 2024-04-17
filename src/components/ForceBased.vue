@@ -57,6 +57,10 @@
       <el-button class="buttonStyle" @click="screenShot"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="图片导出"><v-icon>mdi-download</v-icon></el-tooltip></el-button
       >
+      <!-- 表格控件 -->
+      <el-button class="buttonStyle" @click="boardOpen"
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="表格导出"><v-icon>mdi-table-large-plus</v-icon></el-tooltip></el-button
+      >
     </div>
     <!-- 点线数量 -->
     <div class="CountBoard">
@@ -94,9 +98,9 @@
       <div class="minMaxCancel">
         <el-button style="position: absolute; padding: 5px" type="text" @click="nodeReset">✖️</el-button>
       </div>
-      <div class="minMaxButton">
+      <!-- <div class="minMaxButton">
         <el-button style="position: absolute; padding-top: 0px; padding-bottom: 10px" type="text" @click="boardOpen"><v-icon>mdi-table-large-plus</v-icon></el-button>
-      </div>
+      </div> -->
     </div>
     <!-- 数据面板 -->
     <el-card class="dataBoard" v-if="boardExit">
@@ -593,8 +597,17 @@ export default {
       this.nodesSelectedCount = 0
     },
     boardOpen() {
-      if (this.min || this.max) {
-        this.boardExit = true
+      if (this.boardExit) {
+        this.boardClose()
+      } else {
+        if (this.min || this.max) {
+          this.lightMark++
+          this.boardExit = true
+        } else {
+          this.$alert('<strong>请输入节点的范围</strong>', {
+            dangerouslyUseHTMLString: true
+          })
+        }
       }
     },
     // 框选
@@ -1185,6 +1198,7 @@ export default {
       })
 
       this.scoresValueMax = Math.max(...this.scoresValueArray)
+      this.scoresValueMin = Math.min(...this.scoresValueArray)
       this.propertyChangeData = categoryData
       this.featureName = this.propertyChangeData
       this.updateChart()
@@ -1214,6 +1228,7 @@ export default {
         return scoresNode
       })
       this.scoresValueMax = Math.max(...this.scoresValueArray)
+      this.scoresValueMin = Math.min(...this.scoresValueArray)
       this.propertyChangeData = itemvalue.value
       this.featureName = this.propertyChangeData
       console.log('this.featureName ', this.featureName)
@@ -1314,23 +1329,19 @@ export default {
     },
     generateXData() {
       const _this = this
-      if (_this.propertyChangeData) {
-        const max = _this.scoresValueMax
+      const max = _this.propertyChangeData ? _this.scoresValueMax : _this.sizeValueMax
+      const min = _this.propertyChangeData ? _this.scoresValueMin : 0 // 如果propertyChangeData为false，则从min开始
+      const intervalCount = this.interval
+      const intervalSize = (max - min) / intervalCount // 计算区间段大小
 
-        const intervalCount = this.interval
-        return Array.from({ length: intervalCount }, (_, index) => (index * (max / intervalCount)).toFixed(4))
-      } else {
-        const max = this.sizeValueMax
-        const intervalCount = this.interval
-        return Array.from({ length: intervalCount }, (_, index) => ((index + 0.5) * (max / intervalCount)).toFixed(1))
-      }
+      return Array.from({ length: intervalCount }, (_, index) => (min + index * intervalSize).toFixed(4))
     },
     generateYData() {
       const _this = this
-      // 初始化纵坐标数据为 0
       const yData = Array.from({ length: this.interval }, () => 0)
+      const max = _this.propertyChangeData ? _this.scoresValueMax : _this.sizeValueMax
+      const min = _this.propertyChangeData ? _this.scoresValueMin : 0 // 如果propertyChangeData为false，则从min开始
 
-      // 遍历节点，统计每个区间的数量
       if (_this.propertyChangeData) {
         this.node.each(function (d) {
           const nodeId = Number(d.id)
@@ -1346,17 +1357,18 @@ export default {
           let variableData = data[_this.propertyChangeData]
           let item = variableData.find((item) => Number(item.id) === nodeId)
           const scoresNode = item.value
-          const index = _this.findIndexInInterval(scoresNode)
+          const index = Math.floor((scoresNode - min) / ((max - min) / _this.interval)) // 基于min和区间段大小计算index
           yData[index]++
         })
       } else {
         this.node.each(function (d) {
-          const index = _this.findIndexInInterval(d.size)
+          const index = Math.floor((d.size - min) / ((_this.sizeValueMax - min) / _this.interval)) // 基于min和区间段大小计算index
           yData[index]++
         })
       }
       return yData
     },
+
     updateColorScale(color) {
       const _this = this
       // 根据选择的颜色设置新的渐变色带
@@ -1570,10 +1582,6 @@ export default {
 .minMaxCancel {
   margin-bottom: 20px;
   margin-left: 10px;
-}
-.minMaxButton {
-  margin-bottom: 30px;
-  margin-left: 40px;
 }
 #colorCastButton {
   right: 20px;

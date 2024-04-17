@@ -17,15 +17,14 @@
               <span class="info-label">Last updated:</span>
               <span class="info-value">YYYY-MM-DD HH:MM</span>
             </div>
+            <el-popover placement="bottom" width="200" trigger="click">
+              <div class="popup-content">
+                <div @click="handleTextClick($event)">genus_r1106_c421</div>
+              </div>
+              <el-button slot="reference" class="el-dropdown-link"> Graph name<i class="el-icon-arrow-down el-icon--right"></i> </el-button>
+            </el-popover>
           </div>
         </el-card>
-      </div>
-
-      <div class="popup-box" v-show="showPopup">
-        <h2>Graph name:</h2>
-        <div class="popup-content">
-          <div @click="handleTextClick($event)">genus_r1106_c421</div>
-        </div>
       </div>
 
       <div class="card" @click="handleClick2">
@@ -40,16 +39,15 @@
               <span class="info-label">Last updated:</span>
               <span class="info-value">YYYY-MM-DD HH:MM</span>
             </div>
+            <el-popover placement="bottom" width="200" trigger="click">
+              <div class="popup-content">
+                <div class="textDec" @click="handleTextClick($event)">discv_genus_r1455_c373</div>
+                <div class="textDec" @click="handleTextClick($event)">valid_genus_r634_c373</div>
+              </div>
+              <el-button slot="reference" class="el-dropdown-link"> Graph name<i class="el-icon-arrow-down el-icon--right"></i> </el-button>
+            </el-popover>
           </div>
         </el-card>
-      </div>
-
-      <div class="popup-box" v-show="showPopup2">
-        <h2>Graph name:</h2>
-        <div class="popup-content">
-          <div class="textDec" @click="handleTextClick($event)">discv_genus_r1455_c373</div>
-          <div class="textDec" @click="handleTextClick($event)">valid_genus_r634_c373</div>
-        </div>
       </div>
     </div>
   </div>
@@ -64,8 +62,6 @@ export default {
   name: '',
   data() {
     return {
-      showPopup: false,
-      showPopup2: false,
       Home_visible: true
     }
   },
@@ -74,13 +70,6 @@ export default {
     this.$vuetify.theme.dark = false
   },
   methods: {
-    handleClick1() {
-      // 点击卡片时显示弹出框
-      this.showPopup = !this.showPopup
-    },
-    handleClick2() {
-      this.showPopup2 = !this.showPopup2
-    },
     handleTextClick() {
       const graphName = event.target.innerText
       localStorage.removeItem('graphName')
@@ -165,17 +154,17 @@ h2 {
   color: #555;
   font-style: italic;
 }
-.popup-box {
-  padding: 10px;
-  background-color: rgb(253, 252, 252);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  width: 300px;
-  height: 200px;
-}
 
 .popup-content {
   cursor: pointer;
   color: blue; /* 设置字体颜色为蓝色 */
   text-decoration: underline; /* 添加下划线 */
+}
+.el-dropdown-link {
+  cursor: pointer;
+  color: #409eff;
+}
+.el-icon-arrow-down {
+  font-size: 12px;
 }
 </style>

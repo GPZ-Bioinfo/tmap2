@@ -1,61 +1,68 @@
 <template>
-  <div>
-    <div ref="echarts" style="width: 600px; height: 400px"></div>
-  </div>
+  <div ref="chart" style="width: 600px; height: 400px"></div>
 </template>
 
 <script>
-import { data } from './static/feature_overview_barchart.json'
 import * as echarts from 'echarts'
 
 export default {
   data() {
     return {
-      chartData: data,
-      chart: null
+      chartData: [
+        { name: 'A', value: 10 },
+        { name: 'B', value: 20 },
+        { name: 'C', value: 30 },
+        { name: 'D', value: 40 },
+        { name: 'E', value: 50 }
+      ],
+      chartInstance: null
     }
   },
   mounted() {
-    this.chart = echarts.init(this.$refs.echarts)
-    this.renderChart()
+    this.initChart()
   },
   methods: {
-    renderChart() {
+    initChart() {
+      this.chartInstance = echarts.init(this.$refs.chart)
+      const _this = this
       const option = {
-        tooltip: {
-          trigger: 'axis',
-          axisPointer: {
-            type: 'shadow'
-          }
-        },
-        legend: {
-          type: 'scroll',
-          orient: 'vertical',
-          right: 0,
-          data: this.chartData.map((item) => item.variable)
-        },
         xAxis: {
           type: 'category',
-          data: this.chartData.map((item) => item.variable)
+          data: this.chartData.map((item) => item.name)
         },
         yAxis: {
           type: 'value'
         },
-        series: this.chartData.map((item) => ({
-          name: item.variable,
-          type: 'bar',
-          data: [item.enrich_score]
-        }))
+        series: [
+          {
+            type: 'bar',
+            data: this.chartData.map((item) => item.value)
+          }
+        ]
       }
-      this.chart.setOption(option)
-    },
-    handleLegendClick() {
-      this.renderChart()
+
+      this.chartInstance.setOption(option)
+
+      // 监听柱状图点击事件
+      this.chartInstance.on('click', (params) => {
+        const dataIndex = params.dataIndex
+        console.log('dataIndex', dataIndex)
+        // 取消之前的高亮
+        this.chartInstance.dispatchAction({
+          type: 'downplay',
+          seriesIndex: 0
+        })
+        _this.chartInstance.dispatchAction({
+          type: 'highlight',
+          seriesIndex: 0,
+          dataIndex: dataIndex
+        })
+      })
     }
   }
 }
 </script>
 
 <style>
-/* Add your custom styles here */
+/* 可以在这里定义样式 */
 </style>
