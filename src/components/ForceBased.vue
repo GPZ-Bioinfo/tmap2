@@ -182,6 +182,11 @@
       <!-- 搜索框部分关键字检索 -->
       <div class="querySearch">
         <el-autocomplete v-model="state1" :fetch-suggestions="querySearch" placeholder="Please enter keywords to search" :suffix-icon="icon" clearable style="width: 250px" @select="handleSelect">
+          <template slot="default" slot-scope="{ item }">
+            <div class="searchtip">
+              {{ item.value }}
+            </div>
+          </template>
         </el-autocomplete>
         <el-button @click="cascaderCancel">Cancel</el-button>
       </div>
@@ -465,8 +470,8 @@ export default {
         if (_this.propertyChangeData) {
           const intervalSize = _this.scoresValueMax / _this.interval
           // 根据点击的柱子索引计算对应的最小值和最大值
-          _this.min = (clickedIndex * intervalSize).toFixed(4)
-          _this.max = ((clickedIndex + 1) * intervalSize).toFixed(4)
+          _this.min = (clickedIndex * intervalSize).toFixed(7)
+          _this.max = ((clickedIndex + 1) * intervalSize).toFixed(7)
         } else {
           const intervalSize = _this.sizeValueMax / _this.interval
           // 根据点击的柱子索引计算对应的最小值和最大值
@@ -1150,13 +1155,13 @@ export default {
     querySearch(queryString, cb) {
       const dataList = this.dataList
       const results = queryString ? dataList.filter(this.createFilter(queryString)) : dataList
-
       // 调用 callback 返回建议列表
       cb(results)
     },
     createFilter(queryString) {
       return (data) => {
-        return data.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0
+        // 将搜索字符串和数据值都转换为小写进行比较
+        return data.value.toLowerCase().indexOf(queryString.toLowerCase()) !== -1
       }
     },
     // 节点编辑面板的下拉框
@@ -1334,7 +1339,7 @@ export default {
       const intervalCount = this.interval
       const intervalSize = (max - min) / intervalCount // 计算区间段大小
 
-      return Array.from({ length: intervalCount }, (_, index) => (min + index * intervalSize).toFixed(4))
+      return Array.from({ length: intervalCount }, (_, index) => (min + index * intervalSize).toFixed(7))
     },
     generateYData() {
       const _this = this
@@ -1659,5 +1664,13 @@ export default {
   #chartBarx {
     display: none !important;
   }
+}
+/* 定义悬停工具提示样式 */
+.searchtip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+  white-space: normal; /* 允许文本换行 */
+  word-wrap: break-word; /* 换行时断开单词 */
 }
 </style>

@@ -1,699 +1,2383 @@
 {
   "_data": [
     {
+      "variable": "Faecalibacterium",
+      "enrich_score": 112.91498875845821
+    },
+    {
+      "variable": "Roseburia",
+      "enrich_score": 96.0212615990756
+    },
+    {
+      "variable": "unclassified_Ruminococcaceae",
+      "enrich_score": 93.66376158750546
+    },
+    {
+      "variable": "unclassified_Veillonellaceae",
+      "enrich_score": 88.96414752643051
+    },
+    {
+      "variable": "unclassified_Clostridiales",
+      "enrich_score": 86.85328566223009
+    },
+    {
+      "variable": "Bacteroides",
+      "enrich_score": 77.86348308296779
+    },
+    {
+      "variable": "unclassified_Clostridiaceae",
+      "enrich_score": 70.62879140362986
+    },
+    {
+      "variable": "Blautia",
+      "enrich_score": 69.87507394177769
+    },
+    {
+      "variable": "unclassified_Lachnospiraceae",
+      "enrich_score": 66.59318736647646
+    },
+    {
       "variable": "Bristol_stool_score",
-      "enrich_score": 88.9045412285186
+      "enrich_score": 65.28547301872578
     },
     {
-      "variable": "Gender:F",
-      "enrich_score": 85.72327257797475
+      "variable": "Ruminococcus",
+      "enrich_score": 64.8022602222361
     },
     {
-      "variable": "Gender:M",
-      "enrich_score": 81.07659392378041
+      "variable": "Prevotella",
+      "enrich_score": 60.77979110205332
+    },
+    {
+      "variable": "Coprococcus",
+      "enrich_score": 60.680413096200475
     },
     {
       "variable": "Hemoglobine",
-      "enrich_score": 79.08287495008986
+      "enrich_score": 60.49983960679839
     },
     {
-      "variable": "Mean_corpuscular_hemoglobin_concentration",
-      "enrich_score": 63.5829870693216
+      "variable": "Methanobrevibacter",
+      "enrich_score": 59.52048920103566
     },
     {
-      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.2",
-      "enrich_score": 58.9862216900928
+      "variable": "unclassified_Thermoanaerobacteraceae",
+      "enrich_score": 58.465211007545506
     },
     {
-      "variable": "Shift_work:False",
-      "enrich_score": 57.99790681581743
+      "variable": "Alistipes",
+      "enrich_score": 58.372912341019784
     },
     {
-      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
-      "enrich_score": 54.34981229017558
+      "variable": "unclassified_Victivallaceae",
+      "enrich_score": 57.79510463621247
     },
     {
-      "variable": "Red_blood_cell_count",
-      "enrich_score": 53.72294345850603
+      "variable": "unclassified_Oxalobacteraceae",
+      "enrich_score": 56.60390063705189
     },
     {
-      "variable": "Uric_acid",
-      "enrich_score": 51.10187495371106
+      "variable": "Gender:M",
+      "enrich_score": 55.05639785800545
     },
     {
-      "variable": "Meat_.average_past_week.:nutrition.consumption.option.1",
-      "enrich_score": 46.00170252122784
+      "variable": "Gender:F",
+      "enrich_score": 55.02535686848562
     },
     {
-      "variable": "Height",
-      "enrich_score": 45.99326669420051
+      "variable": "Sporobacter",
+      "enrich_score": 53.24537468882506
     },
     {
-      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2",
-      "enrich_score": 45.876280740184775
+      "variable": "unclassified_Gracilibacteraceae",
+      "enrich_score": 52.681910468863585
     },
     {
-      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
-      "enrich_score": 44.24609254929719
+      "variable": "unclassified_Incertae",
+      "enrich_score": 52.54142570644929
     },
     {
-      "variable": "Pets_.past_3_months.",
-      "enrich_score": 43.87528005952815
+      "variable": "unclassified_Hyphomicrobiaceae",
+      "enrich_score": 48.36558197762745
     },
     {
-      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.1",
-      "enrich_score": 43.72585490676706
+      "variable": "Odoribacter",
+      "enrich_score": 48.16187612583145
     },
     {
-      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
-      "enrich_score": 43.66792582815045
+      "variable": "Gemmiger",
+      "enrich_score": 47.73512328581181
     },
     {
-      "variable": "Gastroentritis_.other_treatment.",
-      "enrich_score": 43.64807698870248
+      "variable": "unclassified_Eubacteriaceae",
+      "enrich_score": 46.51138769870853
     },
     {
-      "variable": "Glomerular_filtration_rate",
-      "enrich_score": 43.39540646772342
+      "variable": "Anaerostipes",
+      "enrich_score": 44.54940177124522
     },
     {
-      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.3",
-      "enrich_score": 42.47110056595373
+      "variable": "unclassified_Rickettsiaceae",
+      "enrich_score": 43.95805418408361
     },
     {
-      "variable": "Age",
-      "enrich_score": 42.133086327287344
+      "variable": "unclassified_Bacillaceae",
+      "enrich_score": 43.95016165725265
     },
     {
-      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4",
-      "enrich_score": 41.71962128987856
+      "variable": "Clostridium_sensu_stricto",
+      "enrich_score": 43.728389760687975
     },
     {
-      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.2",
-      "enrich_score": 41.4569961333568
-    },
-    {
-      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
-      "enrich_score": 41.33360083338048
-    },
-    {
-      "variable": "Meat_.average_past_week.:nutrition.consumption.option.3",
-      "enrich_score": 40.41332755617362
-    },
-    {
-      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2",
-      "enrich_score": 39.89517335650561
-    },
-    {
-      "variable": "Smoking_with_inhalation:Neen",
-      "enrich_score": 39.76602543367001
-    },
-    {
-      "variable": "Creatinine",
-      "enrich_score": 39.48012934200891
-    },
-    {
-      "variable": "Body_mass_index",
-      "enrich_score": 39.290050072959616
-    },
-    {
-      "variable": "Work_days_per_week",
-      "enrich_score": 38.899908077841474
-    },
-    {
-      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.1",
-      "enrich_score": 38.81694586966631
-    },
-    {
-      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.4",
-      "enrich_score": 38.76004982809372
-    },
-    {
-      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.3",
-      "enrich_score": 38.48198815001612
-    },
-    {
-      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.2",
-      "enrich_score": 37.47961064383217
-    },
-    {
-      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.2",
-      "enrich_score": 37.284305596412295
-    },
-    {
-      "variable": "Shift_work:True",
-      "enrich_score": 36.9599441452826
-    },
-    {
-      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.3",
-      "enrich_score": 36.51995878518627
-    },
-    {
-      "variable": "Bread_type_preference:shortanswer.doesnot.apply",
-      "enrich_score": 35.99105492173674
-    },
-    {
-      "variable": "Smoking_with_inhalation:Not_relevant",
-      "enrich_score": 35.91638821340911
-    },
-    {
-      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.1",
-      "enrich_score": 35.813202613993774
-    },
-    {
-      "variable": "Breakfast_.N_past_week.",
-      "enrich_score": 35.65674051430982
-    },
-    {
-      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.5",
-      "enrich_score": 35.33963771553594
-    },
-    {
-      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3",
-      "enrich_score": 35.14370886065051
-    },
-    {
-      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.2",
-      "enrich_score": 34.420331754203694
-    },
-    {
-      "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
-      "enrich_score": 34.34914548214252
+      "variable": "unclassified_Acetobacteraceae",
+      "enrich_score": 42.37609121885851
     },
     {
       "variable": "Soda_.freq._past_week.:nutrition.frequency.option.1",
-      "enrich_score": 34.23803155438934
-    },
-    {
-      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.1",
-      "enrich_score": 33.78210547938594
-    },
-    {
-      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.3",
-      "enrich_score": 33.707968479818774
-    },
-    {
-      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.2",
-      "enrich_score": 33.471099379161444
-    },
-    {
-      "variable": "Smoking_with_inhalation:Ja",
-      "enrich_score": 33.347709382583595
-    },
-    {
-      "variable": "Sleep_.hours.day.",
-      "enrich_score": 33.27489946214503
-    },
-    {
-      "variable": "J01CA04_.amoxicillin.",
-      "enrich_score": 32.949574537835325
-    },
-    {
-      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.1",
-      "enrich_score": 32.8081368273581
+      "enrich_score": 42.17104204951627
     },
     {
       "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.1",
-      "enrich_score": 32.76347180445893
+      "enrich_score": 41.40438727552542
     },
     {
-      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.5",
-      "enrich_score": 32.27557641418989
+      "variable": "unclassified_Coriobacteriaceae",
+      "enrich_score": 40.884362850351174
     },
     {
-      "variable": "HDL_cholesterol",
-      "enrich_score": 32.22313981617919
+      "variable": "unclassified_Erysipelotrichaceae",
+      "enrich_score": 40.851276184855394
     },
     {
-      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.2",
-      "enrich_score": 31.867443110666223
+      "variable": "Turicibacter",
+      "enrich_score": 40.62686025103932
     },
     {
-      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2",
-      "enrich_score": 31.66347430413312
+      "variable": "unclassified_Prevotellaceae",
+      "enrich_score": 39.43480145906813
     },
     {
-      "variable": "Meat_.average_past_week.:nutrition.consumption.option.2",
-      "enrich_score": 31.30194157477661
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.3",
+      "enrich_score": 39.39815628972138
     },
     {
-      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
-      "enrich_score": 30.95334176512106
+      "variable": "unclassified_Heliobacteriaceae",
+      "enrich_score": 39.378577949194536
     },
     {
-      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.4",
-      "enrich_score": 30.90191639608274
+      "variable": "unclassified_Peptococcaceae",
+      "enrich_score": 39.247523919512055
     },
     {
-      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.2",
-      "enrich_score": 30.88789698499462
+      "variable": "Clostridium_IV",
+      "enrich_score": 39.18665979199512
     },
     {
-      "variable": "Smoker",
-      "enrich_score": 30.16128303713852
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.2",
+      "enrich_score": 39.16726893250579
     },
     {
-      "variable": "Meat_.average_past_week.:nutrition.consumption.option.6",
-      "enrich_score": 30.07553248102246
+      "variable": "unclassified_Natranaerobiaceae",
+      "enrich_score": 39.155140354241816
     },
     {
-      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.2",
-      "enrich_score": 29.946821136855203
+      "variable": "unclassified_Kofleriaceae",
+      "enrich_score": 39.136262559146715
     },
     {
-      "variable": "Meat_.average_past_week.:nutrition.consumption.option.4",
-      "enrich_score": 29.87868243589844
+      "variable": "Dorea",
+      "enrich_score": 38.969877350171856
     },
     {
-      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3",
-      "enrich_score": 29.801347077641054
+      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.1",
+      "enrich_score": 38.31423865636673
     },
     {
-      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.6",
-      "enrich_score": 29.54574864844722
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.1",
+      "enrich_score": 38.06512166956672
     },
     {
-      "variable": "Hip_circumference",
-      "enrich_score": 29.167141616966983
+      "variable": "unclassified_Acidaminococcaceae",
+      "enrich_score": 37.61012766098872
     },
     {
-      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.7",
-      "enrich_score": 29.089242454316995
+      "variable": "unclassified_Thermoplasmatales",
+      "enrich_score": 37.517913206243016
     },
     {
-      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.2",
-      "enrich_score": 29.0802227069984
+      "variable": "Bilophila",
+      "enrich_score": 37.29822233047003
     },
     {
-      "variable": "Soy_products_.average_past_week.:shortanswer.doesnot.apply",
-      "enrich_score": 29.02492933301324
+      "variable": "Clostridium_XlVb",
+      "enrich_score": 36.627908019609436
     },
     {
-      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5",
-      "enrich_score": 28.98818720664332
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.2",
+      "enrich_score": 36.31029089631967
     },
     {
-      "variable": "Alpha.2.globulin",
-      "enrich_score": 28.585832637223344
+      "variable": "unclassified_Chitinophagaceae",
+      "enrich_score": 35.79317362978399
     },
     {
-      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.7",
-      "enrich_score": 27.80511503002736
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.5",
+      "enrich_score": 35.68178487002253
     },
     {
-      "variable": "Creatine_kinase",
-      "enrich_score": 27.789040921602528
+      "variable": "Howardella",
+      "enrich_score": 35.54683656014528
     },
     {
-      "variable": "Cigarettes_.average.day_past_3_months.",
-      "enrich_score": 27.36150425254712
+      "variable": "Streptophyta",
+      "enrich_score": 35.53536615320689
     },
     {
-      "variable": "Working_start_age:shortanswer.doesnot.apply",
-      "enrich_score": 27.307967519083935
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.3",
+      "enrich_score": 35.30117645067515
     },
     {
-      "variable": "Irritable_bowel_syndrome",
-      "enrich_score": 26.901254946382227
+      "variable": "Barnesiella",
+      "enrich_score": 34.15056632322375
     },
     {
-      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.7",
-      "enrich_score": 26.79313609468756
+      "variable": "Desulfovibrio",
+      "enrich_score": 33.97832035540071
     },
     {
-      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3",
-      "enrich_score": 26.775441621807687
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.4",
+      "enrich_score": 33.875232620597124
     },
     {
-      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.5",
-      "enrich_score": 26.603782308177
-    },
-    {
-      "variable": "Meat_.average_past_week.:nutrition.consumption.option.7",
-      "enrich_score": 26.504719763437905
-    },
-    {
-      "variable": "Sick_leave_.freq._past_year.:nan",
-      "enrich_score": 26.497894863549384
-    },
-    {
-      "variable": "R06AX28_.rupatadine.",
-      "enrich_score": 26.31644825015068
-    },
-    {
-      "variable": "Food_allergy",
-      "enrich_score": 26.091458375744416
-    },
-    {
-      "variable": "J01CR02_.amoxicillin_and_enzyme_inhibitor.",
-      "enrich_score": 26.07763540694273
-    },
-    {
-      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.6",
-      "enrich_score": 25.60455728186255
-    },
-    {
-      "variable": "G03CA04_CC06_.estrogens.",
-      "enrich_score": 25.5564318944422
-    },
-    {
-      "variable": "J01XE01_.nitrofurantoin.",
-      "enrich_score": 25.51200176214974
-    },
-    {
-      "variable": "Beta.globulin",
-      "enrich_score": 25.26818749044988
-    },
-    {
-      "variable": "Blood_urea",
-      "enrich_score": 23.960907973495814
-    },
-    {
-      "variable": "Magnesium_supplement",
-      "enrich_score": 23.701717309056328
-    },
-    {
-      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.9",
-      "enrich_score": 22.58898171568992
-    },
-    {
-      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
-      "enrich_score": 22.47989077752448
-    },
-    {
-      "variable": "Working_hours_.hours.week.",
-      "enrich_score": 21.90353493110248
-    },
-    {
-      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.2",
-      "enrich_score": 21.527068107752125
-    },
-    {
-      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.3",
-      "enrich_score": 20.92000338671091
-    },
-    {
-      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.1",
-      "enrich_score": 20.653091119664825
-    },
-    {
-      "variable": "Gamma.glutamyltransferase",
-      "enrich_score": 20.42036406372003
-    },
-    {
-      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
-      "enrich_score": 20.410881417298555
-    },
-    {
-      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.6",
-      "enrich_score": 20.37703264249102
-    },
-    {
-      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.5",
-      "enrich_score": 20.06257231669452
-    },
-    {
-      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.3",
-      "enrich_score": 19.966443519848085
-    },
-    {
-      "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.3",
-      "enrich_score": 19.916580941256463
-    },
-    {
-      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.3",
-      "enrich_score": 19.830182093717596
-    },
-    {
-      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.4",
-      "enrich_score": 19.774849101656432
-    },
-    {
-      "variable": "Coffee_.days_since_consumed.:shortanswer.doesnot.apply",
-      "enrich_score": 19.58769941767888
-    },
-    {
-      "variable": "L04AX01_.azathioprine.",
-      "enrich_score": 19.2833236049625
-    },
-    {
-      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.4",
-      "enrich_score": 18.24560676030072
-    },
-    {
-      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.6",
-      "enrich_score": 17.956703635445372
-    },
-    {
-      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.4",
-      "enrich_score": 17.54001080194868
-    },
-    {
-      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.6",
-      "enrich_score": 17.2807039307139
-    },
-    {
-      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.8",
-      "enrich_score": 17.27213613820711
-    },
-    {
-      "variable": "Triglycerides",
-      "enrich_score": 17.253213688364937
+      "variable": "unclassified_Cryomorphaceae",
+      "enrich_score": 33.58188303004467
     },
     {
       "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.1",
-      "enrich_score": 17.23754379767938
+      "enrich_score": 33.567164253254596
     },
     {
-      "variable": "Shift_work:nan",
-      "enrich_score": 17.15692167187574
+      "variable": "unclassified_Bryobacter",
+      "enrich_score": 33.322194290715146
     },
     {
-      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
-      "enrich_score": 16.907309457916348
+      "variable": "Breakfast_.N_past_week.",
+      "enrich_score": 33.30876399190145
     },
     {
-      "variable": "Alcohol_.average_past_week.:shortanswer.doesnot.apply",
-      "enrich_score": 16.831383955140268
+      "variable": "unclassified_Ignavibacteriaceae",
+      "enrich_score": 33.05068451318522
     },
     {
-      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.2",
-      "enrich_score": 16.794653490619986
+      "variable": "Soy_products_.average_past_week.:shortanswer.doesnot.apply",
+      "enrich_score": 32.907039910004244
     },
     {
-      "variable": "N06AX16_.venlafaxine.",
-      "enrich_score": 16.66001050931742
+      "variable": "unclassified_Porphyromonadaceae",
+      "enrich_score": 32.86906882032399
     },
     {
-      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.5",
-      "enrich_score": 16.487866499461408
+      "variable": "Cerasicoccus",
+      "enrich_score": 32.83064340220605
     },
     {
-      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.7",
-      "enrich_score": 16.228818702819023
+      "variable": "Anaerosporobacter",
+      "enrich_score": 32.34265014837888
     },
     {
-      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.7",
-      "enrich_score": 15.470297314472008
+      "variable": "Clostridium_XI",
+      "enrich_score": 32.0572607262986
     },
     {
-      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
-      "enrich_score": 15.227553236276162
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.1",
+      "enrich_score": 32.01861215839116
     },
     {
-      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.1",
-      "enrich_score": 15.176647331381696
+      "variable": "J01CR02_.amoxicillin_and_enzyme_inhibitor.",
+      "enrich_score": 31.940784656845253
     },
     {
-      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.4",
-      "enrich_score": 15.129010210981226
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3",
+      "enrich_score": 31.34622914502958
     },
     {
-      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.2",
-      "enrich_score": 15.01560380263308
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.1",
+      "enrich_score": 31.317639889102193
     },
     {
-      "variable": "Chocolate_type_preference:shortanswer.doesnot.apply",
-      "enrich_score": 14.9951699271025
+      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.2",
+      "enrich_score": 31.094608791598645
     },
     {
-      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.4",
-      "enrich_score": 14.8331601693608
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.3",
+      "enrich_score": 30.89734090377257
     },
     {
-      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.1",
-      "enrich_score": 14.617600050946214
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.6",
+      "enrich_score": 30.028649316703756
     },
     {
-      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.9",
-      "enrich_score": 14.490408450640968
+      "variable": "unclassified_Bifidobacteriaceae",
+      "enrich_score": 29.885862521123492
     },
     {
-      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.3",
-      "enrich_score": 14.461892016738554
+      "variable": "Age",
+      "enrich_score": 29.663381471774706
     },
     {
-      "variable": "L04AB_.TNF.alpha_inhibitors.",
-      "enrich_score": 14.449447687252016
+      "variable": "Height",
+      "enrich_score": 29.65205849727151
     },
     {
-      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.5",
-      "enrich_score": 14.235338748392545
+      "variable": "Uric_acid",
+      "enrich_score": 29.370080731041522
     },
     {
-      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.3",
-      "enrich_score": 13.922990802002982
+      "variable": "Granulicatella",
+      "enrich_score": 29.11403310080124
     },
     {
-      "variable": "Childhood_residence_type:nan",
-      "enrich_score": 13.855463158479598
+      "variable": "unclassified_Halobacteriaceae",
+      "enrich_score": 29.086077004022215
     },
     {
-      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.6",
-      "enrich_score": 13.647434613940955
+      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.3",
+      "enrich_score": 28.87603509385922
     },
     {
-      "variable": "Ulcerative_colitis",
-      "enrich_score": 13.377637722367565
+      "variable": "unclassified_Verrucomicrobiaceae",
+      "enrich_score": 28.84791058637962
     },
     {
-      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.4",
-      "enrich_score": 13.198968715066169
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.4",
+      "enrich_score": 28.68784368227086
     },
     {
-      "variable": "Fruits_.days_since_consumed.:shortanswer.doesnot.apply",
-      "enrich_score": 12.98423910784048
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.2",
+      "enrich_score": 28.67218002473283
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.3",
+      "enrich_score": 28.09724334729171
+    },
+    {
+      "variable": "Glomerular_filtration_rate",
+      "enrich_score": 28.06569711612621
+    },
+    {
+      "variable": "HDL_cholesterol",
+      "enrich_score": 27.91547682578312
+    },
+    {
+      "variable": "Oscillibacter",
+      "enrich_score": 27.665608645933098
+    },
+    {
+      "variable": "unclassified_Simkaniaceae",
+      "enrich_score": 27.639113763581122
+    },
+    {
+      "variable": "Alpha.2.globulin",
+      "enrich_score": 27.50994366024635
+    },
+    {
+      "variable": "Enterorhabdus",
+      "enrich_score": 27.322047590982386
+    },
+    {
+      "variable": "Butyricimonas",
+      "enrich_score": 27.235294678429533
+    },
+    {
+      "variable": "Hip_circumference",
+      "enrich_score": 27.223313837587398
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.2",
+      "enrich_score": 27.217992932036392
     },
     {
       "variable": "Meat_.average_past_week.:shortanswer.doesnot.apply",
-      "enrich_score": 12.327745287810483
+      "enrich_score": 27.178323983657325
     },
     {
-      "variable": "G03AA12_.drospirenone_and_ethinylestradiol.",
-      "enrich_score": 11.961650178387938
+      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.3",
+      "enrich_score": 27.131786076471236
     },
     {
-      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.1",
-      "enrich_score": 11.827580103731304
+      "variable": "Parabacteroides",
+      "enrich_score": 27.109426394067743
     },
     {
-      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.6",
-      "enrich_score": 11.510409705556553
+      "variable": "unclassified_Thiotrichaceae",
+      "enrich_score": 27.100993977255705
     },
     {
-      "variable": "Q10_supplement",
-      "enrich_score": 11.328370412921958
+      "variable": "unclassified_Oleiphilaceae",
+      "enrich_score": 26.971118457117452
     },
     {
-      "variable": "A07EC02_.mesalazine.",
-      "enrich_score": 11.215545214962969
+      "variable": "unclassified_Bdellovibrionaceae",
+      "enrich_score": 26.961575140454087
     },
     {
-      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1",
-      "enrich_score": 11.197263534257658
+      "variable": "unclassified_Puniceicoccaceae",
+      "enrich_score": 26.940458565726992
     },
     {
-      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7",
-      "enrich_score": 11.132282625278204
+      "variable": "unclassified_Bacteroidaceae",
+      "enrich_score": 26.93947928349056
     },
     {
-      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.4",
-      "enrich_score": 11.110353468416092
+      "variable": "unclassified_Deferribacteraceae",
+      "enrich_score": 26.882134070532604
     },
     {
-      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2",
-      "enrich_score": 10.803068599323035
+      "variable": "Smoking_with_inhalation:Not_relevant",
+      "enrich_score": 26.71044331563566
     },
     {
-      "variable": "A06AD15_65_.osmotic_laxatives.",
-      "enrich_score": 10.760629246261688
-    },
-    {
-      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.5",
-      "enrich_score": 10.751162407901449
-    },
-    {
-      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.7",
-      "enrich_score": 10.43954856265614
-    },
-    {
-      "variable": "Working_start_age:nan",
-      "enrich_score": 10.27530893244445
-    },
-    {
-      "variable": "Chronic_fatigue_syndrome",
-      "enrich_score": 9.680235955317256
-    },
-    {
-      "variable": "Childhood_residence_type:enkeleboerderijdieren",
-      "enrich_score": 9.216858087967898
-    },
-    {
-      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.3",
-      "enrich_score": 9.160656829992911
-    },
-    {
-      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.5",
-      "enrich_score": 8.21379426686712
-    },
-    {
-      "variable": "Spirits_consumption:shortanswer.doesnot.apply",
-      "enrich_score": 7.982859345169944
-    },
-    {
-      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.4",
-      "enrich_score": 7.751591690407304
-    },
-    {
-      "variable": "Alanine_transaminase_.ALT.",
-      "enrich_score": 7.676561983421367
-    },
-    {
-      "variable": "N03AE01_.clonazepam.",
-      "enrich_score": 7.53401064563776
-    },
-    {
-      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5",
-      "enrich_score": 7.374915713071388
-    },
-    {
-      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.1",
-      "enrich_score": 7.119288838178222
-    },
-    {
-      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.6",
-      "enrich_score": 6.205978065439757
-    },
-    {
-      "variable": "G03DA04_.progesterone.",
-      "enrich_score": 5.856207172770446
-    },
-    {
-      "variable": "Beer_consumption:shortanswer.doesnot.apply",
-      "enrich_score": 4.671376488705903
-    },
-    {
-      "variable": "Meat_.average_past_week.:nutrition.consumption.option.5",
-      "enrich_score": 3.921824752916192
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
+      "enrich_score": 26.593535682352016
     },
     {
       "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.1",
-      "enrich_score": 2.412160724241548
+      "enrich_score": 26.205289058865745
     },
     {
-      "variable": "HOMA.IR",
-      "enrich_score": 2.27696346533352
+      "variable": "Red_blood_cell_count",
+      "enrich_score": 26.136408762512442
     },
     {
-      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.3",
-      "enrich_score": 2.197341600671212
+      "variable": "Shift_work:False",
+      "enrich_score": 26.0050318031458
     },
     {
-      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.6",
-      "enrich_score": 0.0
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.4",
+      "enrich_score": 25.979580476817826
+    },
+    {
+      "variable": "Pets_.past_3_months.",
+      "enrich_score": 25.844931759381033
+    },
+    {
+      "variable": "Butyricicoccus",
+      "enrich_score": 25.634580885555465
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.1",
+      "enrich_score": 25.31114465200272
+    },
+    {
+      "variable": "unclassified_Euzebyaceae",
+      "enrich_score": 25.26746449967108
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.7",
+      "enrich_score": 25.245883314862514
+    },
+    {
+      "variable": "Solobacterium",
+      "enrich_score": 25.229291409705482
+    },
+    {
+      "variable": "Smoking_with_inhalation:Ja",
+      "enrich_score": 25.203513239410768
+    },
+    {
+      "variable": "Working_start_age:shortanswer.doesnot.apply",
+      "enrich_score": 24.998973332734924
+    },
+    {
+      "variable": "Eggerthella",
+      "enrich_score": 24.316010471584413
+    },
+    {
+      "variable": "unclassified_Halomonadaceae",
+      "enrich_score": 24.315645852055855
+    },
+    {
+      "variable": "unclassified_Anaplasmataceae",
+      "enrich_score": 24.264609569822664
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.4",
+      "enrich_score": 24.22477212120677
+    },
+    {
+      "variable": "Slackia",
+      "enrich_score": 24.178812321461972
+    },
+    {
+      "variable": "unclassified_Marinilabiaceae",
+      "enrich_score": 23.970053540370927
+    },
+    {
+      "variable": "unclassified_Enterobacteriaceae",
+      "enrich_score": 23.7914586417981
+    },
+    {
+      "variable": "unclassified_Syntrophorhabdaceae",
+      "enrich_score": 23.68983224887723
+    },
+    {
+      "variable": "unclassified_Dehalogenimonas",
+      "enrich_score": 23.6422586417939
+    },
+    {
+      "variable": "Phascolarctobacterium",
+      "enrich_score": 23.598506761807855
+    },
+    {
+      "variable": "Gastroentritis_.other_treatment.",
+      "enrich_score": 23.587393136183604
+    },
+    {
+      "variable": "unclassified_Thiotrichales",
+      "enrich_score": 23.54646700933191
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.1",
+      "enrich_score": 23.430046430922197
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.2",
+      "enrich_score": 23.11391031546653
+    },
+    {
+      "variable": "Creatinine",
+      "enrich_score": 23.06558234134118
+    },
+    {
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2",
+      "enrich_score": 23.05777629647484
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.1",
+      "enrich_score": 22.93645440009135
+    },
+    {
+      "variable": "Pseudobutyrivibrio",
+      "enrich_score": 22.9186079408032
+    },
+    {
+      "variable": "Peptococcus",
+      "enrich_score": 22.857718248972006
+    },
+    {
+      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.3",
+      "enrich_score": 22.784615941700494
+    },
+    {
+      "variable": "unclassified_Thermoleophilaceae",
+      "enrich_score": 22.738218540724603
+    },
+    {
+      "variable": "unclassified_Thermoactinomycetaceae",
+      "enrich_score": 22.696462303996892
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.4",
+      "enrich_score": 22.67310616176072
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.2",
+      "enrich_score": 22.51956331769139
+    },
+    {
+      "variable": "Gamma.glutamyltransferase",
+      "enrich_score": 22.461730569745306
+    },
+    {
+      "variable": "unclassified_Ferroplasmaceae",
+      "enrich_score": 22.443928536116548
+    },
+    {
+      "variable": "unclassified_Alteromonadaceae",
+      "enrich_score": 22.296293856217382
+    },
+    {
+      "variable": "Body_mass_index",
+      "enrich_score": 22.249287956641815
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.6",
+      "enrich_score": 22.11205185247835
+    },
+    {
+      "variable": "Creatine_kinase",
+      "enrich_score": 22.10702087610347
+    },
+    {
+      "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.3",
+      "enrich_score": 21.97639687669197
+    },
+    {
+      "variable": "Succiniclasticum",
+      "enrich_score": 21.855711053101576
+    },
+    {
+      "variable": "unclassified_Lentisphaeraceae",
+      "enrich_score": 21.783035678820877
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.1",
+      "enrich_score": 21.760412423564002
+    },
+    {
+      "variable": "Beer_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+      "enrich_score": 21.70258159575855
+    },
+    {
+      "variable": "Victivallis",
+      "enrich_score": 21.69018466087801
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.5",
+      "enrich_score": 21.68325183842723
+    },
+    {
+      "variable": "Beta.globulin",
+      "enrich_score": 21.63020096910072
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.5",
+      "enrich_score": 21.526117774249183
+    },
+    {
+      "variable": "Allobaculum",
+      "enrich_score": 21.37160003829434
+    },
+    {
+      "variable": "Papillibacter",
+      "enrich_score": 21.366058989820722
+    },
+    {
+      "variable": "unclassified_Waddliaceae",
+      "enrich_score": 21.27678189927552
+    },
+    {
+      "variable": "unclassified_Sutterellaceae",
+      "enrich_score": 21.149316185078295
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:shortanswer.doesnot.apply",
+      "enrich_score": 21.132651183548823
+    },
+    {
+      "variable": "unclassified_Desulfomicrobiaceae",
+      "enrich_score": 21.048070661775768
+    },
+    {
+      "variable": "Sutterella",
+      "enrich_score": 21.046695334418324
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.4",
+      "enrich_score": 20.943524159005886
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.6",
+      "enrich_score": 20.88902255906937
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:nan",
+      "enrich_score": 20.707572055547736
+    },
+    {
+      "variable": "Chocolate_type_preference:composedDishesChocolateAndWaterQuestions.chocolate.type.option.2",
+      "enrich_score": 20.705546709557872
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.2",
+      "enrich_score": 20.28684424766751
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.1",
+      "enrich_score": 20.282376268223643
+    },
+    {
+      "variable": "Gordonibacter",
+      "enrich_score": 20.075991987989312
+    },
+    {
+      "variable": "unclassified_Halobacteroidaceae",
+      "enrich_score": 20.026382441489027
+    },
+    {
+      "variable": "unclassified_Gilvimarinus",
+      "enrich_score": 20.014214420416018
+    },
+    {
+      "variable": "unclassified_Succinivibrionaceae",
+      "enrich_score": 19.90793709246425
+    },
+    {
+      "variable": "Bifidobacterium",
+      "enrich_score": 19.715881262347253
+    },
+    {
+      "variable": "Mean_corpuscular_hemoglobin_concentration",
+      "enrich_score": 19.690011000893275
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.3",
+      "enrich_score": 19.647278867325067
+    },
+    {
+      "variable": "Anaerophaga",
+      "enrich_score": 19.588502552939254
+    },
+    {
+      "variable": "Hallella",
+      "enrich_score": 19.571225407720934
+    },
+    {
+      "variable": "Dialister",
+      "enrich_score": 19.523750775193555
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.2",
+      "enrich_score": 19.447133250027257
+    },
+    {
+      "variable": "Olsenella",
+      "enrich_score": 19.159245908538296
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.2",
+      "enrich_score": 19.03601938949488
+    },
+    {
+      "variable": "Eubacterium",
+      "enrich_score": 18.888738607249824
+    },
+    {
+      "variable": "unclassified_Nannocystaceae",
+      "enrich_score": 18.865294101275015
+    },
+    {
+      "variable": "unclassified_Rhodospirillaceae",
+      "enrich_score": 18.685082787729648
+    },
+    {
+      "variable": "unclassified_Desulfohalobiaceae",
+      "enrich_score": 18.55716191898217
+    },
+    {
+      "variable": "Alanine_transaminase_.ALT.",
+      "enrich_score": 18.36038919174332
+    },
+    {
+      "variable": "Veillonella",
+      "enrich_score": 18.344169070985444
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.4",
+      "enrich_score": 18.339458036235087
+    },
+    {
+      "variable": "N03AE01_.clonazepam.",
+      "enrich_score": 18.297872325935636
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.4",
+      "enrich_score": 18.239716196068976
+    },
+    {
+      "variable": "Mucispirillum",
+      "enrich_score": 18.22230777981644
+    },
+    {
+      "variable": "Catenibacterium",
+      "enrich_score": 18.030686410859204
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.5",
+      "enrich_score": 18.018934339188476
+    },
+    {
+      "variable": "unclassified_Peptostreptococcaceae",
+      "enrich_score": 17.855832315653135
+    },
+    {
+      "variable": "Irritable_bowel_syndrome",
+      "enrich_score": 17.849310075738103
+    },
+    {
+      "variable": "Serratia",
+      "enrich_score": 17.847542255974304
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.5",
+      "enrich_score": 17.81738872336655
+    },
+    {
+      "variable": "Megasphaera",
+      "enrich_score": 17.64496590247915
+    },
+    {
+      "variable": "unclassified_Synergistaceae",
+      "enrich_score": 17.530700111018916
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.9",
+      "enrich_score": 17.454955968275975
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.1",
+      "enrich_score": 17.430116742413453
+    },
+    {
+      "variable": "unclassified_Flammeovirgaceae",
+      "enrich_score": 17.3820852118465
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.7",
+      "enrich_score": 17.36492170930873
+    },
+    {
+      "variable": "unclassified_Thermodesulfobacteriaceae",
+      "enrich_score": 17.290327140673387
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.5",
+      "enrich_score": 17.260605506303136
+    },
+    {
+      "variable": "unclassified_Cystobacteraceae",
+      "enrich_score": 17.25708248872744
+    },
+    {
+      "variable": "Cellulosilyticum",
+      "enrich_score": 17.22090723554057
+    },
+    {
+      "variable": "L04AX01_.azathioprine.",
+      "enrich_score": 17.186411875855192
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.3",
+      "enrich_score": 17.169316305504825
+    },
+    {
+      "variable": "Pelomonas",
+      "enrich_score": 17.015221695913848
+    },
+    {
+      "variable": "Shift_work:nan",
+      "enrich_score": 16.935723973273078
+    },
+    {
+      "variable": "unclassified_Cytophagaceae",
+      "enrich_score": 16.931382738328765
+    },
+    {
+      "variable": "unclassified_Hyphomonadaceae",
+      "enrich_score": 16.890461653856885
+    },
+    {
+      "variable": "unclassified_Beutenbergiaceae",
+      "enrich_score": 16.783424246270656
+    },
+    {
+      "variable": "unclassified_Vibrionaceae",
+      "enrich_score": 16.549570234861076
+    },
+    {
+      "variable": "Pseudoflavonifractor",
+      "enrich_score": 16.488026817829805
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.2",
+      "enrich_score": 16.406714940423136
+    },
+    {
+      "variable": "Triglycerides",
+      "enrich_score": 16.304466807517116
+    },
+    {
+      "variable": "unclassified_Prolixibacter",
+      "enrich_score": 16.29139294373442
+    },
+    {
+      "variable": "unclassified_Ectothiorhodospiraceae",
+      "enrich_score": 16.2150354184246
+    },
+    {
+      "variable": "unclassified_Cellulomonadaceae",
+      "enrich_score": 16.168350943186322
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.6",
+      "enrich_score": 16.161393662434342
+    },
+    {
+      "variable": "unclassified_Rhodocyclaceae",
+      "enrich_score": 16.109131413851966
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+      "enrich_score": 16.077893246069966
+    },
+    {
+      "variable": "Thermogymnomonas",
+      "enrich_score": 16.0267454265171
+    },
+    {
+      "variable": "Pseudomonas",
+      "enrich_score": 15.959469731358926
+    },
+    {
+      "variable": "Mitsuokella",
+      "enrich_score": 15.934826631265448
+    },
+    {
+      "variable": "unclassified_Planococcaceae",
+      "enrich_score": 15.780346324685668
+    },
+    {
+      "variable": "unclassified_Hahellaceae",
+      "enrich_score": 15.74728829543809
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.6",
+      "enrich_score": 15.627881592239609
+    },
+    {
+      "variable": "Shift_work:True",
+      "enrich_score": 15.564537168946156
+    },
+    {
+      "variable": "unclassified_Syntrophomonadaceae",
+      "enrich_score": 15.562167652485805
+    },
+    {
+      "variable": "Anaeroglobus",
+      "enrich_score": 15.43793500076248
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.2",
+      "enrich_score": 15.291805252847544
+    },
+    {
+      "variable": "unclassified_Brucellaceae",
+      "enrich_score": 15.191889493269478
+    },
+    {
+      "variable": "unclassified_Bradyrhizobiaceae",
+      "enrich_score": 15.189767954240327
+    },
+    {
+      "variable": "Sick_leave_.freq._past_year.:workersQuestions.frequencyOfSickLeavesLastYear.option.3",
+      "enrich_score": 14.994904262034298
+    },
+    {
+      "variable": "unclassified_Rhodobacteraceae",
+      "enrich_score": 14.991519978045085
+    },
+    {
+      "variable": "unclassified_Polyangiaceae",
+      "enrich_score": 14.931256683982268
+    },
+    {
+      "variable": "J01XE01_.nitrofurantoin.",
+      "enrich_score": 14.862305260804261
+    },
+    {
+      "variable": "J01CA04_.amoxicillin.",
+      "enrich_score": 14.737510227557994
+    },
+    {
+      "variable": "unclassified_Planctomycetaceae",
+      "enrich_score": 14.608931611484094
+    },
+    {
+      "variable": "Gardnerella",
+      "enrich_score": 14.51222560540249
+    },
+    {
+      "variable": "Blood_urea",
+      "enrich_score": 14.47559632862449
+    },
+    {
+      "variable": "unclassified_Microbacteriaceae",
+      "enrich_score": 14.278830245432964
+    },
+    {
+      "variable": "Chronic_fatigue_syndrome",
+      "enrich_score": 14.240575102139422
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.7",
+      "enrich_score": 14.218393051084224
+    },
+    {
+      "variable": "Plan_to_change_weight:weightQuestions.doYouWantToDoSomethingAboutYourWeight.option.2",
+      "enrich_score": 14.047393039537546
+    },
+    {
+      "variable": "Bread_type_preference:shortanswer.doesnot.apply",
+      "enrich_score": 13.986541721696844
+    },
+    {
+      "variable": "unclassified_Pseudomonadaceae",
+      "enrich_score": 13.976503069265112
+    },
+    {
+      "variable": "Parvimonas",
+      "enrich_score": 13.832251902342694
+    },
+    {
+      "variable": "unclassified_Methylocystaceae",
+      "enrich_score": 13.784549108528383
+    },
+    {
+      "variable": "Smoker",
+      "enrich_score": 13.715322859770716
+    },
+    {
+      "variable": "unclassified_Desulfurellaceae",
+      "enrich_score": 13.664028409635298
+    },
+    {
+      "variable": "R06AX28_.rupatadine.",
+      "enrich_score": 13.610552158093368
+    },
+    {
+      "variable": "unclassified_Methanomicrobiaceae",
+      "enrich_score": 13.582939426019724
+    },
+    {
+      "variable": "unclassified_Desulfovibrionaceae",
+      "enrich_score": 13.48015343038298
+    },
+    {
+      "variable": "Porphyromonas",
+      "enrich_score": 13.431125675108257
+    },
+    {
+      "variable": "Paraprevotella",
+      "enrich_score": 13.42052589795004
+    },
+    {
+      "variable": "unclassified_Burkholderiales",
+      "enrich_score": 13.401135617832558
+    },
+    {
+      "variable": "Haemophilus",
+      "enrich_score": 13.397714584874432
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.7",
+      "enrich_score": 13.169533015692346
+    },
+    {
+      "variable": "EscherichiaShigella",
+      "enrich_score": 13.16268777171604
+    },
+    {
+      "variable": "Scardovia",
+      "enrich_score": 13.162669631149248
+    },
+    {
+      "variable": "unclassified_Thermoplasmataceae",
+      "enrich_score": 13.037148606268595
+    },
+    {
+      "variable": "Abiotrophia",
+      "enrich_score": 13.01425804117548
+    },
+    {
+      "variable": "unclassified_Elioraea",
+      "enrich_score": 12.995224517911854
+    },
+    {
+      "variable": "Sleep_.hours.day.",
+      "enrich_score": 12.985220844951735
+    },
+    {
+      "variable": "unclassified_Staphylococcaceae",
+      "enrich_score": 12.937691463339204
+    },
+    {
+      "variable": "unclassified_Bacillales",
+      "enrich_score": 12.773767291046488
+    },
+    {
+      "variable": "Rothia",
+      "enrich_score": 12.71130802194756
+    },
+    {
+      "variable": "Cryptobacterium",
+      "enrich_score": 12.624981802702369
+    },
+    {
+      "variable": "Cardiobacterium",
+      "enrich_score": 12.528877061153413
+    },
+    {
+      "variable": "Collinsella",
+      "enrich_score": 12.429217490793175
+    },
+    {
+      "variable": "N06AX16_.venlafaxine.",
+      "enrich_score": 12.387747520108691
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:shortanswer.doesnot.apply",
+      "enrich_score": 12.376011758940514
+    },
+    {
+      "variable": "G03CA04_CC06_.estrogens.",
+      "enrich_score": 12.366782454546385
+    },
+    {
+      "variable": "Oribacterium",
+      "enrich_score": 12.26462633489742
+    },
+    {
+      "variable": "Methanocorpusculum",
+      "enrich_score": 12.23515941895821
+    },
+    {
+      "variable": "Working_hours_.hours.week.",
+      "enrich_score": 12.112558103909048
+    },
+    {
+      "variable": "Working_start_age:nan",
+      "enrich_score": 12.110149999716109
+    },
+    {
+      "variable": "Enterococcus",
+      "enrich_score": 12.0956669634853
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.2",
+      "enrich_score": 12.070326943608237
+    },
+    {
+      "variable": "unclassified_Comamonadaceae",
+      "enrich_score": 12.066329661708671
+    },
+    {
+      "variable": "Weissella",
+      "enrich_score": 12.008058747249011
+    },
+    {
+      "variable": "Vagococcus",
+      "enrich_score": 11.968260729238432
+    },
+    {
+      "variable": "unclassified_Flavobacteriaceae",
+      "enrich_score": 11.960740197729834
+    },
+    {
+      "variable": "Flavonifractor",
+      "enrich_score": 11.960048102966978
+    },
+    {
+      "variable": "Synergistes",
+      "enrich_score": 11.872692935354383
+    },
+    {
+      "variable": "A06AD15_65_.osmotic_laxatives.",
+      "enrich_score": 11.836970678195248
+    },
+    {
+      "variable": "Tannerella",
+      "enrich_score": 11.831708656438853
+    },
+    {
+      "variable": "unclassified_Enterococcaceae",
+      "enrich_score": 11.791312732913351
+    },
+    {
+      "variable": "Paraeggerthella",
+      "enrich_score": 11.723637696255892
+    },
+    {
+      "variable": "Geobacillus",
+      "enrich_score": 11.670946664643955
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.4",
+      "enrich_score": 11.645816005327772
+    },
+    {
+      "variable": "unclassified_Thermofilaceae",
+      "enrich_score": 11.579771771199884
+    },
+    {
+      "variable": "Cigarettes_.average.day_past_3_months.",
+      "enrich_score": 11.53037410383886
+    },
+    {
+      "variable": "Selenomonas",
+      "enrich_score": 11.488092270581589
+    },
+    {
+      "variable": "unclassified_Rikenellaceae",
+      "enrich_score": 11.401078770195427
+    },
+    {
+      "variable": "Gemella",
+      "enrich_score": 11.35501333110986
+    },
+    {
+      "variable": "unclassified_Kineosporiaceae",
+      "enrich_score": 11.35064840772193
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.6",
+      "enrich_score": 11.278418143635784
+    },
+    {
+      "variable": "unclassified_Mariprofundaceae",
+      "enrich_score": 11.24551302465974
+    },
+    {
+      "variable": "Clostridium_XlVa",
+      "enrich_score": 11.13784517281299
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.5",
+      "enrich_score": 11.128636385721782
+    },
+    {
+      "variable": "unclassified_Sinobacteraceae",
+      "enrich_score": 11.107402354635491
+    },
+    {
+      "variable": "Ulcerative_colitis",
+      "enrich_score": 11.107402354635491
+    },
+    {
+      "variable": "Megamonas",
+      "enrich_score": 11.074049141194893
+    },
+    {
+      "variable": "Neisseria",
+      "enrich_score": 11.06739532920964
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.1",
+      "enrich_score": 11.034702282427443
+    },
+    {
+      "variable": "Psychrobacter",
+      "enrich_score": 11.01540526897443
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.4",
+      "enrich_score": 10.968297535608006
+    },
+    {
+      "variable": "Robinsoniella",
+      "enrich_score": 10.883360631857396
+    },
+    {
+      "variable": "Childhood_residence_type:youthQuestions.residencyDescYoungerThan5.option.3",
+      "enrich_score": 10.8225660692666
+    },
+    {
+      "variable": "unclassified_Thermotogales",
+      "enrich_score": 10.73026124269293
+    },
+    {
+      "variable": "Streptococcus",
+      "enrich_score": 10.70763817084656
+    },
+    {
+      "variable": "unclassified_Xanthomonadaceae",
+      "enrich_score": 10.684766214546656
+    },
+    {
+      "variable": "unclassified_Caldisericaceae",
+      "enrich_score": 10.646856113605763
+    },
+    {
+      "variable": "unclassified_Saprospiraceae",
+      "enrich_score": 10.60729915691073
+    },
+    {
+      "variable": "unclassified_Methanosarcinaceae",
+      "enrich_score": 10.527715687773126
+    },
+    {
+      "variable": "Methanosphaera",
+      "enrich_score": 10.512657754794988
+    },
+    {
+      "variable": "unclassified_Leptotrichiaceae",
+      "enrich_score": 10.446335485332094
+    },
+    {
+      "variable": "Bulleidia",
+      "enrich_score": 10.244968364243629
+    },
+    {
+      "variable": "Fruits_.freq._past_week.:nutrition.frequency.option.2",
+      "enrich_score": 10.216487159373495
+    },
+    {
+      "variable": "Carnobacterium",
+      "enrich_score": 10.159758741415825
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:shortanswer.doesnot.apply",
+      "enrich_score": 10.0982188394669
+    },
+    {
+      "variable": "unclassified_Moraxellaceae",
+      "enrich_score": 10.097406461519347
+    },
+    {
+      "variable": "unclassified_Halanaerobiaceae",
+      "enrich_score": 10.054736589492126
+    },
+    {
+      "variable": "Succinatimonas",
+      "enrich_score": 10.054735954502902
+    },
+    {
+      "variable": "unclassified_Aurantimonadaceae",
+      "enrich_score": 10.03980992292518
+    },
+    {
+      "variable": "unclassified_Alicyclobacillaceae",
+      "enrich_score": 9.979307278976808
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.9",
+      "enrich_score": 9.955281966323543
+    },
+    {
+      "variable": "Bread_type_preference:generalNutritionQuestions.mostEatenBreadType.option.1",
+      "enrich_score": 9.945464675823997
+    },
+    {
+      "variable": "Facklamia",
+      "enrich_score": 9.934245447797272
+    },
+    {
+      "variable": "unclassified_Methermicoccaceae",
+      "enrich_score": 9.933846304541008
+    },
+    {
+      "variable": "Work_days_per_week",
+      "enrich_score": 9.91327808024247
+    },
+    {
+      "variable": "Staphylococcus",
+      "enrich_score": 9.909429972640545
+    },
+    {
+      "variable": "unclassified_Carnobacteriaceae",
+      "enrich_score": 9.871411786079005
+    },
+    {
+      "variable": "Acidaminococcus",
+      "enrich_score": 9.84288686356941
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.3",
+      "enrich_score": 9.797166421076902
+    },
+    {
+      "variable": "Capnocytophaga",
+      "enrich_score": 9.781654407779987
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.7",
+      "enrich_score": 9.672219303662658
+    },
+    {
+      "variable": "Childhood_residence_type:nan",
+      "enrich_score": 9.631003426493223
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.4",
+      "enrich_score": 9.581781830952028
+    },
+    {
+      "variable": "unclassified_Helicobacteraceae",
+      "enrich_score": 9.534221219178047
+    },
+    {
+      "variable": "unclassified_Desulfobacteraceae",
+      "enrich_score": 9.414558498178335
+    },
+    {
+      "variable": "unclassified_Sphingobacteriaceae",
+      "enrich_score": 9.396460157908624
+    },
+    {
+      "variable": "unclassified_Desulfobulbaceae",
+      "enrich_score": 9.396281711537057
+    },
+    {
+      "variable": "unclassified_Cyclobacteriaceae",
+      "enrich_score": 9.306118167510895
+    },
+    {
+      "variable": "Meat_.average_past_week.:nutrition.consumption.option.5",
+      "enrich_score": 9.235994168882751
+    },
+    {
+      "variable": "unclassified_Arenicella",
+      "enrich_score": 9.235618504641561
+    },
+    {
+      "variable": "unclassified_Pseudomonadales",
+      "enrich_score": 9.18752971968239
+    },
+    {
+      "variable": "Smoking_with_inhalation:Neen",
+      "enrich_score": 9.087573099169914
+    },
+    {
+      "variable": "Murdochiella",
+      "enrich_score": 9.068922376259344
+    },
+    {
+      "variable": "unclassified_Micrococcaceae",
+      "enrich_score": 9.048539433021789
+    },
+    {
+      "variable": "Anaerotruncus",
+      "enrich_score": 9.040579369522385
+    },
+    {
+      "variable": "unclassified_Subdivision5",
+      "enrich_score": 9.016528002161664
+    },
+    {
+      "variable": "Peptostreptococcus",
+      "enrich_score": 9.004717704791158
+    },
+    {
+      "variable": "unclassified_TM7",
+      "enrich_score": 8.9933271880194
+    },
+    {
+      "variable": "unclassified_Intrasporangiaceae",
+      "enrich_score": 8.9933271880194
+    },
+    {
+      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.2",
+      "enrich_score": 8.989434643060129
+    },
+    {
+      "variable": "Catonella",
+      "enrich_score": 8.959058997317078
+    },
+    {
+      "variable": "Leptotrichia",
+      "enrich_score": 8.935098973797501
+    },
+    {
+      "variable": "Rikenella",
+      "enrich_score": 8.919519776588634
+    },
+    {
+      "variable": "Akkermansia",
+      "enrich_score": 8.911946985578368
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.6",
+      "enrich_score": 8.911594800352251
+    },
+    {
+      "variable": "Comamonas",
+      "enrich_score": 8.872494469363364
+    },
+    {
+      "variable": "Time_since_previous_relief:samplingInfo.previousRelief.option.3",
+      "enrich_score": 8.820750529320472
+    },
+    {
+      "variable": "unclassified_Simiduia",
+      "enrich_score": 8.796060599209238
+    },
+    {
+      "variable": "Clostridium_XVIII",
+      "enrich_score": 8.62344360880398
+    },
+    {
+      "variable": "Lachnobacterium",
+      "enrich_score": 8.594570415843897
+    },
+    {
+      "variable": "Spirits_consumption:shortanswer.doesnot.apply",
+      "enrich_score": 8.552132231230297
+    },
+    {
+      "variable": "Anoxybacillus",
+      "enrich_score": 8.54473341542332
+    },
+    {
+      "variable": "unclassified_Kiloniellaceae",
+      "enrich_score": 8.54473341542332
+    },
+    {
+      "variable": "Enterobacter",
+      "enrich_score": 8.528371946782238
+    },
+    {
+      "variable": "Lactonifactor",
+      "enrich_score": 8.411235057647477
+    },
+    {
+      "variable": "Chocolate_type_preference:shortanswer.doesnot.apply",
+      "enrich_score": 8.346558568486333
+    },
+    {
+      "variable": "Food_allergy",
+      "enrich_score": 8.249622718489881
+    },
+    {
+      "variable": "unclassified_Pseudonocardiaceae",
+      "enrich_score": 8.242699877527414
+    },
+    {
+      "variable": "unclassified_Nocardioidaceae",
+      "enrich_score": 8.220965378120663
+    },
+    {
+      "variable": "unclassified_Sedimenticola",
+      "enrich_score": 8.210258210441172
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.3",
+      "enrich_score": 8.199467242173125
+    },
+    {
+      "variable": "Actinobaculum",
+      "enrich_score": 8.163559825909688
+    },
+    {
+      "variable": "Proteus",
+      "enrich_score": 8.074384617400945
+    },
+    {
+      "variable": "unclassified_Desulfuromonadaceae",
+      "enrich_score": 8.074079390204977
+    },
+    {
+      "variable": "Childhood_residence_type:enkeleboerderijdieren",
+      "enrich_score": 8.026475023475877
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.8",
+      "enrich_score": 7.978870656746777
+    },
+    {
+      "variable": "unclassified_Caulobacteraceae",
+      "enrich_score": 7.9367570868046835
+    },
+    {
+      "variable": "unclassified_Rhodobiaceae",
+      "enrich_score": 7.905895914765389
+    },
+    {
+      "variable": "Acinetobacter",
+      "enrich_score": 7.862009961581317
+    },
+    {
+      "variable": "unclassified_Marinifilum",
+      "enrich_score": 7.862009961581317
+    },
+    {
+      "variable": "Coffee_.days_since_consumed.:nutrition.last.intake.option.7",
+      "enrich_score": 7.861681255370276
+    },
+    {
+      "variable": "Schwartzia",
+      "enrich_score": 7.751225654803163
+    },
+    {
+      "variable": "unclassified_Anaeroplasmataceae",
+      "enrich_score": 7.750943906622271
+    },
+    {
+      "variable": "Acetitomaculum",
+      "enrich_score": 7.746097904724744
+    },
+    {
+      "variable": "Anaerofustis",
+      "enrich_score": 7.724745333088881
+    },
+    {
+      "variable": "Hafnia",
+      "enrich_score": 7.66719090072549
+    },
+    {
+      "variable": "Cetobacterium",
+      "enrich_score": 7.618353091585401
+    },
+    {
+      "variable": "Gallicola",
+      "enrich_score": 7.6127973024017805
+    },
+    {
+      "variable": "Q10_supplement",
+      "enrich_score": 7.57209752987639
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.3",
+      "enrich_score": 7.56684651811557
+    },
+    {
+      "variable": "unclassified_Aerococcaceae",
+      "enrich_score": 7.530992116085406
+    },
+    {
+      "variable": "Syntrophococcus",
+      "enrich_score": 7.448954581263441
+    },
+    {
+      "variable": "Allisonella",
+      "enrich_score": 7.4254356195838165
+    },
+    {
+      "variable": "unclassified_Lactobacillaceae",
+      "enrich_score": 7.3313915599816095
+    },
+    {
+      "variable": "Holdemania",
+      "enrich_score": 7.200844086809856
+    },
+    {
+      "variable": "unclassified_Syntrophaceae",
+      "enrich_score": 7.187327669264614
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.5",
+      "enrich_score": 7.187327669264614
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.4",
+      "enrich_score": 7.131076740463088
+    },
+    {
+      "variable": "G03AA12_.drospirenone_and_ethinylestradiol.",
+      "enrich_score": 7.125227145366123
+    },
+    {
+      "variable": "Magnesium_supplement",
+      "enrich_score": 7.110556766361397
+    },
+    {
+      "variable": "unclassified_Acanthopleuribacteraceae",
+      "enrich_score": 7.086155088373593
+    },
+    {
+      "variable": "Aeromonas",
+      "enrich_score": 7.006292844229042
+    },
+    {
+      "variable": "Morganella",
+      "enrich_score": 6.945267160926972
+    },
+    {
+      "variable": "Arcanobacterium",
+      "enrich_score": 6.945267160926972
+    },
+    {
+      "variable": "unclassified_Aeromonadaceae",
+      "enrich_score": 6.911773073395931
+    },
+    {
+      "variable": "Spirits_consumption:alcoholicBeveragesConsumptionQuestions.alcohol.consumption.option.2",
+      "enrich_score": 6.858757834532048
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.1",
+      "enrich_score": 6.847188082222964
+    },
+    {
+      "variable": "Acetivibrio",
+      "enrich_score": 6.670392010648277
+    },
+    {
+      "variable": "Helicobacter",
+      "enrich_score": 6.645755465101491
+    },
+    {
+      "variable": "Mannheimia",
+      "enrich_score": 6.569185767943167
+    },
+    {
+      "variable": "Lactobacillus",
+      "enrich_score": 6.522982433022012
+    },
+    {
+      "variable": "Acetanaerobacterium",
+      "enrich_score": 6.52140384993798
+    },
+    {
+      "variable": "Weight_perception:weightQuestions.howDoYouFindYourself.option.7",
+      "enrich_score": 6.52140384993798
+    },
+    {
+      "variable": "Cloacibacillus",
+      "enrich_score": 6.52140384993798
+    },
+    {
+      "variable": "Fructobacillus",
+      "enrich_score": 6.520026288093071
+    },
+    {
+      "variable": "Fruits_.days_since_consumed.:nutrition.last.intake.option.6",
+      "enrich_score": 6.475095435400689
+    },
+    {
+      "variable": "unclassified_Phycisphaeraceae",
+      "enrich_score": 6.280046266205403
+    },
+    {
+      "variable": "Clostridium_III",
+      "enrich_score": 6.246528699659285
+    },
+    {
+      "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.7",
+      "enrich_score": 6.049611569791343
+    },
+    {
+      "variable": "unclassified_Aquificaceae",
+      "enrich_score": 6.005620005482825
+    },
+    {
+      "variable": "Ralstonia",
+      "enrich_score": 5.9818251082167375
+    },
+    {
+      "variable": "Lactococcus",
+      "enrich_score": 5.9296627513006985
+    },
+    {
+      "variable": "Aquabacterium",
+      "enrich_score": 5.923337807668927
+    },
+    {
+      "variable": "unclassified_Methanobacteriaceae",
+      "enrich_score": 5.867259045522799
+    },
+    {
+      "variable": "Corynebacterium",
+      "enrich_score": 5.865838783713187
+    },
+    {
+      "variable": "Brevibacterium",
+      "enrich_score": 5.865838783713187
+    },
+    {
+      "variable": "Salmonella",
+      "enrich_score": 5.865580514547371
+    },
+    {
+      "variable": "Sneathia",
+      "enrich_score": 5.865580514547371
+    },
+    {
+      "variable": "unclassified_Dermacoccaceae",
+      "enrich_score": 5.865580514547371
+    },
+    {
+      "variable": "unclassified_Haloplasmataceae",
+      "enrich_score": 5.865580514547371
+    },
+    {
+      "variable": "Rhodococcus",
+      "enrich_score": 5.786687367847337
+    },
+    {
+      "variable": "Soda_.freq._past_week.:nutrition.frequency.option.5",
+      "enrich_score": 5.6768221445768585
+    },
+    {
+      "variable": "Buttiauxella",
+      "enrich_score": 5.6722996661150855
+    },
+    {
+      "variable": "unclassified_Nitrosomonadaceae",
+      "enrich_score": 5.624695299385985
+    },
+    {
+      "variable": "unclassified_Alcaligenaceae",
+      "enrich_score": 5.624695299385984
+    },
+    {
+      "variable": "unclassified_Erythrobacteraceae",
+      "enrich_score": 5.560395450043541
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.4",
+      "enrich_score": 5.497104558755448
+    },
+    {
+      "variable": "unclassified_Pasteurellaceae",
+      "enrich_score": 5.477853079479373
+    },
+    {
+      "variable": "Pseudoramibacter",
+      "enrich_score": 5.252346306236799
+    },
+    {
+      "variable": "unclassified_Corynebacteriaceae",
+      "enrich_score": 5.220680066475282
+    },
+    {
+      "variable": "unclassified_Methanomicrobiales",
+      "enrich_score": 5.220680066475282
+    },
+    {
+      "variable": "Moryella",
+      "enrich_score": 5.220680066475282
+    },
+    {
+      "variable": "unclassified_Methylococcaceae",
+      "enrich_score": 5.220680066475282
+    },
+    {
+      "variable": "Stenotrophomonas",
+      "enrich_score": 5.220680066475282
+    },
+    {
+      "variable": "unclassified_Promicromonosporaceae",
+      "enrich_score": 5.22044527632454
+    },
+    {
+      "variable": "Subdoligranulum",
+      "enrich_score": 5.22044527632454
+    },
+    {
+      "variable": "unclassified_Legionellaceae",
+      "enrich_score": 5.22044527632454
+    },
+    {
+      "variable": "unclassified_Actinomycetaceae",
+      "enrich_score": 5.193610331906768
+    },
+    {
+      "variable": "Treponema",
+      "enrich_score": 5.190825850065904
+    },
+    {
+      "variable": "unclassified_Methanocellaceae",
+      "enrich_score": 5.027946002373183
+    },
+    {
+      "variable": "unclassified_Ktedonobacteraceae",
+      "enrich_score": 5.027946002373183
+    },
+    {
+      "variable": "Parasutterella",
+      "enrich_score": 5.027734691237512
+    },
+    {
+      "variable": "Pantoea",
+      "enrich_score": 5.027734691237512
+    },
+    {
+      "variable": "Alcohol_.average_past_week.:nutrition.consumption.option.7",
+      "enrich_score": 5.018658795021008
+    },
+    {
+      "variable": "Aerococcus",
+      "enrich_score": 4.980341635644082
+    },
+    {
+      "variable": "unclassified_Beijerinckiaceae",
+      "enrich_score": 4.980341635644082
+    },
+    {
+      "variable": "Cloacibacterium",
+      "enrich_score": 4.946354488796479
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.5",
+      "enrich_score": 4.933694410506842
+    },
+    {
+      "variable": "unclassified_Fusobacteriaceae",
+      "enrich_score": 4.843075959995954
+    },
+    {
+      "variable": "Actinobacillus",
+      "enrich_score": 4.752887549717153
+    },
+    {
+      "variable": "Arcobacter",
+      "enrich_score": 4.587281677181762
+    },
+    {
+      "variable": "unclassified_Anaerolineaceae",
+      "enrich_score": 4.587281677181762
+    },
+    {
+      "variable": "unclassified_Burkholderiaceae",
+      "enrich_score": 4.587281677181762
+    },
+    {
+      "variable": "unclassified_Parachlamydiaceae",
+      "enrich_score": 4.587070366046092
+    },
+    {
+      "variable": "unclassified_Oceanospirillaceae",
+      "enrich_score": 4.587070366046092
+    },
+    {
+      "variable": "unclassified_Chloroplast",
+      "enrich_score": 4.587070366046092
+    },
+    {
+      "variable": "Alloscardovia",
+      "enrich_score": 4.587070366046092
+    },
+    {
+      "variable": "Anaerorhabdus",
+      "enrich_score": 4.51561900095242
+    },
+    {
+      "variable": "Streptobacillus",
+      "enrich_score": 4.494213207756709
+    },
+    {
+      "variable": "Anaerobiospirillum",
+      "enrich_score": 4.450504390901154
+    },
+    {
+      "variable": "Coprobacillus",
+      "enrich_score": 4.406643251914206
+    },
+    {
+      "variable": "Filifactor",
+      "enrich_score": 4.347645380859207
+    },
+    {
+      "variable": "Photobacterium",
+      "enrich_score": 4.347457548738611
+    },
+    {
+      "variable": "Fusobacterium",
+      "enrich_score": 4.341467126425783
+    },
+    {
+      "variable": "unclassified_Desulfonatronaceae",
+      "enrich_score": 4.256638596968305
+    },
+    {
+      "variable": "unclassified_Opitutaceae",
+      "enrich_score": 4.217932129053822
+    },
+    {
+      "variable": "unclassified_Leptospiraceae",
+      "enrich_score": 4.156499231307554
+    },
+    {
+      "variable": "Hespellia",
+      "enrich_score": 3.966955464913109
+    },
+    {
+      "variable": "unclassified_Dermatophilaceae",
+      "enrich_score": 3.966955464913109
+    },
+    {
+      "variable": "Vampirovibrio",
+      "enrich_score": 3.966955464913109
+    },
+    {
+      "variable": "Campylobacter",
+      "enrich_score": 3.966955464913109
+    },
+    {
+      "variable": "Sarcina",
+      "enrich_score": 3.966955464913109
+    },
+    {
+      "variable": "unclassified_Thermaceae",
+      "enrich_score": 3.9667676327925134
+    },
+    {
+      "variable": "unclassified_Bacteroidales",
+      "enrich_score": 3.9667676327925134
+    },
+    {
+      "variable": "Elusimicrobium",
+      "enrich_score": 3.9667676327925134
+    },
+    {
+      "variable": "Working_start_age:workQuestions.ageAtFirstWork.option.1",
+      "enrich_score": 3.9667676327925134
+    },
+    {
+      "variable": "Bacillus",
+      "enrich_score": 3.9667676327925134
+    },
+    {
+      "variable": "Mogibacterium",
+      "enrich_score": 3.932588798430797
+    },
+    {
+      "variable": "unclassified_Desulfarculaceae",
+      "enrich_score": 3.914490458161085
+    },
+    {
+      "variable": "unclassified_Porticoccus",
+      "enrich_score": 3.827526191952666
+    },
+    {
+      "variable": "Beer_consumption:shortanswer.doesnot.apply",
+      "enrich_score": 3.8136616591947448
+    },
+    {
+      "variable": "unclassified_Nakamurellaceae",
+      "enrich_score": 3.775644962255935
+    },
+    {
+      "variable": "A07EC02_.mesalazine.",
+      "enrich_score": 3.775644962255935
+    },
+    {
+      "variable": "unclassified_Geminicoccus",
+      "enrich_score": 3.7282049486323547
+    },
+    {
+      "variable": "unclassified_Spirochaetaceae",
+      "enrich_score": 3.7282049486323547
+    },
+    {
+      "variable": "Denitrobacterium",
+      "enrich_score": 3.601493087729298
+    },
+    {
+      "variable": "unclassified_Halothiobacillaceae",
+      "enrich_score": 3.601352213638852
+    },
+    {
+      "variable": "L04AB_.TNF.alpha_inhibitors.",
+      "enrich_score": 3.5382112255579763
+    },
+    {
+      "variable": "SR1_genera_incertae_sedis",
+      "enrich_score": 3.53807035146753
+    },
+    {
+      "variable": "Anaerofilum",
+      "enrich_score": 3.5061434801806506
+    },
+    {
+      "variable": "unclassified_Caldisphaeraceae",
+      "enrich_score": 3.3613435637034246
+    },
+    {
+      "variable": "unclassified_Chrysiogenaceae",
+      "enrich_score": 3.3613435637034246
+    },
+    {
+      "variable": "Oxalobacter",
+      "enrich_score": 3.3613435637034246
+    },
+    {
+      "variable": "Succinivibrio",
+      "enrich_score": 3.3611792105979044
+    },
+    {
+      "variable": "Yersinia",
+      "enrich_score": 3.3611792105979044
     },
     {
       "variable": "Bloating_.days_past_week.:stoolQuestions.intestinalComplication.option.4",
+      "enrich_score": 3.303905780743893
+    },
+    {
+      "variable": "unclassified_Chromatiaceae",
+      "enrich_score": 3.125308546347844
+    },
+    {
+      "variable": "Pediococcus",
+      "enrich_score": 3.000898138388723
+    },
+    {
+      "variable": "unclassified_Rhizomicrobium",
+      "enrich_score": 2.7725615844132365
+    },
+    {
+      "variable": "Marvinbryantia",
+      "enrich_score": 2.7725615844132365
+    },
+    {
+      "variable": "Leuconostoc",
+      "enrich_score": 2.7725615844132365
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.3",
+      "enrich_score": 2.7725615844132365
+    },
+    {
+      "variable": "Shuttleworthia",
+      "enrich_score": 2.7725615844132365
+    },
+    {
+      "variable": "Brachyspira",
+      "enrich_score": 2.7725615844132365
+    },
+    {
+      "variable": "Dysgonomonas",
+      "enrich_score": 2.7724207103227902
+    },
+    {
+      "variable": "unclassified_Thermomicrobiaceae",
+      "enrich_score": 2.7724207103227902
+    },
+    {
+      "variable": "Soy_products_.average_past_week.:nutrition.consumption.option.6",
+      "enrich_score": 2.7724207103227902
+    },
+    {
+      "variable": "unclassified_Dietziaceae",
+      "enrich_score": 2.7724207103227902
+    },
+    {
+      "variable": "Butyrivibrio",
+      "enrich_score": 2.584011541903201
+    },
+    {
+      "variable": "Brevibacillus",
+      "enrich_score": 2.41924283852432
+    },
+    {
+      "variable": "Constipation_.days_past_week.:stoolQuestions.intestinalComplication.option.6",
+      "enrich_score": 2.203439021032475
+    },
+    {
+      "variable": "unclassified_Eionea",
+      "enrich_score": 2.203439021032475
+    },
+    {
+      "variable": "Actinomyces",
+      "enrich_score": 2.203439021032475
+    },
+    {
+      "variable": "Phocaeicola",
+      "enrich_score": 2.203439021032475
+    },
+    {
+      "variable": "Varibaculum",
+      "enrich_score": 2.203439021032475
+    },
+    {
+      "variable": "Finegoldia",
+      "enrich_score": 2.203321625957103
+    },
+    {
+      "variable": "Mobiluncus",
+      "enrich_score": 2.203321625957103
+    },
+    {
+      "variable": "Peptoniphilus",
+      "enrich_score": 2.203321625957103
+    },
+    {
+      "variable": "unclassified_Leuconostocaceae",
+      "enrich_score": 2.203321625957103
+    },
+    {
+      "variable": "Anaerococcus",
+      "enrich_score": 2.203321625957103
+    },
+    {
+      "variable": "Saccharofermentans",
+      "enrich_score": 2.0171471293825105
+    },
+    {
+      "variable": "Hydrogenoanaerobacterium",
+      "enrich_score": 2.0171471293825105
+    },
+    {
+      "variable": "unclassified_Family",
+      "enrich_score": 1.6579569226924211
+    },
+    {
+      "variable": "unclassified_Neisseriaceae",
+      "enrich_score": 1.6579569226924211
+    },
+    {
+      "variable": "Herbaspirillum",
+      "enrich_score": 1.6579569226924211
+    },
+    {
+      "variable": "unclassified_Thiohalobacter",
+      "enrich_score": 1.6579569226924211
+    },
+    {
+      "variable": "unclassified_Syntrophobacteraceae",
+      "enrich_score": 1.6578630066321234
+    },
+    {
+      "variable": "Providencia",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "HOMA.IR",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "Pyramidobacter",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "Bradyrhizobium",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Geobacteraceae",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Thiohalophilus",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Streptococcaceae",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "Cronobacter",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Elusimicrobiaceae",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Paenibacillaceae",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Orbus",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Acidimicrobineae",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Holophagaceae",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Deinococcaceae",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Acidimicrobiaceae",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "unclassified_Listeriaceae",
+      "enrich_score": 1.1421401848835182
+    },
+    {
+      "variable": "Paracoccus",
+      "enrich_score": 1.1420697478382948
+    },
+    {
+      "variable": "Lachnospira",
+      "enrich_score": 1.1420697478382948
+    },
+    {
+      "variable": "Brochothrix",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "unclassified_Alteromonadales",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "unclassified_Micromonosporaceae",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "unclassified_Mycoplasmataceae",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Xylanibacter",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "unclassified_Nitrospiraceae",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Atopobium",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Coriobacterium",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "unclassified_Hydrogenophilaceae",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Wohlfahrtiimonas",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "unclassified_Bogoriellaceae",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Kocuria",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Tetragenococcus",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "unclassified_Granulosicoccaceae",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Centipeda",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Mycoplasma",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Methanobacterium",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "unclassified_Cryptosporangiaceae",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "G03DA04_.progesterone.",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "unclassified_Conexibacteraceae",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Methylobacterium",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "unclassified_Corynebacterineae",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Cobetia",
       "enrich_score": 0.0
     }
   ]

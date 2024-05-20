@@ -74,7 +74,7 @@ export default {
       const graphName = event.target.innerText
       localStorage.removeItem('graphName')
       localStorage.setItem('graphName', JSON.stringify(graphName))
-      this.$router.push(`/project_id=${graphName}/ForceBased`)
+      this.$router.push(`/project_id=${graphName}/Features`)
       location.reload()
     },
     goBack() {
