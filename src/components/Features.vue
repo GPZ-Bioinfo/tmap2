@@ -264,10 +264,11 @@ export default {
 
     let graphLayout = d3
       .forceSimulation(graph.nodes)
-      .force('charge', d3.forceManyBody().strength(-150))
+      .velocityDecay(0.2)
+      .force('charge', d3.forceManyBody())
       .force('center', d3.forceCenter(this.width / 2, this.height / 2))
-      .force('x', d3.forceX(this.width / 2).strength(1))
-      .force('y', d3.forceY(this.height / 2).strength(1))
+      .force('x', d3.forceX())
+      .force('y', d3.forceY())
       .force(
         'link',
         d3
@@ -275,8 +276,6 @@ export default {
           .id(function (d) {
             return d.id
           })
-          .distance(50)
-          .strength(1)
       )
       .on('tick', ticked)
 
