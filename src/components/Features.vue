@@ -74,15 +74,15 @@
 <script>
 import * as d3 from 'd3'
 import * as echarts from 'echarts'
-import { _elements } from './static/feature_overview_coenrich_graph.json'
-import { _data } from './static/feature_overview_barchart.json'
-import { _datas } from './static/feature_overview_metadata_category.json'
-import { _elements2 } from './static/gzfy_valid_genus_r634_c373/feature_overview_coenrich_graph.json'
-import { _datas2 } from './static/gzfy_valid_genus_r634_c373/metadata_category.json'
-import { _data2 } from './static/gzfy_valid_genus_r634_c373/feature_overview_barchart.json'
-import { _elements3 } from './static/gzfy_discv_genus_r1455_c373/feature_overview_coenrich_graph.json'
-import { _datas3 } from './static/gzfy_discv_genus_r1455_c373/metadata_category.json'
-import { _data3 } from './static/gzfy_discv_genus_r1455_c373/feature_overview_barchart.json'
+import { elements as _elements } from './static/feature_overview_coenrich_graph.json'
+import { data as _data } from './static/feature_overview_barchart.json'
+import { data as _datas } from './static/vars_category.json'
+import { elements as _elements2 } from './static/gzfy_valid_genus_r634_c373/feature_overview_coenrich_graph.json'
+import { data as _datas2 } from './static/gzfy_valid_genus_r634_c373/vars_category.json'
+import { data as _data2 } from './static/gzfy_valid_genus_r634_c373/feature_overview_barchart.json'
+import { elements as _elements3 } from './static/gzfy_discv_genus_r1455_c373/feature_overview_coenrich_graph.json'
+import { data as _datas3 } from './static/gzfy_discv_genus_r1455_c373/vars_category.json'
+import { data as _data3 } from './static/gzfy_discv_genus_r1455_c373/feature_overview_barchart.json'
 
 export default {
   data() {
