@@ -5,7 +5,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Ruminococcaceae.g__",
+      "variable": "f__Ruminococcaceae_g__",
       "category": "Taxa"
     },
     {
@@ -37,7 +37,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Clostridium.sensu.stricto.1",
+      "variable": "g__Clostridium_sensu_stricto_1",
       "category": "Taxa"
     },
     {
@@ -49,11 +49,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.UCG-004",
+      "variable": "g__Lachnospiraceae_UCG-004",
       "category": "Taxa"
     },
     {
-      "variable": "g__Incertae.Sedis",
+      "variable": "g__Incertae_Sedis",
       "category": "Taxa"
     },
     {
@@ -73,7 +73,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.NK4A136.group",
+      "variable": "g__Lachnospiraceae_NK4A136_group",
       "category": "Taxa"
     },
     {
@@ -81,11 +81,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Family.XIII.AD3011.group",
+      "variable": "g__Family_XIII_AD3011_group",
       "category": "Taxa"
     },
     {
-      "variable": "o__Clostridia.vadinBB60.group.f__.g__",
+      "variable": "o__Clostridia_vadinBB60_group_f___g__",
       "category": "Taxa"
     },
     {
@@ -93,7 +93,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "o__Clostridia.UCG-014.f__.g__",
+      "variable": "o__Clostridia_UCG-014_f___g__",
       "category": "Taxa"
     },
     {
@@ -113,7 +113,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Muribaculaceae.g__",
+      "variable": "f__Muribaculaceae_g__",
       "category": "Taxa"
     },
     {
@@ -121,7 +121,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__.Ruminococcus.torques.group",
+      "variable": "g___Ruminococcus_torques_group",
       "category": "Taxa"
     },
     {
@@ -137,7 +137,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Lachnospiraceae.g__",
+      "variable": "f__Lachnospiraceae_g__",
       "category": "Taxa"
     },
     {
@@ -145,11 +145,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "c__Clostridia.o__.f__.g__",
+      "variable": "c__Clostridia_o___f___g__",
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.UCG-010",
+      "variable": "g__Lachnospiraceae_UCG-010",
       "category": "Taxa"
     },
     {
@@ -161,11 +161,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__.Ruminococcus.gauvreauii.group",
+      "variable": "g___Ruminococcus_gauvreauii_group",
       "category": "Taxa"
     },
     {
-      "variable": "f__UCG-010.g__",
+      "variable": "f__UCG-010_g__",
       "category": "Taxa"
     },
     {
@@ -185,7 +185,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Christensenellaceae.g__",
+      "variable": "f__Christensenellaceae_g__",
       "category": "Taxa"
     },
     {
@@ -201,7 +201,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.FCS020.group",
+      "variable": "g__Lachnospiraceae_FCS020_group",
       "category": "Taxa"
     },
     {
@@ -221,11 +221,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__.Ruminococcus.gnavus.group",
+      "variable": "g___Ruminococcus_gnavus_group",
       "category": "Taxa"
     },
     {
-      "variable": "g__.Eubacterium.ventriosum.group",
+      "variable": "g___Eubacterium_ventriosum_group",
       "category": "Taxa"
     },
     {
@@ -241,11 +241,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Eggerthellaceae.g__",
+      "variable": "f__Eggerthellaceae_g__",
       "category": "Taxa"
     },
     {
-      "variable": "p__Firmicutes.c__.o__.f__.g__",
+      "variable": "p__Firmicutes_c___o___f___g__",
       "category": "Taxa"
     },
     {
@@ -261,35 +261,35 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__.Eubacterium.coprostanoligenes.group.g__",
+      "variable": "f___Eubacterium_coprostanoligenes_group_g__",
       "category": "Taxa"
     },
     {
-      "variable": "f__Peptococcaceae.g__",
+      "variable": "f__Peptococcaceae_g__",
       "category": "Taxa"
     },
     {
-      "variable": "f__Anaerovoracaceae.g__",
+      "variable": "f__Anaerovoracaceae_g__",
       "category": "Taxa"
     },
     {
-      "variable": "o__Izemoplasmatales.f__.g__",
+      "variable": "o__Izemoplasmatales_f___g__",
       "category": "Taxa"
     },
     {
-      "variable": "f__Oscillospiraceae.g__",
+      "variable": "f__Oscillospiraceae_g__",
       "category": "Taxa"
     },
     {
-      "variable": "o__RF39.f__.g__",
+      "variable": "o__RF39_f___g__",
       "category": "Taxa"
     },
     {
-      "variable": "g__Christensenellaceae.R-7.group",
+      "variable": "g__Christensenellaceae_R-7_group",
       "category": "Taxa"
     },
     {
-      "variable": "g__Defluviitaleaceae.UCG-011",
+      "variable": "g__Defluviitaleaceae_UCG-011",
       "category": "Taxa"
     },
     {
@@ -297,11 +297,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Butyricicoccaceae.g__",
+      "variable": "f__Butyricicoccaceae_g__",
       "category": "Taxa"
     },
     {
-      "variable": "f__Enterobacteriaceae.g__",
+      "variable": "f__Enterobacteriaceae_g__",
       "category": "Taxa"
     },
     {
@@ -333,11 +333,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__.Eubacterium.xylanophilum.group",
+      "variable": "g___Eubacterium_xylanophilum_group",
       "category": "Taxa"
     },
     {
-      "variable": "g__Erysipelotrichaceae.UCG-003",
+      "variable": "g__Erysipelotrichaceae_UCG-003",
       "category": "Taxa"
     },
     {
@@ -349,15 +349,15 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__.Eubacterium.brachy.group",
+      "variable": "g___Eubacterium_brachy_group",
       "category": "Taxa"
     },
     {
-      "variable": "f__Sphingobacteriaceae.g__",
+      "variable": "f__Sphingobacteriaceae_g__",
       "category": "Taxa"
     },
     {
-      "variable": "o__Lactobacillales.f__.g__",
+      "variable": "o__Lactobacillales_f___g__",
       "category": "Taxa"
     },
     {
@@ -385,7 +385,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__NK4A214.group",
+      "variable": "g__NK4A214_group",
       "category": "Taxa"
     },
     {
@@ -397,11 +397,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Prevotellaceae.UCG-001",
+      "variable": "g__Prevotellaceae_UCG-001",
       "category": "Taxa"
     },
     {
-      "variable": "g__Candidatus.Soleaferrea",
+      "variable": "g__Candidatus_Soleaferrea",
       "category": "Taxa"
     },
     {
@@ -409,11 +409,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__.Eubacterium.eligens.group",
+      "variable": "g___Eubacterium_eligens_group",
       "category": "Taxa"
     },
     {
-      "variable": "g__.Eubacterium.siraeum.group",
+      "variable": "g___Eubacterium_siraeum_group",
       "category": "Taxa"
     },
     {
@@ -421,7 +421,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "o__Coriobacteriales.f__.g__",
+      "variable": "o__Coriobacteriales_f___g__",
       "category": "Taxa"
     },
     {
@@ -437,11 +437,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "o__Oscillospirales.f__.g__",
+      "variable": "o__Oscillospirales_f___g__",
       "category": "Taxa"
     },
     {
-      "variable": "o__Bacteroidales.f__.g__",
+      "variable": "o__Bacteroidales_f___g__",
       "category": "Taxa"
     },
     {
@@ -461,11 +461,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__.Eubacterium.hallii.group",
+      "variable": "g___Eubacterium_hallii_group",
       "category": "Taxa"
     },
     {
-      "variable": "g__.Clostridium.innocuum.group",
+      "variable": "g___Clostridium_innocuum_group",
       "category": "Taxa"
     },
     {
@@ -477,7 +477,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "o__Gastranaerophilales.f__.g__",
+      "variable": "o__Gastranaerophilales_f___g__",
       "category": "Taxa"
     },
     {
@@ -497,7 +497,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__.Eubacterium.fissicatena.group",
+      "variable": "g___Eubacterium_fissicatena_group",
       "category": "Taxa"
     },
     {
@@ -513,7 +513,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.UCG-003",
+      "variable": "g__Lachnospiraceae_UCG-003",
       "category": "Taxa"
     },
     {
@@ -533,7 +533,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Prevotellaceae.NK3B31.group",
+      "variable": "g__Prevotellaceae_NK3B31_group",
       "category": "Taxa"
     },
     {
@@ -589,7 +589,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.UCG-001",
+      "variable": "g__Lachnospiraceae_UCG-001",
       "category": "Taxa"
     },
     {
@@ -629,7 +629,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Coriobacteriales.Incertae.Sedis.g__",
+      "variable": "f__Coriobacteriales_Incertae_Sedis_g__",
       "category": "Taxa"
     },
     {
@@ -637,7 +637,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "o__Gracilibacteraceae.f__.g__",
+      "variable": "o__Gracilibacteraceae_f___g__",
       "category": "Taxa"
     },
     {
@@ -649,7 +649,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "o__Enterobacterales.f__.g__",
+      "variable": "o__Enterobacterales_f___g__",
       "category": "Taxa"
     },
     {
@@ -669,7 +669,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Prevotellaceae.g__",
+      "variable": "f__Prevotellaceae_g__",
       "category": "Taxa"
     },
     {
@@ -705,11 +705,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Family.XIII.UCG-001",
+      "variable": "g__Family_XIII_UCG-001",
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.NC2004.group",
+      "variable": "g__Lachnospiraceae_NC2004_group",
       "category": "Taxa"
     },
     {
@@ -729,7 +729,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Erysipelatoclostridiaceae.g__",
+      "variable": "f__Erysipelatoclostridiaceae_g__",
       "category": "Taxa"
     },
     {
@@ -773,7 +773,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Hungateiclostridiaceae.g__",
+      "variable": "f__Hungateiclostridiaceae_g__",
       "category": "Taxa"
     },
     {
@@ -789,11 +789,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Prevotellaceae.Ga6A1.group",
+      "variable": "g__Prevotellaceae_Ga6A1_group",
       "category": "Taxa"
     },
     {
-      "variable": "f__Microbacteriaceae.g__",
+      "variable": "f__Microbacteriaceae_g__",
       "category": "Taxa"
     },
     {
@@ -821,7 +821,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Coriobacteriaceae.UCG-002",
+      "variable": "g__Coriobacteriaceae_UCG-002",
       "category": "Taxa"
     },
     {
@@ -829,7 +829,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__.Eubacterium.ruminantium.group",
+      "variable": "g___Eubacterium_ruminantium_group",
       "category": "Taxa"
     },
     {
@@ -837,7 +837,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "o__Rhodospirillales.f__.g__",
+      "variable": "o__Rhodospirillales_f___g__",
       "category": "Taxa"
     },
     {
@@ -849,7 +849,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Erysipelotrichaceae.g__",
+      "variable": "f__Erysipelotrichaceae_g__",
       "category": "Taxa"
     },
     {
@@ -857,7 +857,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.ND3007.group",
+      "variable": "g__Lachnospiraceae_ND3007_group",
       "category": "Taxa"
     },
     {
@@ -885,7 +885,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__.Eubacterium.nodatum.group",
+      "variable": "g___Eubacterium_nodatum_group",
       "category": "Taxa"
     },
     {
@@ -905,7 +905,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Atopobiaceae.g__",
+      "variable": "f__Atopobiaceae_g__",
       "category": "Taxa"
     },
     {
@@ -953,7 +953,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Rikenellaceae.RC9.gut.group",
+      "variable": "g__Rikenellaceae_RC9_gut_group",
       "category": "Taxa"
     },
     {
@@ -973,7 +973,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.AC2044.group",
+      "variable": "g__Lachnospiraceae_AC2044_group",
       "category": "Taxa"
     },
     {
@@ -981,7 +981,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.UCG-009",
+      "variable": "g__Lachnospiraceae_UCG-009",
       "category": "Taxa"
     },
     {
@@ -1001,7 +1001,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Erysipelotrichaceae.UCG-006",
+      "variable": "g__Erysipelotrichaceae_UCG-006",
       "category": "Taxa"
     },
     {
@@ -1013,7 +1013,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "p__WPS-2.c__.o__.f__.g__",
+      "variable": "p__WPS-2_c___o___f___g__",
       "category": "Taxa"
     },
     {
@@ -1025,11 +1025,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Tannerellaceae.g__",
+      "variable": "f__Tannerellaceae_g__",
       "category": "Taxa"
     },
     {
-      "variable": "f__Saccharimonadaceae.g__",
+      "variable": "f__Saccharimonadaceae_g__",
       "category": "Taxa"
     },
     {
@@ -1037,11 +1037,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__.Clostridium.methylpentosum.group.g__",
+      "variable": "f___Clostridium_methylpentosum_group_g__",
       "category": "Taxa"
     },
     {
-      "variable": "f__Lactobacillaceae.g__",
+      "variable": "f__Lactobacillaceae_g__",
       "category": "Taxa"
     },
     {
@@ -1049,7 +1049,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "k__Bacteria.p__.c__.o__.f__.g__",
+      "variable": "k__Bacteria_p___c___o___f___g__",
       "category": "Taxa"
     },
     {
@@ -1073,7 +1073,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Puniceicoccaceae.g__",
+      "variable": "f__Puniceicoccaceae_g__",
       "category": "Taxa"
     },
     {
@@ -1085,7 +1085,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "o__Clostridiales.f__.g__",
+      "variable": "o__Clostridiales_f___g__",
       "category": "Taxa"
     },
     {
@@ -1113,15 +1113,15 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Peptostreptococcaceae.g__",
+      "variable": "f__Peptostreptococcaceae_g__",
       "category": "Taxa"
     },
     {
-      "variable": "f__Desulfovibrionaceae.g__",
+      "variable": "f__Desulfovibrionaceae_g__",
       "category": "Taxa"
     },
     {
-      "variable": "f__Selenomonadaceae.g__",
+      "variable": "f__Selenomonadaceae_g__",
       "category": "Taxa"
     },
     {
@@ -1129,7 +1129,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Hydrogenoanaerobacterium.g__",
+      "variable": "f__Hydrogenoanaerobacterium_g__",
       "category": "Taxa"
     },
     {
@@ -1137,7 +1137,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "c__Bacteroidia.o__.f__.g__",
+      "variable": "c__Bacteroidia_o___f___g__",
       "category": "Taxa"
     },
     {
@@ -1169,15 +1169,15 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Rhizobiaceae.g__",
+      "variable": "f__Rhizobiaceae_g__",
       "category": "Taxa"
     },
     {
-      "variable": "g__.Bacteroides.pectinophilus.group",
+      "variable": "g___Bacteroides_pectinophilus_group",
       "category": "Taxa"
     },
     {
-      "variable": "f__Veillonellaceae.g__",
+      "variable": "f__Veillonellaceae_g__",
       "category": "Taxa"
     },
     {
@@ -1201,7 +1201,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Candidatus.Stoquefichus",
+      "variable": "g__Candidatus_Stoquefichus",
       "category": "Taxa"
     },
     {
@@ -1213,7 +1213,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "o__Flavobacteriales.f__.g__",
+      "variable": "o__Flavobacteriales_f___g__",
       "category": "Taxa"
     },
     {
@@ -1309,7 +1309,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Prevotellaceae.UCG-003",
+      "variable": "g__Prevotellaceae_UCG-003",
       "category": "Taxa"
     },
     {
@@ -1325,7 +1325,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "o__Saccharimonadales.f__.g__",
+      "variable": "o__Saccharimonadales_f___g__",
       "category": "Taxa"
     },
     {
@@ -1337,7 +1337,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__Sphingomonadaceae.g__",
+      "variable": "f__Sphingomonadaceae_g__",
       "category": "Taxa"
     },
     {
@@ -1357,11 +1357,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "f__P5D1-392.g__",
+      "variable": "f__P5D1-392_g__",
       "category": "Taxa"
     },
     {
-      "variable": "f__Pasteurellaceae.g__",
+      "variable": "f__Pasteurellaceae_g__",
       "category": "Taxa"
     },
     {
@@ -1369,7 +1369,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.UCG-008",
+      "variable": "g__Lachnospiraceae_UCG-008",
       "category": "Taxa"
     },
     {
@@ -1381,11 +1381,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Prevotellaceae.UCG-004",
+      "variable": "g__Prevotellaceae_UCG-004",
       "category": "Taxa"
     },
     {
-      "variable": "c__Alphaproteobacteria.o__.f__.g__",
+      "variable": "c__Alphaproteobacteria_o___f___g__",
       "category": "Taxa"
     },
     {
@@ -1453,7 +1453,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae.NK3A20.group",
+      "variable": "g__Lachnospiraceae_NK3A20_group",
       "category": "Taxa"
     },
     {
@@ -1985,23 +1985,23 @@
       "category": "Demographics"
     },
     {
-      "variable": "Age_Group_.29",
+      "variable": "Age_Group__29",
       "category": "Demographics"
     },
     {
-      "variable": "Age_Group_.35",
+      "variable": "Age_Group__35",
       "category": "Demographics"
     },
     {
-      "variable": "BMI_Before_Pregnancy_G_18.5-24.Normal",
+      "variable": "BMI_Before_Pregnancy_G_18_5-24_Normal",
       "category": "Demographics"
     },
     {
-      "variable": "BMI_Before_Pregnancy_G_.18.5.Underweight",
+      "variable": "BMI_Before_Pregnancy_G__18_5_Underweight",
       "category": "Demographics"
     },
     {
-      "variable": "BMI_Before_Pregnancy_G_.24.Overweight",
+      "variable": "BMI_Before_Pregnancy_G__24_Overweight",
       "category": "Demographics"
     },
     {
@@ -2069,19 +2069,19 @@
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Delivery_Gestational_Age_G_.42W",
+      "variable": "Delivery_Gestational_Age_G__42W",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Delivery_Mode_Cesarean.Delivery",
+      "variable": "Delivery_Mode_Cesarean_Delivery",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Delivery_Mode_Forceps.Delivery",
+      "variable": "Delivery_Mode_Forceps_Delivery",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Delivery_Mode_Vaginal.Delivery",
+      "variable": "Delivery_Mode_Vaginal_Delivery",
       "category": "Pregnancy Outcomes"
     },
     {
@@ -2101,11 +2101,11 @@
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Fetal_Abnormalities_Fetal.Distress",
+      "variable": "Fetal_Abnormalities_Fetal_Distress",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Fetal_Abnormalities_Fetal.Growth.Retardation",
+      "variable": "Fetal_Abnormalities_Fetal_Growth_Retardation",
       "category": "Pregnancy Outcomes"
     },
     {
@@ -2125,15 +2125,15 @@
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Infant_Weight_G_2.5-4KG.Normal",
+      "variable": "Infant_Weight_G_2_5-4KG_Normal",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Infant_Weight_G_.2.5KG.Underweight",
+      "variable": "Infant_Weight_G__2_5KG_Underweight",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Infant_Weight_G_.4KG.Overweight",
+      "variable": "Infant_Weight_G__4KG_Overweight",
       "category": "Pregnancy Outcomes"
     },
     {
@@ -2193,15 +2193,15 @@
       "category": "Pregnancy Related Characteristics"
     },
     {
-      "variable": "Weight_Gain_Over_Pregnancy_G_Less.Than.Guidelines",
+      "variable": "Weight_Gain_Over_Pregnancy_G_Less_Than_Guidelines",
       "category": "Pregnancy Related Characteristics"
     },
     {
-      "variable": "Weight_Gain_Over_Pregnancy_G_More.Than.Guidelines",
+      "variable": "Weight_Gain_Over_Pregnancy_G_More_Than_Guidelines",
       "category": "Pregnancy Related Characteristics"
     },
     {
-      "variable": "Weight_Gain_Over_Pregnancy_G_Within.Guidelines",
+      "variable": "Weight_Gain_Over_Pregnancy_G_Within_Guidelines",
       "category": "Pregnancy Related Characteristics"
     }
   ]

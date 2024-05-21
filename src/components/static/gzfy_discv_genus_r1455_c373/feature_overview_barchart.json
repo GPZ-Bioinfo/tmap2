@@ -1,1468 +1,1464 @@
 {
   "data": [
     {
-      "variable": "g__Lachnospiraceae.ND3007.group",
-      "enrich_score": 124.9189
-    },
-    {
       "variable": "g__Faecalibacterium",
-      "enrich_score": 119.7823
+      "enrich_score": 125.1379
     },
     {
-      "variable": "g__Lachnospiraceae.FCS020.group",
-      "enrich_score": 114.3724
+      "variable": "g__Lachnospiraceae_ND3007_group",
+      "enrich_score": 124.9038
     },
     {
-      "variable": "g__Christensenellaceae.R-7.group",
-      "enrich_score": 112.5627
+      "variable": "g__Lachnospiraceae_FCS020_group",
+      "enrich_score": 115.3256
+    },
+    {
+      "variable": "g__Christensenellaceae_R-7_group",
+      "enrich_score": 113.8585
     },
     {
       "variable": "g__Coprococcus",
-      "enrich_score": 108.5764
+      "enrich_score": 108.4075
     },
     {
       "variable": "g__Dorea",
-      "enrich_score": 107.8464
+      "enrich_score": 107.9594
     },
     {
-      "variable": "g__Lachnospiraceae.UCG-001",
-      "enrich_score": 103.4576
+      "variable": "g__Lachnospiraceae_UCG-001",
+      "enrich_score": 102.1678
     },
     {
       "variable": "g__Marvinbryantia",
-      "enrich_score": 102.4277
+      "enrich_score": 101.1624
     },
     {
-      "variable": "g__Lachnospiraceae.NK4A136.group",
-      "enrich_score": 96.4414
+      "variable": "g__Lachnospiraceae_NK4A136_group",
+      "enrich_score": 93.2491
     },
     {
       "variable": "g__UCG-003",
-      "enrich_score": 92.418
-    },
-    {
-      "variable": "g__Family.XIII.UCG-001",
-      "enrich_score": 90.978
-    },
-    {
-      "variable": "g__Alistipes",
-      "enrich_score": 90.9097
+      "enrich_score": 92.4118
     },
     {
       "variable": "g__Blautia",
-      "enrich_score": 90.4972
+      "enrich_score": 90.7794
+    },
+    {
+      "variable": "g__Alistipes",
+      "enrich_score": 90.4613
+    },
+    {
+      "variable": "g__Family_XIII_UCG-001",
+      "enrich_score": 89.8457
     },
     {
       "variable": "g__UCG-002",
-      "enrich_score": 87.3527
+      "enrich_score": 88.2171
     },
     {
       "variable": "g__Agathobacter",
-      "enrich_score": 85.8638
-    },
-    {
-      "variable": "g__Lachnospiraceae.UCG-004",
-      "enrich_score": 82.3575
-    },
-    {
-      "variable": "f__.Eubacterium.coprostanoligenes.group.g__",
-      "enrich_score": 81.8754
-    },
-    {
-      "variable": "g__.Eubacterium.siraeum.group",
-      "enrich_score": 81.8609
+      "enrich_score": 84.8904
     },
     {
       "variable": "g__GCA-900066575",
-      "enrich_score": 81.2586
+      "enrich_score": 83.6129
+    },
+    {
+      "variable": "g__Lachnospiraceae_UCG-004",
+      "enrich_score": 82.2406
+    },
+    {
+      "variable": "f___Eubacterium_coprostanoligenes_group_g__",
+      "enrich_score": 81.6714
+    },
+    {
+      "variable": "g___Eubacterium_siraeum_group",
+      "enrich_score": 81.3048
     },
     {
       "variable": "g__Bacteroides",
-      "enrich_score": 80.6621
+      "enrich_score": 80.1625
     },
     {
-      "variable": "g__.Eubacterium.xylanophilum.group",
-      "enrich_score": 78.0683
+      "variable": "g___Eubacterium_xylanophilum_group",
+      "enrich_score": 78.7896
     },
     {
       "variable": "g__UCG-005",
-      "enrich_score": 77.7374
-    },
-    {
-      "variable": "g__Lachnospira",
-      "enrich_score": 75.7809
-    },
-    {
-      "variable": "g__Roseburia",
-      "enrich_score": 75.6762
-    },
-    {
-      "variable": "g__Desulfovibrio",
-      "enrich_score": 74.878
+      "enrich_score": 76.2716
     },
     {
       "variable": "g__Subdoligranulum",
-      "enrich_score": 74.1093
+      "enrich_score": 75.3359
     },
     {
-      "variable": "g__.Eubacterium.ruminantium.group",
-      "enrich_score": 73.705
+      "variable": "g__Lachnospira",
+      "enrich_score": 74.8251
     },
     {
-      "variable": "g__Adlercreutzia",
-      "enrich_score": 71.64
+      "variable": "g__Roseburia",
+      "enrich_score": 74.6489
+    },
+    {
+      "variable": "g__Desulfovibrio",
+      "enrich_score": 73.1406
     },
     {
       "variable": "g__CAG-56",
-      "enrich_score": 71.207
+      "enrich_score": 72.9507
     },
     {
-      "variable": "g__Butyricicoccus",
-      "enrich_score": 70.7813
+      "variable": "g__Adlercreutzia",
+      "enrich_score": 72.1164
+    },
+    {
+      "variable": "g___Eubacterium_ruminantium_group",
+      "enrich_score": 71.864
     },
     {
       "variable": "g__Bilophila",
-      "enrich_score": 69.4201
+      "enrich_score": 71.5894
     },
     {
-      "variable": "g__Parabacteroides",
-      "enrich_score": 68.8773
+      "variable": "g__Butyricicoccus",
+      "enrich_score": 70.1846
     },
     {
-      "variable": "f__Oscillospiraceae.g__",
-      "enrich_score": 67.6662
+      "variable": "g__Lachnospiraceae_UCG-010",
+      "enrich_score": 68.8962
     },
     {
-      "variable": "g__Lachnospiraceae.UCG-010",
-      "enrich_score": 67.2733
+      "variable": "f__Oscillospiraceae_g__",
+      "enrich_score": 68.5929
     },
     {
       "variable": "g__Oscillospira",
-      "enrich_score": 66.9073
+      "enrich_score": 67.9052
     },
     {
-      "variable": "g__UCG-009",
-      "enrich_score": 64.428
+      "variable": "g__Parabacteroides",
+      "enrich_score": 67.4328
     },
     {
-      "variable": "g__.Eubacterium.hallii.group",
-      "enrich_score": 62.1663
-    },
-    {
-      "variable": "g__Fusicatenibacter",
-      "enrich_score": 61.6102
+      "variable": "g___Eubacterium_hallii_group",
+      "enrich_score": 63.202
     },
     {
       "variable": "g__Dialister",
-      "enrich_score": 61.5978
+      "enrich_score": 62.2165
     },
     {
-      "variable": "g__.Eubacterium.eligens.group",
-      "enrich_score": 60.6062
+      "variable": "g__UCG-009",
+      "enrich_score": 62.0274
     },
     {
-      "variable": "g__.Ruminococcus.gauvreauii.group",
-      "enrich_score": 60.4979
+      "variable": "g__Fusicatenibacter",
+      "enrich_score": 60.209
     },
     {
-      "variable": "o__RF39.f__.g__",
-      "enrich_score": 59.7304
+      "variable": "g___Ruminococcus_gauvreauii_group",
+      "enrich_score": 59.8831
     },
     {
-      "variable": "o__Clostridia.UCG-014.f__.g__",
-      "enrich_score": 58.1089
+      "variable": "o__RF39_f___g__",
+      "enrich_score": 59.8043
     },
     {
       "variable": "g__Lachnoclostridium",
-      "enrich_score": 56.6437
+      "enrich_score": 59.3831
+    },
+    {
+      "variable": "g___Eubacterium_eligens_group",
+      "enrich_score": 58.9329
+    },
+    {
+      "variable": "o__Clostridia_UCG-014_f___g__",
+      "enrich_score": 57.6098
+    },
+    {
+      "variable": "g___Eubacterium_ventriosum_group",
+      "enrich_score": 55.7343
     },
     {
       "variable": "g__Barnesiella",
-      "enrich_score": 55.1994
-    },
-    {
-      "variable": "g__Incertae.Sedis",
-      "enrich_score": 54.9046
-    },
-    {
-      "variable": "g__.Eubacterium.ventriosum.group",
-      "enrich_score": 54.8386
+      "enrich_score": 55.3941
     },
     {
       "variable": "g__Sutterella",
-      "enrich_score": 54.5717
+      "enrich_score": 54.6379
     },
     {
-      "variable": "g__Butyricimonas",
-      "enrich_score": 52.3603
+      "variable": "g__Incertae_Sedis",
+      "enrich_score": 54.5232
     },
     {
       "variable": "g__CHKCI002",
-      "enrich_score": 51.1356
-    },
-    {
-      "variable": "g__CAG-352",
-      "enrich_score": 50.7342
-    },
-    {
-      "variable": "g__Family.XIII.AD3011.group",
-      "enrich_score": 50.73
-    },
-    {
-      "variable": "g__Oscillibacter",
-      "enrich_score": 50.6553
-    },
-    {
-      "variable": "g__.Eubacterium.brachy.group",
-      "enrich_score": 49.9885
-    },
-    {
-      "variable": "g__Defluviitaleaceae.UCG-011",
-      "enrich_score": 49.4927
-    },
-    {
-      "variable": "Native_Place_Other",
-      "enrich_score": 49.1943
-    },
-    {
-      "variable": "g__Anaerofilum",
-      "enrich_score": 48.9267
+      "enrich_score": 51.8587
     },
     {
       "variable": "Allergic_History",
-      "enrich_score": 48.8459
+      "enrich_score": 51.065
     },
     {
-      "variable": "Conception_Season_Summer",
-      "enrich_score": 48.835
+      "variable": "g__Oscillibacter",
+      "enrich_score": 51.0167
+    },
+    {
+      "variable": "g__Family_XIII_AD3011_group",
+      "enrich_score": 50.7755
+    },
+    {
+      "variable": "g__CAG-352",
+      "enrich_score": 50.1489
+    },
+    {
+      "variable": "Native_Place_Other",
+      "enrich_score": 50.0335
+    },
+    {
+      "variable": "g__Butyricimonas",
+      "enrich_score": 49.9315
     },
     {
       "variable": "g__Prevotella_9",
-      "enrich_score": 48.7098
-    },
-    {
-      "variable": "f__Coriobacteriales.Incertae.Sedis.g__",
-      "enrich_score": 48.5407
+      "enrich_score": 48.8993
     },
     {
       "variable": "g__Streptococcus",
-      "enrich_score": 48.1919
+      "enrich_score": 48.6927
     },
     {
-      "variable": "B_RBC",
-      "enrich_score": 47.7888
+      "variable": "g__Anaerofilum",
+      "enrich_score": 48.5197
+    },
+    {
+      "variable": "g___Eubacterium_brachy_group",
+      "enrich_score": 48.2007
+    },
+    {
+      "variable": "g__Defluviitaleaceae_UCG-011",
+      "enrich_score": 47.6807
     },
     {
       "variable": "g__Angelakisella",
-      "enrich_score": 47.3672
+      "enrich_score": 47.558
     },
     {
-      "variable": "Cord_Entanglement",
-      "enrich_score": 47.1851
+      "variable": "Conception_Season_Summer",
+      "enrich_score": 47.3586
     },
     {
-      "variable": "g__.Ruminococcus.torques.group",
-      "enrich_score": 45.9049
+      "variable": "f__Eggerthellaceae_g__",
+      "enrich_score": 47.1026
+    },
+    {
+      "variable": "g___Ruminococcus_torques_group",
+      "enrich_score": 46.4034
+    },
+    {
+      "variable": "f__Coriobacteriales_Incertae_Sedis_g__",
+      "enrich_score": 46.3636
     },
     {
       "variable": "g__Ruminococcus",
-      "enrich_score": 45.8579
-    },
-    {
-      "variable": "f__Eggerthellaceae.g__",
-      "enrich_score": 45.8368
-    },
-    {
-      "variable": "f__Ruminococcaceae.g__",
-      "enrich_score": 45.3635
-    },
-    {
-      "variable": "g__Lachnospiraceae.UCG-003",
-      "enrich_score": 45.3532
-    },
-    {
-      "variable": "Scar_Uterus",
-      "enrich_score": 44.1863
-    },
-    {
-      "variable": "Delivery_Gestational_Age_G_37-42W",
-      "enrich_score": 43.7438
+      "enrich_score": 46.3324
     },
     {
       "variable": "g__Parasutterella",
-      "enrich_score": 43.5882
+      "enrich_score": 45.6691
     },
     {
-      "variable": "f__Prevotellaceae.g__",
-      "enrich_score": 42.7237
+      "variable": "f__Ruminococcaceae_g__",
+      "enrich_score": 45.5461
+    },
+    {
+      "variable": "Cord_Entanglement",
+      "enrich_score": 45.4626
+    },
+    {
+      "variable": "g__Lachnospiraceae_UCG-003",
+      "enrich_score": 45.2626
+    },
+    {
+      "variable": "Delivery_Gestational_Age_G_37-42W",
+      "enrich_score": 45.2316
+    },
+    {
+      "variable": "B_RBC",
+      "enrich_score": 44.9533
+    },
+    {
+      "variable": "Scar_Uterus",
+      "enrich_score": 44.7961
     },
     {
       "variable": "g__Olsenella",
-      "enrich_score": 41.5518
+      "enrich_score": 42.703
     },
     {
-      "variable": "g__Flavonifractor",
-      "enrich_score": 40.9971
-    },
-    {
-      "variable": "Amniodic_Fluid_Clear",
-      "enrich_score": 40.4235
-    },
-    {
-      "variable": "g__Erysipelotrichaceae.UCG-003",
-      "enrich_score": 40.3393
-    },
-    {
-      "variable": "g__Paraprevotella",
-      "enrich_score": 39.8031
+      "variable": "f__Prevotellaceae_g__",
+      "enrich_score": 41.901
     },
     {
       "variable": "B_GLO",
-      "enrich_score": 39.3776
+      "enrich_score": 40.4571
+    },
+    {
+      "variable": "g__Flavonifractor",
+      "enrich_score": 39.8928
+    },
+    {
+      "variable": "g__Paraprevotella",
+      "enrich_score": 39.7728
     },
     {
       "variable": "g__Megamonas",
-      "enrich_score": 39.341
+      "enrich_score": 39.7673
     },
     {
-      "variable": "U_PRO_Negative",
-      "enrich_score": 39.1189
-    },
-    {
-      "variable": "Hypertensive_Disorder_of_Pregnancy",
-      "enrich_score": 38.813
+      "variable": "Infant_Weight_G_2_5-4KG_Normal",
+      "enrich_score": 39.746
     },
     {
       "variable": "g__Colidextribacter",
-      "enrich_score": 38.7708
+      "enrich_score": 39.3473
     },
     {
-      "variable": "Chronic_Inflammation",
-      "enrich_score": 38.6541
-    },
-    {
-      "variable": "o__Bacteroidales.f__.g__",
-      "enrich_score": 37.8352
-    },
-    {
-      "variable": "g__NK4A214.group",
-      "enrich_score": 36.6858
-    },
-    {
-      "variable": "g__Comamonas",
-      "enrich_score": 36.6441
-    },
-    {
-      "variable": "o__Oscillospirales.f__.g__",
-      "enrich_score": 36.5982
-    },
-    {
-      "variable": "g__Lachnospiraceae.AC2044.group",
-      "enrich_score": 36.334
-    },
-    {
-      "variable": "U_BIL_Negative",
-      "enrich_score": 35.9875
-    },
-    {
-      "variable": "g__Christensenella",
-      "enrich_score": 35.8377
+      "variable": "U_PRO_Negative",
+      "enrich_score": 39.3418
     },
     {
       "variable": "U_UBG_G_Negative",
-      "enrich_score": 35.7644
+      "enrich_score": 39.0824
     },
     {
-      "variable": "g__Campylobacter",
-      "enrich_score": 35.7165
+      "variable": "g__Erysipelotrichaceae_UCG-003",
+      "enrich_score": 38.7023
     },
     {
-      "variable": "HbA1c",
-      "enrich_score": 35.1779
+      "variable": "o__Oscillospirales_f___g__",
+      "enrich_score": 38.6824
     },
     {
-      "variable": "Gestational_Diabetes_Mellitus",
-      "enrich_score": 35.1399
+      "variable": "o__Bacteroidales_f___g__",
+      "enrich_score": 38.6776
     },
     {
-      "variable": "g__Prevotellaceae.UCG-004",
-      "enrich_score": 34.9728
+      "variable": "Hypertensive_Disorder_of_Pregnancy",
+      "enrich_score": 38.4193
+    },
+    {
+      "variable": "g__NK4A214_group",
+      "enrich_score": 37.7266
+    },
+    {
+      "variable": "g__Comamonas",
+      "enrich_score": 37.313
     },
     {
       "variable": "g__Senegalimassilia",
-      "enrich_score": 34.8976
-    },
-    {
-      "variable": "Premature_Rupture_of_Membranes",
-      "enrich_score": 34.8534
-    },
-    {
-      "variable": "g__Phocea",
-      "enrich_score": 34.6328
-    },
-    {
-      "variable": "Postpartum_Hemorrhage",
-      "enrich_score": 34.1929
+      "enrich_score": 37.2762
     },
     {
       "variable": "g__UCG-007",
-      "enrich_score": 33.9935
+      "enrich_score": 37.0747
     },
     {
-      "variable": "g__.Eubacterium.fissicatena.group",
-      "enrich_score": 33.9418
+      "variable": "Chronic_Inflammation",
+      "enrich_score": 36.3008
     },
     {
-      "variable": "Infant_Weight_G_2.5-4KG.Normal",
-      "enrich_score": 33.8461
+      "variable": "Gestational_Diabetes_Mellitus",
+      "enrich_score": 36.2007
     },
     {
-      "variable": "History_Pregnancy_Outcomes_No",
-      "enrich_score": 33.8433
+      "variable": "U_BIL_Negative",
+      "enrich_score": 35.9611
+    },
+    {
+      "variable": "g__Campylobacter",
+      "enrich_score": 35.7518
+    },
+    {
+      "variable": "g__Lachnospiraceae_AC2044_group",
+      "enrich_score": 35.4276
     },
     {
       "variable": "Placental_Insufficiency",
-      "enrich_score": 33.6502
+      "enrich_score": 35.4062
+    },
+    {
+      "variable": "Amniodic_Fluid_Clear",
+      "enrich_score": 35.2164
+    },
+    {
+      "variable": "g__Prevotellaceae_UCG-004",
+      "enrich_score": 35.112
+    },
+    {
+      "variable": "g__Phocea",
+      "enrich_score": 34.793
+    },
+    {
+      "variable": "g__Christensenella",
+      "enrich_score": 34.6934
+    },
+    {
+      "variable": "HbA1c",
+      "enrich_score": 34.5416
+    },
+    {
+      "variable": "Premature_Rupture_of_Membranes",
+      "enrich_score": 33.6627
+    },
+    {
+      "variable": "Postpartum_Hemorrhage",
+      "enrich_score": 33.3701
+    },
+    {
+      "variable": "History_Pregnancy_Outcomes_No",
+      "enrich_score": 33.0945
     },
     {
       "variable": "Infant_Weight",
-      "enrich_score": 32.789
+      "enrich_score": 32.6554
+    },
+    {
+      "variable": "g___Eubacterium_fissicatena_group",
+      "enrich_score": 32.5212
     },
     {
       "variable": "Hysteromyoma",
-      "enrich_score": 32.6277
-    },
-    {
-      "variable": "f__Peptococcaceae.g__",
-      "enrich_score": 32.3837
+      "enrich_score": 32.3907
     },
     {
       "variable": "Native_Place_Guangdong",
-      "enrich_score": 32.2423
-    },
-    {
-      "variable": "g__Holdemania",
-      "enrich_score": 31.8559
-    },
-    {
-      "variable": "g__Catenibacterium",
-      "enrich_score": 31.7878
-    },
-    {
-      "variable": "g__Intestinimonas",
-      "enrich_score": 31.5793
-    },
-    {
-      "variable": "g__Pygmaiobacter",
-      "enrich_score": 31.4732
-    },
-    {
-      "variable": "B_NEUT",
-      "enrich_score": 31.4274
-    },
-    {
-      "variable": "g__Holdemanella",
-      "enrich_score": 31.2468
+      "enrich_score": 31.8763
     },
     {
       "variable": "Infant_Outcome_Discharge",
-      "enrich_score": 30.8426
+      "enrich_score": 31.7955
     },
     {
-      "variable": "B_MONO",
-      "enrich_score": 30.8164
-    },
-    {
-      "variable": "A_G",
-      "enrich_score": 30.8019
-    },
-    {
-      "variable": "B_TP",
-      "enrich_score": 30.7901
-    },
-    {
-      "variable": "g__Alloprevotella",
-      "enrich_score": 30.7487
-    },
-    {
-      "variable": "Thyroid_Disease",
-      "enrich_score": 30.3777
-    },
-    {
-      "variable": "Pelvic_Adhesions",
-      "enrich_score": 30.3569
-    },
-    {
-      "variable": "f__Muribaculaceae.g__",
-      "enrich_score": 30.0713
-    },
-    {
-      "variable": "g__Gordonibacter",
-      "enrich_score": 29.9075
-    },
-    {
-      "variable": "g__Peptococcus",
-      "enrich_score": 29.8174
+      "variable": "g__Holdemanella",
+      "enrich_score": 31.2775
     },
     {
       "variable": "g__Shuttleworthia",
-      "enrich_score": 29.7778
+      "enrich_score": 31.2433
     },
     {
-      "variable": "Hepatopathy",
-      "enrich_score": 29.5779
+      "variable": "B_NEUT",
+      "enrich_score": 31.18
     },
     {
-      "variable": "Delivery_Gestational_Age",
-      "enrich_score": 29.5153
+      "variable": "g__Holdemania",
+      "enrich_score": 31.1236
+    },
+    {
+      "variable": "Pelvic_Adhesions",
+      "enrich_score": 31.0917
+    },
+    {
+      "variable": "g__Catenibacterium",
+      "enrich_score": 30.8708
+    },
+    {
+      "variable": "f__Muribaculaceae_g__",
+      "enrich_score": 30.7771
+    },
+    {
+      "variable": "g__Pygmaiobacter",
+      "enrich_score": 30.7506
+    },
+    {
+      "variable": "f__Peptococcaceae_g__",
+      "enrich_score": 30.6989
     },
     {
       "variable": "g__Coprobacter",
-      "enrich_score": 29.1421
-    },
-    {
-      "variable": "Anemia_No",
-      "enrich_score": 29.0809
-    },
-    {
-      "variable": "BMI_Before_Pregnancy_G_18.5-24.Normal",
-      "enrich_score": 28.9765
-    },
-    {
-      "variable": "Weight_Gain_Over_Pregnancy_G_Within.Guidelines",
-      "enrich_score": 28.9301
-    },
-    {
-      "variable": "B_HGB",
-      "enrich_score": 28.8614
-    },
-    {
-      "variable": "o__Rhodospirillales.f__.g__",
-      "enrich_score": 28.8542
-    },
-    {
-      "variable": "c__Clostridia.o__.f__.g__",
-      "enrich_score": 28.8322
-    },
-    {
-      "variable": "Medication_No",
-      "enrich_score": 28.338
+      "enrich_score": 30.1666
     },
     {
       "variable": "g__Papillibacter",
-      "enrich_score": 28.3219
+      "enrich_score": 30.0754
     },
     {
-      "variable": "B_EO",
-      "enrich_score": 28.3133
+      "variable": "Hepatopathy",
+      "enrich_score": 29.9669
     },
     {
-      "variable": "Delivery_Mode_Vaginal.Delivery",
-      "enrich_score": 28.2285
+      "variable": "g__Peptococcus",
+      "enrich_score": 29.9337
     },
     {
-      "variable": "g__Catabacter",
-      "enrich_score": 27.8111
+      "variable": "B_TP",
+      "enrich_score": 29.8113
     },
     {
-      "variable": "g__Anaerostipes",
-      "enrich_score": 27.7953
+      "variable": "g__Alloprevotella",
+      "enrich_score": 29.6492
     },
     {
-      "variable": "g__Prevotellaceae.NK3B31.group",
-      "enrich_score": 27.5953
+      "variable": "A_G",
+      "enrich_score": 29.5883
     },
     {
-      "variable": "g__Negativibacillus",
-      "enrich_score": 27.5632
-    },
-    {
-      "variable": "g__Latilactobacillus",
-      "enrich_score": 27.5432
-    },
-    {
-      "variable": "U_KET_G_Negative",
-      "enrich_score": 27.488
-    },
-    {
-      "variable": "B_EO_P",
-      "enrich_score": 27.4119
-    },
-    {
-      "variable": "g__Anaerotruncus",
-      "enrich_score": 27.404
-    },
-    {
-      "variable": "o__Coriobacteriales.f__.g__",
-      "enrich_score": 27.2094
-    },
-    {
-      "variable": "B_FIB",
-      "enrich_score": 27.1797
-    },
-    {
-      "variable": "B_MCV",
-      "enrich_score": 26.8569
-    },
-    {
-      "variable": "Primipara",
-      "enrich_score": 26.8238
-    },
-    {
-      "variable": "p__Firmicutes.c__.o__.f__.g__",
-      "enrich_score": 26.6122
-    },
-    {
-      "variable": "g__Prevotella",
-      "enrich_score": 26.5161
-    },
-    {
-      "variable": "g__Victivallis",
-      "enrich_score": 26.5064
-    },
-    {
-      "variable": "U_URI_G_Normal",
-      "enrich_score": 26.4378
-    },
-    {
-      "variable": "Delivery_Season_Spring",
-      "enrich_score": 26.1623
-    },
-    {
-      "variable": "Blood_Type_AB",
-      "enrich_score": 25.9568
-    },
-    {
-      "variable": "B_BA",
-      "enrich_score": 25.6956
-    },
-    {
-      "variable": "Intrahepatic_Cholestasis_of_Pregnancy",
-      "enrich_score": 25.6306
-    },
-    {
-      "variable": "B_PLT",
-      "enrich_score": 25.5813
-    },
-    {
-      "variable": "g__Anaerostignum",
-      "enrich_score": 25.562
-    },
-    {
-      "variable": "Ovary_Disease",
-      "enrich_score": 25.428
+      "variable": "Thyroid_Disease",
+      "enrich_score": 29.5611
     },
     {
       "variable": "B_ALB",
-      "enrich_score": 25.3419
-    },
-    {
-      "variable": "B_MONO_P",
-      "enrich_score": 25.1585
-    },
-    {
-      "variable": "Breast_Disease",
-      "enrich_score": 24.984
-    },
-    {
-      "variable": "B_NEUT_P",
-      "enrich_score": 24.8169
-    },
-    {
-      "variable": "B_MCH",
-      "enrich_score": 24.6373
-    },
-    {
-      "variable": "g__Intestinibacter",
-      "enrich_score": 24.3734
-    },
-    {
-      "variable": "B_LYMPH",
-      "enrich_score": 24.3358
-    },
-    {
-      "variable": "Weight_Gain_Over_Pregnancy",
-      "enrich_score": 24.1425
-    },
-    {
-      "variable": "B_TBIL",
-      "enrich_score": 24.0152
-    },
-    {
-      "variable": "g__Methanosphaera",
-      "enrich_score": 23.9456
-    },
-    {
-      "variable": "g__Paludicola",
-      "enrich_score": 23.7034
-    },
-    {
-      "variable": "B_BA_P",
-      "enrich_score": 23.6854
-    },
-    {
-      "variable": "g__DTU089",
-      "enrich_score": 23.524
-    },
-    {
-      "variable": "g__Citrobacter",
-      "enrich_score": 23.4725
-    },
-    {
-      "variable": "Health",
-      "enrich_score": 23.4701
-    },
-    {
-      "variable": "U_ERY_G_Negative",
-      "enrich_score": 23.4403
-    },
-    {
-      "variable": "g__Escherichia-Shigella",
-      "enrich_score": 23.2929
-    },
-    {
-      "variable": "B_HCT",
-      "enrich_score": 23.2782
-    },
-    {
-      "variable": "HBeAb_Positive",
-      "enrich_score": 23.2644
-    },
-    {
-      "variable": "Conception_Season_Winter",
-      "enrich_score": 23.1563
-    },
-    {
-      "variable": "U_KET_G_Positive",
-      "enrich_score": 23.1333
-    },
-    {
-      "variable": "g__Fournierella",
-      "enrich_score": 23.0992
-    },
-    {
-      "variable": "Delivery_Season_Autumn",
-      "enrich_score": 23.0829
-    },
-    {
-      "variable": "g__Candidatus.Soleaferrea",
-      "enrich_score": 22.9593
+      "enrich_score": 29.5011
     },
     {
       "variable": "B_IBIL",
-      "enrich_score": 22.7997
+      "enrich_score": 29.2223
     },
     {
-      "variable": "HCV_Negative",
-      "enrich_score": 22.7958
+      "variable": "g__Intestinimonas",
+      "enrich_score": 28.9943
     },
     {
-      "variable": "g__Odoribacter",
-      "enrich_score": 22.3384
+      "variable": "o__Rhodospirillales_f___g__",
+      "enrich_score": 28.8222
     },
     {
-      "variable": "f__Veillonellaceae.g__",
-      "enrich_score": 22.1085
+      "variable": "Weight_Gain_Over_Pregnancy_G_Within_Guidelines",
+      "enrich_score": 28.7215
     },
     {
-      "variable": "g__Selenomonas",
-      "enrich_score": 22.051
+      "variable": "B_MCH",
+      "enrich_score": 28.6925
+    },
+    {
+      "variable": "g__Anaerotruncus",
+      "enrich_score": 28.6534
+    },
+    {
+      "variable": "g__Gordonibacter",
+      "enrich_score": 28.4286
+    },
+    {
+      "variable": "B_HGB",
+      "enrich_score": 28.1675
+    },
+    {
+      "variable": "Delivery_Gestational_Age",
+      "enrich_score": 27.996
+    },
+    {
+      "variable": "c__Clostridia_o___f___g__",
+      "enrich_score": 27.9505
+    },
+    {
+      "variable": "Intrahepatic_Cholestasis_of_Pregnancy",
+      "enrich_score": 27.9128
+    },
+    {
+      "variable": "g__Prevotellaceae_NK3B31_group",
+      "enrich_score": 27.911
+    },
+    {
+      "variable": "g__Catabacter",
+      "enrich_score": 27.857
+    },
+    {
+      "variable": "B_MONO",
+      "enrich_score": 27.6976
+    },
+    {
+      "variable": "Medication_No",
+      "enrich_score": 27.6817
+    },
+    {
+      "variable": "Anemia_No",
+      "enrich_score": 27.67
+    },
+    {
+      "variable": "U_KET_G_Negative",
+      "enrich_score": 27.6311
+    },
+    {
+      "variable": "B_EO",
+      "enrich_score": 27.6162
+    },
+    {
+      "variable": "g__Anaerostipes",
+      "enrich_score": 27.4626
+    },
+    {
+      "variable": "g__Latilactobacillus",
+      "enrich_score": 27.2397
+    },
+    {
+      "variable": "B_PLT",
+      "enrich_score": 27.1864
+    },
+    {
+      "variable": "g__Negativibacillus",
+      "enrich_score": 27.1176
+    },
+    {
+      "variable": "Primipara",
+      "enrich_score": 27.0328
+    },
+    {
+      "variable": "BMI_Before_Pregnancy_G_18_5-24_Normal",
+      "enrich_score": 26.9592
+    },
+    {
+      "variable": "o__Coriobacteriales_f___g__",
+      "enrich_score": 26.9131
+    },
+    {
+      "variable": "Delivery_Season_Spring",
+      "enrich_score": 26.8914
+    },
+    {
+      "variable": "B_FIB",
+      "enrich_score": 26.7812
+    },
+    {
+      "variable": "U_URI_G_Normal",
+      "enrich_score": 26.3336
+    },
+    {
+      "variable": "B_MCV",
+      "enrich_score": 26.2197
+    },
+    {
+      "variable": "g__Anaerostignum",
+      "enrich_score": 26.0481
+    },
+    {
+      "variable": "B_EO_P",
+      "enrich_score": 26.0035
+    },
+    {
+      "variable": "Blood_Type_AB",
+      "enrich_score": 25.8948
     },
     {
       "variable": "B_WBC",
-      "enrich_score": 21.9488
+      "enrich_score": 25.8441
     },
     {
-      "variable": "o__Flavobacteriales.f__.g__",
-      "enrich_score": 21.9209
+      "variable": "p__Firmicutes_c___o___f___g__",
+      "enrich_score": 25.7985
     },
     {
-      "variable": "g__Haemophilus",
-      "enrich_score": 21.7327
+      "variable": "g__Prevotella",
+      "enrich_score": 25.7945
+    },
+    {
+      "variable": "B_NEUT_P",
+      "enrich_score": 25.7567
+    },
+    {
+      "variable": "g__Fournierella",
+      "enrich_score": 25.5505
+    },
+    {
+      "variable": "Weight_Gain_Over_Pregnancy",
+      "enrich_score": 25.2578
+    },
+    {
+      "variable": "HBeAb_Positive",
+      "enrich_score": 24.7351
+    },
+    {
+      "variable": "U_KET_G_Positive",
+      "enrich_score": 24.6938
+    },
+    {
+      "variable": "B_LYMPH",
+      "enrich_score": 24.6553
+    },
+    {
+      "variable": "g__Victivallis",
+      "enrich_score": 24.6103
+    },
+    {
+      "variable": "g__Paludicola",
+      "enrich_score": 24.5211
+    },
+    {
+      "variable": "Breast_Disease",
+      "enrich_score": 24.4319
+    },
+    {
+      "variable": "Ovary_Disease",
+      "enrich_score": 24.378
+    },
+    {
+      "variable": "Delivery_Mode_Vaginal_Delivery",
+      "enrich_score": 24.1236
+    },
+    {
+      "variable": "g__DTU089",
+      "enrich_score": 24.0167
+    },
+    {
+      "variable": "B_BA_P",
+      "enrich_score": 23.9985
+    },
+    {
+      "variable": "g__Methanosphaera",
+      "enrich_score": 23.9591
+    },
+    {
+      "variable": "g__Escherichia-Shigella",
+      "enrich_score": 23.6473
+    },
+    {
+      "variable": "B_TBIL",
+      "enrich_score": 23.5043
+    },
+    {
+      "variable": "U_ERY_G_Negative",
+      "enrich_score": 23.2635
+    },
+    {
+      "variable": "B_BA",
+      "enrich_score": 23.224
+    },
+    {
+      "variable": "g__Odoribacter",
+      "enrich_score": 23.1756
+    },
+    {
+      "variable": "g__Clostridium_sensu_stricto_1",
+      "enrich_score": 22.9838
+    },
+    {
+      "variable": "HCV_Negative",
+      "enrich_score": 22.6783
     },
     {
       "variable": "B_RDW_SD",
-      "enrich_score": 21.703
+      "enrich_score": 22.6317
+    },
+    {
+      "variable": "g__Haemophilus",
+      "enrich_score": 22.503
+    },
+    {
+      "variable": "B_HCT",
+      "enrich_score": 22.2893
+    },
+    {
+      "variable": "g__Intestinibacter",
+      "enrich_score": 22.2856
+    },
+    {
+      "variable": "g__Candidatus_Soleaferrea",
+      "enrich_score": 22.2117
+    },
+    {
+      "variable": "Conception_Season_Winter",
+      "enrich_score": 22.1985
+    },
+    {
+      "variable": "Delivery_Season_Autumn",
+      "enrich_score": 22.113
+    },
+    {
+      "variable": "o__Flavobacteriales_f___g__",
+      "enrich_score": 22.0376
+    },
+    {
+      "variable": "f__Veillonellaceae_g__",
+      "enrich_score": 22.0201
+    },
+    {
+      "variable": "Health",
+      "enrich_score": 21.9889
+    },
+    {
+      "variable": "g__Selenomonas",
+      "enrich_score": 21.9664
+    },
+    {
+      "variable": "g__Citrobacter",
+      "enrich_score": 21.9572
     },
     {
       "variable": "g__Lacticaseibacillus",
-      "enrich_score": 21.5353
-    },
-    {
-      "variable": "U_PRO_Positive",
-      "enrich_score": 21.5003
-    },
-    {
-      "variable": "g__Actinomyces",
-      "enrich_score": 21.4406
-    },
-    {
-      "variable": "f__Desulfovibrionaceae.g__",
-      "enrich_score": 21.2084
-    },
-    {
-      "variable": "g__Staphylococcus",
-      "enrich_score": 21.1467
-    },
-    {
-      "variable": "g__Stappia",
-      "enrich_score": 21.1378
-    },
-    {
-      "variable": "g__Stenotrophomonas",
-      "enrich_score": 21.1223
-    },
-    {
-      "variable": "B_RDW_CV",
-      "enrich_score": 21.0683
-    },
-    {
-      "variable": "g__Clostridium.sensu.stricto.1",
-      "enrich_score": 21.0066
+      "enrich_score": 21.9326
     },
     {
       "variable": "g__Sneathia",
-      "enrich_score": 20.9428
+      "enrich_score": 21.9
     },
     {
-      "variable": "f__Tannerellaceae.g__",
-      "enrich_score": 20.787
-    },
-    {
-      "variable": "f__Atopobiaceae.g__",
-      "enrich_score": 20.7539
-    },
-    {
-      "variable": "g__Denitrobacterium",
-      "enrich_score": 20.5446
-    },
-    {
-      "variable": "Infant_Outcome_Referral",
-      "enrich_score": 20.4542
-    },
-    {
-      "variable": "g__Synergistes",
-      "enrich_score": 20.3438
+      "variable": "f__Desulfovibrionaceae_g__",
+      "enrich_score": 21.8248
     },
     {
       "variable": "HBcAb_Positive",
-      "enrich_score": 20.2798
+      "enrich_score": 21.7341
     },
     {
-      "variable": "B_MCHC",
-      "enrich_score": 20.2552
+      "variable": "g__Staphylococcus",
+      "enrich_score": 21.732
     },
     {
-      "variable": "f__Hungateiclostridiaceae.g__",
-      "enrich_score": 20.2311
+      "variable": "f__Tannerellaceae_g__",
+      "enrich_score": 21.6269
     },
     {
-      "variable": "f__Butyricicoccaceae.g__",
-      "enrich_score": 20.1815
+      "variable": "f__Butyricicoccaceae_g__",
+      "enrich_score": 21.6237
     },
     {
-      "variable": "g__Lachnospiraceae.NC2004.group",
-      "enrich_score": 20.1526
+      "variable": "f__Atopobiaceae_g__",
+      "enrich_score": 21.4992
     },
     {
-      "variable": "HAVAB_Negative",
-      "enrich_score": 20.0338
+      "variable": "g__Synergistes",
+      "enrich_score": 21.3011
     },
     {
-      "variable": "BS",
-      "enrich_score": 19.9288
+      "variable": "g__Stappia",
+      "enrich_score": 21.1227
     },
     {
-      "variable": "g__Sphingorhabdus",
-      "enrich_score": 19.8764
-    },
-    {
-      "variable": "BS60",
-      "enrich_score": 19.7648
-    },
-    {
-      "variable": "f__Lachnospiraceae.g__",
-      "enrich_score": 19.3704
-    },
-    {
-      "variable": "Delivery_Gestational_Age_G_28-36W",
-      "enrich_score": 19.3198
-    },
-    {
-      "variable": "Rupture_of_Membranes_Model_Artificial",
-      "enrich_score": 18.9041
-    },
-    {
-      "variable": "g__Anaerococcus",
-      "enrich_score": 18.7928
-    },
-    {
-      "variable": "Age_Group_30-34",
-      "enrich_score": 18.7072
-    },
-    {
-      "variable": "f__Christensenellaceae.g__",
-      "enrich_score": 18.7052
-    },
-    {
-      "variable": "U_NEC",
-      "enrich_score": 18.5207
-    },
-    {
-      "variable": "g__Fastidiosipila",
-      "enrich_score": 18.5042
+      "variable": "g__Actinomyces",
+      "enrich_score": 20.977
     },
     {
       "variable": "Anemia_Thalassemia",
-      "enrich_score": 18.443
+      "enrich_score": 20.8187
     },
     {
-      "variable": "g__Succinivibrio",
-      "enrich_score": 18.3791
+      "variable": "f__Hungateiclostridiaceae_g__",
+      "enrich_score": 20.8005
     },
     {
-      "variable": "Delivery_Mode_Cesarean.Delivery",
-      "enrich_score": 18.2881
+      "variable": "Infant_Outcome_Referral",
+      "enrich_score": 20.6
     },
     {
-      "variable": "U_LEU_G_Negative",
-      "enrich_score": 18.2681
+      "variable": "g__Stenotrophomonas",
+      "enrich_score": 20.5314
     },
     {
-      "variable": "Weight_Gain_Over_Pregnancy_G_Less.Than.Guidelines",
-      "enrich_score": 18.2433
+      "variable": "U_PRO_Positive",
+      "enrich_score": 20.4284
+    },
+    {
+      "variable": "HAVAB_Negative",
+      "enrich_score": 20.4049
+    },
+    {
+      "variable": "BS",
+      "enrich_score": 20.3868
+    },
+    {
+      "variable": "g__Lachnospiraceae_NC2004_group",
+      "enrich_score": 20.2778
+    },
+    {
+      "variable": "B_MCHC",
+      "enrich_score": 20.2002
+    },
+    {
+      "variable": "g__Denitrobacterium",
+      "enrich_score": 20.1053
+    },
+    {
+      "variable": "B_MONO_P",
+      "enrich_score": 19.7988
+    },
+    {
+      "variable": "f__Sphingobacteriaceae_g__",
+      "enrich_score": 19.0245
+    },
+    {
+      "variable": "g__Sphingorhabdus",
+      "enrich_score": 19.0164
+    },
+    {
+      "variable": "Delivery_Gestational_Age_G_28-36W",
+      "enrich_score": 18.9588
+    },
+    {
+      "variable": "B_RDW_CV",
+      "enrich_score": 18.9295
+    },
+    {
+      "variable": "f__Lachnospiraceae_g__",
+      "enrich_score": 18.8061
     },
     {
       "variable": "Amniodic_Fluid_Muddy",
-      "enrich_score": 18.2203
-    },
-    {
-      "variable": "Gestation_Age",
-      "enrich_score": 18.118
-    },
-    {
-      "variable": "o__Gastranaerophilales.f__.g__",
-      "enrich_score": 17.9091
-    },
-    {
-      "variable": "g__Gardnerella",
-      "enrich_score": 17.8812
-    },
-    {
-      "variable": "g__Tuzzerella",
-      "enrich_score": 17.818
-    },
-    {
-      "variable": "f__Sphingomonadaceae.g__",
-      "enrich_score": 17.807
-    },
-    {
-      "variable": "f__Sphingobacteriaceae.g__",
-      "enrich_score": 17.7503
-    },
-    {
-      "variable": "g__Phascolarctobacterium",
-      "enrich_score": 17.6198
-    },
-    {
-      "variable": "g__Rothia",
-      "enrich_score": 17.5833
+      "enrich_score": 18.6474
     },
     {
       "variable": "g__Granulicatella",
-      "enrich_score": 17.5584
+      "enrich_score": 18.5802
     },
     {
-      "variable": "U_ERY_G_Positive",
-      "enrich_score": 17.5203
+      "variable": "U_LEU_G_Negative",
+      "enrich_score": 18.5498
     },
     {
-      "variable": "g__Bosea",
-      "enrich_score": 17.5124
+      "variable": "Age_Group_30-34",
+      "enrich_score": 18.4787
     },
     {
-      "variable": "Medication_Progesterone",
-      "enrich_score": 17.4664
+      "variable": "Weight_Gain_Over_Pregnancy_G_Less_Than_Guidelines",
+      "enrich_score": 18.3789
     },
     {
-      "variable": "g__Rikenella",
-      "enrich_score": 17.3745
+      "variable": "g__Phascolarctobacterium",
+      "enrich_score": 18.3704
     },
     {
-      "variable": "g__Aquamicrobium",
-      "enrich_score": 17.3202
+      "variable": "o__Gastranaerophilales_f___g__",
+      "enrich_score": 18.3123
+    },
+    {
+      "variable": "BS60",
+      "enrich_score": 18.2902
+    },
+    {
+      "variable": "U_NEC",
+      "enrich_score": 18.2369
+    },
+    {
+      "variable": "g__Succinivibrio",
+      "enrich_score": 18.2235
+    },
+    {
+      "variable": "g__Gardnerella",
+      "enrich_score": 18.1475
+    },
+    {
+      "variable": "g__Tuzzerella",
+      "enrich_score": 18.1386
+    },
+    {
+      "variable": "f__Christensenellaceae_g__",
+      "enrich_score": 17.9517
+    },
+    {
+      "variable": "Infant_Weight_G__2_5KG_Underweight",
+      "enrich_score": 17.8681
     },
     {
       "variable": "B_LYMPH_P",
-      "enrich_score": 17.2211
+      "enrich_score": 17.7166
     },
     {
-      "variable": "Blood_Type_O",
-      "enrich_score": 17.2175
+      "variable": "Medication_Progesterone",
+      "enrich_score": 17.4709
+    },
+    {
+      "variable": "g__Fastidiosipila",
+      "enrich_score": 17.433
+    },
+    {
+      "variable": "g__Aquamicrobium",
+      "enrich_score": 17.4245
+    },
+    {
+      "variable": "g__Rothia",
+      "enrich_score": 17.3496
     },
     {
       "variable": "g__Ochrobactrum",
-      "enrich_score": 17.1918
+      "enrich_score": 17.3237
     },
     {
-      "variable": "f__UCG-010.g__",
-      "enrich_score": 17.1546
+      "variable": "U_ERY_G_Positive",
+      "enrich_score": 17.1902
     },
     {
-      "variable": "p__WPS-2.c__.o__.f__.g__",
-      "enrich_score": 17.0466
+      "variable": "Blood_Type_O",
+      "enrich_score": 17.1304
     },
     {
-      "variable": "f__Rhizobiaceae.g__",
-      "enrich_score": 17.043
+      "variable": "Gestation_Age",
+      "enrich_score": 17.093
     },
     {
-      "variable": "g__Sarcina",
-      "enrich_score": 16.9779
-    },
-    {
-      "variable": "g__Caproiciproducens",
-      "enrich_score": 16.8452
-    },
-    {
-      "variable": "Delivery_Gestational_Age_G_.42W",
-      "enrich_score": 16.796
+      "variable": "p__WPS-2_c___o___f___g__",
+      "enrich_score": 16.9168
     },
     {
       "variable": "B_DBIL",
-      "enrich_score": 16.7551
-    },
-    {
-      "variable": "g__Enorma",
-      "enrich_score": 16.7483
-    },
-    {
-      "variable": "g__Muribaculum",
-      "enrich_score": 16.5737
-    },
-    {
-      "variable": "HBsAb_Positive",
-      "enrich_score": 16.4499
-    },
-    {
-      "variable": "g__Epulopiscium",
-      "enrich_score": 16.3324
-    },
-    {
-      "variable": "U_ASC_G_Positive",
-      "enrich_score": 16.2421
-    },
-    {
-      "variable": "g__Paraclostridium",
-      "enrich_score": 16.2231
+      "enrich_score": 16.9125
     },
     {
       "variable": "g__Porphyromonas",
-      "enrich_score": 16.2073
+      "enrich_score": 16.8261
     },
     {
-      "variable": "U_TRI",
-      "enrich_score": 16.079
+      "variable": "g__Sarcina",
+      "enrich_score": 16.7384
+    },
+    {
+      "variable": "g__Bosea",
+      "enrich_score": 16.7141
     },
     {
       "variable": "g__Aerococcus",
-      "enrich_score": 15.9929
+      "enrich_score": 16.6342
     },
     {
-      "variable": "c__Bacteroidia.o__.f__.g__",
-      "enrich_score": 15.9216
+      "variable": "f__Sphingomonadaceae_g__",
+      "enrich_score": 16.61
     },
     {
-      "variable": "g__Monoglobus",
-      "enrich_score": 15.8425
+      "variable": "Delivery_Gestational_Age_G__42W",
+      "enrich_score": 16.5784
     },
     {
-      "variable": "g__Leuconostoc",
-      "enrich_score": 15.8071
+      "variable": "Rupture_of_Membranes_Model_Artificial",
+      "enrich_score": 16.5141
     },
     {
-      "variable": "Infant_Weight_G_.2.5KG.Underweight",
-      "enrich_score": 15.7999
-    },
-    {
-      "variable": "g__Veillonella",
-      "enrich_score": 15.7557
-    },
-    {
-      "variable": "g__Anaeroplasma",
-      "enrich_score": 15.5935
-    },
-    {
-      "variable": "o__Saccharimonadales.f__.g__",
-      "enrich_score": 15.5219
-    },
-    {
-      "variable": "g__Proteus",
-      "enrich_score": 15.3997
-    },
-    {
-      "variable": "U_MUC",
-      "enrich_score": 15.2968
-    },
-    {
-      "variable": "Pregnancy_Mode_ART",
-      "enrich_score": 15.1505
-    },
-    {
-      "variable": "B_R_GT",
-      "enrich_score": 15.1216
+      "variable": "g__Anaerococcus",
+      "enrich_score": 16.4917
     },
     {
       "variable": "BS120",
-      "enrich_score": 14.9958
+      "enrich_score": 16.4483
+    },
+    {
+      "variable": "g__Muribaculum",
+      "enrich_score": 16.4161
+    },
+    {
+      "variable": "U_ASC_G_Positive",
+      "enrich_score": 16.39
+    },
+    {
+      "variable": "f__Rhizobiaceae_g__",
+      "enrich_score": 16.3677
     },
     {
       "variable": "g__Providencia",
-      "enrich_score": 14.9313
+      "enrich_score": 16.3626
     },
     {
-      "variable": "f__Hydrogenoanaerobacterium.g__",
-      "enrich_score": 14.8958
+      "variable": "g__Epulopiscium",
+      "enrich_score": 16.3597
     },
     {
-      "variable": "o__Lactobacillales.f__.g__",
-      "enrich_score": 14.7877
+      "variable": "g__Caproiciproducens",
+      "enrich_score": 16.3031
     },
     {
-      "variable": "g__Raoultella",
-      "enrich_score": 14.6411
+      "variable": "Delivery_Mode_Cesarean_Delivery",
+      "enrich_score": 16.25
     },
     {
-      "variable": "k__Bacteria.p__.c__.o__.f__.g__",
-      "enrich_score": 14.6106
+      "variable": "g__Leuconostoc",
+      "enrich_score": 16.1978
     },
     {
-      "variable": "g__Neorhizobium",
-      "enrich_score": 14.5021
+      "variable": "g__Paraclostridium",
+      "enrich_score": 16.1789
     },
     {
-      "variable": "g__Prevotellaceae.UCG-001",
-      "enrich_score": 14.4382
-    },
-    {
-      "variable": "B_AST",
-      "enrich_score": 14.3531
-    },
-    {
-      "variable": "g__Howardella",
-      "enrich_score": 14.3047
-    },
-    {
-      "variable": "g__Erysipelotrichaceae.UCG-006",
-      "enrich_score": 14.2145
+      "variable": "HBsAb_Positive",
+      "enrich_score": 16.1655
     },
     {
       "variable": "g__Turicibacter",
-      "enrich_score": 14.1557
+      "enrich_score": 16.1483
     },
     {
-      "variable": "Delivery_Season_Winter",
-      "enrich_score": 14.1183
+      "variable": "g__Proteus",
+      "enrich_score": 15.9677
     },
     {
-      "variable": "Age",
-      "enrich_score": 14.1111
+      "variable": "Pregnancy_Mode_ART",
+      "enrich_score": 15.9431
     },
     {
-      "variable": "g__Brucella",
-      "enrich_score": 14.1026
+      "variable": "o__Saccharimonadales_f___g__",
+      "enrich_score": 15.8375
+    },
+    {
+      "variable": "U_TRI",
+      "enrich_score": 15.6133
+    },
+    {
+      "variable": "g__Enorma",
+      "enrich_score": 15.5734
+    },
+    {
+      "variable": "U_MUC",
+      "enrich_score": 15.4577
+    },
+    {
+      "variable": "g__Rikenella",
+      "enrich_score": 15.4002
+    },
+    {
+      "variable": "f__Hydrogenoanaerobacterium_g__",
+      "enrich_score": 15.3465
     },
     {
       "variable": "g__Stomatobaculum",
-      "enrich_score": 14.0914
+      "enrich_score": 15.3423
     },
     {
-      "variable": "U_WBC",
-      "enrich_score": 13.9677
-    },
-    {
-      "variable": "f__Enterobacteriaceae.g__",
-      "enrich_score": 13.9646
-    },
-    {
-      "variable": "Height",
-      "enrich_score": 13.9381
-    },
-    {
-      "variable": "B_APTT",
-      "enrich_score": 13.8782
-    },
-    {
-      "variable": "U_HYA",
-      "enrich_score": 13.8373
-    },
-    {
-      "variable": "U_GLU_G_Negative",
-      "enrich_score": 13.7105
-    },
-    {
-      "variable": "Rupture_of_Membranes_Model_Spontaneous",
-      "enrich_score": 13.7024
-    },
-    {
-      "variable": "Fetal_Abnormalities_No",
-      "enrich_score": 13.6989
+      "variable": "B_R_GT",
+      "enrich_score": 15.1303
     },
     {
       "variable": "HBeAg_Negative",
-      "enrich_score": 13.6117
+      "enrich_score": 14.9292
     },
     {
-      "variable": "g__Johnsonella",
-      "enrich_score": 13.569
+      "variable": "Age",
+      "enrich_score": 14.8507
     },
     {
-      "variable": "g__Acetanaerobacterium",
-      "enrich_score": 13.558
+      "variable": "f__UCG-010_g__",
+      "enrich_score": 14.7861
     },
     {
-      "variable": "g__Ezakiella",
-      "enrich_score": 13.4661
+      "variable": "g__Prevotellaceae_UCG-001",
+      "enrich_score": 14.7515
+    },
+    {
+      "variable": "U_GLU_G_Negative",
+      "enrich_score": 14.738
+    },
+    {
+      "variable": "k__Bacteria_p___c___o___f___g__",
+      "enrich_score": 14.6896
+    },
+    {
+      "variable": "c__Bacteroidia_o___f___g__",
+      "enrich_score": 14.6754
     },
     {
       "variable": "U_EPI",
-      "enrich_score": 13.4613
+      "enrich_score": 14.6683
     },
     {
-      "variable": "U_SG",
-      "enrich_score": 13.432
+      "variable": "g__Raoultella",
+      "enrich_score": 14.6449
     },
     {
-      "variable": "g__Harryflintia",
-      "enrich_score": 13.3013
+      "variable": "g__Veillonella",
+      "enrich_score": 14.6081
     },
     {
-      "variable": "g__Faecalicoccus",
-      "enrich_score": 13.2519
+      "variable": "g__Monoglobus",
+      "enrich_score": 14.6028
     },
     {
-      "variable": "g__Ruminiclostridium",
-      "enrich_score": 13.2477
+      "variable": "U_HYA",
+      "enrich_score": 14.5592
     },
     {
-      "variable": "Multiple_Pregnancy",
-      "enrich_score": 13.218
+      "variable": "g__Brucella",
+      "enrich_score": 14.5115
     },
     {
-      "variable": "HBsAg_Negative",
-      "enrich_score": 12.9386
+      "variable": "Height",
+      "enrich_score": 14.4491
     },
     {
-      "variable": "g__Fenollaria",
-      "enrich_score": 12.742
-    },
-    {
-      "variable": "g__Succinatimonas",
-      "enrich_score": 12.5411
-    },
-    {
-      "variable": "BMI_Before_Pregnancy_G_.24.Overweight",
-      "enrich_score": 12.5063
-    },
-    {
-      "variable": "g__Catenisphaera",
-      "enrich_score": 12.5038
-    },
-    {
-      "variable": "g__Serratia",
-      "enrich_score": 12.4769
-    },
-    {
-      "variable": "g__Lactococcus",
-      "enrich_score": 12.3807
-    },
-    {
-      "variable": "B_PCT",
-      "enrich_score": 12.3587
-    },
-    {
-      "variable": "HBcAb_Negative",
-      "enrich_score": 12.3223
-    },
-    {
-      "variable": "g__Negativicoccus",
-      "enrich_score": 12.3081
+      "variable": "Delivery_Season_Winter",
+      "enrich_score": 14.4165
     },
     {
       "variable": "HCV_Positive",
-      "enrich_score": 12.1748
+      "enrich_score": 14.357
     },
     {
-      "variable": "g__Sellimonas",
-      "enrich_score": 12.0864
+      "variable": "B_APTT",
+      "enrich_score": 14.2545
     },
     {
-      "variable": "History_Pregnancy_Outcomes_Miscarriage",
-      "enrich_score": 12.0483
+      "variable": "g__Erysipelotrichaceae_UCG-006",
+      "enrich_score": 14.2269
+    },
+    {
+      "variable": "Multiple_Pregnancy",
+      "enrich_score": 14.2037
     },
     {
       "variable": "Conception_Season_Spring",
-      "enrich_score": 11.9854
+      "enrich_score": 14.1762
+    },
+    {
+      "variable": "HBsAg_Negative",
+      "enrich_score": 14.1268
+    },
+    {
+      "variable": "g__Neorhizobium",
+      "enrich_score": 14.1013
+    },
+    {
+      "variable": "g__Howardella",
+      "enrich_score": 13.8035
+    },
+    {
+      "variable": "B_AST",
+      "enrich_score": 13.7071
+    },
+    {
+      "variable": "g__Johnsonella",
+      "enrich_score": 13.6825
+    },
+    {
+      "variable": "g__Negativicoccus",
+      "enrich_score": 13.6393
+    },
+    {
+      "variable": "g__Anaeroplasma",
+      "enrich_score": 13.6388
+    },
+    {
+      "variable": "f__Enterobacteriaceae_g__",
+      "enrich_score": 13.5581
+    },
+    {
+      "variable": "U_WBC",
+      "enrich_score": 13.525
+    },
+    {
+      "variable": "g__Ezakiella",
+      "enrich_score": 13.4734
+    },
+    {
+      "variable": "g__Harryflintia",
+      "enrich_score": 13.464
+    },
+    {
+      "variable": "g__Acetanaerobacterium",
+      "enrich_score": 13.2998
+    },
+    {
+      "variable": "o__Lactobacillales_f___g__",
+      "enrich_score": 13.2657
+    },
+    {
+      "variable": "BMI_Before_Pregnancy_G__24_Overweight",
+      "enrich_score": 13.2149
+    },
+    {
+      "variable": "B_PCT",
+      "enrich_score": 12.9719
+    },
+    {
+      "variable": "g__Ruminiclostridium",
+      "enrich_score": 12.7849
+    },
+    {
+      "variable": "g__Catenisphaera",
+      "enrich_score": 12.7809
+    },
+    {
+      "variable": "g__Fenollaria",
+      "enrich_score": 12.738
+    },
+    {
+      "variable": "U_LEU_G_Positive",
+      "enrich_score": 12.676
+    },
+    {
+      "variable": "History_Pregnancy_Outcomes_Miscarriage",
+      "enrich_score": 12.6079
+    },
+    {
+      "variable": "g__Sellimonas",
+      "enrich_score": 12.4707
+    },
+    {
+      "variable": "Rupture_of_Membranes_Model_Spontaneous",
+      "enrich_score": 12.4558
     },
     {
       "variable": "g__Bifidobacterium",
-      "enrich_score": 11.8682
+      "enrich_score": 12.0398
+    },
+    {
+      "variable": "g__Succinatimonas",
+      "enrich_score": 11.9287
+    },
+    {
+      "variable": "g__Serratia",
+      "enrich_score": 11.906
+    },
+    {
+      "variable": "Fetal_Abnormalities_No",
+      "enrich_score": 11.8475
+    },
+    {
+      "variable": "U_SG",
+      "enrich_score": 11.7254
+    },
+    {
+      "variable": "g__Raoultibacter",
+      "enrich_score": 11.6794
     },
     {
       "variable": "g__Solobacterium",
       "enrich_score": 11.6344
     },
     {
-      "variable": "g__UCG-008",
-      "enrich_score": 11.4087
+      "variable": "g__Butyrivibrio",
+      "enrich_score": 11.536
     },
     {
       "variable": "g__Prevotella_7",
-      "enrich_score": 11.381
+      "enrich_score": 11.4388
     },
     {
-      "variable": "g__Raoultibacter",
-      "enrich_score": 11.2853
+      "variable": "g__UCG-008",
+      "enrich_score": 11.4108
     },
     {
-      "variable": "g__Butyrivibrio",
-      "enrich_score": 11.2538
+      "variable": "HBcAb_Negative",
+      "enrich_score": 11.3803
     },
     {
-      "variable": "g__Atopobium",
-      "enrich_score": 11.2385
+      "variable": "B_TT",
+      "enrich_score": 11.2746
     },
     {
-      "variable": "U_LEU_G_Positive",
-      "enrich_score": 11.1893
-    },
-    {
-      "variable": "g__Allisonella",
-      "enrich_score": 11.1612
-    },
-    {
-      "variable": "Gestation_Age_G1_1-12W",
-      "enrich_score": 11.0962
+      "variable": "g__Lactococcus",
+      "enrich_score": 10.921
     },
     {
       "variable": "g__Macrococcus",
       "enrich_score": 10.9082
     },
     {
-      "variable": "g__Prevotellaceae.UCG-003",
-      "enrich_score": 10.6048
-    },
-    {
-      "variable": "B_TT",
-      "enrich_score": 10.5672
-    },
-    {
-      "variable": "Infant_Weight_G_.4KG.Overweight",
-      "enrich_score": 10.4255
-    },
-    {
-      "variable": "Fetal_Abnormalities_Fetal.Growth.Retardation",
-      "enrich_score": 10.3548
-    },
-    {
-      "variable": "g__S5-A14a",
-      "enrich_score": 10.321
-    },
-    {
-      "variable": "HBeAb_Negative",
-      "enrich_score": 10.2329
-    },
-    {
-      "variable": "g__Kosakonia",
-      "enrich_score": 10.1878
-    },
-    {
-      "variable": "g__Candidatus.Stoquefichus",
-      "enrich_score": 10.0712
-    },
-    {
-      "variable": "U_PH",
-      "enrich_score": 10.059
-    },
-    {
-      "variable": "B_TBA",
-      "enrich_score": 9.8305
-    },
-    {
-      "variable": "Fetal_Abnormalities_Fetal.Distress",
-      "enrich_score": 9.7518
-    },
-    {
-      "variable": "g__Merdibacter",
-      "enrich_score": 9.7498
-    },
-    {
       "variable": "g__Hafnia-Obesumbacterium",
-      "enrich_score": 9.7491
-    },
-    {
-      "variable": "Weight_Gain_Over_Pregnancy_G_More.Than.Guidelines",
-      "enrich_score": 9.5866
-    },
-    {
-      "variable": "g__Lactiplantibacillus",
-      "enrich_score": 9.5572
-    },
-    {
-      "variable": "History_Pregnancy_Outcomes_Other",
-      "enrich_score": 9.5232
-    },
-    {
-      "variable": "g__Brevibacterium",
-      "enrich_score": 9.4813
-    },
-    {
-      "variable": "g__Deinococcus",
-      "enrich_score": 9.4746
-    },
-    {
-      "variable": "g__Neisseria",
-      "enrich_score": 9.4475
-    },
-    {
-      "variable": "g__Aeromonas",
-      "enrich_score": 9.4106
-    },
-    {
-      "variable": "f__Puniceicoccaceae.g__",
-      "enrich_score": 9.4075
-    },
-    {
-      "variable": "g__Tyzzerella",
-      "enrich_score": 9.2796
+      "enrich_score": 10.7938
     },
     {
       "variable": "Fetal_Abnormalities_Other",
-      "enrich_score": 9.2165
+      "enrich_score": 10.5673
     },
     {
-      "variable": "Weight_Before_Pregnancy",
-      "enrich_score": 9.1212
+      "variable": "Gestation_Age_G1_1-12W",
+      "enrich_score": 10.3881
     },
     {
-      "variable": "g__Rikenellaceae.RC9.gut.group",
-      "enrich_score": 9.1062
+      "variable": "g__Merdibacter",
+      "enrich_score": 10.37
+    },
+    {
+      "variable": "g__Pseudomonas",
+      "enrich_score": 10.1433
+    },
+    {
+      "variable": "HBeAb_Negative",
+      "enrich_score": 10.0102
+    },
+    {
+      "variable": "g__Prevotellaceae_UCG-003",
+      "enrich_score": 9.9929
+    },
+    {
+      "variable": "g__Kosakonia",
+      "enrich_score": 9.9925
+    },
+    {
+      "variable": "g__S5-A14a",
+      "enrich_score": 9.8956
+    },
+    {
+      "variable": "g__Methylobacterium-Methylorubrum",
+      "enrich_score": 9.825
+    },
+    {
+      "variable": "Delivery_Mode_Forceps_Delivery",
+      "enrich_score": 9.7947
+    },
+    {
+      "variable": "g__Tyzzerella",
+      "enrich_score": 9.6902
+    },
+    {
+      "variable": "g__Deinococcus",
+      "enrich_score": 9.6347
+    },
+    {
+      "variable": "g__Neisseria",
+      "enrich_score": 9.5466
+    },
+    {
+      "variable": "History_Pregnancy_Outcomes_Other",
+      "enrich_score": 9.4707
+    },
+    {
+      "variable": "f__Puniceicoccaceae_g__",
+      "enrich_score": 9.4137
+    },
+    {
+      "variable": "g__Megasphaera",
+      "enrich_score": 9.3795
     },
     {
       "variable": "Medication_Other",
-      "enrich_score": 9.0898
+      "enrich_score": 9.3763
     },
     {
-      "variable": "g__Klebsiella",
-      "enrich_score": 8.9051
+      "variable": "HBeAg_Positive",
+      "enrich_score": 9.348
     },
     {
-      "variable": "Gestation_Age_G1_29-45W",
-      "enrich_score": 8.8642
+      "variable": "g__Aeromonas",
+      "enrich_score": 9.3334
     },
     {
-      "variable": "BMI_Before_Pregnancy",
-      "enrich_score": 8.8033
+      "variable": "B_TBA",
+      "enrich_score": 9.3237
+    },
+    {
+      "variable": "g__Atopobium",
+      "enrich_score": 9.2283
+    },
+    {
+      "variable": "Infant_Weight_G__4KG_Overweight",
+      "enrich_score": 9.2188
+    },
+    {
+      "variable": "Fetal_Abnormalities_Fetal_Growth_Retardation",
+      "enrich_score": 9.2037
+    },
+    {
+      "variable": "g__Candidatus_Stoquefichus",
+      "enrich_score": 9.1528
+    },
+    {
+      "variable": "HBsAb_Negative",
+      "enrich_score": 9.1288
+    },
+    {
+      "variable": "Gestation_Age_G1_13-28W",
+      "enrich_score": 9.086
+    },
+    {
+      "variable": "Fetal_Abnormalities_Fetal_Distress",
+      "enrich_score": 9.0664
+    },
+    {
+      "variable": "g__Brevibacterium",
+      "enrich_score": 9.0034
+    },
+    {
+      "variable": "g__Lactiplantibacillus",
+      "enrich_score": 8.9697
+    },
+    {
+      "variable": "g__DNF00809",
+      "enrich_score": 8.8511
     },
     {
       "variable": "g__Chryseobacterium",
@@ -1473,23 +1469,15 @@
       "enrich_score": 8.7688
     },
     {
-      "variable": "g__DNF00809",
-      "enrich_score": 8.7218
-    },
-    {
-      "variable": "g__Methylobacterium-Methylorubrum",
-      "enrich_score": 8.7026
-    },
-    {
-      "variable": "HBeAg_Positive",
-      "enrich_score": 8.6728
-    },
-    {
-      "variable": "Anemia_Other",
-      "enrich_score": 8.6425
-    },
-    {
       "variable": "g__Psychrobacter",
+      "enrich_score": 8.7688
+    },
+    {
+      "variable": "Weight_Gain_Over_Pregnancy_G_More_Than_Guidelines",
+      "enrich_score": 8.7438
+    },
+    {
+      "variable": "g__Sanguibacteroides",
       "enrich_score": 8.5743
     },
     {
@@ -1497,296 +1485,316 @@
       "enrich_score": 8.574
     },
     {
-      "variable": "g__Brevundimonas",
-      "enrich_score": 8.5267
-    },
-    {
-      "variable": "g__Pseudomonas",
-      "enrich_score": 8.5128
-    },
-    {
-      "variable": "f__Anaerovoracaceae.g__",
-      "enrich_score": 8.4747
-    },
-    {
-      "variable": "g__Sanguibacteroides",
-      "enrich_score": 8.3319
+      "variable": "Weight_Before_Pregnancy",
+      "enrich_score": 8.5496
     },
     {
       "variable": "g__Enhydrobacter",
+      "enrich_score": 8.4929
+    },
+    {
+      "variable": "BMI_Before_Pregnancy",
+      "enrich_score": 8.4926
+    },
+    {
+      "variable": "g__Brevundimonas",
+      "enrich_score": 8.4664
+    },
+    {
+      "variable": "f__Erysipelatoclostridiaceae_g__",
+      "enrich_score": 8.4288
+    },
+    {
+      "variable": "Age_Group__35",
+      "enrich_score": 8.374
+    },
+    {
+      "variable": "g__Faecalicoccus",
+      "enrich_score": 8.3393
+    },
+    {
+      "variable": "g__Rikenellaceae_RC9_gut_group",
       "enrich_score": 8.2984
     },
     {
-      "variable": "B_P_LCR",
-      "enrich_score": 8.2826
+      "variable": "g__Ligilactobacillus",
+      "enrich_score": 8.0624
     },
     {
-      "variable": "Gestation_Age_G1_13-28W",
-      "enrich_score": 8.2775
+      "variable": "Gestation_Age_G1_29-45W",
+      "enrich_score": 8.0558
     },
     {
-      "variable": "g__Eggerthella",
-      "enrich_score": 8.2555
+      "variable": "g__Lachnospiraceae_UCG-008",
+      "enrich_score": 7.9488
     },
     {
-      "variable": "g__Megasphaera",
-      "enrich_score": 8.2544
+      "variable": "BMI_Before_Pregnancy_G__18_5_Underweight",
+      "enrich_score": 7.9065
     },
     {
-      "variable": "Delivery_Mode_Forceps.Delivery",
-      "enrich_score": 8.2424
+      "variable": "g__Klebsiella",
+      "enrich_score": 7.8882
     },
     {
-      "variable": "Blood_Type_B",
-      "enrich_score": 8.1872
-    },
-    {
-      "variable": "g__Lachnospiraceae.UCG-008",
-      "enrich_score": 8.1429
-    },
-    {
-      "variable": "Age_Group_.35",
-      "enrich_score": 7.9355
-    },
-    {
-      "variable": "g__Murdochiella",
-      "enrich_score": 7.8763
-    },
-    {
-      "variable": "g__Paeniclostridium",
-      "enrich_score": 7.8678
-    },
-    {
-      "variable": "g__Libanicoccus",
-      "enrich_score": 7.8017
-    },
-    {
-      "variable": "o__Enterobacterales.f__.g__",
-      "enrich_score": 7.7978
-    },
-    {
-      "variable": "g__Peptostreptococcus",
-      "enrich_score": 7.6146
-    },
-    {
-      "variable": "Age_Group_.29",
-      "enrich_score": 7.5364
+      "variable": "Age_Group__29",
+      "enrich_score": 7.8014
     },
     {
       "variable": "g__Pseudobutyrivibrio",
-      "enrich_score": 7.5272
+      "enrich_score": 7.7949
     },
     {
-      "variable": "g__Cuneatibacter",
-      "enrich_score": 7.4298
+      "variable": "Blood_Type_B",
+      "enrich_score": 7.7484
     },
     {
-      "variable": "g__Methanobrevibacter",
-      "enrich_score": 7.4019
+      "variable": "o__Enterobacterales_f___g__",
+      "enrich_score": 7.6019
+    },
+    {
+      "variable": "g__Eubacterium",
+      "enrich_score": 7.5056
+    },
+    {
+      "variable": "B_GLU",
+      "enrich_score": 7.4352
+    },
+    {
+      "variable": "g__Morganella",
+      "enrich_score": 7.4303
     },
     {
       "variable": "g__Paraeggerthella",
       "enrich_score": 7.3815
     },
     {
-      "variable": "g__Ligilactobacillus",
-      "enrich_score": 7.3595
+      "variable": "g__Lactobacillus",
+      "enrich_score": 7.3812
     },
     {
-      "variable": "f__Erysipelatoclostridiaceae.g__",
-      "enrich_score": 7.3594
+      "variable": "g__Allisonella",
+      "enrich_score": 7.3767
     },
     {
-      "variable": "g__Eubacterium",
-      "enrich_score": 7.3332
-    },
-    {
-      "variable": "g__Romboutsia",
-      "enrich_score": 7.3121
-    },
-    {
-      "variable": "U_BIL_Positive",
-      "enrich_score": 7.2811
-    },
-    {
-      "variable": "g__Flexilinea",
-      "enrich_score": 7.1059
-    },
-    {
-      "variable": "g__Pyramidobacter",
-      "enrich_score": 7.0581
-    },
-    {
-      "variable": "g__Prevotellaceae.Ga6A1.group",
-      "enrich_score": 7.0029
+      "variable": "g__Murdochiella",
+      "enrich_score": 7.2767
     },
     {
       "variable": "U_GLU_G_Positive",
-      "enrich_score": 6.9446
+      "enrich_score": 7.2121
     },
     {
-      "variable": "g__Acidaminococcus",
-      "enrich_score": 6.9201
+      "variable": "g__Flexilinea",
+      "enrich_score": 7.1397
     },
     {
-      "variable": "B_GLU",
-      "enrich_score": 6.829
+      "variable": "f__Anaerovoracaceae_g__",
+      "enrich_score": 7.1394
     },
     {
-      "variable": "g__Fretibacterium",
-      "enrich_score": 6.7878
-    },
-    {
-      "variable": "o__Izemoplasmatales.f__.g__",
-      "enrich_score": 6.7567
-    },
-    {
-      "variable": "g__Gemella",
-      "enrich_score": 6.7009
-    },
-    {
-      "variable": "U_URI_G_High",
-      "enrich_score": 6.7006
-    },
-    {
-      "variable": "g__Finegoldia",
-      "enrich_score": 6.7006
-    },
-    {
-      "variable": "HBsAg_Positive",
-      "enrich_score": 6.6836
-    },
-    {
-      "variable": "o__Clostridia.vadinBB60.group.f__.g__",
-      "enrich_score": 6.4486
+      "variable": "U_PH",
+      "enrich_score": 7.0073
     },
     {
       "variable": "g__Caulobacter",
-      "enrich_score": 6.4439
+      "enrich_score": 6.9772
     },
     {
-      "variable": "g__Collinsella",
-      "enrich_score": 6.4255
+      "variable": "Anemia_Other",
+      "enrich_score": 6.9202
     },
     {
-      "variable": "g__Cronobacter",
-      "enrich_score": 6.3996
+      "variable": "U_BIL_Positive",
+      "enrich_score": 6.9202
+    },
+    {
+      "variable": "g__Prevotellaceae_Ga6A1_group",
+      "enrich_score": 6.9075
+    },
+    {
+      "variable": "g__Eggerthella",
+      "enrich_score": 6.899
+    },
+    {
+      "variable": "g__Methanobrevibacter",
+      "enrich_score": 6.8384
+    },
+    {
+      "variable": "g__Sporobacter",
+      "enrich_score": 6.7938
+    },
+    {
+      "variable": "o__Clostridia_vadinBB60_group_f___g__",
+      "enrich_score": 6.7681
+    },
+    {
+      "variable": "g__Fretibacterium",
+      "enrich_score": 6.745
+    },
+    {
+      "variable": "U_URI_G_High",
+      "enrich_score": 6.7009
+    },
+    {
+      "variable": "Blood_Type_A",
+      "enrich_score": 6.6902
+    },
+    {
+      "variable": "Conception_Season_Autumn",
+      "enrich_score": 6.6624
+    },
+    {
+      "variable": "g__Hungatella",
+      "enrich_score": 6.599
+    },
+    {
+      "variable": "g__Cuneatibacter",
+      "enrich_score": 6.5942
+    },
+    {
+      "variable": "HBsAg_Positive",
+      "enrich_score": 6.5913
+    },
+    {
+      "variable": "B_MPV",
+      "enrich_score": 6.5069
+    },
+    {
+      "variable": "g__Romboutsia",
+      "enrich_score": 6.421
+    },
+    {
+      "variable": "B_P_LCR",
+      "enrich_score": 6.3517
     },
     {
       "variable": "g__HT002",
       "enrich_score": 6.3238
     },
     {
-      "variable": "g__Lactobacillus",
-      "enrich_score": 6.3175
+      "variable": "g__Pyramidobacter",
+      "enrich_score": 6.2325
     },
     {
-      "variable": "g__Sporobacter",
-      "enrich_score": 6.2322
+      "variable": "g__Cellulosilyticum",
+      "enrich_score": 6.206
     },
     {
-      "variable": "g__Fusobacterium",
-      "enrich_score": 6.2288
+      "variable": "g__Finegoldia",
+      "enrich_score": 6.1779
     },
     {
-      "variable": "Conception_Season_Autumn",
-      "enrich_score": 6.1906
+      "variable": "B_PDW",
+      "enrich_score": 6.1611
     },
     {
-      "variable": "g__Morganella",
-      "enrich_score": 6.1584
+      "variable": "g__Gemella",
+      "enrich_score": 6.1089
+    },
+    {
+      "variable": "g__Paeniclostridium",
+      "enrich_score": 6.0851
+    },
+    {
+      "variable": "g__Mailhella",
+      "enrich_score": 6.074
+    },
+    {
+      "variable": "g__Enterococcus",
+      "enrich_score": 6.0509
     },
     {
       "variable": "g__Herbaspirillum",
       "enrich_score": 6.0301
     },
     {
-      "variable": "g__Hungatella",
+      "variable": "g__Cronobacter",
       "enrich_score": 6.0299
     },
     {
-      "variable": "g__Enterorhabdus",
+      "variable": "o__Izemoplasmatales_f___g__",
       "enrich_score": 6.0299
     },
     {
-      "variable": "g__Oxalobacter",
-      "enrich_score": 5.9293
+      "variable": "g__Collinsella",
+      "enrich_score": 6.0299
     },
     {
-      "variable": "HBsAb_Negative",
-      "enrich_score": 5.8726
+      "variable": "g__Akkermansia",
+      "enrich_score": 5.9448
     },
     {
-      "variable": "B_PT_P",
-      "enrich_score": 5.7386
+      "variable": "g__Leptotrichia",
+      "enrich_score": 5.9209
     },
     {
-      "variable": "g__Parvimonas",
-      "enrich_score": 5.6221
+      "variable": "g__Fusobacterium",
+      "enrich_score": 5.8368
     },
     {
-      "variable": "g__.Clostridium.innocuum.group",
-      "enrich_score": 5.37
+      "variable": "g__Peptostreptococcus",
+      "enrich_score": 5.8013
+    },
+    {
+      "variable": "g___Eubacterium_nodatum_group",
+      "enrich_score": 5.4923
     },
     {
       "variable": "g__Peptoclostridium",
       "enrich_score": 5.37
     },
     {
-      "variable": "g__Cellulosilyticum",
+      "variable": "g___Clostridium_innocuum_group",
       "enrich_score": 5.37
     },
     {
-      "variable": "g__.Bacteroides.pectinophilus.group",
-      "enrich_score": 5.3698
-    },
-    {
       "variable": "g__Tetragenococcus",
+      "enrich_score": 5.37
+    },
+    {
+      "variable": "g___Bacteroides_pectinophilus_group",
       "enrich_score": 5.3698
     },
     {
-      "variable": "g__TM7x",
-      "enrich_score": 5.3698
-    },
-    {
-      "variable": "g__Salmonella",
-      "enrich_score": 5.3698
-    },
-    {
-      "variable": "B_MPV",
-      "enrich_score": 5.2838
+      "variable": "g__Enterorhabdus",
+      "enrich_score": 5.3329
     },
     {
       "variable": "g__Mycoplasma",
-      "enrich_score": 5.2529
+      "enrich_score": 5.3005
     },
     {
-      "variable": "g__Akkermansia",
-      "enrich_score": 5.2003
+      "variable": "U_ASC_G_Negative",
+      "enrich_score": 5.1801
     },
     {
-      "variable": "B_ALT",
+      "variable": "g__Acidaminococcus",
       "enrich_score": 5.1773
     },
     {
-      "variable": "Blood_Type_A",
-      "enrich_score": 5.1667
+      "variable": "g__Salmonella",
+      "enrich_score": 5.1773
     },
     {
-      "variable": "g__Enterococcus",
-      "enrich_score": 5.1426
+      "variable": "B_ALT",
+      "enrich_score": 5.1297
     },
     {
-      "variable": "B_PDW",
-      "enrich_score": 5.1036
+      "variable": "g__Coriobacteriaceae_UCG-002",
+      "enrich_score": 5.1297
     },
     {
-      "variable": "g__Catenibacillus",
-      "enrich_score": 4.9975
+      "variable": "g___Ruminococcus_gnavus_group",
+      "enrich_score": 5.0075
     },
     {
-      "variable": "g__Mailhella",
-      "enrich_score": 4.8563
+      "variable": "g__Oxalobacter",
+      "enrich_score": 4.9754
+    },
+    {
+      "variable": "g__Parvimonas",
+      "enrich_score": 4.8873
     },
     {
       "variable": "g__UC5-1-2E3",
@@ -1797,32 +1805,20 @@
       "enrich_score": 4.7217
     },
     {
-      "variable": "g__.Ruminococcus.gnavus.group",
-      "enrich_score": 4.7126
-    },
-    {
-      "variable": "g__Coriobacteriaceae.UCG-002",
-      "enrich_score": 4.4821
+      "variable": "g__Libanicoccus",
+      "enrich_score": 4.7162
     },
     {
       "variable": "g__Dellaglioa",
-      "enrich_score": 4.4819
+      "enrich_score": 4.5295
     },
     {
-      "variable": "g__Allobaculum",
-      "enrich_score": 4.4811
+      "variable": "U_UBG_G_Positive",
+      "enrich_score": 4.4481
     },
     {
-      "variable": "g__Leptotrichia",
-      "enrich_score": 4.257
-    },
-    {
-      "variable": "g__.Eubacterium.nodatum.group",
-      "enrich_score": 4.1896
-    },
-    {
-      "variable": "g__Curtobacterium",
-      "enrich_score": 4.0864
+      "variable": "U_NIT_Negative",
+      "enrich_score": 4.3823
     },
     {
       "variable": "g__Lactonifactor",
@@ -1830,130 +1826,102 @@
     },
     {
       "variable": "B_Urea",
+      "enrich_score": 4.0864
+    },
+    {
+      "variable": "g__Curtobacterium",
+      "enrich_score": 4.0864
+    },
+    {
+      "variable": "g__Terrisporobacter",
       "enrich_score": 4.0863
     },
     {
-      "variable": "BMI_Before_Pregnancy_G_.18.5.Underweight",
-      "enrich_score": 3.9618
+      "variable": "f__P5D1-392_g__",
+      "enrich_score": 4.0863
     },
     {
-      "variable": "U_UBG_G_Positive",
-      "enrich_score": 3.8951
+      "variable": "g__Lachnospiraceae_UCG-009",
+      "enrich_score": 3.8953
     },
     {
-      "variable": "g__Cryptobacterium",
-      "enrich_score": 3.8605
+      "variable": "g__Mitsuokella",
+      "enrich_score": 3.8475
     },
     {
-      "variable": "U_NIT_Negative",
-      "enrich_score": 3.8605
+      "variable": "g__Kocuria",
+      "enrich_score": 3.8475
     },
     {
-      "variable": "g__Pseudoflavonifractor",
-      "enrich_score": 3.8065
+      "variable": "g__Peptoniphilus",
+      "enrich_score": 3.6256
     },
     {
-      "variable": "Delivery_Season_Summer",
-      "enrich_score": 3.6958
-    },
-    {
-      "variable": "g__GCA-900066755",
-      "enrich_score": 3.4872
-    },
-    {
-      "variable": "g__Lachnospiraceae.UCG-009",
-      "enrich_score": 3.4659
+      "variable": "g__Bacillus",
+      "enrich_score": 3.5662
     },
     {
       "variable": "g__F0332",
       "enrich_score": 3.4659
     },
     {
-      "variable": "o__Clostridiales.f__.g__",
-      "enrich_score": 3.4659
-    },
-    {
-      "variable": "f__Lactobacillaceae.g__",
-      "enrich_score": 3.4659
-    },
-    {
-      "variable": "f__P5D1-392.g__",
-      "enrich_score": 3.4657
-    },
-    {
       "variable": "g__Centipeda",
       "enrich_score": 3.4657
     },
     {
-      "variable": "g__Mitsuokella",
+      "variable": "g__Oribacterium",
       "enrich_score": 3.4657
+    },
+    {
+      "variable": "o__Clostridiales_f___g__",
+      "enrich_score": 3.4657
+    },
+    {
+      "variable": "f__Lactobacillaceae_g__",
+      "enrich_score": 3.4657
+    },
+    {
+      "variable": "g__GCA-900066755",
+      "enrich_score": 3.2759
     },
     {
       "variable": "g__Mobiluncus",
-      "enrich_score": 3.4657
+      "enrich_score": 3.2758
     },
     {
       "variable": "g__Coprobacillus",
-      "enrich_score": 3.4373
-    },
-    {
-      "variable": "g__Anaeroglobus",
-      "enrich_score": 3.2282
-    },
-    {
-      "variable": "f__Selenomonadaceae.g__",
-      "enrich_score": 3.2282
-    },
-    {
-      "variable": "g__Oribacterium",
-      "enrich_score": 3.2282
-    },
-    {
-      "variable": "g__Anaerofustis",
-      "enrich_score": 3.1056
-    },
-    {
-      "variable": "U_ASC_G_Negative",
-      "enrich_score": 3.0399
-    },
-    {
-      "variable": "B_UA",
-      "enrich_score": 2.8961
-    },
-    {
-      "variable": "B_INR",
-      "enrich_score": 2.875
-    },
-    {
-      "variable": "g__Kocuria",
-      "enrich_score": 2.862
+      "enrich_score": 3.0104
     },
     {
       "variable": "g__Aggregatibacter",
-      "enrich_score": 2.862
+      "enrich_score": 2.8622
     },
     {
       "variable": "g__Eisenbergiella",
+      "enrich_score": 2.8622
+    },
+    {
+      "variable": "g__Anaeroglobus",
+      "enrich_score": 2.862
+    },
+    {
+      "variable": "g__TM7x",
       "enrich_score": 2.6737
     },
     {
-      "variable": "f__Microbacteriaceae.g__",
+      "variable": "f__Microbacteriaceae_g__",
       "enrich_score": 2.6737
+    },
+    {
+      "variable": "B_INR",
+      "enrich_score": 2.6033
     },
     {
       "variable": "g__Lawsonella",
-      "enrich_score": 2.6736
-    },
-    {
-      "variable": "g__CHKCI001",
-      "enrich_score": 2.2781
+      "enrich_score": 2.509
     },
     {
       "variable": "g__Robinsoniella",
-      "enrich_score": 2.2781
-    },
-    {
-      "variable": "g__Abiotrophia",
       "enrich_score": 2.2781
     },
     {
@@ -1961,11 +1929,11 @@
       "enrich_score": 2.2781
     },
     {
-      "variable": "g__Clostridioides",
+      "variable": "g__Abiotrophia",
       "enrich_score": 2.2781
     },
     {
-      "variable": "g__Fructilactobacillus",
+      "variable": "g__Clostridioides",
       "enrich_score": 2.2781
     },
     {
@@ -1973,23 +1941,23 @@
       "enrich_score": 2.2781
     },
     {
-      "variable": "g__Weissella",
-      "enrich_score": 2.0919
+      "variable": "g__Anaerofustis",
+      "enrich_score": 2.2781
     },
     {
-      "variable": "g__Bacillus",
-      "enrich_score": 1.9354
+      "variable": "g__CHKCI001",
+      "enrich_score": 2.2781
     },
     {
-      "variable": "g__Peptoniphilus",
-      "enrich_score": 1.7177
+      "variable": "g__Cryptobacterium",
+      "enrich_score": 2.278
     },
     {
-      "variable": "f__Erysipelotrichaceae.g__",
-      "enrich_score": 1.7177
+      "variable": "g__Allobaculum",
+      "enrich_score": 1.8711
     },
     {
-      "variable": "g__Cloacibacillus",
+      "variable": "g__Fructilactobacillus",
       "enrich_score": 1.7177
     },
     {
@@ -1997,19 +1965,47 @@
       "enrich_score": 1.7177
     },
     {
-      "variable": "U_NIT_Positive",
+      "variable": "f__Erysipelotrichaceae_g__",
       "enrich_score": 1.7177
     },
     {
-      "variable": "g__Companilactobacillus",
+      "variable": "g__Cloacibacillus",
+      "enrich_score": 1.7177
+    },
+    {
+      "variable": "g__Weissella",
       "enrich_score": 1.7177
     },
     {
       "variable": "g__UBA1819",
+      "enrich_score": 1.7177
+    },
+    {
+      "variable": "U_NIT_Positive",
+      "enrich_score": 1.7177
+    },
+    {
+      "variable": "Delivery_Season_Summer",
+      "enrich_score": 1.7177
+    },
+    {
+      "variable": "g__Catenibacillus",
+      "enrich_score": 1.7177
+    },
+    {
+      "variable": "B_Crea",
+      "enrich_score": 1.7176
+    },
+    {
+      "variable": "g__Companilactobacillus",
       "enrich_score": 1.7176
     },
     {
       "variable": "g__Dielma",
+      "enrich_score": 1.1869
+    },
+    {
+      "variable": "B_UA",
       "enrich_score": 1.1869
     },
     {
@@ -2021,15 +2017,15 @@
       "enrich_score": 1.1869
     },
     {
+      "variable": "f__Peptostreptococcaceae_g__",
+      "enrich_score": 1.1869
+    },
+    {
+      "variable": "g__Pseudoflavonifractor",
+      "enrich_score": 1.1869
+    },
+    {
       "variable": "g__Alloscardovia",
-      "enrich_score": 1.1869
-    },
-    {
-      "variable": "f__.Clostridium.methylpentosum.group.g__",
-      "enrich_score": 1.1869
-    },
-    {
-      "variable": "f__Peptostreptococcaceae.g__",
       "enrich_score": 1.1869
     },
     {
@@ -2037,155 +2033,27 @@
       "enrich_score": 1.1869
     },
     {
-      "variable": "B_Crea",
+      "variable": "f___Clostridium_methylpentosum_group_g__",
       "enrich_score": 1.1869
     },
     {
-      "variable": "g__Delftia",
+      "variable": "B_Cysc",
       "enrich_score": 1.1869
-    },
-    {
-      "variable": "g__Terrisporobacter",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Paracoccus",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Mogibacterium",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "Streptococcal_Infection",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "PPD_GE13",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "EPDS_Score",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Lautropia",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Plesiomonas",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Moryella",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Lachnoanaerobaculum",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Sphingopyxis",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Cetobacterium",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Gallicola",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Enterobacter",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "f__Pasteurellaceae.g__",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Tropheryma",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Limosilactobacillus",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "c__Alphaproteobacteria.o__.f__.g__",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Frisingicoccus",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Clavibacter",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Levilactobacillus",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "f__Saccharimonadaceae.g__",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Pediococcus",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Geobacillus",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Cardiobacterium",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Faecalitalea",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Carnobacterium",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "o__Gracilibacteraceae.f__.g__",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Varibaculum",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Lachnospiraceae.NK3A20.group",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Enteroscipio",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Arcanobacterium",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "AFP",
-      "enrich_score": 0.0
-    },
-    {
-      "variable": "g__Slackia",
-      "enrich_score": 0.0
     },
     {
       "variable": "Pregnancy_Mode_NAT",
+      "enrich_score": 1.1869
+    },
+    {
+      "variable": "B_PT_P",
       "enrich_score": 0.0
     },
     {
-      "variable": "g__Acidovorax",
+      "variable": "B_PT",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Delftia",
       "enrich_score": 0.0
     },
     {
@@ -2197,7 +2065,99 @@
       "enrich_score": 0.0
     },
     {
-      "variable": "B_PT",
+      "variable": "g__Gallicola",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Enterobacter",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Cardiobacterium",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Clavibacter",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Geobacillus",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Varibaculum",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Faecalitalea",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Pediococcus",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Limosilactobacillus",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Frisingicoccus",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Lachnospiraceae_NK3A20_group",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "f__Saccharimonadaceae_g__",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Cetobacterium",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Tropheryma",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Plesiomonas",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "Streptococcal_Infection",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Paracoccus",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "c__Alphaproteobacteria_o___f___g__",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Arcanobacterium",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Acidovorax",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Enteroscipio",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "o__Gracilibacteraceae_f___g__",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "f__Selenomonadaceae_g__",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Carnobacterium",
       "enrich_score": 0.0
     },
     {
@@ -2205,7 +2165,47 @@
       "enrich_score": 0.0
     },
     {
-      "variable": "B_Cysc",
+      "variable": "g__Sphingopyxis",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Slackia",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Lachnoanaerobaculum",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Mogibacterium",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Levilactobacillus",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "AFP",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Moryella",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "g__Lautropia",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "EPDS_Score",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "PPD_GE13",
+      "enrich_score": 0.0
+    },
+    {
+      "variable": "f__Pasteurellaceae_g__",
       "enrich_score": 0.0
     }
   ]
