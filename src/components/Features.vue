@@ -31,7 +31,7 @@
 
     <div class="container">
       <div class="card-content">
-        <div id="chartBary" style="width: 900px; height: 200px"></div>
+        <div id="chartBary" style="width: 58vw; height: 30vh"></div>
       </div>
       <div class="button-container">
         <!-- 创建按钮和色块 -->
@@ -40,7 +40,12 @@
           <button>All</button>
         </div>
         <div v-for="category in categories" :key="category" class="category-button" @click="toggleBarsByCategory(category)">
-          <div class="color-box" :style="{ backgroundColor: colorPalette[categories.indexOf(category) % colorPalette.length] }"></div>
+          <div
+            class="color-box"
+            :style="{
+              backgroundColor: colorPalette[categories.indexOf(category) % colorPalette.length]
+            }"
+          ></div>
           <button>{{ category }}</button>
         </div>
       </div>
@@ -54,7 +59,6 @@
       <div class="module">
         <el-card>
           <h2>Summary</h2>
-
           <h3>Enriched</h3>
           <h5>Nodes: {{ nodesCount2 }}</h5>
           <h5>Samples: {{ histogramParams }}</h5>
@@ -264,11 +268,10 @@ export default {
 
     let graphLayout = d3
       .forceSimulation(graph.nodes)
-      .velocityDecay(0.2)
-      .force('charge', d3.forceManyBody())
+      .force('charge', d3.forceManyBody().strength(-150))
       .force('center', d3.forceCenter(this.width / 2, this.height / 2))
-      .force('x', d3.forceX())
-      .force('y', d3.forceY())
+      .force('x', d3.forceX(this.width / 2).strength(1))
+      .force('y', d3.forceY(this.height / 2).strength(1))
       .force(
         'link',
         d3
@@ -276,6 +279,8 @@ export default {
           .id(function (d) {
             return d.id
           })
+          .distance(50)
+          .strength(1)
       )
       .on('tick', ticked)
 
@@ -286,8 +291,12 @@ export default {
     this.graphLinks = graph.links
     this.graphNodes = graph.nodes
 
-    let svg = d3.select('#viy').attr('width', this.width).attr('height', this.height)
+    let svg = d3.select('#viy')
     this.svg = svg
+    // 初始化 SVG 大小
+    this.resize()
+    // 监听窗口大小变化事件
+    window.addEventListener('resize', this.resize)
     let container = svg.append('g')
 
     svg.call(
@@ -462,10 +471,22 @@ export default {
       node.dispatch('click')
     }
   },
+  beforeDestroy() {
+    // 在组件销毁前移除窗口大小变化事件监听
+  },
   watch: {
     interval: 'updateChart' // 监听 interval 的变化，调用 updateChart 方法更新图表
   },
   methods: {
+    resize() {
+      // 获取新的窗口宽度和高度
+      this.width = window.innerWidth * 0.55
+      this.height = window.innerHeight * 0.6
+
+      // 设置 SVG 的宽度和高度
+      this.svg.attr('width', this.width).attr('height', this.height)
+      this.chartBar.resize()
+    },
     ResetTop() {
       this.interval = this.nodesCount2
     },
@@ -570,13 +591,13 @@ export default {
 
 <style scoped>
 .container {
-  height: 200px;
+  height: 30vh;
   display: flex;
   justify-content: space-between;
 }
 
 .button-container {
-  width: 30%;
+  width: 40vw;
   display: flex;
   flex-direction: column;
 }
@@ -584,7 +605,7 @@ export default {
 .category-button {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .color-box {
@@ -598,28 +619,24 @@ export default {
   cursor: pointer;
   height: 15px;
   font-size: 13px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  overflow-x: auto;
 }
 .card-content {
-  height: 200px;
-  width: 900px;
+  height: 30vh;
+  width: 60vw;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
-  width: 1140px;
   margin-top: 4px;
 }
 
 .module {
-  margin-top: 50px;
-  width: 200px;
+  margin-top: 65px;
+  width: 21vw;
 }
 h3 {
-  margin-top: 20px;
+  margin-top: 0.4vh;
 }
 .popup-content {
   cursor: pointer;
@@ -646,6 +663,6 @@ h3 {
   display: inline-block;
   border-bottom: 1px dotted black;
   white-space: normal; /* 允许文本换行 */
-  word-wrap: break-word; /* 换行时断开单词 */
+  overflow-wrap: break-word; /* 换行时断开单词 */
 }
 </style>

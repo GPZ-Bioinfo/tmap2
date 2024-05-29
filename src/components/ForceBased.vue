@@ -61,6 +61,10 @@
       <el-button class="buttonStyle" @click="boardOpen"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="表格导出"><v-icon>mdi-table-large-plus</v-icon></el-tooltip></el-button
       >
+      <!-- 直方图比较 -->
+      <el-button icon="el-icon-menu" class="buttonStyle" @click="openTableDialog">
+        <el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="直方图比较"></el-tooltip
+      ></el-button>
     </div>
     <!-- 点线数量 -->
     <div class="CountBoard">
@@ -146,6 +150,18 @@
         {{ index + 1 + '、 ' + item }}
       </div>
     </el-card>
+    <!-- 弹窗 -->
+    <el-dialog :title="featureName" :visible.sync="dialogVisible" width="50%">
+      <div ref="chart1" class="chart" style="height: 400px"></div>
+      <div ref="chart2" class="chart" style="height: 400px; margin-top: 20px"></div>
+    </el-dialog>
+    <!-- <div class="dataBoard2" v-if="boardExit">
+      <div slot="header" class="clearfix">
+        <h1>{{ featureName }}</h1>
+        <el-button style="position: absolute; right: 10px; top: 0" type="text" @click="boardClose">❌</el-button>
+      </div>
+      <canvas class="dataBoard2" ref="chartCanvas"></canvas>
+    </div> -->
     <!-- 取色板按钮面板 -->
     <div id="colorCastButton">
       <!-- 画板控件 -->
@@ -297,7 +313,8 @@ export default {
     intervalData: [],
     sizeValueArray: [],
     scaleColor: null,
-    lightMark: 0
+    lightMark: 0,
+    dialogVisible: false
   }),
   mounted() {
     let graphName = JSON.parse(localStorage.getItem('graphName'))
@@ -348,13 +365,11 @@ export default {
       .force('y', d3.forceY())
       .force(
         'link',
-        d3
-          .forceLink(graph.links)
-          .id(function (d) {
-            return d.id
-          })
-          // .distance(d => d.dist)
-          // .strength(1)
+        d3.forceLink(graph.links).id(function (d) {
+          return d.id
+        })
+        // .distance(d => d.dist)
+        // .strength(1)
       )
       .on('tick', ticked)
     let graphTrans = d3.zoomTransform(graph.nodes)
@@ -488,6 +503,7 @@ export default {
 
     this.dataList = this.loadAll()
     this.updateChart()
+
     if (this.$route.params.value) {
       this.value = this.$route.params.value
       this.handleChange(this.value)
@@ -499,11 +515,86 @@ export default {
     window.removeEventListener('resize', this.resize)
   },
   watch: {
-    interval: 'updateChart' // Watch for changes in the interval and update the chart
+    interval: 'updateChart', // Watch for changes in the interval and update the chart
+    dialogVisible(newVal) {
+      if (newVal) {
+        // 当对话框显示时，绘制 Canvas
+        this.$nextTick(() => {
+          this.drawChart()
+        })
+      }
+    }
   },
   created() {},
 
   methods: {
+    openTableDialog() {
+      this.dialogVisible = true
+    },
+    initChart(chartDom, chartXData, chartYData) {
+      // 初始化图表
+      const myChart = echarts.init(chartDom)
+
+      // 指定图表的配置项和数据
+      const option = {
+        tooltip: {},
+        xAxis: {
+          data: chartXData
+        },
+        yAxis: {},
+        series: [
+          {
+            name: 'Value',
+            type: 'bar',
+            data: chartYData
+          }
+        ]
+      }
+
+      // 使用刚指定的配置项和数据显示图表。
+      myChart.setOption(option)
+    },
+    drawChart() {
+      if (this.dialogVisible) {
+        this.initChart(this.$refs.chart1, this.generateXData(), this.generateYData())
+        this.initChart(this.$refs.chart2, this.generateXData(), this.generateYData())
+        // const canvas = this.$refs.chartCanvas
+        // const ctx = canvas.getContext('2d')
+
+        // // 清除之前的绘制内容
+        // ctx.clearRect(0, 0, canvas.width, canvas.height)
+        // // 设置直方图参数
+        // const barWidth = 40 // 直方图宽度
+        // const spacing = 10
+        // const startX = 30
+        // const maxHeight = 100 // 直方图高度
+        // const gap = 10 // 两个直方图之间的空白距离
+
+        // // 设置直方图的起始 Y 位置（从顶部开始）
+        // const startY = 0
+
+        // // 上半部分直方图
+        // ctx.fillStyle = 'blue'
+        // for (let i = 0; i < 5; i++) {
+        //   const height = Math.random() * maxHeight // 随机生成直方图高度
+        //   ctx.fillRect(startX + i * (barWidth + spacing), startY, barWidth, height)
+        // }
+
+        // // 下半部分直方图
+        // // 注意：从上半部分直方图的底部开始绘制
+        // ctx.fillStyle = 'red'
+        // for (let i = 0; i < 5; i++) {
+        //   const height = Math.random() * maxHeight // 随机生成直方图高度
+        //   // 计算下半部分直方图的起始y坐标
+        //   const bottomStartY = startY + maxHeight + gap
+        //   // 确保直方图不会超出画布底部
+        //   const maxBottomHeight = canvas.height - bottomStartY - gap // 减去gap作为安全边距
+        //   // 如果随机生成的高度过大，则使用最大允许高度
+        //   const adjustedHeight = Math.min(height, maxBottomHeight)
+        //   ctx.fillRect(startX + i * (barWidth + spacing), bottomStartY, barWidth, adjustedHeight)
+        // }
+      }
+    },
     // 更新 SVG 大小的方法
     resize() {
       // 获取新的窗口宽度和高度
@@ -610,13 +701,20 @@ export default {
       } else {
         if (this.min || this.max) {
           this.lightMark++
-          this.boardExit = true
+          this.boardExitTrue()
         } else {
           this.$alert('<strong>请输入节点的范围</strong>', {
             dangerouslyUseHTMLString: true
           })
         }
       }
+    },
+    boardExitTrue() {
+      this.boardExit = true
+      const _this = this
+      setTimeout(() => {
+        _this.drawChart()
+      }, 0.5)
     },
     // 框选
     brushSelect() {
@@ -640,7 +738,7 @@ export default {
 
       const brush = d3.brush().on('start', brushstarted).on('brush', brushing)
       function brushstarted() {
-        _this.boardExit = true
+        _this.boardExitTrue()
       }
       function brushing() {
         const selection = d3.brushSelection(this)
@@ -749,7 +847,7 @@ export default {
 
       const brush = d3.brush().on('start', brushstarted2).on('brush', brushing2)
       function brushstarted2() {
-        _this.boardExit = true
+        _this.boardExitTrue()
       }
       function brushing2() {
         const selection = d3.brushSelection(this)
@@ -853,7 +951,7 @@ export default {
       const _this = this
       this.node.on('click', clickSelect)
       function clickSelect(event) {
-        _this.boardExit = true
+        _this.boardExitTrue()
         const nodeDataId = d3.select(this).attr('id')
         const nodeOpacity = Number(d3.select(this).style('opacity'))
         if (nodeOpacity === 0.4) {

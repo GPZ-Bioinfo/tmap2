@@ -73,7 +73,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae_NK4A136_group",
+      "variable": "g__Lachnospiraceae_NK4A136-group",
       "category": "Taxa"
     },
     {
@@ -81,11 +81,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Family_XIII_AD3011_group",
+      "variable": "g__Family_XIII_AD3011-group",
       "category": "Taxa"
     },
     {
-      "variable": "o__Clostridia_vadinBB60_group_f___g__",
+      "variable": "o__Clostridia_vadinBB60-group_f___g__",
       "category": "Taxa"
     },
     {
@@ -121,7 +121,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Ruminococcus_torques_group",
+      "variable": "g___Ruminococcus_torques-group",
       "category": "Taxa"
     },
     {
@@ -161,7 +161,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Ruminococcus_gauvreauii_group",
+      "variable": "g___Ruminococcus_gauvreauii-group",
       "category": "Taxa"
     },
     {
@@ -201,7 +201,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae_FCS020_group",
+      "variable": "g__Lachnospiraceae_FCS020-group",
       "category": "Taxa"
     },
     {
@@ -221,11 +221,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Ruminococcus_gnavus_group",
+      "variable": "g___Ruminococcus_gnavus-group",
       "category": "Taxa"
     },
     {
-      "variable": "g___Eubacterium_ventriosum_group",
+      "variable": "g___Eubacterium_ventriosum-group",
       "category": "Taxa"
     },
     {
@@ -261,7 +261,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f___Eubacterium_coprostanoligenes_group_g__",
+      "variable": "f___Eubacterium_coprostanoligenes-group_g__",
       "category": "Taxa"
     },
     {
@@ -285,7 +285,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Christensenellaceae_R-7_group",
+      "variable": "g__Christensenellaceae_R-7-group",
       "category": "Taxa"
     },
     {
@@ -333,7 +333,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Eubacterium_xylanophilum_group",
+      "variable": "g___Eubacterium_xylanophilum-group",
       "category": "Taxa"
     },
     {
@@ -349,7 +349,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Eubacterium_brachy_group",
+      "variable": "g___Eubacterium_brachy-group",
       "category": "Taxa"
     },
     {
@@ -385,7 +385,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__NK4A214_group",
+      "variable": "g__NK4A214-group",
       "category": "Taxa"
     },
     {
@@ -409,11 +409,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Eubacterium_eligens_group",
+      "variable": "g___Eubacterium_eligens-group",
       "category": "Taxa"
     },
     {
-      "variable": "g___Eubacterium_siraeum_group",
+      "variable": "g___Eubacterium_siraeum-group",
       "category": "Taxa"
     },
     {
@@ -461,11 +461,11 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Eubacterium_hallii_group",
+      "variable": "g___Eubacterium_hallii-group",
       "category": "Taxa"
     },
     {
-      "variable": "g___Clostridium_innocuum_group",
+      "variable": "g___Clostridium_innocuum-group",
       "category": "Taxa"
     },
     {
@@ -497,7 +497,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Eubacterium_fissicatena_group",
+      "variable": "g___Eubacterium_fissicatena-group",
       "category": "Taxa"
     },
     {
@@ -533,7 +533,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Prevotellaceae_NK3B31_group",
+      "variable": "g__Prevotellaceae_NK3B31-group",
       "category": "Taxa"
     },
     {
@@ -709,7 +709,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae_NC2004_group",
+      "variable": "g__Lachnospiraceae_NC2004-group",
       "category": "Taxa"
     },
     {
@@ -789,7 +789,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Prevotellaceae_Ga6A1_group",
+      "variable": "g__Prevotellaceae_Ga6A1-group",
       "category": "Taxa"
     },
     {
@@ -829,7 +829,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Eubacterium_ruminantium_group",
+      "variable": "g___Eubacterium_ruminantium-group",
       "category": "Taxa"
     },
     {
@@ -857,7 +857,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae_ND3007_group",
+      "variable": "g__Lachnospiraceae_ND3007-group",
       "category": "Taxa"
     },
     {
@@ -885,7 +885,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Eubacterium_nodatum_group",
+      "variable": "g___Eubacterium_nodatum-group",
       "category": "Taxa"
     },
     {
@@ -953,7 +953,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Rikenellaceae_RC9_gut_group",
+      "variable": "g__Rikenellaceae_RC9_gut-group",
       "category": "Taxa"
     },
     {
@@ -973,7 +973,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae_AC2044_group",
+      "variable": "g__Lachnospiraceae_AC2044-group",
       "category": "Taxa"
     },
     {
@@ -1037,7 +1037,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "f___Clostridium_methylpentosum_group_g__",
+      "variable": "f___Clostridium_methylpentosum-group_g__",
       "category": "Taxa"
     },
     {
@@ -1173,7 +1173,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g___Bacteroides_pectinophilus_group",
+      "variable": "g___Bacteroides_pectinophilus-group",
       "category": "Taxa"
     },
     {
@@ -1453,7 +1453,7 @@
       "category": "Taxa"
     },
     {
-      "variable": "g__Lachnospiraceae_NK3A20_group",
+      "variable": "g__Lachnospiraceae_NK3A20-group",
       "category": "Taxa"
     },
     {
@@ -1797,11 +1797,11 @@
       "category": "Pregnancy Complications"
     },
     {
-      "variable": "Hypertensive_Disorder_of_Pregnancy",
+      "variable": "Hypertensive_Disorder-of_Pregnancy",
       "category": "Pregnancy Complications"
     },
     {
-      "variable": "Intrahepatic_Cholestasis_of_Pregnancy",
+      "variable": "Intrahepatic_Cholestasis-of_Pregnancy",
       "category": "Pregnancy Complications"
     },
     {
@@ -1829,7 +1829,7 @@
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Premature_Rupture_of_Membranes",
+      "variable": "Premature_Rupture-of_Membranes",
       "category": "Pregnancy Outcomes"
     },
     {
@@ -1905,11 +1905,11 @@
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_ASC_G_Negative",
+      "variable": "U_ASC-G_Negative",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_ASC_G_Positive",
+      "variable": "U_ASC-G_Positive",
       "category": "Biochemical Indices"
     },
     {
@@ -1921,35 +1921,35 @@
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_ERY_G_Negative",
+      "variable": "U_ERY-G_Negative",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_ERY_G_Positive",
+      "variable": "U_ERY-G_Positive",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_GLU_G_Negative",
+      "variable": "U_GLU-G_Negative",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_GLU_G_Positive",
+      "variable": "U_GLU-G_Positive",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_KET_G_Negative",
+      "variable": "U_KET-G_Negative",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_KET_G_Positive",
+      "variable": "U_KET-G_Positive",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_LEU_G_Negative",
+      "variable": "U_LEU-G_Negative",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_LEU_G_Positive",
+      "variable": "U_LEU-G_Positive",
       "category": "Biochemical Indices"
     },
     {
@@ -1969,39 +1969,39 @@
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_UBG_G_Negative",
+      "variable": "U_UBG-G_Negative",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_UBG_G_Positive",
+      "variable": "U_UBG-G_Positive",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "U_URI_G_Normal",
+      "variable": "U_URI-G_Normal",
       "category": "Biochemical Indices"
     },
     {
-      "variable": "Age_Group_30-34",
+      "variable": "Age-group_30-34",
       "category": "Demographics"
     },
     {
-      "variable": "Age_Group__29",
+      "variable": "Age-group__29",
       "category": "Demographics"
     },
     {
-      "variable": "Age_Group__35",
+      "variable": "Age-group__35",
       "category": "Demographics"
     },
     {
-      "variable": "BMI_Before_Pregnancy_G_18_5-24_Normal",
+      "variable": "BMI_Before_Pregnancy-G_18_5-24_Normal",
       "category": "Demographics"
     },
     {
-      "variable": "BMI_Before_Pregnancy_G__18_5_Underweight",
+      "variable": "BMI_Before_Pregnancy-G__18_5_Underweight",
       "category": "Demographics"
     },
     {
-      "variable": "BMI_Before_Pregnancy_G__24_Overweight",
+      "variable": "BMI_Before_Pregnancy-G__24_Overweight",
       "category": "Demographics"
     },
     {
@@ -2061,27 +2061,27 @@
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Delivery_Gestational_Age_G_28-36W",
+      "variable": "Delivery_Gestational_Age-G_28-36W",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Delivery_Gestational_Age_G_37-42W",
+      "variable": "Delivery_Gestational_Age-G_37-42W",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Delivery_Gestational_Age_G__42W",
+      "variable": "Delivery_Gestational_Age-G__42W",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Delivery_Mode_Cesarean_Delivery",
+      "variable": "Delivery_Mode_Cesarean-Delivery",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Delivery_Mode_Forceps_Delivery",
+      "variable": "Delivery_Mode_Forceps-Delivery",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Delivery_Mode_Vaginal_Delivery",
+      "variable": "Delivery_Mode_Vaginal-Delivery",
       "category": "Pregnancy Outcomes"
     },
     {
@@ -2125,23 +2125,23 @@
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Infant_Weight_G_2_5-4KG_Normal",
+      "variable": "Infant_Weight-G_2_5-4KG_Normal",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Infant_Weight_G__2_5KG_Underweight",
+      "variable": "Infant_Weight-G__2_5KG_Underweight",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Infant_Weight_G__4KG_Overweight",
+      "variable": "Infant_Weight-G__4KG_Overweight",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Rupture_of_Membranes_Model_Artificial",
+      "variable": "Rupture-of_Membranes_Model_Artificial",
       "category": "Pregnancy Outcomes"
     },
     {
-      "variable": "Rupture_of_Membranes_Model_Spontaneous",
+      "variable": "Rupture-of_Membranes_Model_Spontaneous",
       "category": "Pregnancy Outcomes"
     },
     {
@@ -2193,15 +2193,15 @@
       "category": "Pregnancy Related Characteristics"
     },
     {
-      "variable": "Weight_Gain_Over_Pregnancy_G_Less_Than_Guidelines",
+      "variable": "Weight_Gain_Over_Pregnancy-G_Less_Than_Guidelines",
       "category": "Pregnancy Related Characteristics"
     },
     {
-      "variable": "Weight_Gain_Over_Pregnancy_G_More_Than_Guidelines",
+      "variable": "Weight_Gain_Over_Pregnancy-G_More_Than_Guidelines",
       "category": "Pregnancy Related Characteristics"
     },
     {
-      "variable": "Weight_Gain_Over_Pregnancy_G_Within_Guidelines",
+      "variable": "Weight_Gain_Over_Pregnancy-G_Within_Guidelines",
       "category": "Pregnancy Related Characteristics"
     }
   ]

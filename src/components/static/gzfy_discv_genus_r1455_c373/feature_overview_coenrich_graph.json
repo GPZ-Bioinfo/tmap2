@@ -10,7 +10,7 @@
         "degree": 3
       },
       {
-        "id": "g___Eubacterium_hallii_group",
+        "id": "g___Eubacterium_hallii-group",
         "degree": 5
       },
       {
@@ -38,7 +38,7 @@
         "degree": 3
       },
       {
-        "id": "g___Eubacterium_siraeum_group",
+        "id": "g___Eubacterium_siraeum-group",
         "degree": 5
       },
       {
@@ -46,11 +46,11 @@
         "degree": 4
       },
       {
-        "id": "g___Eubacterium_ruminantium_group",
+        "id": "g___Eubacterium_ruminantium-group",
         "degree": 6
       },
       {
-        "id": "g__Lachnospiraceae_FCS020_group",
+        "id": "g__Lachnospiraceae_FCS020-group",
         "degree": 4
       },
       {
@@ -74,11 +74,11 @@
         "degree": 3
       },
       {
-        "id": "g___Eubacterium_xylanophilum_group",
+        "id": "g___Eubacterium_xylanophilum-group",
         "degree": 4
       },
       {
-        "id": "g__Lachnospiraceae_ND3007_group",
+        "id": "g__Lachnospiraceae_ND3007-group",
         "degree": 6
       },
       {
@@ -178,7 +178,7 @@
         "degree": 5
       },
       {
-        "id": "g___Eubacterium_eligens_group",
+        "id": "g___Eubacterium_eligens-group",
         "degree": 4
       },
       {
@@ -190,7 +190,7 @@
         "degree": 6
       },
       {
-        "id": "g__Family_XIII_AD3011_group",
+        "id": "g__Family_XIII_AD3011-group",
         "degree": 10
       },
       {
@@ -202,7 +202,7 @@
         "degree": 3
       },
       {
-        "id": "U_LEU_G_Negative",
+        "id": "U_LEU-G_Negative",
         "degree": 4
       },
       {
@@ -250,7 +250,7 @@
         "degree": 5
       },
       {
-        "id": "g__Lachnospiraceae_NK4A136_group",
+        "id": "g__Lachnospiraceae_NK4A136-group",
         "degree": 6
       },
       {
@@ -270,7 +270,7 @@
         "degree": 3
       },
       {
-        "id": "f___Eubacterium_coprostanoligenes_group_g__",
+        "id": "f___Eubacterium_coprostanoligenes-group_g__",
         "degree": 8
       },
       {
@@ -278,7 +278,7 @@
         "degree": 5
       },
       {
-        "id": "g___Eubacterium_fissicatena_group",
+        "id": "g___Eubacterium_fissicatena-group",
         "degree": 7
       },
       {
@@ -286,7 +286,7 @@
         "degree": 6
       },
       {
-        "id": "o__Clostridia_vadinBB60_group_f___g__",
+        "id": "o__Clostridia_vadinBB60-group_f___g__",
         "degree": 4
       },
       {
@@ -298,7 +298,7 @@
         "degree": 5
       },
       {
-        "id": "g__Rikenellaceae_RC9_gut_group",
+        "id": "g__Rikenellaceae_RC9_gut-group",
         "degree": 4
       },
       {
@@ -338,7 +338,7 @@
         "degree": 4
       },
       {
-        "id": "g__Prevotellaceae_Ga6A1_group",
+        "id": "g__Prevotellaceae_Ga6A1-group",
         "degree": 5
       },
       {
@@ -346,7 +346,7 @@
         "degree": 6
       },
       {
-        "id": "BMI_Before_Pregnancy_G__24_Overweight",
+        "id": "BMI_Before_Pregnancy-G__24_Overweight",
         "degree": 7
       },
       {
@@ -362,7 +362,7 @@
         "degree": 7
       },
       {
-        "id": "g___Clostridium_innocuum_group",
+        "id": "g___Clostridium_innocuum-group",
         "degree": 5
       },
       {
@@ -382,11 +382,11 @@
         "degree": 4
       },
       {
-        "id": "g___Ruminococcus_gauvreauii_group",
+        "id": "g___Ruminococcus_gauvreauii-group",
         "degree": 5
       },
       {
-        "id": "g___Ruminococcus_torques_group",
+        "id": "g___Ruminococcus_torques-group",
         "degree": 5
       },
       {
@@ -422,7 +422,7 @@
         "degree": 8
       },
       {
-        "id": "U_KET_G_Negative",
+        "id": "U_KET-G_Negative",
         "degree": 6
       },
       {
@@ -506,7 +506,7 @@
         "degree": 4
       },
       {
-        "id": "Weight_Gain_Over_Pregnancy_G_Within_Guidelines",
+        "id": "Weight_Gain_Over_Pregnancy-G_Within_Guidelines",
         "degree": 3
       },
       {
@@ -526,7 +526,7 @@
         "degree": 3
       },
       {
-        "id": "g__Christensenellaceae_R-7_group",
+        "id": "g__Christensenellaceae_R-7-group",
         "degree": 5
       },
       {
@@ -558,7 +558,7 @@
         "degree": 3
       },
       {
-        "id": "f___Clostridium_methylpentosum_group_g__",
+        "id": "f___Clostridium_methylpentosum-group_g__",
         "degree": 3
       },
       {
@@ -590,7 +590,7 @@
         "degree": 3
       },
       {
-        "id": "g___Ruminococcus_gnavus_group",
+        "id": "g___Ruminococcus_gnavus-group",
         "degree": 3
       },
       {
@@ -598,7 +598,7 @@
         "degree": 3
       },
       {
-        "id": "g___Eubacterium_ventriosum_group",
+        "id": "g___Eubacterium_ventriosum-group",
         "degree": 5
       },
       {
@@ -654,7 +654,7 @@
         "degree": 3
       },
       {
-        "id": "g__NK4A214_group",
+        "id": "g__NK4A214-group",
         "degree": 4
       },
       {
@@ -714,7 +714,7 @@
         "degree": 5
       },
       {
-        "id": "g__Prevotellaceae_NK3B31_group",
+        "id": "g__Prevotellaceae_NK3B31-group",
         "degree": 4
       },
       {
@@ -730,11 +730,11 @@
         "degree": 4
       },
       {
-        "id": "Rupture_of_Membranes_Model_Spontaneous",
+        "id": "Rupture-of_Membranes_Model_Spontaneous",
         "degree": 4
       },
       {
-        "id": "Delivery_Mode_Vaginal_Delivery",
+        "id": "Delivery_Mode_Vaginal-Delivery",
         "degree": 4
       },
       {
@@ -758,7 +758,7 @@
         "degree": 3
       },
       {
-        "id": "g___Eubacterium_brachy_group",
+        "id": "g___Eubacterium_brachy-group",
         "degree": 7
       },
       {
@@ -778,7 +778,7 @@
         "degree": 7
       },
       {
-        "id": "Age_Group__29",
+        "id": "Age-group__29",
         "degree": 3
       },
       {
@@ -858,7 +858,7 @@
         "degree": 6
       },
       {
-        "id": "U_UBG_G_Negative",
+        "id": "U_UBG-G_Negative",
         "degree": 3
       },
       {
@@ -878,7 +878,7 @@
         "degree": 3
       },
       {
-        "id": "Hypertensive_Disorder_of_Pregnancy",
+        "id": "Hypertensive_Disorder-of_Pregnancy",
         "degree": 6
       },
       {
@@ -906,7 +906,7 @@
         "degree": 3
       },
       {
-        "id": "Infant_Weight_G_2_5-4KG_Normal",
+        "id": "Infant_Weight-G_2_5-4KG_Normal",
         "degree": 5
       },
       {
@@ -934,7 +934,7 @@
         "degree": 3
       },
       {
-        "id": "g___Bacteroides_pectinophilus_group",
+        "id": "g___Bacteroides_pectinophilus-group",
         "degree": 3
       },
       {
@@ -958,7 +958,7 @@
         "degree": 4
       },
       {
-        "id": "g__Lachnospiraceae_AC2044_group",
+        "id": "g__Lachnospiraceae_AC2044-group",
         "degree": 6
       },
       {
@@ -1134,7 +1134,7 @@
         "degree": 3
       },
       {
-        "id": "U_ERY_G_Positive",
+        "id": "U_ERY-G_Positive",
         "degree": 5
       },
       {
@@ -1202,7 +1202,7 @@
         "degree": 4
       },
       {
-        "id": "g__Lachnospiraceae_NC2004_group",
+        "id": "g__Lachnospiraceae_NC2004-group",
         "degree": 3
       },
       {
@@ -1314,11 +1314,11 @@
         "degree": 7
       },
       {
-        "id": "U_UBG_G_Positive",
+        "id": "U_UBG-G_Positive",
         "degree": 4
       },
       {
-        "id": "g___Eubacterium_nodatum_group",
+        "id": "g___Eubacterium_nodatum-group",
         "degree": 5
       },
       {
@@ -1362,7 +1362,7 @@
         "degree": 3
       },
       {
-        "id": "Delivery_Mode_Forceps_Delivery",
+        "id": "Delivery_Mode_Forceps-Delivery",
         "degree": 3
       },
       {
@@ -1478,7 +1478,7 @@
         "degree": 4
       },
       {
-        "id": "Age_Group__35",
+        "id": "Age-group__35",
         "degree": 3
       },
       {
@@ -1490,7 +1490,7 @@
         "degree": 4
       },
       {
-        "id": "Delivery_Gestational_Age_G__42W",
+        "id": "Delivery_Gestational_Age-G__42W",
         "degree": 5
       },
       {
@@ -1522,7 +1522,7 @@
         "degree": 3
       },
       {
-        "id": "U_URI_G_High",
+        "id": "U_URI-G_High",
         "degree": 3
       },
       {
@@ -1550,7 +1550,7 @@
         "degree": 3
       },
       {
-        "id": "U_LEU_G_Positive",
+        "id": "U_LEU-G_Positive",
         "degree": 3
       },
       {
@@ -1610,7 +1610,7 @@
         "degree": 3
       },
       {
-        "id": "Age_Group_30-34",
+        "id": "Age-group_30-34",
         "degree": 3
       },
       {
@@ -1686,7 +1686,7 @@
         "degree": 3
       },
       {
-        "id": "U_GLU_G_Negative",
+        "id": "U_GLU-G_Negative",
         "degree": 4
       },
       {
@@ -1738,7 +1738,7 @@
         "degree": 5
       },
       {
-        "id": "Premature_Rupture_of_Membranes",
+        "id": "Premature_Rupture-of_Membranes",
         "degree": 8
       },
       {
@@ -1762,7 +1762,7 @@
         "degree": 4
       },
       {
-        "id": "Delivery_Gestational_Age_G_37-42W",
+        "id": "Delivery_Gestational_Age-G_37-42W",
         "degree": 7
       },
       {
@@ -1862,7 +1862,7 @@
         "degree": 4
       },
       {
-        "id": "Intrahepatic_Cholestasis_of_Pregnancy",
+        "id": "Intrahepatic_Cholestasis-of_Pregnancy",
         "degree": 7
       },
       {
@@ -1914,15 +1914,15 @@
         "degree": 3
       },
       {
-        "id": "U_ASC_G_Negative",
+        "id": "U_ASC-G_Negative",
         "degree": 4
       },
       {
-        "id": "U_ASC_G_Positive",
+        "id": "U_ASC-G_Positive",
         "degree": 3
       },
       {
-        "id": "Rupture_of_Membranes_Model_Artificial",
+        "id": "Rupture-of_Membranes_Model_Artificial",
         "degree": 4
       },
       {
@@ -1930,23 +1930,23 @@
         "degree": 4
       },
       {
-        "id": "U_URI_G_Normal",
+        "id": "U_URI-G_Normal",
         "degree": 3
       },
       {
-        "id": "U_ERY_G_Negative",
+        "id": "U_ERY-G_Negative",
         "degree": 4
       },
       {
-        "id": "U_GLU_G_Positive",
+        "id": "U_GLU-G_Positive",
         "degree": 3
       },
       {
-        "id": "Delivery_Mode_Cesarean_Delivery",
+        "id": "Delivery_Mode_Cesarean-Delivery",
         "degree": 4
       },
       {
-        "id": "U_KET_G_Positive",
+        "id": "U_KET-G_Positive",
         "degree": 3
       },
       {
@@ -1958,7 +1958,7 @@
         "degree": 3
       },
       {
-        "id": "BMI_Before_Pregnancy_G_18_5-24_Normal",
+        "id": "BMI_Before_Pregnancy-G_18_5-24_Normal",
         "degree": 3
       },
       {
@@ -1966,7 +1966,7 @@
         "degree": 4
       },
       {
-        "id": "BMI_Before_Pregnancy_G__18_5_Underweight",
+        "id": "BMI_Before_Pregnancy-G__18_5_Underweight",
         "degree": 3
       },
       {
@@ -1994,11 +1994,11 @@
         "degree": 3
       },
       {
-        "id": "Delivery_Gestational_Age_G_28-36W",
+        "id": "Delivery_Gestational_Age-G_28-36W",
         "degree": 3
       },
       {
-        "id": "Infant_Weight_G__2_5KG_Underweight",
+        "id": "Infant_Weight-G__2_5KG_Underweight",
         "degree": 4
       },
       {
@@ -2026,7 +2026,7 @@
         "degree": 3
       },
       {
-        "id": "Infant_Weight_G__4KG_Overweight",
+        "id": "Infant_Weight-G__4KG_Overweight",
         "degree": 3
       },
       {
@@ -2038,11 +2038,11 @@
         "degree": 3
       },
       {
-        "id": "Weight_Gain_Over_Pregnancy_G_Less_Than_Guidelines",
+        "id": "Weight_Gain_Over_Pregnancy-G_Less_Than_Guidelines",
         "degree": 3
       },
       {
-        "id": "Weight_Gain_Over_Pregnancy_G_More_Than_Guidelines",
+        "id": "Weight_Gain_Over_Pregnancy-G_More_Than_Guidelines",
         "degree": 3
       }
     ],
@@ -2056,7 +2056,7 @@
       {
         "id": 1,
         "source": "g__Fusicatenibacter",
-        "target": "g___Eubacterium_hallii_group",
+        "target": "g___Eubacterium_hallii-group",
         "value": 0.5354
       },
       {
@@ -2080,30 +2080,30 @@
       {
         "id": 5,
         "source": "g__Butyricicoccus",
-        "target": "g___Eubacterium_hallii_group",
+        "target": "g___Eubacterium_hallii-group",
         "value": 0.3806
       },
       {
         "id": 6,
         "source": "g__Butyricicoccus",
-        "target": "g__Lachnospiraceae_FCS020_group",
+        "target": "g__Lachnospiraceae_FCS020-group",
         "value": 0.3654
       },
       {
         "id": 7,
-        "source": "g___Eubacterium_hallii_group",
+        "source": "g___Eubacterium_hallii-group",
         "target": "g__Anaerotruncus",
         "value": 0.3304
       },
       {
         "id": 8,
-        "source": "g___Eubacterium_hallii_group",
+        "source": "g___Eubacterium_hallii-group",
         "target": "g__Holdemania",
         "value": 0.4
       },
       {
         "id": 9,
-        "source": "g___Eubacterium_hallii_group",
+        "source": "g___Eubacterium_hallii-group",
         "target": "B_FIB",
         "value": 0.3482
       },
@@ -2152,7 +2152,7 @@
       {
         "id": 17,
         "source": "g__Anaerofilum",
-        "target": "g__NK4A214_group",
+        "target": "g__NK4A214-group",
         "value": 0.5521
       },
       {
@@ -2176,7 +2176,7 @@
       {
         "id": 21,
         "source": "g__Angelakisella",
-        "target": "g__NK4A214_group",
+        "target": "g__NK4A214-group",
         "value": 0.7011
       },
       {
@@ -2206,7 +2206,7 @@
       {
         "id": 26,
         "source": "g__Desulfovibrio",
-        "target": "g___Eubacterium_siraeum_group",
+        "target": "g___Eubacterium_siraeum-group",
         "value": 0.5563
       },
       {
@@ -2218,37 +2218,37 @@
       {
         "id": 28,
         "source": "g__Desulfovibrio",
-        "target": "g___Eubacterium_ruminantium_group",
+        "target": "g___Eubacterium_ruminantium-group",
         "value": 0.5385
       },
       {
         "id": 29,
-        "source": "g___Eubacterium_siraeum_group",
-        "target": "g___Eubacterium_xylanophilum_group",
+        "source": "g___Eubacterium_siraeum-group",
+        "target": "g___Eubacterium_xylanophilum-group",
         "value": 0.56
       },
       {
         "id": 30,
-        "source": "g___Eubacterium_siraeum_group",
-        "target": "g___Eubacterium_ruminantium_group",
+        "source": "g___Eubacterium_siraeum-group",
+        "target": "g___Eubacterium_ruminantium-group",
         "value": 0.6159
       },
       {
         "id": 31,
-        "source": "g___Eubacterium_siraeum_group",
+        "source": "g___Eubacterium_siraeum-group",
         "target": "g__UCG-003",
         "value": 0.5779
       },
       {
         "id": 32,
-        "source": "g___Eubacterium_siraeum_group",
+        "source": "g___Eubacterium_siraeum-group",
         "target": "o__Bacteroidales_f___g__",
         "value": 0.4531
       },
       {
         "id": 33,
         "source": "g__GCA-900066575",
-        "target": "g___Eubacterium_ruminantium_group",
+        "target": "g___Eubacterium_ruminantium-group",
         "value": 0.5745
       },
       {
@@ -2260,42 +2260,42 @@
       {
         "id": 35,
         "source": "g__GCA-900066575",
-        "target": "g__Lachnospiraceae_ND3007_group",
+        "target": "g__Lachnospiraceae_ND3007-group",
         "value": 0.4653
       },
       {
         "id": 36,
-        "source": "g___Eubacterium_ruminantium_group",
+        "source": "g___Eubacterium_ruminantium-group",
         "target": "o__Bacteroidales_f___g__",
         "value": 0.4492
       },
       {
         "id": 37,
-        "source": "g___Eubacterium_ruminantium_group",
+        "source": "g___Eubacterium_ruminantium-group",
         "target": "f__Prevotellaceae_g__",
         "value": 0.4569
       },
       {
         "id": 38,
-        "source": "g___Eubacterium_ruminantium_group",
+        "source": "g___Eubacterium_ruminantium-group",
         "target": "Native_Place_Other",
         "value": 0.5678
       },
       {
         "id": 39,
-        "source": "g__Lachnospiraceae_FCS020_group",
+        "source": "g__Lachnospiraceae_FCS020-group",
         "target": "g__CAG-56",
         "value": 0.5843
       },
       {
         "id": 40,
-        "source": "g__Lachnospiraceae_FCS020_group",
+        "source": "g__Lachnospiraceae_FCS020-group",
         "target": "g__UCG-009",
         "value": 0.5111
       },
       {
         "id": 41,
-        "source": "g__Lachnospiraceae_FCS020_group",
+        "source": "g__Lachnospiraceae_FCS020-group",
         "target": "g__Agathobacter",
         "value": 0.478
       },
@@ -2356,13 +2356,13 @@
       {
         "id": 51,
         "source": "g__Lactiplantibacillus",
-        "target": "U_LEU_G_Positive",
+        "target": "U_LEU-G_Positive",
         "value": 0.2105
       },
       {
         "id": 52,
         "source": "g__Tuzzerella",
-        "target": "Delivery_Mode_Vaginal_Delivery",
+        "target": "Delivery_Mode_Vaginal-Delivery",
         "value": 0.375
       },
       {
@@ -2386,13 +2386,13 @@
       {
         "id": 56,
         "source": "g__Faecalibacterium",
-        "target": "g___Eubacterium_xylanophilum_group",
+        "target": "g___Eubacterium_xylanophilum-group",
         "value": 0.4951
       },
       {
         "id": 57,
         "source": "g__Faecalibacterium",
-        "target": "g__Lachnospiraceae_ND3007_group",
+        "target": "g__Lachnospiraceae_ND3007-group",
         "value": 0.4603
       },
       {
@@ -2403,37 +2403,37 @@
       },
       {
         "id": 59,
-        "source": "g___Eubacterium_xylanophilum_group",
-        "target": "g__Christensenellaceae_R-7_group",
+        "source": "g___Eubacterium_xylanophilum-group",
+        "target": "g__Christensenellaceae_R-7-group",
         "value": 0.4944
       },
       {
         "id": 60,
-        "source": "g___Eubacterium_xylanophilum_group",
+        "source": "g___Eubacterium_xylanophilum-group",
         "target": "o__Bacteroidales_f___g__",
         "value": 0.4331
       },
       {
         "id": 61,
-        "source": "g__Lachnospiraceae_ND3007_group",
+        "source": "g__Lachnospiraceae_ND3007-group",
         "target": "g__Lachnospiraceae_UCG-010",
         "value": 0.495
       },
       {
         "id": 62,
-        "source": "g__Lachnospiraceae_ND3007_group",
-        "target": "g___Eubacterium_ventriosum_group",
+        "source": "g__Lachnospiraceae_ND3007-group",
+        "target": "g___Eubacterium_ventriosum-group",
         "value": 0.3483
       },
       {
         "id": 63,
-        "source": "g__Lachnospiraceae_ND3007_group",
+        "source": "g__Lachnospiraceae_ND3007-group",
         "target": "g__Agathobacter",
         "value": 0.4118
       },
       {
         "id": 64,
-        "source": "g__Lachnospiraceae_ND3007_group",
+        "source": "g__Lachnospiraceae_ND3007-group",
         "target": "g__Lachnospiraceae_UCG-001",
         "value": 0.4885
       },
@@ -2452,7 +2452,7 @@
       {
         "id": 67,
         "source": "g__Lachnospiraceae_UCG-001",
-        "target": "g__Lachnospiraceae_NK4A136_group",
+        "target": "g__Lachnospiraceae_NK4A136-group",
         "value": 0.4974
       },
       {
@@ -2530,7 +2530,7 @@
       {
         "id": 80,
         "source": "g__Erysipelatoclostridium",
-        "target": "g___Ruminococcus_gnavus_group",
+        "target": "g___Ruminococcus_gnavus-group",
         "value": 0.4545
       },
       {
@@ -2542,7 +2542,7 @@
       {
         "id": 82,
         "source": "g__Erysipelatoclostridium",
-        "target": "g___Clostridium_innocuum_group",
+        "target": "g___Clostridium_innocuum-group",
         "value": 0.5
       },
       {
@@ -2728,7 +2728,7 @@
       {
         "id": 113,
         "source": "g__Blautia",
-        "target": "g___Ruminococcus_torques_group",
+        "target": "g___Ruminococcus_torques-group",
         "value": 0.4375
       },
       {
@@ -2938,7 +2938,7 @@
       {
         "id": 148,
         "source": "g__Lachnospiraceae_UCG-004",
-        "target": "g___Eubacterium_eligens_group",
+        "target": "g___Eubacterium_eligens-group",
         "value": 0.696
       },
       {
@@ -2986,7 +2986,7 @@
       {
         "id": 156,
         "source": "g__Bacteroides",
-        "target": "g___Eubacterium_eligens_group",
+        "target": "g___Eubacterium_eligens-group",
         "value": 0.7009
       },
       {
@@ -3010,13 +3010,13 @@
       {
         "id": 160,
         "source": "g__Bacteroides",
-        "target": "U_KET_G_Positive",
+        "target": "U_KET-G_Positive",
         "value": 0.2348
       },
       {
         "id": 161,
         "source": "g__Lachnospira",
-        "target": "g___Eubacterium_eligens_group",
+        "target": "g___Eubacterium_eligens-group",
         "value": 0.6333
       },
       {
@@ -3033,7 +3033,7 @@
       },
       {
         "id": 164,
-        "source": "g___Eubacterium_eligens_group",
+        "source": "g___Eubacterium_eligens-group",
         "target": "g__Roseburia",
         "value": 0.5036
       },
@@ -3046,7 +3046,7 @@
       {
         "id": 166,
         "source": "g__Incertae_Sedis",
-        "target": "g__Family_XIII_AD3011_group",
+        "target": "g__Family_XIII_AD3011-group",
         "value": 0.6495
       },
       {
@@ -3058,7 +3058,7 @@
       {
         "id": 168,
         "source": "g__Incertae_Sedis",
-        "target": "g___Ruminococcus_gauvreauii_group",
+        "target": "g___Ruminococcus_gauvreauii-group",
         "value": 0.5593
       },
       {
@@ -3070,7 +3070,7 @@
       {
         "id": 170,
         "source": "f__Oscillospiraceae_g__",
-        "target": "g___Ruminococcus_gauvreauii_group",
+        "target": "g___Ruminococcus_gauvreauii-group",
         "value": 0.6047
       },
       {
@@ -3082,60 +3082,60 @@
       {
         "id": 172,
         "source": "f__Oscillospiraceae_g__",
-        "target": "g__Family_XIII_AD3011_group",
+        "target": "g__Family_XIII_AD3011-group",
         "value": 0.6053
       },
       {
         "id": 173,
         "source": "f__Oscillospiraceae_g__",
-        "target": "g___Eubacterium_brachy_group",
+        "target": "g___Eubacterium_brachy-group",
         "value": 0.6036
       },
       {
         "id": 174,
-        "source": "g__Family_XIII_AD3011_group",
+        "source": "g__Family_XIII_AD3011-group",
         "target": "g__CHKCI002",
         "value": 0.7674
       },
       {
         "id": 175,
-        "source": "g__Family_XIII_AD3011_group",
-        "target": "g___Eubacterium_fissicatena_group",
+        "source": "g__Family_XIII_AD3011-group",
+        "target": "g___Eubacterium_fissicatena-group",
         "value": 0.7333
       },
       {
         "id": 176,
-        "source": "g__Family_XIII_AD3011_group",
+        "source": "g__Family_XIII_AD3011-group",
         "target": "g__Christensenella",
         "value": 0.7333
       },
       {
         "id": 177,
-        "source": "g__Family_XIII_AD3011_group",
-        "target": "g___Eubacterium_brachy_group",
+        "source": "g__Family_XIII_AD3011-group",
+        "target": "g___Eubacterium_brachy-group",
         "value": 0.686
       },
       {
         "id": 178,
-        "source": "g__Family_XIII_AD3011_group",
+        "source": "g__Family_XIII_AD3011-group",
         "target": "g__Olsenella",
         "value": 0.625
       },
       {
         "id": 179,
-        "source": "g__Family_XIII_AD3011_group",
+        "source": "g__Family_XIII_AD3011-group",
         "target": "g__Senegalimassilia",
         "value": 0.593
       },
       {
         "id": 180,
-        "source": "g__Family_XIII_AD3011_group",
+        "source": "g__Family_XIII_AD3011-group",
         "target": "g__Papillibacter",
         "value": 0.6104
       },
       {
         "id": 181,
-        "source": "g__Family_XIII_AD3011_group",
+        "source": "g__Family_XIII_AD3011-group",
         "target": "f__Hydrogenoanaerobacterium_g__",
         "value": 0.3867
       },
@@ -3148,13 +3148,13 @@
       {
         "id": 183,
         "source": "g__Adlercreutzia",
-        "target": "g___Ruminococcus_gauvreauii_group",
+        "target": "g___Ruminococcus_gauvreauii-group",
         "value": 0.678
       },
       {
         "id": 184,
         "source": "g__Adlercreutzia",
-        "target": "g___Eubacterium_brachy_group",
+        "target": "g___Eubacterium_brachy-group",
         "value": 0.6095
       },
       {
@@ -3166,13 +3166,13 @@
       {
         "id": 186,
         "source": "g__Adlercreutzia",
-        "target": "f___Eubacterium_coprostanoligenes_group_g__",
+        "target": "f___Eubacterium_coprostanoligenes-group_g__",
         "value": 0.6241
       },
       {
         "id": 187,
         "source": "g__Megamonas",
-        "target": "U_LEU_G_Negative",
+        "target": "U_LEU-G_Negative",
         "value": 0.3971
       },
       {
@@ -3189,20 +3189,20 @@
       },
       {
         "id": 190,
-        "source": "U_LEU_G_Negative",
+        "source": "U_LEU-G_Negative",
         "target": "HbA1c",
         "value": 0.3676
       },
       {
         "id": 191,
-        "source": "U_LEU_G_Negative",
+        "source": "U_LEU-G_Negative",
         "target": "U_PRO_Negative",
         "value": 0.3902
       },
       {
         "id": 192,
-        "source": "U_LEU_G_Negative",
-        "target": "Weight_Gain_Over_Pregnancy_G_More_Than_Guidelines",
+        "source": "U_LEU-G_Negative",
+        "target": "Weight_Gain_Over_Pregnancy-G_More_Than_Guidelines",
         "value": 0.2292
       },
       {
@@ -3220,13 +3220,13 @@
       {
         "id": 195,
         "source": "U_PRO_Negative",
-        "target": "U_ERY_G_Negative",
+        "target": "U_ERY-G_Negative",
         "value": 0.475
       },
       {
         "id": 196,
         "source": "U_PRO_Negative",
-        "target": "U_KET_G_Negative",
+        "target": "U_KET-G_Negative",
         "value": 0.4023
       },
       {
@@ -3238,13 +3238,13 @@
       {
         "id": 198,
         "source": "U_PRO_Negative",
-        "target": "U_URI_G_Normal",
+        "target": "U_URI-G_Normal",
         "value": 0.4149
       },
       {
         "id": 199,
         "source": "g__Tyzzerella",
-        "target": "g__Prevotellaceae_Ga6A1_group",
+        "target": "g__Prevotellaceae_Ga6A1-group",
         "value": 0.5
       },
       {
@@ -3256,7 +3256,7 @@
       {
         "id": 201,
         "source": "g__Tyzzerella",
-        "target": "BMI_Before_Pregnancy_G__24_Overweight",
+        "target": "BMI_Before_Pregnancy-G__24_Overweight",
         "value": 0.4815
       },
       {
@@ -3280,7 +3280,7 @@
       {
         "id": 205,
         "source": "g__Tyzzerella",
-        "target": "Delivery_Mode_Cesarean_Delivery",
+        "target": "Delivery_Mode_Cesarean-Delivery",
         "value": 0.3
       },
       {
@@ -3316,7 +3316,7 @@
       {
         "id": 211,
         "source": "g__Coprococcus",
-        "target": "g__Christensenellaceae_R-7_group",
+        "target": "g__Christensenellaceae_R-7-group",
         "value": 0.6178
       },
       {
@@ -3328,7 +3328,7 @@
       {
         "id": 213,
         "source": "g__UCG-002",
-        "target": "g__Christensenellaceae_R-7_group",
+        "target": "g__Christensenellaceae_R-7-group",
         "value": 0.6951
       },
       {
@@ -3346,7 +3346,7 @@
       {
         "id": 216,
         "source": "g__Family_XIII_UCG-001",
-        "target": "f___Eubacterium_coprostanoligenes_group_g__",
+        "target": "f___Eubacterium_coprostanoligenes-group_g__",
         "value": 0.7063
       },
       {
@@ -3370,7 +3370,7 @@
       {
         "id": 220,
         "source": "g__Marvinbryantia",
-        "target": "f___Eubacterium_coprostanoligenes_group_g__",
+        "target": "f___Eubacterium_coprostanoligenes-group_g__",
         "value": 0.698
       },
       {
@@ -3394,7 +3394,7 @@
       {
         "id": 224,
         "source": "g__Paraprevotella",
-        "target": "Infant_Weight_G__2_5KG_Underweight",
+        "target": "Infant_Weight-G__2_5KG_Underweight",
         "value": 0.2857
       },
       {
@@ -3472,7 +3472,7 @@
       {
         "id": 237,
         "source": "g__Coprobacter",
-        "target": "Infant_Weight_G__2_5KG_Underweight",
+        "target": "Infant_Weight-G__2_5KG_Underweight",
         "value": 0.3125
       },
       {
@@ -3514,36 +3514,36 @@
       {
         "id": 244,
         "source": "Native_Place_Other",
-        "target": "g__Lachnospiraceae_AC2044_group",
+        "target": "g__Lachnospiraceae_AC2044-group",
         "value": 0.5517
       },
       {
         "id": 245,
-        "source": "g__Lachnospiraceae_NK4A136_group",
+        "source": "g__Lachnospiraceae_NK4A136-group",
         "target": "g__Alistipes",
         "value": 0.6667
       },
       {
         "id": 246,
-        "source": "g__Lachnospiraceae_NK4A136_group",
+        "source": "g__Lachnospiraceae_NK4A136-group",
         "target": "g__UCG-003",
         "value": 0.5774
       },
       {
         "id": 247,
-        "source": "g__Lachnospiraceae_NK4A136_group",
+        "source": "g__Lachnospiraceae_NK4A136-group",
         "target": "g__Oscillospira",
         "value": 0.549
       },
       {
         "id": 248,
-        "source": "g__Lachnospiraceae_NK4A136_group",
+        "source": "g__Lachnospiraceae_NK4A136-group",
         "target": "g__Lachnospiraceae_UCG-010",
         "value": 0.456
       },
       {
         "id": 249,
-        "source": "g__Lachnospiraceae_NK4A136_group",
+        "source": "g__Lachnospiraceae_NK4A136-group",
         "target": "g__Oscillibacter",
         "value": 0.5364
       },
@@ -3592,7 +3592,7 @@
       {
         "id": 257,
         "source": "g__Oscillospira",
-        "target": "g__Prevotellaceae_NK3B31_group",
+        "target": "g__Prevotellaceae_NK3B31-group",
         "value": 0.3303
       },
       {
@@ -3604,30 +3604,30 @@
       {
         "id": 259,
         "source": "g__Ruminococcus",
-        "target": "f___Eubacterium_coprostanoligenes_group_g__",
+        "target": "f___Eubacterium_coprostanoligenes-group_g__",
         "value": 0.3355
       },
       {
         "id": 260,
-        "source": "f___Eubacterium_coprostanoligenes_group_g__",
+        "source": "f___Eubacterium_coprostanoligenes-group_g__",
         "target": "g__Subdoligranulum",
         "value": 0.7
       },
       {
         "id": 261,
-        "source": "f___Eubacterium_coprostanoligenes_group_g__",
+        "source": "f___Eubacterium_coprostanoligenes-group_g__",
         "target": "f__Eggerthellaceae_g__",
         "value": 0.6393
       },
       {
         "id": 262,
-        "source": "f___Eubacterium_coprostanoligenes_group_g__",
+        "source": "f___Eubacterium_coprostanoligenes-group_g__",
         "target": "o__RF39_f___g__",
         "value": 0.7009
       },
       {
         "id": 263,
-        "source": "f___Eubacterium_coprostanoligenes_group_g__",
+        "source": "f___Eubacterium_coprostanoligenes-group_g__",
         "target": "f__Coriobacteriales_Incertae_Sedis_g__",
         "value": 0.625
       },
@@ -3657,37 +3657,37 @@
       },
       {
         "id": 268,
-        "source": "g___Eubacterium_fissicatena_group",
+        "source": "g___Eubacterium_fissicatena-group",
         "target": "g__Gordonibacter",
         "value": 0.7719
       },
       {
         "id": 269,
-        "source": "g___Eubacterium_fissicatena_group",
+        "source": "g___Eubacterium_fissicatena-group",
         "target": "g__Christensenella",
         "value": 0.746
       },
       {
         "id": 270,
-        "source": "g___Eubacterium_fissicatena_group",
+        "source": "g___Eubacterium_fissicatena-group",
         "target": "g__Paludicola",
         "value": 0.4928
       },
       {
         "id": 271,
-        "source": "g___Eubacterium_fissicatena_group",
+        "source": "g___Eubacterium_fissicatena-group",
         "target": "g__Catabacter",
         "value": 0.5156
       },
       {
         "id": 272,
-        "source": "g___Eubacterium_fissicatena_group",
+        "source": "g___Eubacterium_fissicatena-group",
         "target": "g__Olsenella",
         "value": 0.6184
       },
       {
         "id": 273,
-        "source": "g___Eubacterium_fissicatena_group",
+        "source": "g___Eubacterium_fissicatena-group",
         "target": "f__Hydrogenoanaerobacterium_g__",
         "value": 0.377
       },
@@ -3711,25 +3711,25 @@
       },
       {
         "id": 277,
-        "source": "o__Clostridia_vadinBB60_group_f___g__",
+        "source": "o__Clostridia_vadinBB60-group_f___g__",
         "target": "g__Lachnospiraceae_UCG-008",
         "value": 0.5263
       },
       {
         "id": 278,
-        "source": "o__Clostridia_vadinBB60_group_f___g__",
+        "source": "o__Clostridia_vadinBB60-group_f___g__",
         "target": "f__Puniceicoccaceae_g__",
         "value": 0.4762
       },
       {
         "id": 279,
-        "source": "o__Clostridia_vadinBB60_group_f___g__",
-        "target": "g__Rikenellaceae_RC9_gut_group",
+        "source": "o__Clostridia_vadinBB60-group_f___g__",
+        "target": "g__Rikenellaceae_RC9_gut-group",
         "value": 0.381
       },
       {
         "id": 280,
-        "source": "o__Clostridia_vadinBB60_group_f___g__",
+        "source": "o__Clostridia_vadinBB60-group_f___g__",
         "target": "g__Fournierella",
         "value": 0.3182
       },
@@ -3772,7 +3772,7 @@
       {
         "id": 287,
         "source": "f__Puniceicoccaceae_g__",
-        "target": "g__Rikenellaceae_RC9_gut_group",
+        "target": "g__Rikenellaceae_RC9_gut-group",
         "value": 0.6842
       },
       {
@@ -3783,13 +3783,13 @@
       },
       {
         "id": 289,
-        "source": "g__Rikenellaceae_RC9_gut_group",
+        "source": "g__Rikenellaceae_RC9_gut-group",
         "target": "g__Succinivibrio",
         "value": 0.5357
       },
       {
         "id": 290,
-        "source": "g__Rikenellaceae_RC9_gut_group",
+        "source": "g__Rikenellaceae_RC9_gut-group",
         "target": "g__Anaeroplasma",
         "value": 0.4828
       },
@@ -3844,7 +3844,7 @@
       {
         "id": 299,
         "source": "g__Pseudobutyrivibrio",
-        "target": "U_GLU_G_Positive",
+        "target": "U_GLU-G_Positive",
         "value": 0.25
       },
       {
@@ -3886,7 +3886,7 @@
       {
         "id": 306,
         "source": "g__Coriobacteriaceae_UCG-002",
-        "target": "U_GLU_G_Positive",
+        "target": "U_GLU-G_Positive",
         "value": 0.3
       },
       {
@@ -3934,7 +3934,7 @@
       {
         "id": 314,
         "source": "o__Clostridia_UCG-014_f___g__",
-        "target": "g__NK4A214_group",
+        "target": "g__NK4A214-group",
         "value": 0.5978
       },
       {
@@ -4012,36 +4012,36 @@
       {
         "id": 327,
         "source": "g__Dorea",
-        "target": "g___Ruminococcus_gauvreauii_group",
+        "target": "g___Ruminococcus_gauvreauii-group",
         "value": 0.5488
       },
       {
         "id": 328,
         "source": "g__Dorea",
-        "target": "g___Ruminococcus_torques_group",
+        "target": "g___Ruminococcus_torques-group",
         "value": 0.425
       },
       {
         "id": 329,
-        "source": "g__Prevotellaceae_Ga6A1_group",
+        "source": "g__Prevotellaceae_Ga6A1-group",
         "target": "g__Tetragenococcus",
         "value": 0.7692
       },
       {
         "id": 330,
-        "source": "g__Prevotellaceae_Ga6A1_group",
+        "source": "g__Prevotellaceae_Ga6A1-group",
         "target": "HBsAb_Negative",
         "value": 0.3077
       },
       {
         "id": 331,
-        "source": "g__Prevotellaceae_Ga6A1_group",
+        "source": "g__Prevotellaceae_Ga6A1-group",
         "target": "g__Paeniclostridium",
         "value": 0.2727
       },
       {
         "id": 332,
-        "source": "g__Prevotellaceae_Ga6A1_group",
+        "source": "g__Prevotellaceae_Ga6A1-group",
         "target": "Blood_Type_O",
         "value": 0.2941
       },
@@ -4071,37 +4071,37 @@
       },
       {
         "id": 337,
-        "source": "BMI_Before_Pregnancy_G__24_Overweight",
+        "source": "BMI_Before_Pregnancy-G__24_Overweight",
         "target": "g__Escherichia-Shigella",
         "value": 0.383
       },
       {
         "id": 338,
-        "source": "BMI_Before_Pregnancy_G__24_Overweight",
+        "source": "BMI_Before_Pregnancy-G__24_Overweight",
         "target": "BMI_Before_Pregnancy",
         "value": 0.4074
       },
       {
         "id": 339,
-        "source": "BMI_Before_Pregnancy_G__24_Overweight",
+        "source": "BMI_Before_Pregnancy-G__24_Overweight",
         "target": "Weight_Before_Pregnancy",
         "value": 0.3929
       },
       {
         "id": 340,
-        "source": "BMI_Before_Pregnancy_G__24_Overweight",
+        "source": "BMI_Before_Pregnancy-G__24_Overweight",
         "target": "Anemia_No",
         "value": 0.3529
       },
       {
         "id": 341,
-        "source": "BMI_Before_Pregnancy_G__24_Overweight",
-        "target": "Delivery_Mode_Cesarean_Delivery",
+        "source": "BMI_Before_Pregnancy-G__24_Overweight",
+        "target": "Delivery_Mode_Cesarean-Delivery",
         "value": 0.2609
       },
       {
         "id": 342,
-        "source": "BMI_Before_Pregnancy_G__24_Overweight",
+        "source": "BMI_Before_Pregnancy-G__24_Overweight",
         "target": "Fetal_Abnormalities_No",
         "value": 0.3077
       },
@@ -4114,7 +4114,7 @@
       {
         "id": 344,
         "source": "g__Bifidobacterium",
-        "target": "g___Clostridium_innocuum_group",
+        "target": "g___Clostridium_innocuum-group",
         "value": 0.4545
       },
       {
@@ -4161,19 +4161,19 @@
       },
       {
         "id": 352,
-        "source": "g___Clostridium_innocuum_group",
-        "target": "g___Ruminococcus_gnavus_group",
+        "source": "g___Clostridium_innocuum-group",
+        "target": "g___Ruminococcus_gnavus-group",
         "value": 0.9091
       },
       {
         "id": 353,
-        "source": "g___Clostridium_innocuum_group",
+        "source": "g___Clostridium_innocuum-group",
         "target": "g__Gemella",
         "value": 0.8333
       },
       {
         "id": 354,
-        "source": "g___Clostridium_innocuum_group",
+        "source": "g___Clostridium_innocuum-group",
         "target": "BS120",
         "value": 0.2941
       },
@@ -4239,25 +4239,25 @@
       },
       {
         "id": 365,
-        "source": "g___Ruminococcus_gauvreauii_group",
+        "source": "g___Ruminococcus_gauvreauii-group",
         "target": "g__Erysipelotrichaceae_UCG-003",
         "value": 0.3667
       },
       {
         "id": 366,
-        "source": "g___Ruminococcus_torques_group",
+        "source": "g___Ruminococcus_torques-group",
         "target": "g__Erysipelotrichaceae_UCG-003",
         "value": 0.4681
       },
       {
         "id": 367,
-        "source": "g___Ruminococcus_torques_group",
+        "source": "g___Ruminococcus_torques-group",
         "target": "g__Brucella",
         "value": 0.2442
       },
       {
         "id": 368,
-        "source": "g___Ruminococcus_torques_group",
+        "source": "g___Ruminococcus_torques-group",
         "target": "Gestation_Age",
         "value": 0.2353
       },
@@ -4324,7 +4324,7 @@
       {
         "id": 379,
         "source": "g__Bilophila",
-        "target": "U_KET_G_Positive",
+        "target": "U_KET-G_Positive",
         "value": 0.2366
       },
       {
@@ -4342,7 +4342,7 @@
       {
         "id": 382,
         "source": "f__Lachnospiraceae_g__",
-        "target": "U_KET_G_Negative",
+        "target": "U_KET-G_Negative",
         "value": 0.3818
       },
       {
@@ -4366,7 +4366,7 @@
       {
         "id": 386,
         "source": "g__Veillonella",
-        "target": "BMI_Before_Pregnancy_G_18_5-24_Normal",
+        "target": "BMI_Before_Pregnancy-G_18_5-24_Normal",
         "value": 0.2333
       },
       {
@@ -4407,26 +4407,26 @@
       },
       {
         "id": 393,
-        "source": "U_KET_G_Negative",
+        "source": "U_KET-G_Negative",
         "target": "g__Escherichia-Shigella",
         "value": 0.3968
       },
       {
         "id": 394,
-        "source": "U_KET_G_Negative",
+        "source": "U_KET-G_Negative",
         "target": "B_APTT",
         "value": 0.3158
       },
       {
         "id": 395,
-        "source": "U_KET_G_Negative",
+        "source": "U_KET-G_Negative",
         "target": "U_BIL_Negative",
         "value": 0.3864
       },
       {
         "id": 396,
-        "source": "U_KET_G_Negative",
-        "target": "Age_Group_30-34",
+        "source": "U_KET-G_Negative",
+        "target": "Age-group_30-34",
         "value": 0.3
       },
       {
@@ -4444,13 +4444,13 @@
       {
         "id": 399,
         "source": "g__Agathobacter",
-        "target": "g___Eubacterium_ventriosum_group",
+        "target": "g___Eubacterium_ventriosum-group",
         "value": 0.3432
       },
       {
         "id": 400,
         "source": "g__UCG-009",
-        "target": "g__Christensenellaceae_R-7_group",
+        "target": "g__Christensenellaceae_R-7-group",
         "value": 0.5119
       },
       {
@@ -4678,7 +4678,7 @@
       {
         "id": 438,
         "source": "g__Campylobacter",
-        "target": "Infant_Weight_G__2_5KG_Underweight",
+        "target": "Infant_Weight-G__2_5KG_Underweight",
         "value": 0.3134
       },
       {
@@ -4696,7 +4696,7 @@
       {
         "id": 441,
         "source": "g__Intestinibacter",
-        "target": "Weight_Gain_Over_Pregnancy_G_Within_Guidelines",
+        "target": "Weight_Gain_Over_Pregnancy-G_Within_Guidelines",
         "value": 0.3286
       },
       {
@@ -4726,7 +4726,7 @@
       {
         "id": 446,
         "source": "g__Lacticaseibacillus",
-        "target": "U_LEU_G_Positive",
+        "target": "U_LEU-G_Positive",
         "value": 0.25
       },
       {
@@ -4737,13 +4737,13 @@
       },
       {
         "id": 448,
-        "source": "Weight_Gain_Over_Pregnancy_G_Within_Guidelines",
+        "source": "Weight_Gain_Over_Pregnancy-G_Within_Guidelines",
         "target": "Blood_Type_AB",
         "value": 0.2987
       },
       {
         "id": 449,
-        "source": "Weight_Gain_Over_Pregnancy_G_Within_Guidelines",
+        "source": "Weight_Gain_Over_Pregnancy-G_Within_Guidelines",
         "target": "g__Anaerostipes",
         "value": 0.32
       },
@@ -4798,7 +4798,7 @@
       {
         "id": 458,
         "source": "g__UCG-005",
-        "target": "g__Christensenellaceae_R-7_group",
+        "target": "g__Christensenellaceae_R-7-group",
         "value": 0.5723
       },
       {
@@ -4936,7 +4936,7 @@
       {
         "id": 481,
         "source": "g__Peptoniphilus",
-        "target": "f___Clostridium_methylpentosum_group_g__",
+        "target": "f___Clostridium_methylpentosum-group_g__",
         "value": 0.375
       },
       {
@@ -4953,13 +4953,13 @@
       },
       {
         "id": 484,
-        "source": "f___Clostridium_methylpentosum_group_g__",
+        "source": "f___Clostridium_methylpentosum-group_g__",
         "target": "g__Corynebacterium",
         "value": 1.0
       },
       {
         "id": 485,
-        "source": "f___Clostridium_methylpentosum_group_g__",
+        "source": "f___Clostridium_methylpentosum-group_g__",
         "target": "g__Eggerthella",
         "value": 0.2143
       },
@@ -5068,7 +5068,7 @@
       {
         "id": 503,
         "source": "g__Parasutterella",
-        "target": "U_KET_G_Positive",
+        "target": "U_KET-G_Positive",
         "value": 0.2727
       },
       {
@@ -5098,7 +5098,7 @@
       {
         "id": 508,
         "source": "g__Flavonifractor",
-        "target": "Delivery_Mode_Vaginal_Delivery",
+        "target": "Delivery_Mode_Vaginal-Delivery",
         "value": 0.359
       },
       {
@@ -5109,25 +5109,25 @@
       },
       {
         "id": 510,
-        "source": "g___Ruminococcus_gnavus_group",
+        "source": "g___Ruminococcus_gnavus-group",
         "target": "g__Gemella",
         "value": 0.7692
       },
       {
         "id": 511,
-        "source": "g___Eubacterium_ventriosum_group",
+        "source": "g___Eubacterium_ventriosum-group",
         "target": "g__Anaerotruncus",
         "value": 0.3243
       },
       {
         "id": 512,
-        "source": "g___Eubacterium_ventriosum_group",
+        "source": "g___Eubacterium_ventriosum-group",
         "target": "g__Shuttleworthia",
         "value": 0.2258
       },
       {
         "id": 513,
-        "source": "g___Eubacterium_ventriosum_group",
+        "source": "g___Eubacterium_ventriosum-group",
         "target": "g__Negativibacillus",
         "value": 0.2719
       },
@@ -5182,7 +5182,7 @@
       {
         "id": 522,
         "source": "f__Peptococcaceae_g__",
-        "target": "g__NK4A214_group",
+        "target": "g__NK4A214-group",
         "value": 0.6479
       },
       {
@@ -5266,7 +5266,7 @@
       {
         "id": 536,
         "source": "g__Acidaminococcus",
-        "target": "Infant_Weight_G__4KG_Overweight",
+        "target": "Infant_Weight-G__4KG_Overweight",
         "value": 0.3043
       },
       {
@@ -5278,7 +5278,7 @@
       {
         "id": 538,
         "source": "g__Neisseria",
-        "target": "Rupture_of_Membranes_Model_Spontaneous",
+        "target": "Rupture-of_Membranes_Model_Spontaneous",
         "value": 0.3793
       },
       {
@@ -5314,13 +5314,13 @@
       {
         "id": 544,
         "source": "g__Fusobacterium",
-        "target": "Infant_Weight_G__4KG_Overweight",
+        "target": "Infant_Weight-G__4KG_Overweight",
         "value": 0.2917
       },
       {
         "id": 545,
         "source": "g__Fusobacterium",
-        "target": "Rupture_of_Membranes_Model_Spontaneous",
+        "target": "Rupture-of_Membranes_Model_Spontaneous",
         "value": 0.36
       },
       {
@@ -5506,13 +5506,13 @@
       {
         "id": 576,
         "source": "f__Enterobacteriaceae_g__",
-        "target": "g__Prevotellaceae_NK3B31_group",
+        "target": "g__Prevotellaceae_NK3B31-group",
         "value": 0.2667
       },
       {
         "id": 577,
         "source": "g__Selenomonas",
-        "target": "g__Prevotellaceae_NK3B31_group",
+        "target": "g__Prevotellaceae_NK3B31-group",
         "value": 0.3906
       },
       {
@@ -5554,12 +5554,12 @@
       {
         "id": 584,
         "source": "k__Bacteria_p___c___o___f___g__",
-        "target": "Delivery_Gestational_Age_G_28-36W",
+        "target": "Delivery_Gestational_Age-G_28-36W",
         "value": 0.1698
       },
       {
         "id": 585,
-        "source": "g__Prevotellaceae_NK3B31_group",
+        "source": "g__Prevotellaceae_NK3B31-group",
         "target": "f__Tannerellaceae_g__",
         "value": 0.3438
       },
@@ -5578,30 +5578,30 @@
       {
         "id": 588,
         "source": "Native_Place_Guangdong",
-        "target": "Infant_Weight_G_2_5-4KG_Normal",
+        "target": "Infant_Weight-G_2_5-4KG_Normal",
         "value": 0.3636
       },
       {
         "id": 589,
-        "source": "Rupture_of_Membranes_Model_Spontaneous",
+        "source": "Rupture-of_Membranes_Model_Spontaneous",
         "target": "Infant_Outcome_Referral",
         "value": 0.3488
       },
       {
         "id": 590,
-        "source": "Rupture_of_Membranes_Model_Spontaneous",
+        "source": "Rupture-of_Membranes_Model_Spontaneous",
         "target": "B_PCT",
         "value": 0.3714
       },
       {
         "id": 591,
-        "source": "Delivery_Mode_Vaginal_Delivery",
+        "source": "Delivery_Mode_Vaginal-Delivery",
         "target": "B_TT",
         "value": 0.3019
       },
       {
         "id": 592,
-        "source": "Delivery_Mode_Vaginal_Delivery",
+        "source": "Delivery_Mode_Vaginal-Delivery",
         "target": "g__Anaerostignum",
         "value": 0.3188
       },
@@ -5626,7 +5626,7 @@
       {
         "id": 596,
         "source": "g__Ligilactobacillus",
-        "target": "g___Eubacterium_nodatum_group",
+        "target": "g___Eubacterium_nodatum-group",
         "value": 0.2857
       },
       {
@@ -5674,7 +5674,7 @@
       {
         "id": 604,
         "source": "g__Lactobacillus",
-        "target": "Age_Group__29",
+        "target": "Age-group__29",
         "value": 0.3043
       },
       {
@@ -5692,30 +5692,30 @@
       {
         "id": 607,
         "source": "g__Enterococcus",
-        "target": "Age_Group__29",
+        "target": "Age-group__29",
         "value": 0.3043
       },
       {
         "id": 608,
-        "source": "g___Eubacterium_brachy_group",
+        "source": "g___Eubacterium_brachy-group",
         "target": "g__Pygmaiobacter",
         "value": 0.5854
       },
       {
         "id": 609,
-        "source": "g___Eubacterium_brachy_group",
+        "source": "g___Eubacterium_brachy-group",
         "target": "g__Olsenella",
         "value": 0.5862
       },
       {
         "id": 610,
-        "source": "g___Eubacterium_brachy_group",
+        "source": "g___Eubacterium_brachy-group",
         "target": "p__WPS-2_c___o___f___g__",
         "value": 0.4
       },
       {
         "id": 611,
-        "source": "g___Eubacterium_brachy_group",
+        "source": "g___Eubacterium_brachy-group",
         "target": "f__Rhizobiaceae_g__",
         "value": 0.4
       },
@@ -5782,7 +5782,7 @@
       {
         "id": 622,
         "source": "o__Lactobacillales_f___g__",
-        "target": "Age_Group__29",
+        "target": "Age-group__29",
         "value": 0.3143
       },
       {
@@ -5860,7 +5860,7 @@
       {
         "id": 635,
         "source": "B_TBA",
-        "target": "Rupture_of_Membranes_Model_Artificial",
+        "target": "Rupture-of_Membranes_Model_Artificial",
         "value": 0.3889
       },
       {
@@ -5920,7 +5920,7 @@
       {
         "id": 645,
         "source": "B_TT",
-        "target": "U_ERY_G_Positive",
+        "target": "U_ERY-G_Positive",
         "value": 0.3111
       },
       {
@@ -6028,7 +6028,7 @@
       {
         "id": 663,
         "source": "BMI_Before_Pregnancy",
-        "target": "Infant_Weight_G__4KG_Overweight",
+        "target": "Infant_Weight-G__4KG_Overweight",
         "value": 0.25
       },
       {
@@ -6046,7 +6046,7 @@
       {
         "id": 666,
         "source": "g__Romboutsia",
-        "target": "Weight_Gain_Over_Pregnancy_G_More_Than_Guidelines",
+        "target": "Weight_Gain_Over_Pregnancy-G_More_Than_Guidelines",
         "value": 0.25
       },
       {
@@ -6106,7 +6106,7 @@
       {
         "id": 676,
         "source": "g__Lachnoclostridium",
-        "target": "U_UBG_G_Negative",
+        "target": "U_UBG-G_Negative",
         "value": 0.5
       },
       {
@@ -6124,19 +6124,19 @@
       {
         "id": 679,
         "source": "g__Lachnoclostridium",
-        "target": "Weight_Gain_Over_Pregnancy_G_Less_Than_Guidelines",
+        "target": "Weight_Gain_Over_Pregnancy-G_Less_Than_Guidelines",
         "value": 0.2252
       },
       {
         "id": 680,
-        "source": "U_UBG_G_Negative",
+        "source": "U_UBG-G_Negative",
         "target": "U_BIL_Negative",
         "value": 0.8095
       },
       {
         "id": 681,
-        "source": "U_UBG_G_Negative",
-        "target": "U_URI_G_Normal",
+        "source": "U_UBG-G_Negative",
+        "target": "U_URI-G_Normal",
         "value": 0.6024
       },
       {
@@ -6154,36 +6154,36 @@
       {
         "id": 684,
         "source": "g__Escherichia-Shigella",
-        "target": "Hypertensive_Disorder_of_Pregnancy",
+        "target": "Hypertensive_Disorder-of_Pregnancy",
         "value": 0.3452
       },
       {
         "id": 685,
-        "source": "Hypertensive_Disorder_of_Pregnancy",
+        "source": "Hypertensive_Disorder-of_Pregnancy",
         "target": "Hysteromyoma",
         "value": 0.7
       },
       {
         "id": 686,
-        "source": "Hypertensive_Disorder_of_Pregnancy",
+        "source": "Hypertensive_Disorder-of_Pregnancy",
         "target": "Scar_Uterus",
         "value": 0.6882
       },
       {
         "id": 687,
-        "source": "Hypertensive_Disorder_of_Pregnancy",
+        "source": "Hypertensive_Disorder-of_Pregnancy",
         "target": "Gestational_Diabetes_Mellitus",
         "value": 0.6829
       },
       {
         "id": 688,
-        "source": "Hypertensive_Disorder_of_Pregnancy",
+        "source": "Hypertensive_Disorder-of_Pregnancy",
         "target": "Cord_Entanglement",
         "value": 0.6818
       },
       {
         "id": 689,
-        "source": "Hypertensive_Disorder_of_Pregnancy",
+        "source": "Hypertensive_Disorder-of_Pregnancy",
         "target": "Amniodic_Fluid_Clear",
         "value": 0.37
       },
@@ -6244,7 +6244,7 @@
       {
         "id": 699,
         "source": "g__Enterorhabdus",
-        "target": "U_URI_G_High",
+        "target": "U_URI-G_High",
         "value": 0.3529
       },
       {
@@ -6256,7 +6256,7 @@
       {
         "id": 701,
         "source": "g__Granulicatella",
-        "target": "Infant_Weight_G_2_5-4KG_Normal",
+        "target": "Infant_Weight-G_2_5-4KG_Normal",
         "value": 0.3896
       },
       {
@@ -6268,18 +6268,18 @@
       {
         "id": 703,
         "source": "Delivery_Season_Spring",
-        "target": "Infant_Weight_G_2_5-4KG_Normal",
+        "target": "Infant_Weight-G_2_5-4KG_Normal",
         "value": 0.4286
       },
       {
         "id": 704,
-        "source": "Infant_Weight_G_2_5-4KG_Normal",
-        "target": "Delivery_Gestational_Age_G_37-42W",
+        "source": "Infant_Weight-G_2_5-4KG_Normal",
+        "target": "Delivery_Gestational_Age-G_37-42W",
         "value": 0.4231
       },
       {
         "id": 705,
-        "source": "Infant_Weight_G_2_5-4KG_Normal",
+        "source": "Infant_Weight-G_2_5-4KG_Normal",
         "target": "History_Pregnancy_Outcomes_No",
         "value": 0.4066
       },
@@ -6334,7 +6334,7 @@
       {
         "id": 714,
         "source": "f__Hungateiclostridiaceae_g__",
-        "target": "g__Lachnospiraceae_NC2004_group",
+        "target": "g__Lachnospiraceae_NC2004-group",
         "value": 0.4468
       },
       {
@@ -6358,7 +6358,7 @@
       {
         "id": 718,
         "source": "g__Mitsuokella",
-        "target": "g___Bacteroides_pectinophilus_group",
+        "target": "g___Bacteroides_pectinophilus-group",
         "value": 0.8
       },
       {
@@ -6375,13 +6375,13 @@
       },
       {
         "id": 721,
-        "source": "g___Bacteroides_pectinophilus_group",
+        "source": "g___Bacteroides_pectinophilus-group",
         "target": "g__Sporobacter",
         "value": 0.6
       },
       {
         "id": 722,
-        "source": "g___Bacteroides_pectinophilus_group",
+        "source": "g___Bacteroides_pectinophilus-group",
         "target": "g__Cuneatibacter",
         "value": 0.2105
       },
@@ -6424,7 +6424,7 @@
       {
         "id": 729,
         "source": "g__Succinivibrio",
-        "target": "g__Lachnospiraceae_AC2044_group",
+        "target": "g__Lachnospiraceae_AC2044-group",
         "value": 0.5185
       },
       {
@@ -6442,7 +6442,7 @@
       {
         "id": 732,
         "source": "g__Succinivibrio",
-        "target": "Delivery_Gestational_Age_G__42W",
+        "target": "Delivery_Gestational_Age-G__42W",
         "value": 0.3333
       },
       {
@@ -6466,24 +6466,24 @@
       {
         "id": 736,
         "source": "g__Sneathia",
-        "target": "g__Lachnospiraceae_AC2044_group",
+        "target": "g__Lachnospiraceae_AC2044-group",
         "value": 0.4516
       },
       {
         "id": 737,
-        "source": "g__Lachnospiraceae_AC2044_group",
+        "source": "g__Lachnospiraceae_AC2044-group",
         "target": "f__Prevotellaceae_g__",
         "value": 0.6301
       },
       {
         "id": 738,
-        "source": "g__Lachnospiraceae_AC2044_group",
+        "source": "g__Lachnospiraceae_AC2044-group",
         "target": "g__Intestinimonas",
         "value": 0.4932
       },
       {
         "id": 739,
-        "source": "g__Lachnospiraceae_AC2044_group",
+        "source": "g__Lachnospiraceae_AC2044-group",
         "target": "f__Veillonellaceae_g__",
         "value": 0.5323
       },
@@ -6568,7 +6568,7 @@
       {
         "id": 753,
         "source": "g__Salmonella",
-        "target": "Delivery_Gestational_Age_G__42W",
+        "target": "Delivery_Gestational_Age-G__42W",
         "value": 0.2
       },
       {
@@ -6616,7 +6616,7 @@
       {
         "id": 761,
         "source": "Medication_Other",
-        "target": "g___Eubacterium_nodatum_group",
+        "target": "g___Eubacterium_nodatum-group",
         "value": 0.25
       },
       {
@@ -6652,7 +6652,7 @@
       {
         "id": 767,
         "source": "g__Anoxybacillus",
-        "target": "g___Eubacterium_nodatum_group",
+        "target": "g___Eubacterium_nodatum-group",
         "value": 0.1667
       },
       {
@@ -6784,7 +6784,7 @@
       {
         "id": 789,
         "source": "g__Epulopiscium",
-        "target": "Delivery_Gestational_Age_G__42W",
+        "target": "Delivery_Gestational_Age-G__42W",
         "value": 0.2553
       },
       {
@@ -6796,7 +6796,7 @@
       {
         "id": 791,
         "source": "f__Veillonellaceae_g__",
-        "target": "Delivery_Gestational_Age_G__42W",
+        "target": "Delivery_Gestational_Age-G__42W",
         "value": 0.2586
       },
       {
@@ -6880,7 +6880,7 @@
       {
         "id": 805,
         "source": "g__Shuttleworthia",
-        "target": "U_ERY_G_Positive",
+        "target": "U_ERY-G_Positive",
         "value": 0.2179
       },
       {
@@ -6891,20 +6891,20 @@
       },
       {
         "id": 807,
-        "source": "U_ERY_G_Positive",
+        "source": "U_ERY-G_Positive",
         "target": "g__Fretibacterium",
         "value": 0.2895
       },
       {
         "id": 808,
-        "source": "U_ERY_G_Positive",
+        "source": "U_ERY-G_Positive",
         "target": "Medication_No",
         "value": 0.2985
       },
       {
         "id": 809,
-        "source": "U_ERY_G_Positive",
-        "target": "U_GLU_G_Negative",
+        "source": "U_ERY-G_Positive",
+        "target": "U_GLU-G_Negative",
         "value": 0.2885
       },
       {
@@ -7083,13 +7083,13 @@
       },
       {
         "id": 839,
-        "source": "g__Lachnospiraceae_NC2004_group",
+        "source": "g__Lachnospiraceae_NC2004-group",
         "target": "g__Neorhizobium",
         "value": 0.5263
       },
       {
         "id": 840,
-        "source": "g__Lachnospiraceae_NC2004_group",
+        "source": "g__Lachnospiraceae_NC2004-group",
         "target": "g__Caulobacter",
         "value": 0.3714
       },
@@ -7282,19 +7282,19 @@
       {
         "id": 872,
         "source": "g__HT002",
-        "target": "U_UBG_G_Positive",
+        "target": "U_UBG-G_Positive",
         "value": 0.3125
       },
       {
         "id": 873,
         "source": "g__HT002",
-        "target": "U_ASC_G_Negative",
+        "target": "U_ASC-G_Negative",
         "value": 0.2632
       },
       {
         "id": 874,
         "source": "g__F0332",
-        "target": "U_UBG_G_Positive",
+        "target": "U_UBG-G_Positive",
         "value": 0.4545
       },
       {
@@ -7306,42 +7306,42 @@
       {
         "id": 876,
         "source": "g__F0332",
-        "target": "Delivery_Mode_Forceps_Delivery",
+        "target": "Delivery_Mode_Forceps-Delivery",
         "value": 0.3684
       },
       {
         "id": 877,
         "source": "g__F0332",
-        "target": "U_ASC_G_Negative",
+        "target": "U_ASC-G_Negative",
         "value": 0.3571
       },
       {
         "id": 878,
         "source": "g__F0332",
-        "target": "Weight_Gain_Over_Pregnancy_G_More_Than_Guidelines",
+        "target": "Weight_Gain_Over_Pregnancy-G_More_Than_Guidelines",
         "value": 0.3333
       },
       {
         "id": 879,
-        "source": "U_UBG_G_Positive",
-        "target": "U_ASC_G_Negative",
+        "source": "U_UBG-G_Positive",
+        "target": "U_ASC-G_Negative",
         "value": 0.3125
       },
       {
         "id": 880,
-        "source": "U_UBG_G_Positive",
-        "target": "Delivery_Mode_Forceps_Delivery",
+        "source": "U_UBG-G_Positive",
+        "target": "Delivery_Mode_Forceps-Delivery",
         "value": 0.2174
       },
       {
         "id": 881,
-        "source": "g___Eubacterium_nodatum_group",
+        "source": "g___Eubacterium_nodatum-group",
         "target": "Fetal_Abnormalities_Other",
         "value": 0.2692
       },
       {
         "id": 882,
-        "source": "g___Eubacterium_nodatum_group",
+        "source": "g___Eubacterium_nodatum-group",
         "target": "Delivery_Season_Summer",
         "value": 0.25
       },
@@ -7390,25 +7390,25 @@
       {
         "id": 890,
         "source": "g__Negativicoccus",
-        "target": "BMI_Before_Pregnancy_G__18_5_Underweight",
+        "target": "BMI_Before_Pregnancy-G__18_5_Underweight",
         "value": 0.1714
       },
       {
         "id": 891,
         "source": "g__Negativicoccus",
-        "target": "Delivery_Gestational_Age_G_28-36W",
+        "target": "Delivery_Gestational_Age-G_28-36W",
         "value": 0.1667
       },
       {
         "id": 892,
         "source": "Fetal_Abnormalities_Fetal_Distress",
-        "target": "Delivery_Mode_Forceps_Delivery",
+        "target": "Delivery_Mode_Forceps-Delivery",
         "value": 0.2414
       },
       {
         "id": 893,
         "source": "Fetal_Abnormalities_Fetal_Distress",
-        "target": "U_ASC_G_Negative",
+        "target": "U_ASC-G_Negative",
         "value": 0.2609
       },
       {
@@ -7486,7 +7486,7 @@
       {
         "id": 906,
         "source": "HCV_Positive",
-        "target": "BMI_Before_Pregnancy_G__18_5_Underweight",
+        "target": "BMI_Before_Pregnancy-G__18_5_Underweight",
         "value": 0.1714
       },
       {
@@ -7534,13 +7534,13 @@
       {
         "id": 914,
         "source": "g__Pyramidobacter",
-        "target": "Age_Group__35",
+        "target": "Age-group__35",
         "value": 0.3333
       },
       {
         "id": 915,
         "source": "Age",
-        "target": "Age_Group__35",
+        "target": "Age-group__35",
         "value": 0.375
       },
       {
@@ -7551,26 +7551,26 @@
       },
       {
         "id": 917,
-        "source": "Age_Group__35",
+        "source": "Age-group__35",
         "target": "History_Pregnancy_Outcomes_Miscarriage",
         "value": 0.3636
       },
       {
         "id": 918,
         "source": "Fetal_Abnormalities_No",
-        "target": "Premature_Rupture_of_Membranes",
+        "target": "Premature_Rupture-of_Membranes",
         "value": 0.2969
       },
       {
         "id": 919,
-        "source": "Delivery_Gestational_Age_G__42W",
+        "source": "Delivery_Gestational_Age-G__42W",
         "target": "g__Butyrivibrio",
         "value": 0.2273
       },
       {
         "id": 920,
         "source": "g__Harryflintia",
-        "target": "U_URI_G_High",
+        "target": "U_URI-G_High",
         "value": 0.36
       },
       {
@@ -7588,7 +7588,7 @@
       {
         "id": 923,
         "source": "g__Mobiluncus",
-        "target": "U_URI_G_High",
+        "target": "U_URI-G_High",
         "value": 0.4615
       },
       {
@@ -7612,7 +7612,7 @@
       {
         "id": 927,
         "source": "g__Brucella",
-        "target": "U_LEU_G_Positive",
+        "target": "U_LEU-G_Positive",
         "value": 0.2857
       },
       {
@@ -7762,12 +7762,12 @@
       {
         "id": 952,
         "source": "B_APTT",
-        "target": "Age_Group_30-34",
+        "target": "Age-group_30-34",
         "value": 0.3864
       },
       {
         "id": 953,
-        "source": "Age_Group_30-34",
+        "source": "Age-group_30-34",
         "target": "Amniodic_Fluid_Muddy",
         "value": 0.3077
       },
@@ -8014,19 +8014,19 @@
       {
         "id": 994,
         "source": "B_HGB",
-        "target": "U_GLU_G_Negative",
+        "target": "U_GLU-G_Negative",
         "value": 0.1918
       },
       {
         "id": 995,
-        "source": "U_GLU_G_Negative",
+        "source": "U_GLU-G_Negative",
         "target": "B_WBC",
         "value": 0.303
       },
       {
         "id": 996,
-        "source": "U_GLU_G_Negative",
-        "target": "Premature_Rupture_of_Membranes",
+        "source": "U_GLU-G_Negative",
+        "target": "Premature_Rupture-of_Membranes",
         "value": 0.3871
       },
       {
@@ -8074,7 +8074,7 @@
       {
         "id": 1004,
         "source": "B_PLT",
-        "target": "Premature_Rupture_of_Membranes",
+        "target": "Premature_Rupture-of_Membranes",
         "value": 0.3133
       },
       {
@@ -8092,7 +8092,7 @@
       {
         "id": 1007,
         "source": "Postpartum_Hemorrhage",
-        "target": "Intrahepatic_Cholestasis_of_Pregnancy",
+        "target": "Intrahepatic_Cholestasis-of_Pregnancy",
         "value": 0.8833
       },
       {
@@ -8104,31 +8104,31 @@
       {
         "id": 1009,
         "source": "Postpartum_Hemorrhage",
-        "target": "Premature_Rupture_of_Membranes",
+        "target": "Premature_Rupture-of_Membranes",
         "value": 0.7538
       },
       {
         "id": 1010,
-        "source": "Premature_Rupture_of_Membranes",
+        "source": "Premature_Rupture-of_Membranes",
         "target": "B_WBC",
         "value": 0.2791
       },
       {
         "id": 1011,
-        "source": "Premature_Rupture_of_Membranes",
-        "target": "Intrahepatic_Cholestasis_of_Pregnancy",
+        "source": "Premature_Rupture-of_Membranes",
+        "target": "Intrahepatic_Cholestasis-of_Pregnancy",
         "value": 0.7869
       },
       {
         "id": 1012,
-        "source": "Premature_Rupture_of_Membranes",
+        "source": "Premature_Rupture-of_Membranes",
         "target": "Placental_Insufficiency",
         "value": 0.7385
       },
       {
         "id": 1013,
-        "source": "Premature_Rupture_of_Membranes",
-        "target": "Delivery_Gestational_Age_G_37-42W",
+        "source": "Premature_Rupture-of_Membranes",
+        "target": "Delivery_Gestational_Age-G_37-42W",
         "value": 0.4773
       },
       {
@@ -8164,7 +8164,7 @@
       {
         "id": 1019,
         "source": "Cord_Entanglement",
-        "target": "Delivery_Gestational_Age_G_37-42W",
+        "target": "Delivery_Gestational_Age-G_37-42W",
         "value": 0.4902
       },
       {
@@ -8182,13 +8182,13 @@
       {
         "id": 1022,
         "source": "Pregnancy_Mode_ART",
-        "target": "Rupture_of_Membranes_Model_Artificial",
+        "target": "Rupture-of_Membranes_Model_Artificial",
         "value": 0.3864
       },
       {
         "id": 1023,
         "source": "HbA1c",
-        "target": "Delivery_Gestational_Age_G_37-42W",
+        "target": "Delivery_Gestational_Age-G_37-42W",
         "value": 0.383
       },
       {
@@ -8199,19 +8199,19 @@
       },
       {
         "id": 1025,
-        "source": "Delivery_Gestational_Age_G_37-42W",
+        "source": "Delivery_Gestational_Age-G_37-42W",
         "target": "Medication_Progesterone",
         "value": 0.3171
       },
       {
         "id": 1026,
-        "source": "Delivery_Gestational_Age_G_37-42W",
+        "source": "Delivery_Gestational_Age-G_37-42W",
         "target": "Allergic_History",
         "value": 0.4679
       },
       {
         "id": 1027,
-        "source": "Delivery_Gestational_Age_G_37-42W",
+        "source": "Delivery_Gestational_Age-G_37-42W",
         "target": "Infant_Outcome_Discharge",
         "value": 0.4615
       },
@@ -8422,7 +8422,7 @@
       {
         "id": 1062,
         "source": "Chronic_Inflammation",
-        "target": "Weight_Gain_Over_Pregnancy_G_Less_Than_Guidelines",
+        "target": "Weight_Gain_Over_Pregnancy-G_Less_Than_Guidelines",
         "value": 0.2558
       },
       {
@@ -8458,37 +8458,37 @@
       {
         "id": 1068,
         "source": "Pelvic_Adhesions",
-        "target": "Intrahepatic_Cholestasis_of_Pregnancy",
+        "target": "Intrahepatic_Cholestasis-of_Pregnancy",
         "value": 0.8254
       },
       {
         "id": 1069,
         "source": "Pelvic_Adhesions",
-        "target": "U_ERY_G_Negative",
+        "target": "U_ERY-G_Negative",
         "value": 0.4306
       },
       {
         "id": 1070,
         "source": "Placental_Insufficiency",
-        "target": "Intrahepatic_Cholestasis_of_Pregnancy",
+        "target": "Intrahepatic_Cholestasis-of_Pregnancy",
         "value": 0.8983
       },
       {
         "id": 1071,
-        "source": "Intrahepatic_Cholestasis_of_Pregnancy",
-        "target": "U_ASC_G_Positive",
+        "source": "Intrahepatic_Cholestasis-of_Pregnancy",
+        "target": "U_ASC-G_Positive",
         "value": 0.2714
       },
       {
         "id": 1072,
-        "source": "Intrahepatic_Cholestasis_of_Pregnancy",
-        "target": "U_ERY_G_Negative",
+        "source": "Intrahepatic_Cholestasis-of_Pregnancy",
+        "target": "U_ERY-G_Negative",
         "value": 0.4328
       },
       {
         "id": 1073,
-        "source": "Intrahepatic_Cholestasis_of_Pregnancy",
-        "target": "Rupture_of_Membranes_Model_Artificial",
+        "source": "Intrahepatic_Cholestasis-of_Pregnancy",
+        "target": "Rupture-of_Membranes_Model_Artificial",
         "value": 0.3651
       },
       {
@@ -8542,13 +8542,13 @@
       {
         "id": 1082,
         "source": "HCV_Negative",
-        "target": "U_ASC_G_Positive",
+        "target": "U_ASC-G_Positive",
         "value": 0.2712
       },
       {
         "id": 1083,
         "source": "HCV_Negative",
-        "target": "BMI_Before_Pregnancy_G_18_5-24_Normal",
+        "target": "BMI_Before_Pregnancy-G_18_5-24_Normal",
         "value": 0.2429
       },
       {
@@ -8571,56 +8571,56 @@
       },
       {
         "id": 1087,
-        "source": "U_ASC_G_Positive",
-        "target": "Rupture_of_Membranes_Model_Artificial",
+        "source": "U_ASC-G_Positive",
+        "target": "Rupture-of_Membranes_Model_Artificial",
         "value": 0.2642
       },
       {
         "id": 1088,
         "source": "U_BIL_Negative",
-        "target": "U_URI_G_Normal",
+        "target": "U_URI-G_Normal",
         "value": 0.7051
       },
       {
         "id": 1089,
-        "source": "U_ERY_G_Negative",
+        "source": "U_ERY-G_Negative",
         "target": "Delivery_Season_Winter",
         "value": 0.2679
       },
       {
         "id": 1090,
-        "source": "U_GLU_G_Positive",
-        "target": "Delivery_Mode_Cesarean_Delivery",
+        "source": "U_GLU-G_Positive",
+        "target": "Delivery_Mode_Cesarean-Delivery",
         "value": 0.2439
       },
       {
         "id": 1091,
-        "source": "Delivery_Mode_Cesarean_Delivery",
+        "source": "Delivery_Mode_Cesarean-Delivery",
         "target": "Anemia_No",
         "value": 0.2656
       },
       {
         "id": 1092,
-        "source": "BMI_Before_Pregnancy_G_18_5-24_Normal",
+        "source": "BMI_Before_Pregnancy-G_18_5-24_Normal",
         "target": "Medication_Progesterone",
         "value": 0.2698
       },
       {
         "id": 1093,
-        "source": "BMI_Before_Pregnancy_G__18_5_Underweight",
+        "source": "BMI_Before_Pregnancy-G__18_5_Underweight",
         "target": "Blood_Type_B",
         "value": 0.2222
       },
       {
         "id": 1094,
         "source": "Anemia_No",
-        "target": "Weight_Gain_Over_Pregnancy_G_Less_Than_Guidelines",
+        "target": "Weight_Gain_Over_Pregnancy-G_Less_Than_Guidelines",
         "value": 0.2429
       },
       {
         "id": 1095,
-        "source": "Delivery_Gestational_Age_G_28-36W",
-        "target": "Infant_Weight_G__2_5KG_Underweight",
+        "source": "Delivery_Gestational_Age-G_28-36W",
+        "target": "Infant_Weight-G__2_5KG_Underweight",
         "value": 0.2373
       },
       {

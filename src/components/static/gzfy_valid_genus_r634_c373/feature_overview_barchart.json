@@ -21,11 +21,11 @@
       "enrich_score": 48.4529
     },
     {
-      "variable": "g__Christensenellaceae_R-7_group",
+      "variable": "g__Christensenellaceae_R-7-group",
       "enrich_score": 46.7215
     },
     {
-      "variable": "f___Eubacterium_coprostanoligenes_group_g__",
+      "variable": "f___Eubacterium_coprostanoligenes-group_g__",
       "enrich_score": 45.5019
     },
     {
@@ -53,7 +53,7 @@
       "enrich_score": 40.5824
     },
     {
-      "variable": "g__Family_XIII_AD3011_group",
+      "variable": "g__Family_XIII_AD3011-group",
       "enrich_score": 40.3231
     },
     {
@@ -77,7 +77,7 @@
       "enrich_score": 37.0624
     },
     {
-      "variable": "g___Ruminococcus_torques_group",
+      "variable": "g___Ruminococcus_torques-group",
       "enrich_score": 37.0225
     },
     {
@@ -93,7 +93,7 @@
       "enrich_score": 35.6243
     },
     {
-      "variable": "g__NK4A214_group",
+      "variable": "g__NK4A214-group",
       "enrich_score": 35.4951
     },
     {
@@ -129,15 +129,15 @@
       "enrich_score": 31.2135
     },
     {
-      "variable": "g__Lachnospiraceae_FCS020_group",
+      "variable": "g__Lachnospiraceae_FCS020-group",
       "enrich_score": 30.7921
     },
     {
-      "variable": "Premature_Rupture_of_Membranes",
+      "variable": "Premature_Rupture-of_Membranes",
       "enrich_score": 30.4215
     },
     {
-      "variable": "g___Eubacterium_hallii_group",
+      "variable": "g___Eubacterium_hallii-group",
       "enrich_score": 30.0949
     },
     {
@@ -181,15 +181,15 @@
       "enrich_score": 28.2109
     },
     {
-      "variable": "U_ERY_G_Negative",
+      "variable": "U_ERY-G_Negative",
       "enrich_score": 28.0203
     },
     {
-      "variable": "g___Eubacterium_ventriosum_group",
+      "variable": "g___Eubacterium_ventriosum-group",
       "enrich_score": 27.2485
     },
     {
-      "variable": "g__Lachnospiraceae_AC2044_group",
+      "variable": "g__Lachnospiraceae_AC2044-group",
       "enrich_score": 27.0464
     },
     {
@@ -249,7 +249,7 @@
       "enrich_score": 23.4605
     },
     {
-      "variable": "g___Eubacterium_xylanophilum_group",
+      "variable": "g___Eubacterium_xylanophilum-group",
       "enrich_score": 22.7513
     },
     {
@@ -353,7 +353,7 @@
       "enrich_score": 19.6508
     },
     {
-      "variable": "U_GLU_G_Positive",
+      "variable": "U_GLU-G_Positive",
       "enrich_score": 19.5109
     },
     {
@@ -361,7 +361,7 @@
       "enrich_score": 19.2518
     },
     {
-      "variable": "Delivery_Gestational_Age_G_28-36W",
+      "variable": "Delivery_Gestational_Age-G_28-36W",
       "enrich_score": 19.2313
     },
     {
@@ -377,7 +377,7 @@
       "enrich_score": 18.6603
     },
     {
-      "variable": "g___Ruminococcus_gnavus_group",
+      "variable": "g___Ruminococcus_gnavus-group",
       "enrich_score": 18.5914
     },
     {
@@ -413,11 +413,11 @@
       "enrich_score": 17.5996
     },
     {
-      "variable": "Delivery_Gestational_Age_G__42W",
+      "variable": "Delivery_Gestational_Age-G__42W",
       "enrich_score": 17.5129
     },
     {
-      "variable": "Weight_Gain_Over_Pregnancy_G_Within_Guidelines",
+      "variable": "Weight_Gain_Over_Pregnancy-G_Within_Guidelines",
       "enrich_score": 17.4987
     },
     {
@@ -433,7 +433,7 @@
       "enrich_score": 17.0461
     },
     {
-      "variable": "Rupture_of_Membranes_Model_Spontaneous",
+      "variable": "Rupture-of_Membranes_Model_Spontaneous",
       "enrich_score": 17.0417
     },
     {
@@ -473,7 +473,7 @@
       "enrich_score": 16.4862
     },
     {
-      "variable": "U_ERY_G_Positive",
+      "variable": "U_ERY-G_Positive",
       "enrich_score": 16.4526
     },
     {
@@ -485,7 +485,7 @@
       "enrich_score": 16.4122
     },
     {
-      "variable": "U_GLU_G_Negative",
+      "variable": "U_GLU-G_Negative",
       "enrich_score": 16.2493
     },
     {
@@ -509,7 +509,7 @@
       "enrich_score": 15.8414
     },
     {
-      "variable": "U_ASC_G_Positive",
+      "variable": "U_ASC-G_Positive",
       "enrich_score": 15.8113
     },
     {
@@ -541,7 +541,7 @@
       "enrich_score": 15.2894
     },
     {
-      "variable": "Infant_Weight_G_2_5-4KG_Normal",
+      "variable": "Infant_Weight-G_2_5-4KG_Normal",
       "enrich_score": 15.2302
     },
     {
@@ -597,7 +597,7 @@
       "enrich_score": 14.13
     },
     {
-      "variable": "g___Eubacterium_fissicatena_group",
+      "variable": "g___Eubacterium_fissicatena-group",
       "enrich_score": 14.0196
     },
     {
@@ -605,7 +605,7 @@
       "enrich_score": 13.9885
     },
     {
-      "variable": "Delivery_Mode_Cesarean_Delivery",
+      "variable": "Delivery_Mode_Cesarean-Delivery",
       "enrich_score": 13.9859
     },
     {
@@ -629,7 +629,7 @@
       "enrich_score": 13.6745
     },
     {
-      "variable": "g__Lachnospiraceae_ND3007_group",
+      "variable": "g__Lachnospiraceae_ND3007-group",
       "enrich_score": 13.6565
     },
     {
@@ -641,7 +641,7 @@
       "enrich_score": 13.4679
     },
     {
-      "variable": "U_LEU_G_Negative",
+      "variable": "U_LEU-G_Negative",
       "enrich_score": 13.4508
     },
     {
@@ -673,7 +673,7 @@
       "enrich_score": 13.2133
     },
     {
-      "variable": "g__Rikenellaceae_RC9_gut_group",
+      "variable": "g__Rikenellaceae_RC9_gut-group",
       "enrich_score": 13.1367
     },
     {
@@ -693,11 +693,11 @@
       "enrich_score": 12.7416
     },
     {
-      "variable": "Delivery_Mode_Vaginal_Delivery",
+      "variable": "Delivery_Mode_Vaginal-Delivery",
       "enrich_score": 12.6824
     },
     {
-      "variable": "Age_Group__35",
+      "variable": "Age-group__35",
       "enrich_score": 12.6188
     },
     {
@@ -725,11 +725,11 @@
       "enrich_score": 12.3539
     },
     {
-      "variable": "Infant_Weight_G__2_5KG_Underweight",
+      "variable": "Infant_Weight-G__2_5KG_Underweight",
       "enrich_score": 12.3454
     },
     {
-      "variable": "g___Eubacterium_eligens_group",
+      "variable": "g___Eubacterium_eligens-group",
       "enrich_score": 12.2813
     },
     {
@@ -781,7 +781,7 @@
       "enrich_score": 11.7478
     },
     {
-      "variable": "g___Eubacterium_siraeum_group",
+      "variable": "g___Eubacterium_siraeum-group",
       "enrich_score": 11.7315
     },
     {
@@ -813,7 +813,7 @@
       "enrich_score": 11.2742
     },
     {
-      "variable": "U_LEU_G_Positive",
+      "variable": "U_LEU-G_Positive",
       "enrich_score": 11.2367
     },
     {
@@ -933,7 +933,7 @@
       "enrich_score": 10.3732
     },
     {
-      "variable": "Rupture_of_Membranes_Model_Artificial",
+      "variable": "Rupture-of_Membranes_Model_Artificial",
       "enrich_score": 10.3521
     },
     {
@@ -965,7 +965,7 @@
       "enrich_score": 10.0989
     },
     {
-      "variable": "g___Clostridium_innocuum_group",
+      "variable": "g___Clostridium_innocuum-group",
       "enrich_score": 10.0844
     },
     {
@@ -981,7 +981,7 @@
       "enrich_score": 9.9826
     },
     {
-      "variable": "g___Eubacterium_nodatum_group",
+      "variable": "g___Eubacterium_nodatum-group",
       "enrich_score": 9.9211
     },
     {
@@ -989,7 +989,7 @@
       "enrich_score": 9.8846
     },
     {
-      "variable": "Weight_Gain_Over_Pregnancy_G_Less_Than_Guidelines",
+      "variable": "Weight_Gain_Over_Pregnancy-G_Less_Than_Guidelines",
       "enrich_score": 9.8714
     },
     {
@@ -1033,7 +1033,7 @@
       "enrich_score": 9.4544
     },
     {
-      "variable": "Weight_Gain_Over_Pregnancy_G_More_Than_Guidelines",
+      "variable": "Weight_Gain_Over_Pregnancy-G_More_Than_Guidelines",
       "enrich_score": 9.4052
     },
     {
@@ -1045,7 +1045,7 @@
       "enrich_score": 9.2111
     },
     {
-      "variable": "Age_Group__29",
+      "variable": "Age-group__29",
       "enrich_score": 9.2083
     },
     {
@@ -1149,7 +1149,7 @@
       "enrich_score": 8.4616
     },
     {
-      "variable": "Infant_Weight_G__4KG_Overweight",
+      "variable": "Infant_Weight-G__4KG_Overweight",
       "enrich_score": 8.4563
     },
     {
@@ -1205,7 +1205,7 @@
       "enrich_score": 7.9047
     },
     {
-      "variable": "Intrahepatic_Cholestasis_of_Pregnancy",
+      "variable": "Intrahepatic_Cholestasis-of_Pregnancy",
       "enrich_score": 7.8564
     },
     {
@@ -1245,11 +1245,11 @@
       "enrich_score": 7.5798
     },
     {
-      "variable": "o__Clostridia_vadinBB60_group_f___g__",
+      "variable": "o__Clostridia_vadinBB60-group_f___g__",
       "enrich_score": 7.5741
     },
     {
-      "variable": "g__Lachnospiraceae_NC2004_group",
+      "variable": "g__Lachnospiraceae_NC2004-group",
       "enrich_score": 7.5266
     },
     {
@@ -1281,7 +1281,7 @@
       "enrich_score": 7.2679
     },
     {
-      "variable": "BMI_Before_Pregnancy_G__24_Overweight",
+      "variable": "BMI_Before_Pregnancy-G__24_Overweight",
       "enrich_score": 7.2228
     },
     {
@@ -1289,7 +1289,7 @@
       "enrich_score": 7.2054
     },
     {
-      "variable": "U_ASC_G_Negative",
+      "variable": "U_ASC-G_Negative",
       "enrich_score": 7.1936
     },
     {
@@ -1341,7 +1341,7 @@
       "enrich_score": 6.6437
     },
     {
-      "variable": "Delivery_Mode_Forceps_Delivery",
+      "variable": "Delivery_Mode_Forceps-Delivery",
       "enrich_score": 6.5633
     },
     {
@@ -1365,7 +1365,7 @@
       "enrich_score": 6.2154
     },
     {
-      "variable": "Age_Group_30-34",
+      "variable": "Age-group_30-34",
       "enrich_score": 6.1545
     },
     {
@@ -1469,7 +1469,7 @@
       "enrich_score": 5.3827
     },
     {
-      "variable": "g__Lachnospiraceae_NK4A136_group",
+      "variable": "g__Lachnospiraceae_NK4A136-group",
       "enrich_score": 5.3827
     },
     {
@@ -1485,7 +1485,7 @@
       "enrich_score": 5.2906
     },
     {
-      "variable": "g___Ruminococcus_gauvreauii_group",
+      "variable": "g___Ruminococcus_gauvreauii-group",
       "enrich_score": 5.2888
     },
     {
@@ -1517,7 +1517,7 @@
       "enrich_score": 4.9889
     },
     {
-      "variable": "g__Prevotellaceae_NK3B31_group",
+      "variable": "g__Prevotellaceae_NK3B31-group",
       "enrich_score": 4.9519
     },
     {
@@ -1565,7 +1565,7 @@
       "enrich_score": 4.5329
     },
     {
-      "variable": "BMI_Before_Pregnancy_G_18_5-24_Normal",
+      "variable": "BMI_Before_Pregnancy-G_18_5-24_Normal",
       "enrich_score": 4.5015
     },
     {
@@ -1577,7 +1577,7 @@
       "enrich_score": 4.4602
     },
     {
-      "variable": "BMI_Before_Pregnancy_G__18_5_Underweight",
+      "variable": "BMI_Before_Pregnancy-G__18_5_Underweight",
       "enrich_score": 4.4354
     },
     {
@@ -1593,7 +1593,7 @@
       "enrich_score": 4.3641
     },
     {
-      "variable": "U_KET_G_Positive",
+      "variable": "U_KET-G_Positive",
       "enrich_score": 4.3538
     },
     {
@@ -1633,7 +1633,7 @@
       "enrich_score": 3.9801
     },
     {
-      "variable": "g___Eubacterium_ruminantium_group",
+      "variable": "g___Eubacterium_ruminantium-group",
       "enrich_score": 3.9801
     },
     {
@@ -1661,11 +1661,11 @@
       "enrich_score": 3.98
     },
     {
-      "variable": "f___Clostridium_methylpentosum_group_g__",
+      "variable": "f___Clostridium_methylpentosum-group_g__",
       "enrich_score": 3.98
     },
     {
-      "variable": "Hypertensive_Disorder_of_Pregnancy",
+      "variable": "Hypertensive_Disorder-of_Pregnancy",
       "enrich_score": 3.8941
     },
     {
@@ -1673,7 +1673,7 @@
       "enrich_score": 3.8804
     },
     {
-      "variable": "g___Bacteroides_pectinophilus_group",
+      "variable": "g___Bacteroides_pectinophilus-group",
       "enrich_score": 3.7901
     },
     {
@@ -1685,7 +1685,7 @@
       "enrich_score": 3.6824
     },
     {
-      "variable": "U_UBG_G_Positive",
+      "variable": "U_UBG-G_Positive",
       "enrich_score": 3.5946
     },
     {
@@ -1705,7 +1705,7 @@
       "enrich_score": 3.3384
     },
     {
-      "variable": "g__Prevotellaceae_Ga6A1_group",
+      "variable": "g__Prevotellaceae_Ga6A1-group",
       "enrich_score": 3.3029
     },
     {
@@ -1737,7 +1737,7 @@
       "enrich_score": 3.0181
     },
     {
-      "variable": "g___Eubacterium_brachy_group",
+      "variable": "g___Eubacterium_brachy-group",
       "enrich_score": 2.9777
     },
     {
@@ -1745,7 +1745,7 @@
       "enrich_score": 2.9085
     },
     {
-      "variable": "U_KET_G_Negative",
+      "variable": "U_KET-G_Negative",
       "enrich_score": 2.7686
     },
     {
@@ -1961,11 +1961,11 @@
       "enrich_score": 0.0
     },
     {
-      "variable": "U_URI_G_Normal",
+      "variable": "U_URI-G_Normal",
       "enrich_score": 0.0
     },
     {
-      "variable": "U_UBG_G_Negative",
+      "variable": "U_UBG-G_Negative",
       "enrich_score": 0.0
     },
     {
@@ -1973,7 +1973,7 @@
       "enrich_score": 0.0
     },
     {
-      "variable": "g__Lachnospiraceae_NK3A20_group",
+      "variable": "g__Lachnospiraceae_NK3A20-group",
       "enrich_score": 0.0
     },
     {
@@ -2009,7 +2009,7 @@
       "enrich_score": 0.0
     },
     {
-      "variable": "Delivery_Gestational_Age_G_37-42W",
+      "variable": "Delivery_Gestational_Age-G_37-42W",
       "enrich_score": 0.0
     },
     {
