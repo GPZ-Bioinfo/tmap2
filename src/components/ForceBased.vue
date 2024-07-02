@@ -61,10 +61,6 @@
       <el-button class="buttonStyle" @click="boardOpen"
         ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="表格导出"><v-icon>mdi-table-large-plus</v-icon></el-tooltip></el-button
       >
-      <!-- 直方图比较 -->
-      <el-button icon="el-icon-menu" class="buttonStyle" @click="openTableDialog">
-        <el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="直方图比较"></el-tooltip
-      ></el-button>
     </div>
     <!-- 点线数量 -->
     <div class="CountBoard">
@@ -108,8 +104,38 @@
     </div>
     <!-- 数据面板 -->
     <el-card class="dataBoard" v-if="boardExit">
+      <div>
+        <!-- 上半部分直方图和表格按钮 -->
+        <div style="position: relative; padding: 20px; text-align: center">
+          <p>Summary</p>
+          <el-button type="text" icon="el-icon-menu" style="position: absolute; bottom: 10px; right: 10px" @click="openNewBoard"></el-button>
+        </div>
+
+        <!-- 下半部分直方图和表格 -->
+        <el-tabs v-model="activeTab">
+          <el-tab-pane label="Tab 1" name="1">
+            <div slot="label"><v-icon>mdi-chart-gantt</v-icon></div>
+            <!-- 内容1 -->
+            <div style="padding: 20px">
+              <el-card v-for="(item, index) in dataList" :key="index" class="card-item">
+                <div>
+                  <p>{{ item.value }}</p>
+                  <div class="progress-bar">
+                    <div class="progress" :style="{ width: (nodesData.length / nodesCount) * 100 + '%' }"></div>
+                    <div class="progress-label">{{ (nodesData.length / nodesCount).toFixed(2) * 100 + '%' }}</div>
+                  </div>
+                </div>
+              </el-card>
+            </div>
+          </el-tab-pane>
+        </el-tabs>
+      </div>
+    </el-card>
+    <el-card class="dataBoard" v-if="newboardExit">
       <div slot="header" class="clearfix">
         <h3 style="text-align: center">Selected</h3>
+        <!-- 导出数据按钮 -->
+        <el-button type="text" icon="el-icon-download" class="export-button" @click="exportToCSV"></el-button>
         <el-button style="position: absolute; right: 10px; top: 0" type="text" @click="boardClose">❌</el-button>
       </div>
       <el-descriptions class="margin-top" :column="3" :size="size" border>
@@ -147,21 +173,9 @@
         </el-descriptions-item>
       </el-descriptions>
       <div v-for="(item, index) in nodesData" :key="index" class="dataCard">
-        {{ index + 1 + '、 ' + item }}
+        {{ index + 1 + '、 ' + 'id:' + item.id + ' , ' + 'value:' + item.value }}
       </div>
     </el-card>
-    <!-- 弹窗 -->
-    <el-dialog :title="featureName" :visible.sync="dialogVisible" width="50%">
-      <div ref="chart1" class="chart" style="height: 400px"></div>
-      <div ref="chart2" class="chart" style="height: 400px; margin-top: 20px"></div>
-    </el-dialog>
-    <!-- <div class="dataBoard2" v-if="boardExit">
-      <div slot="header" class="clearfix">
-        <h1>{{ featureName }}</h1>
-        <el-button style="position: absolute; right: 10px; top: 0" type="text" @click="boardClose">❌</el-button>
-      </div>
-      <canvas class="dataBoard2" ref="chartCanvas"></canvas>
-    </div> -->
     <!-- 取色板按钮面板 -->
     <div id="colorCastButton">
       <!-- 画板控件 -->
@@ -261,8 +275,8 @@ export default {
     graphLayout: null,
     graphTrans: null,
     buttonStop: true,
-    brushStop2: true,
     brushStop: true,
+    brushStop2: true,
     nodesCount: 0,
     linksCount: 0,
     nodesSelectedCount: 0,
@@ -271,6 +285,7 @@ export default {
     node: null,
     link: null,
     boardExit: false,
+    newboardExit: false,
     nodesData: [],
     nodesDataId: [],
     nodesDataScores: [],
@@ -314,7 +329,7 @@ export default {
     sizeValueArray: [],
     scaleColor: null,
     lightMark: 0,
-    dialogVisible: false
+    activeTab: '1'
   }),
   mounted() {
     let graphName = JSON.parse(localStorage.getItem('graphName'))
@@ -359,7 +374,7 @@ export default {
       .alphaMin(0.000001)
       .alphaDecay(0.0183)
       .velocityDecay(0.2)
-      .force('charge', d3.forceManyBody())
+      .force('charge', d3.forceManyBody().strength(-200))
       .force('center', d3.forceCenter(this.width / 3, this.height / 2))
       .force('x', d3.forceX())
       .force('y', d3.forceY())
@@ -383,10 +398,28 @@ export default {
     this.resize()
     // 监听窗口大小变化事件
     window.addEventListener('resize', this.resize)
-    // 监听缩放事件
-    this.svg.call(d3.zoom().on('zoom', this.zoomed))
     let container = this.svg.append('g')
     this.container = container
+    // 定义缩放行为
+    let zoom = d3.zoom().on('zoom', zooming)
+    // 应用缩放行为到SVG
+    this.svg.call(zoom)
+    // 获取SVG的中心点
+    let svgWidth = +this.svg.attr('width')
+    let svgHeight = +this.svg.attr('height')
+    let centerX = svgWidth / 3
+    let centerY = svgHeight / 2
+
+    // 设置初始变换，包含缩放比例 k=0.4 和平移到中心位置
+    let initialScale = 0.4
+    let initialTransform = d3.zoomIdentity.translate(centerX, centerY).scale(initialScale).translate(-centerX, -centerY)
+    // 应用初始变换并同步更新zoom行为的内部状态
+    this.svg.call(zoom.transform, initialTransform)
+    function zooming() {
+      _this.currentScale = d3.event.transform.k
+      container.attr('transform', d3.event.transform)
+    }
+
     let link = container.attr('class', 'links').selectAll('line').data(graph.links).enter().append('line').attr('stroke', 'pink').attr('stroke-width', '1px')
     let node = container
       .attr('class', 'nodes')
@@ -396,7 +429,7 @@ export default {
       .append('circle')
       .attr('r', function (d) {
         _this.sizeValueArray.unshift(d.size)
-        return d.size
+        return d.size / 2 + 6
       })
       .attr('id', function (d) {
         return d.id
@@ -412,8 +445,8 @@ export default {
       focusId = container
         .append('text')
         .text(d.id)
-        .attr('x', d.x + 8)
-        .attr('y', d.y - 10)
+        .attr('x', d.x + 12)
+        .attr('y', d.y - 16)
         .style('font-family', 'Arial')
         .style('font-size', 20)
         .style('pointer-events', 'none')
@@ -502,6 +535,7 @@ export default {
     document.getElementById('chartBar').style.display = 'block'
 
     this.dataList = this.loadAll()
+    console.log('dataList', this.dataList)
     this.updateChart()
 
     if (this.$route.params.value) {
@@ -515,22 +549,11 @@ export default {
     window.removeEventListener('resize', this.resize)
   },
   watch: {
-    interval: 'updateChart', // Watch for changes in the interval and update the chart
-    dialogVisible(newVal) {
-      if (newVal) {
-        // 当对话框显示时，绘制 Canvas
-        this.$nextTick(() => {
-          this.drawChart()
-        })
-      }
-    }
+    interval: 'updateChart' // Watch for changes in the interval and update the chart
   },
   created() {},
 
   methods: {
-    openTableDialog() {
-      this.dialogVisible = true
-    },
     initChart(chartDom, chartXData, chartYData) {
       // 初始化图表
       const myChart = echarts.init(chartDom)
@@ -554,47 +577,6 @@ export default {
       // 使用刚指定的配置项和数据显示图表。
       myChart.setOption(option)
     },
-    drawChart() {
-      if (this.dialogVisible) {
-        this.initChart(this.$refs.chart1, this.generateXData(), this.generateYData())
-        this.initChart(this.$refs.chart2, this.generateXData(), this.generateYData())
-        // const canvas = this.$refs.chartCanvas
-        // const ctx = canvas.getContext('2d')
-
-        // // 清除之前的绘制内容
-        // ctx.clearRect(0, 0, canvas.width, canvas.height)
-        // // 设置直方图参数
-        // const barWidth = 40 // 直方图宽度
-        // const spacing = 10
-        // const startX = 30
-        // const maxHeight = 100 // 直方图高度
-        // const gap = 10 // 两个直方图之间的空白距离
-
-        // // 设置直方图的起始 Y 位置（从顶部开始）
-        // const startY = 0
-
-        // // 上半部分直方图
-        // ctx.fillStyle = 'blue'
-        // for (let i = 0; i < 5; i++) {
-        //   const height = Math.random() * maxHeight // 随机生成直方图高度
-        //   ctx.fillRect(startX + i * (barWidth + spacing), startY, barWidth, height)
-        // }
-
-        // // 下半部分直方图
-        // // 注意：从上半部分直方图的底部开始绘制
-        // ctx.fillStyle = 'red'
-        // for (let i = 0; i < 5; i++) {
-        //   const height = Math.random() * maxHeight // 随机生成直方图高度
-        //   // 计算下半部分直方图的起始y坐标
-        //   const bottomStartY = startY + maxHeight + gap
-        //   // 确保直方图不会超出画布底部
-        //   const maxBottomHeight = canvas.height - bottomStartY - gap // 减去gap作为安全边距
-        //   // 如果随机生成的高度过大，则使用最大允许高度
-        //   const adjustedHeight = Math.min(height, maxBottomHeight)
-        //   ctx.fillRect(startX + i * (barWidth + spacing), bottomStartY, barWidth, adjustedHeight)
-        // }
-      }
-    },
     // 更新 SVG 大小的方法
     resize() {
       // 获取新的窗口宽度和高度
@@ -604,10 +586,7 @@ export default {
       // 设置 SVG 的宽度和高度
       this.svg.attr('width', this.width).attr('height', this.height)
     },
-    zoomed() {
-      this.currentScale = d3.event.transform.k
-      this.container.attr('transform', d3.event.transform)
-    },
+
     // 全屏
     requestFullscreen() {
       this.fullScreen = false
@@ -694,27 +673,15 @@ export default {
       this.link.style('opacity', 1)
       this.lightMark = 0
       this.nodesSelectedCount = 0
+      this.node.on('click', null)
     },
     boardOpen() {
       if (this.boardExit) {
-        this.boardClose()
+        this.boardExit = false
       } else {
-        if (this.min || this.max) {
-          this.lightMark++
-          this.boardExitTrue()
-        } else {
-          this.$alert('<strong>请输入节点的范围</strong>', {
-            dangerouslyUseHTMLString: true
-          })
-        }
+        this.lightMark++
+        this.boardExit = true
       }
-    },
-    boardExitTrue() {
-      this.boardExit = true
-      const _this = this
-      setTimeout(() => {
-        _this.drawChart()
-      }, 0.5)
     },
     // 框选
     brushSelect() {
@@ -738,7 +705,7 @@ export default {
 
       const brush = d3.brush().on('start', brushstarted).on('brush', brushing)
       function brushstarted() {
-        _this.boardExitTrue()
+        _this.boardExit = true
       }
       function brushing() {
         const selection = d3.brushSelection(this)
@@ -766,7 +733,7 @@ export default {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
                   _this.nodesDataScores.unshift(nodeDataScores)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
+                  _this.nodesData.unshift({ id: nodeDataId, value: nodeDataScores })
                   _this.nodesSelectedCount = _this.nodesData.length
                 }
               } else {
@@ -774,7 +741,7 @@ export default {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
                   _this.nodesDataScores.unshift(nodeDataScores)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + 'size' + '":' + nodeDataScores)
+                  _this.nodesData.unshift({ id: nodeDataId, value: nodeDataScores })
                   _this.nodesSelectedCount = _this.nodesData.length
                 }
               }
@@ -847,7 +814,7 @@ export default {
 
       const brush = d3.brush().on('start', brushstarted2).on('brush', brushing2)
       function brushstarted2() {
-        _this.boardExitTrue()
+        _this.boardExit = true
       }
       function brushing2() {
         const selection = d3.brushSelection(this)
@@ -871,7 +838,7 @@ export default {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
                   _this.nodesDataScores.unshift(nodeDataScores)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
+                  _this.nodesData.unshift({ id: nodeDataId, value: nodeDataScores })
                   _this.nodesSelectedCount = _this.nodesData.length
                 }
               } else {
@@ -879,7 +846,7 @@ export default {
                 if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                   _this.nodesDataId.unshift(nodeDataId)
                   _this.nodesDataScores.unshift(nodeDataScores)
-                  _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + 'size' + '":' + nodeDataScores)
+                  _this.nodesData.unshift({ id: nodeDataId, value: nodeDataScores })
                   _this.nodesSelectedCount = _this.nodesData.length
                 }
               }
@@ -951,7 +918,7 @@ export default {
       const _this = this
       this.node.on('click', clickSelect)
       function clickSelect(event) {
-        _this.boardExitTrue()
+        _this.boardExit = true
         const nodeDataId = d3.select(this).attr('id')
         const nodeOpacity = Number(d3.select(this).style('opacity'))
         if (nodeOpacity === 0.4) {
@@ -961,7 +928,7 @@ export default {
             if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
               _this.nodesDataId.unshift(nodeDataId)
               _this.nodesDataScores.unshift(nodeDataScores)
-              _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
+              _this.nodesData.unshift({ id: nodeDataId, value: nodeDataScores })
               _this.nodesSelectedCount = _this.nodesData.length
             }
           } else {
@@ -969,7 +936,7 @@ export default {
             if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
               _this.nodesDataId.unshift(nodeDataId)
               _this.nodesDataScores.unshift(nodeDataScores)
-              _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + 'size' + '":' + nodeDataScores)
+              _this.nodesData.unshift({ id: nodeDataId, value: nodeDataScores })
               _this.nodesSelectedCount = _this.nodesData.length
             }
           }
@@ -1017,7 +984,7 @@ export default {
       this.nodesDataScores = []
       this.node.style('opacity', 1)
       this.link.style('opacity', 1)
-      this.boardExit = false
+      this.newboardExit = false
       // 节点悬浮显示id
       let focusId = null
       _this.node.on('mouseover', idFocus).on('mouseout', idUnFocus)
@@ -1025,8 +992,8 @@ export default {
         focusId = _this.container
           .append('text')
           .text(d.id)
-          .attr('x', d.x + 8)
-          .attr('y', d.y - 10)
+          .attr('x', d.x + 12)
+          .attr('y', d.y - 16)
           .style('font-family', 'Arial')
           .style('font-size', 20)
           .style('pointer-events', 'none')
@@ -1177,7 +1144,7 @@ export default {
               if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                 _this.nodesDataId.unshift(nodeDataId)
                 _this.nodesDataScores.unshift(nodeDataScores)
-                _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + _this.propertyChangeData + '":' + nodeDataScores)
+                _this.nodesData.unshift({ id: nodeDataId, value: nodeDataScores })
                 _this.nodesSelectedCount = _this.nodesData.length
               }
             })
@@ -1203,7 +1170,7 @@ export default {
               if (nodeDataId && !_this.nodesDataId.includes(nodeDataId)) {
                 _this.nodesDataId.unshift(nodeDataId)
                 _this.nodesDataScores.unshift(nodeDataScores)
-                _this.nodesData.unshift('"id":' + nodeDataId + ' , "' + 'size' + '":' + nodeDataScores)
+                _this.nodesData.unshift({ id: nodeDataId, value: nodeDataScores })
                 _this.nodesSelectedCount = _this.nodesData.length
               }
             })
@@ -1242,8 +1209,8 @@ export default {
         focusId = _this.container
           .append('text')
           .text(d.id)
-          .attr('x', d.x + 8)
-          .attr('y', d.y - 10)
+          .attr('x', d.x + 12)
+          .attr('y', d.y - 16)
           .style('font-family', 'Arial')
           .style('font-size', 20)
           .style('pointer-events', 'none')
@@ -1398,6 +1365,14 @@ export default {
           bottom: '10%',
           containLabel: true
         },
+        tooltip: {
+          trigger: 'axis' // 触发类型：坐标轴触发
+        },
+        toolbox: {
+          feature: {
+            dataZoom: {}
+          }
+        },
         xAxis: {
           name: _this.propertyChangeData ? _this.propertyChangeData : 'size',
           nameLocation: 'middle',
@@ -1405,8 +1380,11 @@ export default {
           nameTextStyle: { fontSize: 14, fontWeight: 'bold' },
           data: this.xData,
           axisLabel: {
-            interval: Math.ceil(_this.xData.length / this.interval),
-            showMaxLabel: true
+            interval: 1,
+            showMaxLabel: true,
+            formatter: function (value) {
+              return parseFloat(value).toFixed(2) // 保留两位小数
+            }
           }
         },
         yAxis: {
@@ -1566,6 +1544,50 @@ export default {
       })
 
       return index >= 0 ? index : 0 // 确保返回的索引不会小于 0
+    },
+    openNewBoard() {
+      if (this.nodesData[0]) {
+        this.newboardExit = true
+      } else {
+        this.$alert('<strong>选中的节点为空</strong>', {
+          dangerouslyUseHTMLString: true
+        })
+      }
+      // this.boardExit = false
+    },
+    exportToCSV() {
+      const data = this.nodesData
+      const csvContent = this.convertToCSV(data)
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
+      const link = document.createElement('a')
+      if (link.download !== undefined) {
+        const url = URL.createObjectURL(blob)
+        link.setAttribute('href', url)
+        link.setAttribute('download', this.propertyChangeData ? this.propertyChangeData : 'size' + '.csv')
+        link.style.visibility = 'hidden'
+        document.body.appendChild(link)
+        link.click()
+        document.body.removeChild(link)
+      }
+    },
+    convertToCSV(objArray) {
+      const array = typeof objArray !== 'object' ? JSON.parse(objArray) : objArray
+      let str = ''
+
+      // Add headers
+      const headers = Object.keys(array[0])
+      str += headers.join(',') + '\r\n'
+
+      // Add rows
+      for (let i = 0; i < array.length; i++) {
+        let line = ''
+        for (let index in array[i]) {
+          if (line !== '') line += ','
+          line += array[i][index]
+        }
+        str += line + '\r\n'
+      }
+      return str
     }
   }
 }
@@ -1773,5 +1795,47 @@ export default {
   border-bottom: 1px dotted black;
   white-space: normal; /* 允许文本换行 */
   word-wrap: break-word; /* 换行时断开单词 */
+}
+
+.card-item {
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 20px; /* 调整百分比条的高度 */
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 5px;
+  background-color: orange;
+  transition: width 0.5s; /* 添加过渡效果 */
+}
+
+.progress-label {
+  position: absolute;
+  bottom: -20px;
+  left: 5px;
+}
+.export-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 25px;
+  width: 45px;
+  height: 45px;
+  color: #ffff;
+  background-color: #c8d0d4;
+}
+
+.export-button:hover {
+  color: #409eff; /* 鼠标悬停时的颜色 */
 }
 </style>

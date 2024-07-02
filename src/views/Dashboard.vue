@@ -72,6 +72,9 @@ export default {
   methods: {
     handleTextClick() {
       const graphName = event.target.innerText
+      if (JSON.parse(localStorage.getItem('paramsMap'))) {
+        localStorage.removeItem('paramsMap')
+      }
       localStorage.removeItem('graphName')
       localStorage.setItem('graphName', JSON.stringify(graphName))
       this.$router.push(`/project_id=${graphName}/Features`)
