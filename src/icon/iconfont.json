@@ -1,0 +1,373 @@
+{
+  "id": "4625892",
+  "name": "a",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4138754",
+      "name": "框选",
+      "font_class": "kuangxuan4",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "25600049",
+      "name": "框选",
+      "font_class": "kuangxuan3",
+      "unicode": "e68f",
+      "unicode_decimal": 59023
+    },
+    {
+      "icon_id": "7517986",
+      "name": "鼠标",
+      "font_class": "shubiao",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "11228389",
+      "name": "框选",
+      "font_class": "kuangxuan2",
+      "unicode": "e6ab",
+      "unicode_decimal": 59051
+    },
+    {
+      "icon_id": "29307902",
+      "name": "右键单击",
+      "font_class": "youjiandanji",
+      "unicode": "e6c7",
+      "unicode_decimal": 59079
+    },
+    {
+      "icon_id": "35212718",
+      "name": "单击",
+      "font_class": "danji",
+      "unicode": "e794",
+      "unicode_decimal": 59284
+    },
+    {
+      "icon_id": "39582720",
+      "name": "事件-单击",
+      "font_class": "shijian-danji",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "23766787",
+      "name": "取消全屏",
+      "font_class": "quxiaoquanping1",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "6263345",
+      "name": "全屏",
+      "font_class": "quanping4",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "5209605",
+      "name": "全屏",
+      "font_class": "quanping3",
+      "unicode": "e620",
+      "unicode_decimal": 58912
+    },
+    {
+      "icon_id": "5301928",
+      "name": "全屏",
+      "font_class": "quanping2",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "579385",
+      "name": "全屏",
+      "font_class": "quanping1",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "220290",
+      "name": "调色盘",
+      "font_class": "tiaosepan",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "1688307",
+      "name": "帮助",
+      "font_class": "bangzhu",
+      "unicode": "e6be",
+      "unicode_decimal": 59070
+    },
+    {
+      "icon_id": "3216180",
+      "name": "百分比",
+      "font_class": "icon--",
+      "unicode": "e760",
+      "unicode_decimal": 59232
+    },
+    {
+      "icon_id": "3944790",
+      "name": "百分比",
+      "font_class": "icon-test",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "4352420",
+      "name": "调色盘",
+      "font_class": "tiaosepan1",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "11372644",
+      "name": "帮助",
+      "font_class": "bangzhu1",
+      "unicode": "e8ac",
+      "unicode_decimal": 59564
+    },
+    {
+      "icon_id": "11372760",
+      "name": "帮助",
+      "font_class": "bangzhu2",
+      "unicode": "e8c3",
+      "unicode_decimal": 59587
+    },
+    {
+      "icon_id": "38443010",
+      "name": "调色盘-copy",
+      "font_class": "tiaosepanrigth-bottun",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "521100",
+      "name": "开始",
+      "font_class": "kaishi",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "755613",
+      "name": "暂停",
+      "font_class": "stop",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    },
+    {
+      "icon_id": "1305461",
+      "name": "表格",
+      "font_class": "biaoge",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "1459147",
+      "name": "导出",
+      "font_class": "daochu",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "3978081",
+      "name": "暂停",
+      "font_class": "zanting",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "4777232",
+      "name": "全屏",
+      "font_class": "quanping",
+      "unicode": "ec13",
+      "unicode_decimal": 60435
+    },
+    {
+      "icon_id": "4779612",
+      "name": "表单组件-表格",
+      "font_class": "biaodanzujian-biaoge",
+      "unicode": "ec15",
+      "unicode_decimal": 60437
+    },
+    {
+      "icon_id": "5387604",
+      "name": "取消全屏",
+      "font_class": "quxiaoquanping",
+      "unicode": "eb10",
+      "unicode_decimal": 60176
+    },
+    {
+      "icon_id": "6966913",
+      "name": "开始",
+      "font_class": "kaishi1",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "10160769",
+      "name": "直方图",
+      "font_class": "zhifangtu",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "10669089",
+      "name": "框选",
+      "font_class": "kuangxuan",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "18171109",
+      "name": "鼠标指针,移动",
+      "font_class": "indicator",
+      "unicode": "ea0e",
+      "unicode_decimal": 59918
+    },
+    {
+      "icon_id": "19618269",
+      "name": "框选",
+      "font_class": "kuangxuan1",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "24848378",
+      "name": "导出",
+      "font_class": "daochu1",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "25964415",
+      "name": "导出",
+      "font_class": "daochu2",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "38528907",
+      "name": "魔法",
+      "font_class": "mofa",
+      "unicode": "ead0",
+      "unicode_decimal": 60112
+    },
+    {
+      "icon_id": "384197",
+      "name": "chart",
+      "font_class": "chart",
+      "unicode": "e66d",
+      "unicode_decimal": 58989
+    },
+    {
+      "icon_id": "8802650",
+      "name": "对比分析",
+      "font_class": "duibifenxi",
+      "unicode": "e64e",
+      "unicode_decimal": 58958
+    },
+    {
+      "icon_id": "8960214",
+      "name": "groups",
+      "font_class": "groups",
+      "unicode": "e647",
+      "unicode_decimal": 58951
+    },
+    {
+      "icon_id": "15533134",
+      "name": "Groups",
+      "font_class": "Groups",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "18164853",
+      "name": "串并,比对,比较",
+      "font_class": "tandem-full",
+      "unicode": "e86d",
+      "unicode_decimal": 59501
+    },
+    {
+      "icon_id": "17905712",
+      "name": "medical_central_02",
+      "font_class": "yuanzinengli",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "35106132",
+      "name": "原子能力配置",
+      "font_class": "yuanzinenglipeizhi",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "36506622",
+      "name": "原子指标-关联关系",
+      "font_class": "yuanzizhibiao-guanlianguanxi",
+      "unicode": "e626",
+      "unicode_decimal": 58918
+    },
+    {
+      "icon_id": "39504811",
+      "name": "AI原子能力",
+      "font_class": "AIyuanzinengli",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "5180658",
+      "name": "原子",
+      "font_class": "yuanzi1",
+      "unicode": "e707",
+      "unicode_decimal": 59143
+    },
+    {
+      "icon_id": "521106",
+      "name": "原子服务",
+      "font_class": "yuanzifuwu",
+      "unicode": "e649",
+      "unicode_decimal": 58953
+    },
+    {
+      "icon_id": "12592160",
+      "name": "原子",
+      "font_class": "yuanzi",
+      "unicode": "e6e7",
+      "unicode_decimal": 59111
+    },
+    {
+      "icon_id": "31634933",
+      "name": "原子指标",
+      "font_class": "yuanzizhibiao",
+      "unicode": "e6b1",
+      "unicode_decimal": 59057
+    },
+    {
+      "icon_id": "32340603",
+      "name": "原子流数@2x",
+      "font_class": "a-yuanziliushu2x",
+      "unicode": "e864",
+      "unicode_decimal": 59492
+    },
+    {
+      "icon_id": "37250884",
+      "name": "原子指标",
+      "font_class": "yuanzizhibiao1",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    },
+    {
+      "icon_id": "18110371",
+      "name": "原子",
+      "font_class": "atomic",
+      "unicode": "e69a",
+      "unicode_decimal": 59034
+    }
+  ]
+}

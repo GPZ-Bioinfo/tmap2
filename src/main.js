@@ -8,6 +8,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import ApolloClient from 'apollo-boost'
 import VueApollo from 'vue-apollo'
+import '../src/icon/iconfont.css'
 
 const apolloClient = new ApolloClient({
   uri: 'http://localhost:8080/graphql' // 替换成你的GraphQL API的URL

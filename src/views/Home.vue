@@ -5,8 +5,7 @@
       <div class="login">
         <el-input placeholder="请输入用户名" v-model="username" clearable @keyup.native.enter="routerRedirect"></el-input>
         <el-input placeholder="请输入密码" v-model="password" show-password @keyup.native.enter="routerRedirect"></el-input>
-
-        <v-btn outlined large rounded color="primary" class="btn" @click="routerRedirect"><v-icon left>mdi-atom</v-icon>login</v-btn>
+        <v-btn outlined large rounded color="primary" class="btn" @click="routerRedirect"><i class="iconfont icon-yuanzi"></i>login</v-btn>
       </div>
     </div>
     <!-- 背景动画画布 -->
@@ -79,7 +78,6 @@ export default {
           type: 'error'
         })
       }
-      // this.$router.push('/project_id=genus_r1106_c421').catch((err) => {}) // eslint-disable-line
     }
   }
 }
@@ -129,15 +127,6 @@ export default {
 .btn {
   margin-top: 15px;
   z-index: 20;
-}
-
-.btn2 {
-  margin-top: 15px;
-  z-index: 30;
-  color: blue;
-  background-color: transparent;
-  border: 1px solid blue;
-  position: absolute;
 }
 
 .login {

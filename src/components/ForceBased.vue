@@ -3,64 +3,62 @@
     <div class="components">
       <!-- 全屏控件 -->
       <el-button class="buttonStyle" @click="requestFullscreen" v-if="fullScreen"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="全屏">
-          <v-icon>mdi-fullscreen</v-icon>
-        </el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="全屏"> <i class="iconfont icon-quanping4"></i> </el-tooltip
+      ></el-button>
       <el-button class="buttonStyle" @click="exitFullScreen" v-if="!fullScreen" type="info"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消全屏"> <v-icon>mdi-fullscreen-exit</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消全屏"> <i class="iconfont icon-quxiaoquanping1"></i></el-tooltip
+      ></el-button>
       <!-- 暂停控件 -->
       <el-button class="buttonStyle" v-if="buttonStop" @click="forceStop"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="暂停"><v-icon>mdi-pause</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="暂停"><i class="iconfont icon-stop"></i></el-tooltip
+      ></el-button>
       <el-button class="buttonStyle" v-if="!buttonStop" @click="forceStart" type="info"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="开始"><v-icon>mdi-play</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="开始"><i class="iconfont icon-kaishi1"></i></el-tooltip
+      ></el-button>
       <!-- 高亮邻居 -->
       <el-button class="buttonStyle" @click="highLight" v-if="LightStop"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="高亮邻居"><v-icon>mdi-auto-fix</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="高亮邻居"><i class="iconfont icon-mofa"></i></el-tooltip
+      ></el-button>
       <el-button class="buttonStyle" @click="LightCancel" v-if="!LightStop" type="info"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消高亮"><v-icon>mdi-auto-fix</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消高亮"><i class="iconfont icon-mofa"></i></el-tooltip
+      ></el-button>
       <!-- 框选控件 -->
       <el-button class="buttonStyle" @click="brushSelect" v-if="brushStop"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="框选"><v-icon>mdi-crop-square</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="框选"><i class="iconfont icon-kuangxuan1"></i></el-tooltip
+      ></el-button>
       <el-button class="buttonStyle" @click="brushCancel" v-if="!brushStop" type="info"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消框选"><v-icon>mdi-crop-square</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消框选"><i class="iconfont icon-kuangxuan1"></i></el-tooltip
+      ></el-button>
       <!-- 框选控件2 -->
       <el-button class="buttonStyle" @click="brushSelect2" v-if="brushStop2"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="框选2"><v-icon>mdi-shape-square-plus</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="框选2"><i class="iconfont icon-kuangxuan4"></i></el-tooltip
+      ></el-button>
       <el-button class="buttonStyle" @click="brushCancel2" v-if="!brushStop2" type="info"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消框选"><v-icon>mdi-shape-square-plus</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消框选"><i class="iconfont icon-kuangxuan4"></i></el-tooltip
+      ></el-button>
       <!-- 多选按钮 -->
       <el-button class="buttonStyle" @click="MultiSelect" v-if="SelectStop"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="多选"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="多选"><i class="iconfont icon-shijian-danji"></i></el-tooltip
+      ></el-button>
       <el-button class="buttonStyle" @click="SelectCancel" v-if="!SelectStop" type="info"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消多选"><v-icon>mdi-cursor-default-outline</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="取消多选"><i class="iconfont icon-shijian-danji"></i></el-tooltip
+      ></el-button>
 
       <!-- 直方图控件 -->
       <el-button class="buttonStyle" @click="ChartBarNone" v-if="histogramExit"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="直方图"><v-icon>mdi-chart-histogram</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="直方图"><i class="iconfont icon-zhifangtu"></i></el-tooltip
+      ></el-button>
       <el-button class="buttonStyle" @click="theChartBar" v-if="!histogramExit" type="info"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="显示直方图"><v-icon>mdi-chart-histogram</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="显示直方图"><i class="iconfont icon-zhifangtu"></i></el-tooltip
+      ></el-button>
       <!-- 下载控件 -->
       <el-button class="buttonStyle" @click="screenShot"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="图片导出"><v-icon>mdi-download</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="图片导出"><i class="iconfont icon-daochu2"></i></el-tooltip
+      ></el-button>
       <!-- 表格控件 -->
       <el-button class="buttonStyle" @click="boardOpen"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="表格导出"><v-icon>mdi-table-large-plus</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="表格导出"><i class="iconfont icon-biaoge"></i></el-tooltip
+      ></el-button>
     </div>
     <!-- 点线数量 -->
     <div class="CountBoard">
@@ -98,9 +96,6 @@
       <div class="minMaxCancel">
         <el-button style="position: absolute; padding: 5px" type="text" @click="nodeReset">✖️</el-button>
       </div>
-      <!-- <div class="minMaxButton">
-        <el-button style="position: absolute; padding-top: 0px; padding-bottom: 10px" type="text" @click="boardOpen"><v-icon>mdi-table-large-plus</v-icon></el-button>
-      </div> -->
     </div>
     <!-- 数据面板 -->
     <el-card class="dataBoard" v-if="boardExit">
@@ -114,7 +109,7 @@
         <!-- 下半部分直方图和表格 -->
         <el-tabs v-model="activeTab">
           <el-tab-pane label="Tab 1" name="1">
-            <div slot="label"><v-icon>mdi-chart-gantt</v-icon></div>
+            <div slot="label"><i class="iconfont icon-icon--"></i></div>
             <!-- 内容1 -->
             <div style="padding: 20px">
               <el-card v-for="(item, index) in dataList" :key="index" class="card-item">
@@ -180,8 +175,8 @@
     <div id="colorCastButton">
       <!-- 画板控件 -->
       <el-button @click="ColorSelect" type="text" class="buttonStyle2"
-        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="调色板"><v-icon size="30">mdi-palette</v-icon></el-tooltip></el-button
-      >
+        ><el-tooltip placement="right" :delay="{ show: 500, hide: 1000 }" :hide-after="2000" content="调色板"><i class="iconfont icon-tiaosepan1"></i></el-tooltip
+      ></el-button>
       <h3>Click it to open the Color Palette</h3>
     </div>
     <!-- 取色板 -->
@@ -233,12 +228,6 @@
           <el-slider v-model="valueTooltip" class="sliderTooltip" @change="forceChange"></el-slider>
           <span>{{ valueTooltip }}</span>
         </div>
-        <div class="sliderBoxHelp">
-          <el-button @click="sliderHelp" type="text" class="buttonStyle2"
-            ><el-tooltip placement="right" :delay="{ show: 500 }" :hide-after="2000" content="帮助"><v-icon size="30">mdi-lightbulb-on-outline</v-icon></el-tooltip></el-button
-          >
-        </div>
-        <el-card v-if="sliderHelpExist"><h4>if the effect does not respond,try to drag the node</h4></el-card>
       </div>
     </div>
     <!-- d3画布 -->
@@ -315,9 +304,7 @@ export default {
     propertyChangeData: '',
     options: [],
     lastClicked: null,
-    sliderHelpExist: false,
     counter: 0,
-    counter2: 0,
     NodesEditBoardHide: false,
     scoresValueArray: [],
     interval: 10,
@@ -383,7 +370,7 @@ export default {
         d3.forceLink(graph.links).id(function (d) {
           return d.id
         })
-        // .distance(d => d.dist)
+        // .distance((d) => d.dist)
         // .strength(1)
       )
       .on('tick', ticked)
@@ -509,7 +496,9 @@ export default {
     }
     // 图表
     this.sizeValueMax = Math.max(..._this.sizeValueArray)
+    this.updateChart()
     const myChart = echarts.init(document.getElementById('chartBar'))
+    // 直方图柱子点击事件
     myChart.on('click', function (params) {
       if (params.dataIndex === _this.lastClicked) {
         _this.lastClicked = null
@@ -535,8 +524,6 @@ export default {
     document.getElementById('chartBar').style.display = 'block'
 
     this.dataList = this.loadAll()
-    console.log('dataList', this.dataList)
-    this.updateChart()
 
     if (this.$route.params.value) {
       this.value = this.$route.params.value
@@ -554,29 +541,6 @@ export default {
   created() {},
 
   methods: {
-    initChart(chartDom, chartXData, chartYData) {
-      // 初始化图表
-      const myChart = echarts.init(chartDom)
-
-      // 指定图表的配置项和数据
-      const option = {
-        tooltip: {},
-        xAxis: {
-          data: chartXData
-        },
-        yAxis: {},
-        series: [
-          {
-            name: 'Value',
-            type: 'bar',
-            data: chartYData
-          }
-        ]
-      }
-
-      // 使用刚指定的配置项和数据显示图表。
-      myChart.setOption(option)
-    },
     // 更新 SVG 大小的方法
     resize() {
       // 获取新的窗口宽度和高度
@@ -651,7 +615,6 @@ export default {
         return a === b || adjList[a + '-' + b]
       }
       function focus(d) {
-        // console.log(d) // eslint-disable-line
         let index = d3.select(d3.event.target).datum().index
         _this.node.style('opacity', function (o) {
           return neigh(index, o.index) ? 1 : 0.4
@@ -1029,10 +992,8 @@ export default {
       }
       img.onerror = function () {
         console.error('Error loading image')
-        console.log('img', img.src)
       }
       img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(xml)))
-      console.log('img', img.src)
     },
     // 直方图
     theChartBar() {
@@ -1084,15 +1045,78 @@ export default {
       this.colorBarChange4()
       this.colorBoardClose()
     },
-    // 选择器还原
-    cascaderCancel() {
-      this.value = ''
-      this.state1 = ''
-      this.propertyChangeData = ''
-      this.featureName = 'size'
-      this.updateChart()
-      this.colorBoardClose()
-      this.nodeReset()
+    updateColorScale(color) {
+      const _this = this
+      // 根据选择的颜色设置新的渐变色带
+      switch (color) {
+        case 'blue':
+          _this.scaleColor = 'blue'
+          break
+        case 'green':
+          _this.scaleColor = 'green'
+          break
+        case 'orange':
+          _this.scaleColor = 'orange'
+          break
+      }
+    },
+    generateGradientColor(index) {
+      const _this = this
+      // 根据选择的颜色设置新的渐变色带
+      let colorScale = d3
+        .scaleSequential()
+        .domain([_this.interval - 1, 0])
+        .interpolator(d3.interpolateViridis)
+      switch (_this.scaleColor) {
+        case 'blue':
+          colorScale = d3
+            .scaleSequential()
+            .domain([0, _this.interval - 1])
+            .interpolator(d3.interpolateBlues)
+          break
+        case 'green':
+          colorScale = d3
+            .scaleSequential()
+            .domain([0, _this.interval - 1])
+            .interpolator(d3.interpolateGreens)
+          break
+        case 'orange':
+          colorScale = d3
+            .scaleSequential()
+            .domain([0, _this.interval - 1])
+            .interpolator(d3.interpolateOranges)
+          break
+      }
+
+      return colorScale(index)
+    },
+    updateNodeColor() {
+      // 更新节点颜色
+      const _this = this
+      if (_this.propertyChangeData) {
+        this.node.attr('fill', function (d, i) {
+          const nodeId = Number(d.id)
+          let graphName = JSON.parse(localStorage.getItem('graphName'))
+          if (graphName === 'discv_genus_r1455_c373') {
+            _this.data = _data3
+          } else if (graphName === 'valid_genus_r634_c373') {
+            _this.data = _data2
+          } else {
+            _this.data = _data
+          }
+          const data = _this.data
+          let variableData = data[_this.propertyChangeData]
+          let item = variableData.find((item) => Number(item.id) === nodeId)
+          const scoresNode = item.value
+          const index = _this.findIndexInInterval(scoresNode)
+          return _this.generateGradientColor(index)
+        })
+      } else {
+        this.node.attr('fill', function (d, i) {
+          const index = _this.findIndexInInterval(d.size)
+          return _this.generateGradientColor(index)
+        })
+      }
     },
     // 节点按id编辑显示(设置透明度)
     nodeFilter() {
@@ -1232,14 +1256,61 @@ export default {
         return data.value.toLowerCase().indexOf(queryString.toLowerCase()) !== -1
       }
     },
-    // 节点编辑面板的下拉框
+
+    // 搜索点击下拉框数据
+    handleSelect(itemvalue) {
+      const _this = this
+      this.scoresValueArray = []
+      this.value = ''
+      // 处理响应数据
+      this.node.attr(itemvalue.value, function (d) {
+        const nodeId = Number(d.id)
+        let graphName = JSON.parse(localStorage.getItem('graphName'))
+        if (graphName === 'discv_genus_r1455_c373') {
+          _this.data = _data3
+        } else if (graphName === 'valid_genus_r634_c373') {
+          _this.data = _data2
+        } else {
+          _this.data = _data
+        }
+        const data = _this.data
+        let variableData = data[itemvalue.value]
+        let item = variableData.find((item) => Number(item.id) === nodeId)
+        const scoresNode = item.value
+        _this.scoresValueArray.unshift(scoresNode)
+        return scoresNode
+      })
+      this.scoresValueMax = Math.max(...this.scoresValueArray)
+      this.scoresValueMin = Math.min(...this.scoresValueArray)
+      this.propertyChangeData = itemvalue.value
+      this.featureName = this.propertyChangeData
+      this.updateChart()
+    },
+    // 搜索下拉数据显示
+    loadAll() {
+      const _this = this
+      let graphName = JSON.parse(localStorage.getItem('graphName'))
+      if (graphName === 'discv_genus_r1455_c373') {
+        _this.datas = _datas3
+      } else if (graphName === 'valid_genus_r634_c373') {
+        _this.datas = _datas2
+      } else {
+        _this.datas = _datas
+      }
+      const datas = _this.datas
+      const options = datas.map((item) => {
+        return { value: item.variable }
+      })
+
+      return options
+    },
+    // 选择器的下拉框
     handleChange(value) {
       this.state1 = ''
       let categoryData = ''
       this.scoresValueArray = []
       if (Array.isArray(value)) {
         const filteredArr = []
-        console.log('value', value)
         for (let index = 0; index < value.length; index++) {
           if (value[index]) {
             filteredArr.push(value[index])
@@ -1249,7 +1320,6 @@ export default {
       } else {
         categoryData = value
       }
-      console.log(categoryData)
       const _this = this
       this.node.attr(categoryData, function (d) {
         const nodeId = Number(d.id)
@@ -1276,72 +1346,25 @@ export default {
       this.featureName = this.propertyChangeData
       this.updateChart()
     },
-    // 搜索点击下拉框数据
-    handleSelect(itemvalue) {
-      const _this = this
-      this.scoresValueArray = []
+    // 选择器还原
+    cascaderCancel() {
       this.value = ''
-      console.log('itemvalue.value', itemvalue.value)
-      // 处理响应数据
-      this.node.attr(itemvalue.value, function (d) {
-        const nodeId = Number(d.id)
-        let graphName = JSON.parse(localStorage.getItem('graphName'))
-        if (graphName === 'discv_genus_r1455_c373') {
-          _this.data = _data3
-        } else if (graphName === 'valid_genus_r634_c373') {
-          _this.data = _data2
-        } else {
-          _this.data = _data
-        }
-        const data = _this.data
-        let variableData = data[itemvalue.value]
-        let item = variableData.find((item) => Number(item.id) === nodeId)
-        const scoresNode = item.value
-        _this.scoresValueArray.unshift(scoresNode)
-        return scoresNode
-      })
-      this.scoresValueMax = Math.max(...this.scoresValueArray)
-      this.scoresValueMin = Math.min(...this.scoresValueArray)
-      this.propertyChangeData = itemvalue.value
-      this.featureName = this.propertyChangeData
-      console.log('this.featureName ', this.featureName)
+      this.state1 = ''
+      this.propertyChangeData = ''
+      this.featureName = 'size'
       this.updateChart()
-    },
-    // 搜索下拉数据显示
-    loadAll() {
-      const _this = this
-      let graphName = JSON.parse(localStorage.getItem('graphName'))
-      if (graphName === 'discv_genus_r1455_c373') {
-        _this.datas = _datas3
-      } else if (graphName === 'valid_genus_r634_c373') {
-        _this.datas = _datas2
-      } else {
-        _this.datas = _datas
-      }
-      const datas = _this.datas
-      const options = datas.map((item) => {
-        return { value: item.variable }
-      })
-
-      return options
+      this.colorBoardClose()
+      this.nodeReset()
     },
     // 改变节点斥力
     forceChange() {
       this.graphLayout.force('charge', d3.forceManyBody().strength(-this.valueTooltip * 20))
-    },
-    // 灯泡提示隐藏
-    sliderHelp() {
-      this.counter++
-      if (this.counter % 2 === 1) {
-        this.sliderHelpExist = true
-      } else {
-        this.sliderHelpExist = false
-      }
+      this.graphLayout.alphaTarget(0.3).restart()
     },
     // 节点编辑面板隐藏
     HideNodesEditBoard() {
-      this.counter2++
-      if (this.counter2 % 2 === 1) {
+      this.counter++
+      if (this.counter % 2 === 1) {
         this.NodesEditBoardHide = true
       } else {
         this.NodesEditBoardHide = false
@@ -1406,7 +1429,13 @@ export default {
       }
 
       // 使用配置项设置图表
-      const myChart = echarts.init(document.getElementById('chartBar'))
+      let myChart = echarts.getInstanceByDom(document.getElementById('chartBar'))
+      // console.log(myChart); //检查是否存在图表实例
+      if (myChart !== null && myChart !== '' && myChart !== undefined) {
+        //  已存在则调用 dispose() 方法销毁
+        myChart.dispose()
+      }
+      myChart = echarts.init(document.getElementById('chartBar'))
       myChart.setOption(option)
       // 更新节点颜色
       this.updateNodeColor()
@@ -1452,85 +1481,11 @@ export default {
       }
       return yData
     },
-
-    updateColorScale(color) {
-      const _this = this
-      // 根据选择的颜色设置新的渐变色带
-      switch (color) {
-        case 'blue':
-          _this.scaleColor = 'blue'
-          break
-        case 'green':
-          _this.scaleColor = 'green'
-          break
-        case 'orange':
-          _this.scaleColor = 'orange'
-          break
-      }
-    },
-    generateGradientColor(index) {
-      const _this = this
-      // 根据选择的颜色设置新的渐变色带
-      let colorScale = d3
-        .scaleSequential()
-        .domain([_this.interval - 1, 0])
-        .interpolator(d3.interpolateViridis)
-      switch (_this.scaleColor) {
-        case 'blue':
-          colorScale = d3
-            .scaleSequential()
-            .domain([0, _this.interval - 1])
-            .interpolator(d3.interpolateBlues)
-          break
-        case 'green':
-          colorScale = d3
-            .scaleSequential()
-            .domain([0, _this.interval - 1])
-            .interpolator(d3.interpolateGreens)
-          break
-        case 'orange':
-          colorScale = d3
-            .scaleSequential()
-            .domain([0, _this.interval - 1])
-            .interpolator(d3.interpolateOranges)
-          break
-      }
-
-      return colorScale(index)
-    },
     generateIntervalData() {
       // 生成柱子数量
       return Array.from({ length: this.interval }, (_, index) => ({
         id: index + 1
       }))
-    },
-    updateNodeColor() {
-      // 更新节点颜色
-      const _this = this
-      if (_this.propertyChangeData) {
-        this.node.attr('fill', function (d, i) {
-          const nodeId = Number(d.id)
-          let graphName = JSON.parse(localStorage.getItem('graphName'))
-          if (graphName === 'discv_genus_r1455_c373') {
-            _this.data = _data3
-          } else if (graphName === 'valid_genus_r634_c373') {
-            _this.data = _data2
-          } else {
-            _this.data = _data
-          }
-          const data = _this.data
-          let variableData = data[_this.propertyChangeData]
-          let item = variableData.find((item) => Number(item.id) === nodeId)
-          const scoresNode = item.value
-          const index = _this.findIndexInInterval(scoresNode)
-          return _this.generateGradientColor(index)
-        })
-      } else {
-        this.node.attr('fill', function (d, i) {
-          const index = _this.findIndexInInterval(d.size)
-          return _this.generateGradientColor(index)
-        })
-      }
     },
     findIndexInInterval(value) {
       const index = this.xData.findIndex((x, i, arr) => {
@@ -1757,9 +1712,6 @@ export default {
   justify-content: space-between;
   margin-left: 20px;
 }
-.sliderBoxHelp {
-  margin-left: 310px;
-}
 .longButton {
   display: inline-block;
   width: 350px;
@@ -1779,7 +1731,7 @@ export default {
   margin-left: 10px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   .NodesEditBoard,
   #minMaxBox,
   #colorCastButton,
@@ -1837,5 +1789,13 @@ export default {
 
 .export-button:hover {
   color: #409eff; /* 鼠标悬停时的颜色 */
+}
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 18px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
 }
 </style>

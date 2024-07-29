@@ -15,7 +15,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
+      name: '/',
       component: () => import('./views/Home.vue'),
       meta: { title: '' }
     },
@@ -63,7 +63,7 @@ const router = new Router({
         },
         {
           path: `/project_id=${graphName}/Charts1`,
-          name: 'Comparisons1',
+          name: 'Charts1',
           component: () => import('./components/Charts.vue'),
           meta: { title: 'Charts' }
         }

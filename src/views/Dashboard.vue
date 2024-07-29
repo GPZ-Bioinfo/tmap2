@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper">
     <el-header>
-      <el-page-header @back="goBack" title="Home" style="color: #000" v-if="Home_visible"> </el-page-header>
+      <el-page-header @back="goBack" title="Home" style="color: #000"> </el-page-header>
     </el-header>
     <h1>Projects</h1>
     <div class="cardbox">
-      <div class="card" @click="handleClick1">
+      <div class="card">
         <el-card>
           <div class="card-content">
             <h2>Title: <span class="info-value">FGFP</span></h2>
@@ -17,7 +17,7 @@
               <span class="info-label">Last updated:</span>
               <span class="info-value">YYYY-MM-DD HH:MM</span>
             </div>
-            <el-popover placement="bottom" width="200" trigger="click">
+            <el-popover placement="bottom" width="200">
               <div class="popup-content">
                 <div @click="handleTextClick($event)">genus_r1106_c421</div>
               </div>
@@ -27,7 +27,7 @@
         </el-card>
       </div>
 
-      <div class="card" @click="handleClick2">
+      <div class="card">
         <el-card>
           <div class="card-content">
             <h2>Title: <span class="info-value">GZFY</span></h2>
@@ -39,7 +39,7 @@
               <span class="info-label">Last updated:</span>
               <span class="info-value">YYYY-MM-DD HH:MM</span>
             </div>
-            <el-popover placement="bottom" width="200" trigger="click">
+            <el-popover placement="bottom" width="200">
               <div class="popup-content">
                 <div class="textDec" @click="handleTextClick($event)">discv_genus_r1455_c373</div>
                 <div class="textDec" @click="handleTextClick($event)">valid_genus_r634_c373</div>
@@ -61,30 +61,30 @@
 export default {
   name: '',
   data() {
-    return {
-      Home_visible: true
-    }
+    return {}
   },
   created() {},
   mounted() {
     this.$vuetify.theme.dark = false
   },
   methods: {
-    handleTextClick() {
-      const graphName = event.target.innerText
+    handleTextClick(event) {
+      const newGraphName = event.target.innerText
+      const graphName = JSON.parse(localStorage.getItem('graphName'))
       if (JSON.parse(localStorage.getItem('paramsMap'))) {
         localStorage.removeItem('paramsMap')
       }
       localStorage.removeItem('graphName')
-      localStorage.setItem('graphName', JSON.stringify(graphName))
-      this.$router.push(`/project_id=${graphName}/Features`)
-      location.reload()
+
+      localStorage.setItem('graphName', JSON.stringify(newGraphName))
+      this.$router.push(`/project_id=${newGraphName}/Features`)
+      if (newGraphName !== graphName) {
+        location.reload()
+      }
     },
     goBack() {
-      this.$store.commit('removeToken')
       localStorage.removeItem('users')
-      this.Home_visible = true
-      this.$router.push('/home').catch((err) => {}) // eslint-disable-line
+      this.$router.push('/home')
     }
   }
 }

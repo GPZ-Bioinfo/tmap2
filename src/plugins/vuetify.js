@@ -3,7 +3,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
-import '@/assets/styles/main.css' // 引入本地样式文件
 import colors from 'vuetify/lib/util/colors'
 
 Vue.use(Vuetify)
@@ -11,9 +10,6 @@ Vue.use(Vuetify)
 const opts = {
   theme: {
     dark: false,
-    icons: {
-      iconfont: 'mdi' // 使用 Material Design Icons
-    },
     themes: {
       light: {
         primary: '#c8d0d4',

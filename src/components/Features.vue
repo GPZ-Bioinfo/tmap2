@@ -16,7 +16,7 @@
       </div>
       <!-- 搜索框部分关键字检索 -->
       <div class="querySearch">
-        <el-autocomplete v-model="state1" :fetch-suggestions="querySearch" placeholder="Please enter keywords to search" :suffix-icon="icon" clearable style="width: 250px" @select="handleSelect">
+        <el-autocomplete v-model="state1" :fetch-suggestions="querySearch" placeholder="Please enter keywords to search" clearable style="width: 250px" @select="handleSelect">
           <template slot="default" slot-scope="{ item }">
             <div class="searchtext">
               {{ item.value }}
@@ -55,15 +55,15 @@
         <el-card>
           <h2>Nodes</h2>
           <h3>Selected node:</h3>
-          <div class="summarytext">{{ histogramParams }}</div>
+          <div class="summaryText">{{ histogramParams }}</div>
           <h3>Enriched SAFE score:</h3>
-          <div class="summarytext">{{ seletedValue }}</div>
+          <div class="summaryText">{{ selectedValue }}</div>
           <h3>number of enriched nodes on TDA network:</h3>
-          <div class="summarytext">{{ nodesCount }}</div>
+          <div class="summaryText">{{ enrichNodes }}</div>
           <h3>number of enriched samples on TDA network:</h3>
-          <div class="summarytext">{{ categoriesCount }}</div>
+          <div class="summaryText">{{ enrichSample }}</div>
           <h3>Co-enrichment neighbors:</h3>
-          <div class="summarytext" v-for="(item, index) in neighNode" :key="index">
+          <div class="summaryText" v-for="(item, index) in neighNode" :key="index">
             {{ item }}
           </div>
           <div class="popup-content" @click="exploreMap">-> explore on TDA network</div>
@@ -107,14 +107,15 @@ export default {
       xAxisData: '',
       yAxisData: '',
       histogramParams: 'null',
-      seletedValue: 'null',
-      nodesCount: 0,
-      categoriesCount: 0,
+      selectedValue: 'null',
+      enrichNodes: 'null',
+      enrichSample: 'null',
       categories: [],
       barHidden: false,
       interval: 0,
       data: null,
       datas: null,
+      nodeindex: null,
       elements: null,
       variablesValue: null,
       selectedCategory: null, // 记录当前选中的 category
@@ -142,7 +143,6 @@ export default {
     const data = this.data
     const datas = this.datas
     const elements = this.elements
-    this.nodesCount = data.length
 
     data.sort((a, b) => b.enrich_score - a.enrich_score) // 根据 enrich_score 由大到小排序
 
@@ -153,7 +153,6 @@ export default {
 
     // 获取所有类别
     this.categories = [...new Set(datas.map((item) => item.category))]
-    this.categoriesCount = this.categories.length
     // 生成一个很长的色带
     const colorPalette = ['#2E86C1', '#52BE80', '#F4D03F', '#E74C3C', '#AF7AC5', '#5DADE2', '#48C9B0', '#F1948A']
     // 创建一个映射关系，将 variable 映射到 category
@@ -182,7 +181,7 @@ export default {
       },
       dataZoom: [
         {
-          type: 'slider',
+          type: 'inside',
           start: 0,
           end: 100
         }
@@ -391,6 +390,8 @@ export default {
       if (!d3.event.active) graphLayout.alphaTarget(0.6).restart()
       d.fx = d.x
       d.fy = d.y
+      // 清除标签
+      container.selectAll('text').remove()
     }
 
     function dragged(d) {
@@ -402,6 +403,22 @@ export default {
       if (!d3.event.active) graphLayout.alphaTarget(0)
       d.fx = null
       d.fy = null
+      if (_this.nodeindex === d.index) {
+        let index = d.index
+        _this.graphLayout.stop()
+        node
+          .filter((d) => neigh(index, d.index))
+          .each(function (d) {
+            container
+              .append('text')
+              .text(d.id)
+              .attr('x', d.x + 8)
+              .attr('y', d.y - 10)
+              .style('font-family', 'Arial')
+              .style('font-size', 13)
+              .style('pointer-events', 'none')
+          })
+      }
     }
     node.on('click', clickSelect)
     let adjList = []
@@ -412,7 +429,6 @@ export default {
     function neigh(a, b) {
       return a === b || adjList[a + '-' + b]
     }
-    let isFirstTime = true
     function clickSelect(event) {
       // 直方图点击柱子显示 svg 节点
       const currentBar = d3.select(this).attr('id') // 获取当前点击的节点名称
@@ -430,7 +446,7 @@ export default {
         _this.neighNode = []
         _this.toggleBarsAll()
         _this.histogramParams = currentBar
-        _this.seletedValue = _this.data.find((item) => item.variable === _this.histogramParams).enrich_score
+        _this.selectedValue = _this.data.find((item) => item.variable === _this.histogramParams).enrich_score
         option.series[0].data = _this.yAxisData.slice(0, this.interval)
         option.xAxis.data = _this.xAxisData.slice(0, this.interval)
         // 使用 dispatchAction 触发 toolbox 中的 restore 功能
@@ -439,8 +455,8 @@ export default {
         })
         // 如果点击的是不同节点，则显示被点击的节点的透明度为 1，其他节点的透明度为 0.4
         // 高亮邻居
-
-        let index = d3.select(d3.event.target).datum().index
+        _this.nodeindex = d3.select(d3.event.target).datum().index
+        let index = _this.nodeindex
 
         node.style('opacity', function (d) {
           if (neigh(index, d.index)) {
@@ -457,40 +473,26 @@ export default {
               _this.neighNode.push(d.id)
             }
           })
-        // 选中节点显示label,第一次执行延迟
-        if (isFirstTime) {
-          setTimeout(() => {
-            _this.graphLayout.stop()
-            node
-              .filter((d) => neigh(index, d.index))
-              .each(function (d) {
-                container
-                  .append('text')
-                  .text(d.id)
-                  .attr('x', d.x + 8)
-                  .attr('y', d.y - 10)
-                  .style('font-family', 'Arial')
-                  .style('font-size', 13)
-                  .style('pointer-events', 'none')
-              })
+        _this.enrichNodes = _this.neighNode.length + 1
+        let newNeighNode = [...new Set(_this.neighNode)]
+        newNeighNode.push(currentBar)
+        let filteredNode = datas.filter((item) => newNeighNode.includes(item.variable))
+        _this.enrichSample = [...new Set(filteredNode.map((item) => item.category))].length
 
-            isFirstTime = false // 设置标记为 false，表示已经执行过一次了
-          }, 2000)
-        } else {
-          _this.graphLayout.stop()
-          node
-            .filter((d) => neigh(index, d.index))
-            .each(function (d) {
-              container
-                .append('text')
-                .text(d.id)
-                .attr('x', d.x + 8)
-                .attr('y', d.y - 10)
-                .style('font-family', 'Arial')
-                .style('font-size', 13)
-                .style('pointer-events', 'none')
-            })
-        }
+        //  给选中节点和相邻节点加上标签
+        _this.graphLayout.stop()
+        node
+          .filter((d) => neigh(index, d.index))
+          .each(function (d) {
+            container
+              .append('text')
+              .text(d.id)
+              .attr('x', d.x + 8)
+              .attr('y', d.y - 10)
+              .style('font-family', 'Arial')
+              .style('font-size', 13)
+              .style('pointer-events', 'none')
+          })
 
         link.style('opacity', function (o) {
           return o.source.index === index || o.target.index === index ? 1 : 0.4
@@ -507,6 +509,9 @@ export default {
           option.xAxis[0].data = option.xAxis[0].data.filter((_, index) => {
             return _this.linkingNode.includes(index)
           })
+          option.series[0].data = option.series[0].data.filter((_, index) => {
+            return _this.linkingNode.includes(index)
+          })
           option.xAxis[0].axisLabel.formatter = function (value) {
             // 假设每8个字符换行
             let formattedValue = ''
@@ -517,14 +522,16 @@ export default {
           }
           _this.chartBar.setOption(option)
           lastClickedBar = currentBar // 更新上次点击的柱子名称
-        }, 1000)
+        }, 500)
       }
     }
     this.dataList = this.loadAll()
     const isparams = JSON.parse(localStorage.getItem('paramsMap'))
     if (isparams) {
       let node = d3.select(`#${isparams}`)
-      node.dispatch('click')
+      setTimeout(() => {
+        node.dispatch('click')
+      }, 1000)
     }
   },
   beforeDestroy() {
@@ -625,7 +632,10 @@ export default {
       this.linkingNode = []
       this.neighNode = []
       this.histogramParams = 'null'
-      this.seletedValue = 'null'
+      this.selectedValue = 'null'
+      this.enrichNodes = 'null'
+      this.enrichSample = 'null'
+      this.nodeindex = null
       localStorage.removeItem('paramsMap')
       this.node.style('opacity', 1)
       this.node.style('stroke', '#caa455')
@@ -641,10 +651,14 @@ export default {
       const option = this.chartBar.getOption()
       const variables = this.getVariablesByCategory(category)
       this.variablesValue = variables
-      // 对于所有类别，只显示匹配当前类别的柱子
+      // 获取符合类别的柱子的下标数组
+      let indexes = variables.map((element) => option.xAxis[0].data.indexOf(element))
+      // 对纵坐标的数据也进行匹配过滤
+      option.series[0].data = option.series[0].data.filter((_, index) => indexes.includes(index))
+      // 对于所有类别，只显示匹配当前类别的柱子,对横坐标过滤
       option.xAxis[0].data = variables
+      // 只显示第一个和最后一个标签
       option.xAxis[0].axisLabel.formatter = function (value, index) {
-        // 只显示第一个和最后一个标签
         var data = option.xAxis[0].data
         if (index === 0 || index === data.length - 1 || index === parseInt(data.length / 2)) {
           return value
@@ -654,13 +668,8 @@ export default {
       }
       this.chartBar.setOption(option)
     },
-    exploreData() {
-      console.log('Explore Data clicked')
-      // 添加 Data 按钮的点击事件逻辑
-    },
     exploreMap() {
       // 添加 Map 按钮的点击事件逻辑
-      console.log('this.histogramParams', this.histogramParams)
       this.$router.push({ name: 'ForceBased', params: { value: this.histogramParams } })
       localStorage.removeItem('paramsMap')
       localStorage.setItem('paramsMap', JSON.stringify(this.histogramParams))
@@ -747,7 +756,7 @@ h3 {
   white-space: normal; /* 允许文本换行 */
   overflow-wrap: break-word; /* 换行时断开单词 */
 }
-.summarytext {
+.summaryText {
   font-size: 15px;
   border-bottom: 1px dotted black;
   white-space: normal; /* 允许文本换行 */

@@ -1,15 +1,15 @@
 <template>
   <div class="wrapper">
     <el-header>
-      <el-page-header @back="goBack" title="Dashboard" style="color: #000" v-if="Dashboard_visible"> </el-page-header>
+      <el-page-header @back="goBack" title="Dashboard" style="color: #000"> </el-page-header>
       <div class="humberger"><el-button class="el-icon-s-fold" style="font-size: 20px; color: #000" @click="toggleMenu" type="text"></el-button></div>
     </el-header>
     <el-container>
       <el-menu default-active="2" class="el-menu-vertical-demo" @select="handleSelect" :collapse="menuCollapse">
         <el-submenu index="1">
           <template slot="title">
-            <v-icon>mdi-view-column</v-icon>
-            <span>Features</span>
+            <i class="iconfont icon-yuanzizhibiao-guanlianguanxi"></i>
+            <span> Features</span>
           </template>
           <el-menu-item-group>
             <el-menu-item index="1-1">ranking</el-menu-item>
@@ -17,8 +17,8 @@
         </el-submenu>
         <el-submenu index="2">
           <template slot="title">
-            <v-icon>mdi-view-sequential</v-icon>
-            <span>Groups</span>
+            <i class="iconfont icon-groups"></i>
+            <span> Groups</span>
           </template>
           <el-menu-item-group>
             <el-menu-item index="2-1">Groups1</el-menu-item>
@@ -26,8 +26,8 @@
         </el-submenu>
         <el-submenu index="3">
           <template slot="title">
-            <v-icon>mdi-vector-circle</v-icon>
-            <span>Topological Models</span>
+            <i class="iconfont icon-yuanzinenglipeizhi"></i>
+            <span> Topological Models</span>
           </template>
           <el-menu-item-group>
             <el-menu-item index="3-1">ForceBased</el-menu-item>
@@ -35,8 +35,8 @@
         </el-submenu>
         <el-submenu index="4">
           <template slot="title">
-            <v-icon>mdi-chart-gantt</v-icon>
-            <span>Comparisons</span>
+            <i class="iconfont icon-tandem-full"></i>
+            <span> Comparisons</span>
           </template>
           <el-menu-item-group>
             <el-menu-item index="4-1">Comparisons1</el-menu-item>
@@ -44,8 +44,8 @@
         </el-submenu>
         <el-submenu index="5">
           <template slot="title">
-            <v-icon>mdi-chart-bar</v-icon>
-            <span>Charts</span>
+            <i class="iconfont icon-chart"></i>
+            <span> Charts</span>
           </template>
           <el-menu-item-group>
             <el-menu-item index="5-1">Charts1</el-menu-item>
@@ -62,9 +62,7 @@
 <script>
 export default {
   data() {
-    return {
-      Dashboard_visible: true
-    }
+    return {}
   },
   mounted() {
     this.$vuetify.theme.dark = false
@@ -97,11 +95,6 @@ export default {
       }
     },
     goBack() {
-      // this.$store.commit('removeToken')
-      // localStorage.removeItem('users')
-      // this.Home_visible = true
-      // this.$router.push('/home').catch((err) => {})
-      this.Dashboard_visible = false
       this.$router.push('/dashboard')
     }
   }
