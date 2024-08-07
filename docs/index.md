@@ -1,6 +1,6 @@
 # 登录页（Home.vue）
 
-​	![1](./1.png)
+​	![1](images/1.png)
 
 ### 输入框：
 
@@ -36,7 +36,7 @@ this.$router.push('/dashboard')
 
 # 首页（Dashboard.vue）
 
-![2](./2.png)
+![2](images/2.png)
 
 ### 面板卡片：
 
@@ -149,7 +149,7 @@ users：登陆token
 
 # Features模块（Features.vue）
 
-![](./3.png)
+![](images/3.png)
 
 Features模块是跳转到示例页，默认显示的第一个模块，也可以点击菜单栏里ranking，进行跳转
 
@@ -494,7 +494,7 @@ option.series[0].data = option.series[0].data.filter((_, index) => {
 
 
 
-![](./4.png)
+![](images/4.png)
 
 ##### 选中节点后的面板参数：
 
@@ -518,7 +518,7 @@ option.series[0].data = option.series[0].data.filter((_, index) => {
 
 # Forebased模块（Forebased.vue）
 
-![](./5.png)
+![](images/5.png)
 
 分为左侧控件、主体部分svg画布、面板和直方图
 
@@ -619,13 +619,13 @@ _this.node.filter((d) => x3 <= x(d.x) && x(d.x) < x4 && y3 <= y(d.y) && y(d.y) <
 
 利用filter函数xy坐标把符合区域内的点筛选出来，改变透明度
 
-![](./6.png)
+![](images/6.png)
 
 框选时跳出summary面板，横条百分比表示已框选的节点数量占总数之比
 
 点击图中框选的按钮，跳出数据表格面板，绑定函数**openNewBoard**
 
-![](./7.png)
+![](images/7.png)
 
 表格里显示已框选到节点的相关数据，以及统计后的极值、均值和方差等
 
@@ -723,7 +723,7 @@ this.NodesEditBoardExit = false
 
 绑定函数**screenShot**
 
-![](./8.png)
+![](images/8.png)
 
 把网络图以图片png形式导出
 
@@ -941,7 +941,7 @@ idUnFocus：自定义函数，鼠标移出，悬浮节点id移除
 
 ##### 1.点线数量面板
 
-![](./9.png)
+![](images/9.png)
 
 显示已选中节点的个数以及点线的总数，feature后面是已选择的变量名称
 
@@ -1110,7 +1110,7 @@ myChart.on('click', function (params) {}
 
 ##### 3.数据面板
 
-![](./7.png)
+![](images/7.png)
 
 ```vue
 <el-card class="dataBoard" v-if="newboardExit">
@@ -1132,11 +1132,11 @@ unshift表示对数组在开头插入元素，保证新框选到节点属性在�
 
 ##### 4.取色板
 
-![](./10.png)
+![](images/10.png)
 
 点击图上蓝色画板小图标，弹出色带选择卡片，点击想要改变颜色的色带，节点和直方图柱子的颜色也会相应改变，如点击蓝色色带
 
-![](./11.png)
+![](images/11.png)
 
 点击Cancel按钮，对节点和直方图颜色数量还原，并收起取色板
 
@@ -1202,7 +1202,7 @@ function里面写入色带函数**generateGradientColor**生成的颜色
 
 绑定函数**querySearch**，所有变量的数据存储在dataList里，
 
-![](./12.png)
+![](images/12.png)
 
 
 
@@ -1234,7 +1234,7 @@ this.node.attr(itemvalue.value, function (d) {}
 
 点击一级大类选择器，展开二级小类选择器，点击小类选择器，会进行变量切换，网络图和直方图会进行联动
 
-![](./13.png)
+![](images/13.png)
 
 选择器绑定的函数为**handleChange**
 
@@ -1256,7 +1256,7 @@ this.node.attr(categoryData, function (d) {})
 
 ###### 5.3节点斥力滑动条
 
-![](./14.png)
+![](images/14.png)
 
 鼠标拖动滑动条的百分占比，可以调整网络图中节点相互之间的斥力，数值和斥力大小正相关
 
